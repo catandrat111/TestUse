@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface LabelInstance : UIViewController
-
+@property(weak,nonatomic) IBOutlet UILabel *deleteLineLab;
 @end

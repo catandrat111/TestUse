@@ -9,5 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface UsageViewController : UIViewController
-
+-(IBAction)sortAction:(id)sender;
+-(IBAction)quchongAction:(id)sender;
+-(IBAction)filterAction:(id)sender;
 @end

@@ -9,5 +9,6 @@
 #import <Foundation/Foundation.h>
 
 @interface User : NSObject
-
+@property (nonatomic, copy) NSString *name;
+@property (nonatomic, copy) NSNumber *age;
 @end

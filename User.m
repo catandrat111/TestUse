@@ -9,5 +9,8 @@
 #import "User.h"
 
 @implementation User
-
+- (NSComparisonResult)compare:(User *)otherUser {
+    
+    return [self.age compare:otherUser.age];
+}
 @end

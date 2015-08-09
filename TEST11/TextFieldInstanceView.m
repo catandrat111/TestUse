@@ -16,7 +16,12 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+    self.textField.inputView = self.footerview;//弹出INPUTVIEW
+    //self.textField.text = @"ssss";
+    self.textField.placeholder = @"ddd";
+    NSAttributedString *strUser = [[NSAttributedString alloc] initWithString:@"Username" attributes:@{ NSForegroundColorAttributeName : [UIColor redColor] }];
+    self.textField.attributedPlaceholder = strUser;//更改PLACEHOLDER颜色
+    
 }
 
 - (void)didReceiveMemoryWarning {

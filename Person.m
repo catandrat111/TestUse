@@ -9,5 +9,40 @@
 #import "Person.h"
 
 @implementation Person
+- (BOOL)isEqualToPerson:(Person *)person
+{
+    if (self == person)
+    {
+        return YES;
+    }
+    if (!([_name isEqualToString:person.name] || _name == person.name))
+    {
+        return NO;
+    }
+    
+    if (!([_age isEqualToNumber:person.age] || _age == person.age))
+    {
+        return NO;
+    }
+    
+    return YES;
+    
+}
 
+- (BOOL)isEqual:(id)object
+{
+    if ([self class] == [object class])
+    {
+        return [self isEqualToPerson: (Person *)object];
+    }
+    else
+    {
+        return [super isEqual:object];
+    }
+}
+
+- (NSUInteger)hash
+{
+    return [_name hash] ^ [_age hash];
+}
 @end

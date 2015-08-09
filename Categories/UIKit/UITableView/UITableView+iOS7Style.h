@@ -10,4 +10,5 @@
 
 @interface UITableView (iOS7Style)
 -(void)applyiOS7SettingsStyleGrouping:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath;
+-(void)applyiOS7SettingsStyleGrouping1:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath;
 @end

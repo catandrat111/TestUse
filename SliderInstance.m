@@ -16,7 +16,23 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+    self.edgesForExtendedLayout = UIRectEdgeNone;
+    [self.view setBackgroundColor:[UIColor whiteColor]];
+    UISlider *slider = [[UISlider alloc] initWithFrame:CGRectMake(0, 30, 200, 20)]; //初始化
+    slider.minimumValue = 0;//指定可变最小值
+    slider.maximumValue = 100;//指定可变最大值
+    slider.value = 50;//指定初始值
+    [slider addTarget:self action:@selector(updateValue:) forControlEvents:UIControlEventValueChanged];//设置响应事
+    [self.view addSubview:slider];
+    [slider setThumbTintColor:[UIColor greenColor]];
+    [slider setMinimumTrackTintColor:[UIColor greenColor]];
+    [slider setMaximumTrackTintColor:[UIColor redColor]];
+  //  slider.backgroundColor = [UIColor redColor];
+    
+//    [slider setMinimumTrackImage:[UIImage imageNamed:@"slidermax.png"] forState:UIControlStateNormal];
+//    
+//    [slider setMaximumTrackImage:[UIImage imageNamed:@"slidermin.png"] forState:UIControlStateNormal];
+
 }
 
 - (void)didReceiveMemoryWarning {
@@ -24,14 +40,8 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+-(IBAction)updateValue:(UISlider*)slider{
+    float f = slider.value;
+    NSLog(@"%f",f);
 }
-*/
-
 @end

@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface TableInstanceInitCellNoXib : UITableViewCell
-
+@property(strong,nonatomic) UILabel* lab1;
 @end

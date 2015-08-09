@@ -9,5 +9,5 @@
 #import "Person.h"
 
 @interface Person (GHAssociatedObject)
-
+@property (nonatomic, strong) NSNumber *weight;
 @end

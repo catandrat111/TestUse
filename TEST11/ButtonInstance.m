@@ -7,6 +7,12 @@
 //
 
 #import "ButtonInstance.h"
+#import "UIButton+BackgroundColor.h"
+#import "UIButton+CountDown.h"
+#import "UIButton+Indicator.h"
+#import "UIButton+Submitting.h"
+
+#import "NSString+Score.h"
 
 @interface ButtonInstance ()
 
@@ -16,7 +22,14 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+    [self.button1 setBackgroundColor:[UIColor redColor] forState:UIControlStateNormal];
+    self.edgesForExtendedLayout = UIRectEdgeNone;
+    [self.button1 showIndicator];
+    
+    [self.button2 startTime:5 title:@"hello" waitTittle:@"world"];
+    
+     [self.button3 beginSubmitting:@"ddd"];
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -24,14 +37,15 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+-(IBAction)p1:(UIButton*)sender{
+    [self.button1 endSubmitting];
 }
-*/
 
+-(IBAction)p2:(UIButton*)sender{
+    [self.button1 hideIndicator];
+    [self.button3 endSubmitting];
+}
+-(IBAction)p3:(UIButton*)sender{
+    
+}
 @end

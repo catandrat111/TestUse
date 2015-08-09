@@ -8,6 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
-@interface TableInstanceInitCell : UIViewController
+typedef NS_ENUM(NSInteger, UITableViewCellInitType) {
+    UITableViewCellRegisterNoXib,
+    UITableViewCellRegisterXib,
+    UITableViewCellNoRegisterNoXib,
+    UITableViewCellNoRegisterXib
+};
 
+@interface TableInstanceInitCell : UIViewController
+@property(nonatomic) UITableViewCellInitType initType;
 @end

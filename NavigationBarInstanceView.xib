@@ -1,19 +1,69 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="NavigationBarInstanceView">
             <connections>
+                <outlet property="bar1" destination="Exl-H1-KJf" id="APS-A4-ldg"/>
+                <outlet property="bar2" destination="IPv-1G-B54" id="6OP-PH-l2f"/>
+                <outlet property="bar3" destination="IK7-Gu-2Yq" id="oHP-fJ-goD"/>
+                <outlet property="bar4" destination="tnB-Bt-S4V" id="4Ye-Wt-ggF"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
-            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Exl-H1-KJf">
+                    <rect key="frame" x="0.0" y="46" width="320" height="44"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="tuH-UT-E1h"/>
+                    </constraints>
+                    <items>
+                        <navigationItem id="PiD-zW-2Wa">
+                            <barButtonItem key="leftBarButtonItem" title="Item" id="rhZ-bp-5sh"/>
+                            <barButtonItem key="rightBarButtonItem" title="Item" id="e5E-fN-EEQ"/>
+                        </navigationItem>
+                    </items>
+                </navigationBar>
+                <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IPv-1G-B54">
+                    <rect key="frame" x="0.0" y="106" width="320" height="44"/>
+                    <items>
+                        <navigationItem title="Title" id="32U-Lg-Wd5"/>
+                    </items>
+                </navigationBar>
+                <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IK7-Gu-2Yq">
+                    <rect key="frame" x="0.0" y="178" width="320" height="44"/>
+                    <items>
+                        <navigationItem title="Title" id="icZ-BT-bh4"/>
+                    </items>
+                </navigationBar>
+                <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tnB-Bt-S4V">
+                    <rect key="frame" x="0.0" y="251" width="320" height="44"/>
+                    <items>
+                        <navigationItem title="Title" id="38Q-jD-OOF"/>
+                    </items>
+                </navigationBar>
+            </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="Exl-H1-KJf" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="4F5-A2-OeZ"/>
+                <constraint firstAttribute="trailing" secondItem="Exl-H1-KJf" secondAttribute="trailing" id="J1w-UX-XAC"/>
+                <constraint firstItem="Exl-H1-KJf" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="46" id="jFD-lQ-89Z"/>
+            </constraints>
+            <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
+            <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
+            <point key="canvasLocation" x="362" y="249"/>
         </view>
     </objects>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
 </document>

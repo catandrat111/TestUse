@@ -9,5 +9,8 @@
 #import <UIKit/UIKit.h>
 
 @interface NavigationBarInstanceView : UIViewController
-
+@property(weak,nonatomic) IBOutlet UINavigationBar* bar1;
+@property(weak,nonatomic) IBOutlet UINavigationBar* bar2;
+@property(weak,nonatomic) IBOutlet UINavigationBar* bar3;
+@property(weak,nonatomic) IBOutlet UINavigationBar* bar4;
 @end

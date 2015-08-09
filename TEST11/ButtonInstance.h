@@ -9,5 +9,11 @@
 #import <UIKit/UIKit.h>
 
 @interface ButtonInstance : UIViewController
+@property(weak,nonatomic) IBOutlet UIButton* button1;
+@property(weak,nonatomic) IBOutlet UIButton* button2;
+@property(weak,nonatomic) IBOutlet UIButton* button3;
 
+-(IBAction)p1:(id)sender;
+-(IBAction)p2:(id)sender;
+-(IBAction)p3:(id)sender;
 @end

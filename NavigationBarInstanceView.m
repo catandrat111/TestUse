@@ -15,13 +15,36 @@
 @implementation NavigationBarInstanceView
 
 - (void)viewDidLoad {
+/*
+: 导航栏的按钮(如返回)颜色
+titleTextAttributes: 标题颜色
+barTintColor: 背景颜色
+translucent: 是否透明
+ */
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+    self.navigationController.navigationBar.translucent = NO;
+    
+    self.bar1.titleTextAttributes = @{NSFontAttributeName:[UIFont systemFontOfSize:13]};
+    self.bar1.tintColor = [UIColor redColor];
+    self.bar1.barTintColor = [UIColor yellowColor];
+    self.bar1.translucent = YES;
+    self.edgesForExtendedLayout = UIRectEdgeNone;
+
+    //导航栏的按钮(如返回)颜色
+    self.navigationController.navigationBar.tintColor = [UIColor  greenColor];
+    
+    self.title = @"test";
+   // 方法中设置所有返回按钮文字的偏移量 //也可以直接设置LEFTBAIBUTTON 字体设为空就看不到字体  它的优先级高
+    [[UIBarButtonItem appearance] setBackButtonTitlePositionAdjustment:UIOffsetMake(20, 20) forBarMetrics:UIBarMetricsDefault];
+    
+    //标题垂直偏移
+    [self.navigationController.navigationBar setTitleVerticalPositionAdjustment:20 forBarMetrics:UIBarMetricsDefault];
+    
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    
 }
 
 /*

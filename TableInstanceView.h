@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface TableInstanceView : UIViewController
-
+@property(weak,nonatomic) IBOutlet UITableView* tableView;
 @end

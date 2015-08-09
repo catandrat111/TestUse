@@ -16,7 +16,12 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+
+    NSString* str1 = @"aaadfdg";
+    NSMutableAttributedString *attri = [[NSMutableAttributedString alloc] initWithString:str1];
+    [attri addAttribute:NSStrikethroughStyleAttributeName value:@(NSUnderlinePatternSolid | NSUnderlineStyleSingle) range:NSMakeRange(0, str1.length)];
+    [attri addAttribute:NSStrikethroughColorAttributeName value:[UIColor redColor] range:NSMakeRange(0, str1.length)];
+    [self.deleteLineLab setAttributedText:attri];
 }
 
 - (void)didReceiveMemoryWarning {

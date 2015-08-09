@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface TextFieldInstanceView : UIViewController
-
+@property(weak,nonatomic) IBOutlet UITextField* textField;
+@property(strong,nonatomic) IBOutlet UIView* footerview;
 @end

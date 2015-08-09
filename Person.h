@@ -7,7 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
-
+//判断相等
 @interface Person : NSObject
+@property (nonatomic, strong) NSString *name;
+@property (nonatomic, strong) NSNumber *age;
 
 @end
