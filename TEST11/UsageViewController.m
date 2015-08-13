@@ -98,4 +98,29 @@
     NSArray *result2 = [self.array filteredArrayUsingPredicate:predicate2];
     NSLog(@"%@",result2);
 }
+
+-(void)keychainMethod{
+    //跟程序的bundleid有关  如果id变了 uuid换成新的  如果两个id属于一个组 一个已保存，另一个则有相同的uuid
+    //组 target -> capabllity -> share key -> 添加组
+    NSString* uuid = [UIDevice  getUDID];
+    DLog(@"%@",uuid);
+
+    //6EAA3C6E-3DC6-4F52-B57A-6C29041C33CE//com.test com.test.b com.test8 --- bundle id
+    /*
+    <key>Entitlements</key>
+    <dict>
+    <key>application-identifier</key>
+    <string>A1B2C3D4E5.com.example.MyApp</string>
+    <key>get-task-allow</key>
+    <false/>
+    <key>keychain-access-groups</key> //授予客户端访问app的权限  可以访问钥匙串 
+    <array>
+    <string>A1B2C3D4E5.*</string>
+    </array>
+    </dict>
+    
+    codesign -d --entitlements - Foo.app/Foo | vis (查看entitlement)
+     */
+
+}
 @end
