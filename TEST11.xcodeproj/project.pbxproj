@@ -195,6 +195,9 @@
 		51FA7A231B70FB2A0002990E /* UsageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 51FA7A211B70FB2A0002990E /* UsageViewController.m */; };
 		51FA7A241B70FB2A0002990E /* UsageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51FA7A221B70FB2A0002990E /* UsageViewController.xib */; };
 		51FA7A2B1B7105180002990E /* Person+GHAssociatedObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 51FA7A2A1B7105180002990E /* Person+GHAssociatedObject.m */; };
+		BDAE103D1B7C786F001908A5 /* AutoSizeViewInstance.m in Sources */ = {isa = PBXBuildFile; fileRef = BDAE103B1B7C786F001908A5 /* AutoSizeViewInstance.m */; };
+		BDAE103E1B7C786F001908A5 /* AutoSizeViewInstance.xib in Resources */ = {isa = PBXBuildFile; fileRef = BDAE103C1B7C786F001908A5 /* AutoSizeViewInstance.xib */; };
+		BDAE10401B7C7B31001908A5 /* autosize.png in Resources */ = {isa = PBXBuildFile; fileRef = BDAE103F1B7C7B31001908A5 /* autosize.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -563,6 +566,11 @@
 		51FA7A221B70FB2A0002990E /* UsageViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UsageViewController.xib; sourceTree = "<group>"; };
 		51FA7A291B7105180002990E /* Person+GHAssociatedObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Person+GHAssociatedObject.h"; sourceTree = "<group>"; };
 		51FA7A2A1B7105180002990E /* Person+GHAssociatedObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Person+GHAssociatedObject.m"; sourceTree = "<group>"; };
+		BDAE10391B7C77AE001908A5 /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		BDAE103A1B7C786F001908A5 /* AutoSizeViewInstance.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AutoSizeViewInstance.h; sourceTree = "<group>"; };
+		BDAE103B1B7C786F001908A5 /* AutoSizeViewInstance.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AutoSizeViewInstance.m; sourceTree = "<group>"; };
+		BDAE103C1B7C786F001908A5 /* AutoSizeViewInstance.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AutoSizeViewInstance.xib; sourceTree = "<group>"; };
+		BDAE103F1B7C7B31001908A5 /* autosize.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = autosize.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -612,6 +620,7 @@
 		5195B3E11AB70283007CFA8B = {
 			isa = PBXGroup;
 			children = (
+				BDAE10391B7C77AE001908A5 /* PrefixHeader.pch */,
 				51FA7A191B70F99E0002990E /* Model */,
 				5166F55A1B57F43200D440FC /* Reveal.framework */,
 				51E10E561B482FF0009B162E /* libz.dylib */,
@@ -1511,6 +1520,10 @@
 				51FA7A201B70FB2A0002990E /* UsageViewController.h */,
 				51FA7A211B70FB2A0002990E /* UsageViewController.m */,
 				51FA7A221B70FB2A0002990E /* UsageViewController.xib */,
+				BDAE103F1B7C7B31001908A5 /* autosize.png */,
+				BDAE103A1B7C786F001908A5 /* AutoSizeViewInstance.h */,
+				BDAE103B1B7C786F001908A5 /* AutoSizeViewInstance.m */,
+				BDAE103C1B7C786F001908A5 /* AutoSizeViewInstance.xib */,
 			);
 			name = Usage;
 			sourceTree = "<group>";
@@ -1601,6 +1614,8 @@
 				5195B3FB1AB70284007CFA8B /* Images.xcassets in Resources */,
 				512933461B6FA6B4002634D5 /* TextFieldInstanceView.xib in Resources */,
 				51E10C381B47A8EB009B162E /* TableInstanceView.xib in Resources */,
+				BDAE10401B7C7B31001908A5 /* autosize.png in Resources */,
+				BDAE103E1B7C786F001908A5 /* AutoSizeViewInstance.xib in Resources */,
 				51B1C61C1B50D79300E68110 /* SliderInstance.xib in Resources */,
 				51FA7A241B70FB2A0002990E /* UsageViewController.xib in Resources */,
 				51E10DD41B481BD4009B162E /* NSDateTimeAgo.bundle in Resources */,
@@ -1730,6 +1745,7 @@
 				51E10E051B481BD4009B162E /* UIButton+Block.m in Sources */,
 				51E10DF71B481BD4009B162E /* NSString+UUID.m in Sources */,
 				51E10DE11B481BD4009B162E /* NSObject+AddProperty.m in Sources */,
+				BDAE103D1B7C786F001908A5 /* AutoSizeViewInstance.m in Sources */,
 				5195B3F01AB70284007CFA8B /* main.m in Sources */,
 				51E10E381B481BD4009B162E /* UITextView+Select.m in Sources */,
 				51E10DC41B481BD4009B162E /* NSManagedObjectContext+ObjectClear.m in Sources */,
@@ -1914,6 +1930,8 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = PrefixHeader.pch;
 				INFOPLIST_FILE = TEST11/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -1931,6 +1949,8 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = PrefixHeader.pch;
 				INFOPLIST_FILE = TEST11/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
