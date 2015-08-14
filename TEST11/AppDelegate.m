@@ -32,6 +32,10 @@
     DLog(@"%@",uuid);
     //6EAA3C6E-3DC6-4F52-B57A-6C29041C33CE//com.test
  
+    NSString* uuid1 = [UIDevice  getUDID1];
+    DLog(@"%@",uuid1);
+
+    
     return YES;
 }
 

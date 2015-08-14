@@ -291,6 +291,11 @@
 		BDAE15DC1B7C7FED001908A5 /* WGS84TOGCJ02.m in Sources */ = {isa = PBXBuildFile; fileRef = BDAE14D21B7C7FED001908A5 /* WGS84TOGCJ02.m */; };
 		BDAE15DF1B7C8905001908A5 /* Constant.m in Sources */ = {isa = PBXBuildFile; fileRef = BDAE15DE1B7C8905001908A5 /* Constant.m */; };
 		BDAE15E11B7C8ABB001908A5 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BDAE15E01B7C8ABB001908A5 /* libsqlite3.dylib */; };
+		BDC5A9701B7DEF5800AC14C4 /* HSCButton.m in Sources */ = {isa = PBXBuildFile; fileRef = BDC5A96F1B7DEF5800AC14C4 /* HSCButton.m */; };
+		BDC5A9741B7DEF9100AC14C4 /* GestureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BDC5A9721B7DEF9100AC14C4 /* GestureViewController.m */; };
+		BDC5A9751B7DEF9100AC14C4 /* GestureViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BDC5A9731B7DEF9100AC14C4 /* GestureViewController.xib */; };
+		BDC5A97A1B7DF18D00AC14C4 /* SimpleDragInstance.m in Sources */ = {isa = PBXBuildFile; fileRef = BDC5A9781B7DF18D00AC14C4 /* SimpleDragInstance.m */; };
+		BDC5A97B1B7DF18D00AC14C4 /* SimpleDragInstance.xib in Resources */ = {isa = PBXBuildFile; fileRef = BDC5A9791B7DF18D00AC14C4 /* SimpleDragInstance.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -839,6 +844,14 @@
 		BDAE15DD1B7C8905001908A5 /* Constant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Constant.h; path = WeixinActivity/Constant.h; sourceTree = "<group>"; };
 		BDAE15DE1B7C8905001908A5 /* Constant.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Constant.m; path = WeixinActivity/Constant.m; sourceTree = "<group>"; };
 		BDAE15E01B7C8ABB001908A5 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		BDC5A96E1B7DEF5800AC14C4 /* HSCButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HSCButton.h; path = ../HSCButton.h; sourceTree = "<group>"; };
+		BDC5A96F1B7DEF5800AC14C4 /* HSCButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HSCButton.m; path = ../HSCButton.m; sourceTree = "<group>"; };
+		BDC5A9711B7DEF9100AC14C4 /* GestureViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GestureViewController.h; sourceTree = "<group>"; };
+		BDC5A9721B7DEF9100AC14C4 /* GestureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GestureViewController.m; sourceTree = "<group>"; };
+		BDC5A9731B7DEF9100AC14C4 /* GestureViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GestureViewController.xib; sourceTree = "<group>"; };
+		BDC5A9771B7DF18D00AC14C4 /* SimpleDragInstance.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleDragInstance.h; sourceTree = "<group>"; };
+		BDC5A9781B7DF18D00AC14C4 /* SimpleDragInstance.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimpleDragInstance.m; sourceTree = "<group>"; };
+		BDC5A9791B7DF18D00AC14C4 /* SimpleDragInstance.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SimpleDragInstance.xib; sourceTree = "<group>"; };
 		BDF8F02E1B7C97D9007DAC63 /* TEST11.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = TEST11.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -917,6 +930,7 @@
 		5195B3EC1AB70284007CFA8B /* TEST11 */ = {
 			isa = PBXGroup;
 			children = (
+				BDC5A9761B7DEFC500AC14C4 /* Gesture */,
 				BDF8F02E1B7C97D9007DAC63 /* TEST11.entitlements */,
 				BDAE12451B7C7FEC001908A5 /* LIbs */,
 				51FA7A251B70FB360002990E /* Usage */,
@@ -2190,6 +2204,21 @@
 			path = "UIView+Position";
 			sourceTree = "<group>";
 		};
+		BDC5A9761B7DEFC500AC14C4 /* Gesture */ = {
+			isa = PBXGroup;
+			children = (
+				BDC5A96E1B7DEF5800AC14C4 /* HSCButton.h */,
+				BDC5A96F1B7DEF5800AC14C4 /* HSCButton.m */,
+				BDC5A9711B7DEF9100AC14C4 /* GestureViewController.h */,
+				BDC5A9721B7DEF9100AC14C4 /* GestureViewController.m */,
+				BDC5A9731B7DEF9100AC14C4 /* GestureViewController.xib */,
+				BDC5A9771B7DF18D00AC14C4 /* SimpleDragInstance.h */,
+				BDC5A9781B7DF18D00AC14C4 /* SimpleDragInstance.m */,
+				BDC5A9791B7DF18D00AC14C4 /* SimpleDragInstance.xib */,
+			);
+			name = Gesture;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -2283,6 +2312,7 @@
 				BDAE15BA1B7C7FED001908A5 /* LICENSE.txt in Resources */,
 				510281C51B5B4678009EDCA0 /* ButtonInstance.xib in Resources */,
 				5195B3FE1AB70284007CFA8B /* LaunchScreen.xib in Resources */,
+				BDC5A97B1B7DF18D00AC14C4 /* SimpleDragInstance.xib in Resources */,
 				5195B3FB1AB70284007CFA8B /* Images.xcassets in Resources */,
 				512933461B6FA6B4002634D5 /* TextFieldInstanceView.xib in Resources */,
 				51E10C381B47A8EB009B162E /* TableInstanceView.xib in Resources */,
@@ -2305,6 +2335,7 @@
 				BDAE155C1B7C7FED001908A5 /* MJRefresh.bundle in Resources */,
 				BDAE15C81B7C7FED001908A5 /* LICENSE in Resources */,
 				512CB77F1B5E841B0084E5AB /* Selected.png in Resources */,
+				BDC5A9751B7DEF9100AC14C4 /* GestureViewController.xib in Resources */,
 				BDAE15B61B7C7FED001908A5 /* SSKeychain.strings in Resources */,
 				BDAE15C21B7C7FED001908A5 /* LICENSE.txt in Resources */,
 				BDAE10451B7C7D48001908A5 /* AutoLayoutViewInstance.xib in Resources */,
@@ -2413,6 +2444,8 @@
 				51E10E271B481BD4009B162E /* UINavigationController+KeyboardFix.m in Sources */,
 				BDAE15B51B7C7FED001908A5 /* SevenSwitch.m in Sources */,
 				BDAE122A1B7C7E17001908A5 /* UIButton+Parameter.m in Sources */,
+				BDC5A9701B7DEF5800AC14C4 /* HSCButton.m in Sources */,
+				BDC5A9741B7DEF9100AC14C4 /* GestureViewController.m in Sources */,
 				51F410C41B525041008DD35E /* TableInstanceStyle.m in Sources */,
 				51E10E021B481BD4009B162E /* UIBezierPath+SVG.m in Sources */,
 				51E10E501B481BD4009B162E /* WebView+Debug.m in Sources */,
@@ -2429,6 +2462,7 @@
 				51E10C581B480CE8009B162E /* TableInstanceInitCell.m in Sources */,
 				BDAE155D1B7C7FED001908A5 /* MJRefreshBaseView.m in Sources */,
 				51E10DF51B481BD4009B162E /* NSString+UrlEncode.m in Sources */,
+				BDC5A97A1B7DF18D00AC14C4 /* SimpleDragInstance.m in Sources */,
 				BDAE15B91B7C7FED001908A5 /* SSKeychainQuery.m in Sources */,
 				51E10DE91B481BD4009B162E /* NSObject+Runtime.m in Sources */,
 				BDAE11D81B7C7E17001908A5 /* CALayer+Addition.m in Sources */,

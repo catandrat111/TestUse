@@ -11,4 +11,5 @@
 @interface UIDevice (Info)
 +(NSString*)getDeviceType;
 +(NSString*)getUDID;
++(NSString*)getUDID1;
 @end

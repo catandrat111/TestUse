@@ -66,4 +66,14 @@
 }
 
 
++(NSString*)getUDID1{
+    NSString* udid = @"";
+    if(![SSKeychain passwordForService:nil account:@"hello"]){
+        NSString* uuidStr = [[self class] createUuidString];
+        [SSKeychain setPassword:uuidStr forService: nil account:@"hello"];
+    }
+    udid = [SSKeychain passwordForService:nil account:@"hello"];
+    return udid;
+
+}
 @end
