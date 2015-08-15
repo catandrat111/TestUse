@@ -7,16 +7,26 @@
 //
 
 #import "CircleViewController.h"
-
+#import "CircleProgressView.h"
 @interface CircleViewController ()
-
+{
+    CircleProgressView *progress;
+}
 @end
 
 @implementation CircleViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+    progress = [[CircleProgressView alloc] initWithFrame:CGRectMake(0, 64, 60, 60)];
+    progress.fstartValue = 0;
+    progress.flineWidth = 2.0f;
+    progress.lineColor = [UIColor redColor];
+    //view.fvalue = 1.0f;
+    [self.view addSubview:progress];
+    
+    [NSTimer scheduledTimerWithTimeInterval:1.0f target:self selector:@selector(circleAnimation) userInfo:nil repeats:YES];
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -24,14 +34,10 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (void)circleAnimation
+{
+    progress.fvalue = arc4random()%100/100.f;
 }
-*/
+
 
 @end

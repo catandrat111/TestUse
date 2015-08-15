@@ -25,8 +25,8 @@
 //    [tableView setAutoresizingMask:UIViewAutoresizingFlexibleTopMargin | UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleBottomMargin];
     tableView_.delegate = self;
     tableView_.dataSource = self;
-    dataSource = @[@"UILABEL",@"UIBUTTON",@"UITABLEVIEW",@"UISTATUSBAR",@"UINSEARCHBAR",@"UINAVIGATIONBAR",@"UISLIDER",@"UITEXTFILED",@"AUTOSIZE",@"Gesture"];
-    dict = @{@"UITABLEVIEW":@"TableInstanceView",@"UILABEL":@"LabelInstance",@"UISLIDER":@"SliderInstance",@"UIBUTTON":@"ButtonInstance",@"UINAVIGATIONBAR":@"NavigationBarInstanceView",@"UITEXTFILED":@"TextFieldInstanceView",@"AUTOSIZE":@"AutoSizeViewInstance",@"Gesture":@"GestureViewController"};
+    dataSource = @[@"UILABEL",@"UIBUTTON",@"UITABLEVIEW",@"UISTATUSBAR",@"UINSEARCHBAR",@"UINAVIGATIONBAR",@"UISLIDER",@"UITEXTFILED",@"AUTOSIZE",@"Gesture",@"DrawView"];
+    dict = @{@"UITABLEVIEW":@"TableInstanceView",@"UILABEL":@"LabelInstance",@"UISLIDER":@"SliderInstance",@"UIBUTTON":@"ButtonInstance",@"UINAVIGATIONBAR":@"NavigationBarInstanceView",@"UITEXTFILED":@"TextFieldInstanceView",@"AUTOSIZE":@"AutoSizeViewInstance",@"Gesture":@"GestureViewController",@"DrawView":@"DrawViewInstance"};
     [self.view addSubview:tableView_];
 }
 

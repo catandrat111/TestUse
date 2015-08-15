@@ -13,6 +13,13 @@
 		512933451B6FA6B4002634D5 /* TextFieldInstanceView.m in Sources */ = {isa = PBXBuildFile; fileRef = 512933431B6FA6B4002634D5 /* TextFieldInstanceView.m */; };
 		512933461B6FA6B4002634D5 /* TextFieldInstanceView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 512933441B6FA6B4002634D5 /* TextFieldInstanceView.xib */; };
 		512CB77F1B5E841B0084E5AB /* Selected.png in Resources */ = {isa = PBXBuildFile; fileRef = 512CB77E1B5E841B0084E5AB /* Selected.png */; };
+		5158D1931B7E242000ACF3AD /* DrawViewInstance.m in Sources */ = {isa = PBXBuildFile; fileRef = 5158D1911B7E242000ACF3AD /* DrawViewInstance.m */; };
+		5158D1941B7E242000ACF3AD /* DrawViewInstance.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5158D1921B7E242000ACF3AD /* DrawViewInstance.xib */; };
+		5158D1971B7E24BB00ACF3AD /* CircleProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5158D1961B7E24BB00ACF3AD /* CircleProgressView.m */; };
+		5158D19B1B7E253000ACF3AD /* CircleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5158D1991B7E253000ACF3AD /* CircleViewController.m */; };
+		5158D19C1B7E253000ACF3AD /* CircleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5158D19A1B7E253000ACF3AD /* CircleViewController.xib */; };
+		5158D1A01B7E355000ACF3AD /* PanGestureInstance.m in Sources */ = {isa = PBXBuildFile; fileRef = 5158D19E1B7E355000ACF3AD /* PanGestureInstance.m */; };
+		5158D1A11B7E355000ACF3AD /* PanGestureInstance.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5158D19F1B7E355000ACF3AD /* PanGestureInstance.xib */; };
 		515DFBD81B6CE3BA003C7B8E /* NavigationBarInstanceView.m in Sources */ = {isa = PBXBuildFile; fileRef = 515DFBD61B6CE3BA003C7B8E /* NavigationBarInstanceView.m */; };
 		515DFBD91B6CE3BA003C7B8E /* NavigationBarInstanceView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 515DFBD71B6CE3BA003C7B8E /* NavigationBarInstanceView.xib */; };
 		5166F55B1B57F43200D440FC /* Reveal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5166F55A1B57F43200D440FC /* Reveal.framework */; };
@@ -318,6 +325,17 @@
 		512933431B6FA6B4002634D5 /* TextFieldInstanceView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TextFieldInstanceView.m; sourceTree = "<group>"; };
 		512933441B6FA6B4002634D5 /* TextFieldInstanceView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TextFieldInstanceView.xib; sourceTree = "<group>"; };
 		512CB77E1B5E841B0084E5AB /* Selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Selected.png; sourceTree = "<group>"; };
+		5158D1901B7E242000ACF3AD /* DrawViewInstance.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrawViewInstance.h; sourceTree = "<group>"; };
+		5158D1911B7E242000ACF3AD /* DrawViewInstance.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrawViewInstance.m; sourceTree = "<group>"; };
+		5158D1921B7E242000ACF3AD /* DrawViewInstance.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DrawViewInstance.xib; sourceTree = "<group>"; };
+		5158D1951B7E24BB00ACF3AD /* CircleProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CircleProgressView.h; sourceTree = "<group>"; };
+		5158D1961B7E24BB00ACF3AD /* CircleProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CircleProgressView.m; sourceTree = "<group>"; };
+		5158D1981B7E253000ACF3AD /* CircleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CircleViewController.h; sourceTree = "<group>"; };
+		5158D1991B7E253000ACF3AD /* CircleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CircleViewController.m; sourceTree = "<group>"; };
+		5158D19A1B7E253000ACF3AD /* CircleViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CircleViewController.xib; sourceTree = "<group>"; };
+		5158D19D1B7E355000ACF3AD /* PanGestureInstance.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PanGestureInstance.h; sourceTree = "<group>"; };
+		5158D19E1B7E355000ACF3AD /* PanGestureInstance.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PanGestureInstance.m; sourceTree = "<group>"; };
+		5158D19F1B7E355000ACF3AD /* PanGestureInstance.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PanGestureInstance.xib; sourceTree = "<group>"; };
 		515DFBD51B6CE3BA003C7B8E /* NavigationBarInstanceView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavigationBarInstanceView.h; sourceTree = "<group>"; };
 		515DFBD61B6CE3BA003C7B8E /* NavigationBarInstanceView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NavigationBarInstanceView.m; sourceTree = "<group>"; };
 		515DFBD71B6CE3BA003C7B8E /* NavigationBarInstanceView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NavigationBarInstanceView.xib; sourceTree = "<group>"; };
@@ -900,12 +918,29 @@
 			name = TextField;
 			sourceTree = "<group>";
 		};
+		5158D18F1B7E23D000ACF3AD /* Draw */ = {
+			isa = PBXGroup;
+			children = (
+				5158D1901B7E242000ACF3AD /* DrawViewInstance.h */,
+				5158D1911B7E242000ACF3AD /* DrawViewInstance.m */,
+				5158D1921B7E242000ACF3AD /* DrawViewInstance.xib */,
+				5158D1951B7E24BB00ACF3AD /* CircleProgressView.h */,
+				5158D1961B7E24BB00ACF3AD /* CircleProgressView.m */,
+				5158D1981B7E253000ACF3AD /* CircleViewController.h */,
+				5158D1991B7E253000ACF3AD /* CircleViewController.m */,
+				5158D19A1B7E253000ACF3AD /* CircleViewController.xib */,
+				5158D19D1B7E355000ACF3AD /* PanGestureInstance.h */,
+				5158D19E1B7E355000ACF3AD /* PanGestureInstance.m */,
+				5158D19F1B7E355000ACF3AD /* PanGestureInstance.xib */,
+			);
+			name = Draw;
+			sourceTree = "<group>";
+		};
 		5195B3E11AB70283007CFA8B = {
 			isa = PBXGroup;
 			children = (
 				BDAE15E01B7C8ABB001908A5 /* libsqlite3.dylib */,
 				BDAE10391B7C77AE001908A5 /* PrefixHeader.pch */,
-				51FA7A191B70F99E0002990E /* Model */,
 				5166F55A1B57F43200D440FC /* Reveal.framework */,
 				51E10E561B482FF0009B162E /* libz.dylib */,
 				51E10E541B482FE2009B162E /* CoreData.framework */,
@@ -930,6 +965,8 @@
 		5195B3EC1AB70284007CFA8B /* TEST11 */ = {
 			isa = PBXGroup;
 			children = (
+				5158D18F1B7E23D000ACF3AD /* Draw */,
+				51FA7A191B70F99E0002990E /* Model */,
 				BDC5A9761B7DEFC500AC14C4 /* Gesture */,
 				BDF8F02E1B7C97D9007DAC63 /* TEST11.entitlements */,
 				BDAE12451B7C7FEC001908A5 /* LIbs */,
@@ -1800,6 +1837,7 @@
 				51FA7A2A1B7105180002990E /* Person+GHAssociatedObject.m */,
 			);
 			name = Model;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		51FA7A251B70FB360002990E /* Usage */ = {
@@ -2320,9 +2358,12 @@
 				BDAE103E1B7C786F001908A5 /* AutoSizeViewInstance.xib in Resources */,
 				BDAE15B71B7C7FED001908A5 /* Info.plist in Resources */,
 				51B1C61C1B50D79300E68110 /* SliderInstance.xib in Resources */,
+				5158D1941B7E242000ACF3AD /* DrawViewInstance.xib in Resources */,
 				BDAE15BE1B7C7FED001908A5 /* LICENSE.txt in Resources */,
+				5158D19C1B7E253000ACF3AD /* CircleViewController.xib in Resources */,
 				BDAE15B31B7C7FED001908A5 /* LICENSE in Resources */,
 				51FA7A241B70FB2A0002990E /* UsageViewController.xib in Resources */,
+				5158D1A11B7E355000ACF3AD /* PanGestureInstance.xib in Resources */,
 				BDAE15CB1B7C7FED001908A5 /* LICENSE in Resources */,
 				51E10DD41B481BD4009B162E /* NSDateTimeAgo.bundle in Resources */,
 				51E10C591B480CE8009B162E /* TableInstanceInitCell.xib in Resources */,
@@ -2515,7 +2556,9 @@
 				BDAE15AD1B7C7FED001908A5 /* UIImage+GIF.m in Sources */,
 				5195B3F01AB70284007CFA8B /* main.m in Sources */,
 				51E10E381B481BD4009B162E /* UITextView+Select.m in Sources */,
+				5158D1971B7E24BB00ACF3AD /* CircleProgressView.m in Sources */,
 				51E10DC41B481BD4009B162E /* NSManagedObjectContext+ObjectClear.m in Sources */,
+				5158D1931B7E242000ACF3AD /* DrawViewInstance.m in Sources */,
 				51E10E0F1B481BD4009B162E /* UIControl+Block.m in Sources */,
 				BDAE15571B7C7FED001908A5 /* MJType.m in Sources */,
 				51E10DE21B481BD4009B162E /* NSObject+AssociatedObject.m in Sources */,
@@ -2539,6 +2582,7 @@
 				51E10DD31B481BD4009B162E /* NSDate+Utilities.m in Sources */,
 				BDAE15541B7C7FED001908A5 /* MJIvar.m in Sources */,
 				51E10E1E1B481BD4009B162E /* UIImage+RoundedCorner.m in Sources */,
+				5158D1A01B7E355000ACF3AD /* PanGestureInstance.m in Sources */,
 				BDAE155A1B7C7FED001908A5 /* NSObject+MJKeyValue.m in Sources */,
 				51E10DE61B481BD4009B162E /* NSObject+KVOBlocks.m in Sources */,
 				51E10DCF1B481BD4009B162E /* NSDate+Extension.m in Sources */,
@@ -2569,6 +2613,7 @@
 				BDAE15D51B7C7FED001908A5 /* UIView+Position.m in Sources */,
 				BDAE12301B7C7E17001908A5 /* UITableView+iOS7Style.m in Sources */,
 				BDAE155B1B7C7FED001908A5 /* NSObject+MJMember.m in Sources */,
+				5158D19B1B7E253000ACF3AD /* CircleViewController.m in Sources */,
 				BDAE15AF1B7C7FED001908A5 /* UIImage+WebP.m in Sources */,
 				51E10E4A1B481BD4009B162E /* UIWebView+Alert.m in Sources */,
 				BDAE15491B7C7FED001908A5 /* MASConstraint.m in Sources */,

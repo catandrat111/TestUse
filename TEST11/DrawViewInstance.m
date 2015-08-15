@@ -8,7 +8,11 @@
 
 #import "DrawViewInstance.h"
 
-@interface DrawViewInstance ()
+@interface DrawViewInstance ()<UITableViewDelegate,UITableViewDataSource>
+@property(nonatomic,weak) IBOutlet UITableView* tableView;
+@property(nonatomic,strong) NSArray* dataSource;
+@property(nonatomic,strong) NSDictionary* dataSourceDict;
+
 
 @end
 
@@ -16,7 +20,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+    self.dataSource = @[@"circle"];
+    self.dataSourceDict = @{@"circle" :@"CircleViewController"};
+
 }
 
 - (void)didReceiveMemoryWarning {
@@ -24,14 +30,23 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    return  self.dataSource.count;
 }
-*/
+
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    UITableViewCell* cell = [self.tableView dequeueReusableCellWithIdentifier:@"cell"];
+    if(!cell){
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cell"];
+    }
+    cell.textLabel.text = self.dataSource[indexPath.row];
+    return cell;
+}
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    NSString* className = self.dataSourceDict[self.dataSource[indexPath.row]];
+    Class cs = NSClassFromString(className);
+    [self.navigationController pushViewController:[cs new] animated:YES];
+}
 
 @end

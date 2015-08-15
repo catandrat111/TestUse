@@ -18,8 +18,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.dataSource = @[@"simpleDrag"];
-    self.dataSourceDict = @{@"simpleDrag" :@"SimpleDragInstance"};
+    self.dataSource = @[@"simpleDrag",@"PanGesture"];
+    self.dataSourceDict = @{@"simpleDrag" :@"SimpleDragInstance",@"PanGesture":@"PanGestureInstance"};
 }
 
 - (void)didReceiveMemoryWarning {
