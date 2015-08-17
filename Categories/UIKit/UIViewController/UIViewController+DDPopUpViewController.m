@@ -304,6 +304,9 @@ static NSMutableArray *__popUpViewControllers = nil;
     else if (animationType == DDPopUpAnimationTypeSlideRTL){
         startFrame = CGRectOffset(destinationFrame, CGRectGetWidth(containerVC.view.bounds) -  CGRectGetMinX(destinationFrame), 0);
     }
+    else if(animationType == DDPopUpAnimationTypeSlideVerticalFromTop){
+        startFrame = CGRectOffset(destinationFrame, 0,  - CGRectGetMaxY(destinationFrame));
+    }
     else{
         animationDuration = 0.01;
     }
@@ -351,6 +354,9 @@ static NSMutableArray *__popUpViewControllers = nil;
     }
     else if (animationType == DDPopUpAnimationTypeSlideRTL){
         destinationFrame = CGRectOffset(destinationFrame, CGRectGetWidth(containerVC.view.bounds) - CGRectGetMinX(popupContentView.frame), 0);
+    }
+    else if(animationType == DDPopUpAnimationTypeSlideVerticalFromTop){
+        destinationFrame = CGRectOffset(destinationFrame, 0, -CGRectGetMaxY(destinationFrame));
     }
     else if (animationType == DDPopUpAnimationTypeNone){
         animationDuration = 0.01;
