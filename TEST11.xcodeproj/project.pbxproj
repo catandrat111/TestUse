@@ -15,7 +15,6 @@
 		512CB77F1B5E841B0084E5AB /* Selected.png in Resources */ = {isa = PBXBuildFile; fileRef = 512CB77E1B5E841B0084E5AB /* Selected.png */; };
 		515DFBD81B6CE3BA003C7B8E /* NavigationBarInstanceView.m in Sources */ = {isa = PBXBuildFile; fileRef = 515DFBD61B6CE3BA003C7B8E /* NavigationBarInstanceView.m */; };
 		515DFBD91B6CE3BA003C7B8E /* NavigationBarInstanceView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 515DFBD71B6CE3BA003C7B8E /* NavigationBarInstanceView.xib */; };
-		5166F55B1B57F43200D440FC /* Reveal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5166F55A1B57F43200D440FC /* Reveal.framework */; };
 		5195B3F01AB70284007CFA8B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5195B3EF1AB70284007CFA8B /* main.m */; };
 		5195B3F31AB70284007CFA8B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5195B3F21AB70284007CFA8B /* AppDelegate.m */; };
 		5195B3F61AB70284007CFA8B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5195B3F51AB70284007CFA8B /* ViewController.m */; };
@@ -291,6 +290,9 @@
 		BDAE15DC1B7C7FED001908A5 /* WGS84TOGCJ02.m in Sources */ = {isa = PBXBuildFile; fileRef = BDAE14D21B7C7FED001908A5 /* WGS84TOGCJ02.m */; };
 		BDAE15DF1B7C8905001908A5 /* Constant.m in Sources */ = {isa = PBXBuildFile; fileRef = BDAE15DE1B7C8905001908A5 /* Constant.m */; };
 		BDAE15E11B7C8ABB001908A5 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BDAE15E01B7C8ABB001908A5 /* libsqlite3.dylib */; };
+		BDC072821B8467BD00587368 /* SearchBarInstanceView.m in Sources */ = {isa = PBXBuildFile; fileRef = BDC072801B8467BD00587368 /* SearchBarInstanceView.m */; };
+		BDC072831B8467BD00587368 /* SearchBarInstanceView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BDC072811B8467BD00587368 /* SearchBarInstanceView.xib */; };
+		BDC072881B84825D00587368 /* Reveal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDC072871B84825D00587368 /* Reveal.framework */; };
 		BDC5A9701B7DEF5800AC14C4 /* HSCButton.m in Sources */ = {isa = PBXBuildFile; fileRef = BDC5A96F1B7DEF5800AC14C4 /* HSCButton.m */; };
 		BDC5A9741B7DEF9100AC14C4 /* GestureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BDC5A9721B7DEF9100AC14C4 /* GestureViewController.m */; };
 		BDC5A9751B7DEF9100AC14C4 /* GestureViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BDC5A9731B7DEF9100AC14C4 /* GestureViewController.xib */; };
@@ -321,7 +323,6 @@
 		515DFBD51B6CE3BA003C7B8E /* NavigationBarInstanceView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavigationBarInstanceView.h; sourceTree = "<group>"; };
 		515DFBD61B6CE3BA003C7B8E /* NavigationBarInstanceView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NavigationBarInstanceView.m; sourceTree = "<group>"; };
 		515DFBD71B6CE3BA003C7B8E /* NavigationBarInstanceView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NavigationBarInstanceView.xib; sourceTree = "<group>"; };
-		5166F55A1B57F43200D440FC /* Reveal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Reveal.framework; sourceTree = "<group>"; };
 		5195B3EA1AB70284007CFA8B /* TEST11.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TEST11.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5195B3EE1AB70284007CFA8B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5195B3EF1AB70284007CFA8B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -844,6 +845,10 @@
 		BDAE15DD1B7C8905001908A5 /* Constant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Constant.h; path = WeixinActivity/Constant.h; sourceTree = "<group>"; };
 		BDAE15DE1B7C8905001908A5 /* Constant.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Constant.m; path = WeixinActivity/Constant.m; sourceTree = "<group>"; };
 		BDAE15E01B7C8ABB001908A5 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		BDC0727F1B8467BD00587368 /* SearchBarInstanceView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchBarInstanceView.h; sourceTree = "<group>"; };
+		BDC072801B8467BD00587368 /* SearchBarInstanceView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchBarInstanceView.m; sourceTree = "<group>"; };
+		BDC072811B8467BD00587368 /* SearchBarInstanceView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchBarInstanceView.xib; sourceTree = "<group>"; };
+		BDC072871B84825D00587368 /* Reveal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Reveal.framework; sourceTree = "<group>"; };
 		BDC5A96E1B7DEF5800AC14C4 /* HSCButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HSCButton.h; path = ../HSCButton.h; sourceTree = "<group>"; };
 		BDC5A96F1B7DEF5800AC14C4 /* HSCButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HSCButton.m; path = ../HSCButton.m; sourceTree = "<group>"; };
 		BDC5A9711B7DEF9100AC14C4 /* GestureViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GestureViewController.h; sourceTree = "<group>"; };
@@ -860,8 +865,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BDC072881B84825D00587368 /* Reveal.framework in Frameworks */,
 				BDAE15E11B7C8ABB001908A5 /* libsqlite3.dylib in Frameworks */,
-				5166F55B1B57F43200D440FC /* Reveal.framework in Frameworks */,
 				51E10E571B482FF0009B162E /* libz.dylib in Frameworks */,
 				51E10E551B482FE2009B162E /* CoreData.framework in Frameworks */,
 				51E10E531B482F9B009B162E /* CoreLocation.framework in Frameworks */,
@@ -903,10 +908,10 @@
 		5195B3E11AB70283007CFA8B = {
 			isa = PBXGroup;
 			children = (
+				BDC072871B84825D00587368 /* Reveal.framework */,
 				BDAE15E01B7C8ABB001908A5 /* libsqlite3.dylib */,
 				BDAE10391B7C77AE001908A5 /* PrefixHeader.pch */,
 				51FA7A191B70F99E0002990E /* Model */,
-				5166F55A1B57F43200D440FC /* Reveal.framework */,
 				51E10E561B482FF0009B162E /* libz.dylib */,
 				51E10E541B482FE2009B162E /* CoreData.framework */,
 				51E10E521B482F9B009B162E /* CoreLocation.framework */,
@@ -930,6 +935,7 @@
 		5195B3EC1AB70284007CFA8B /* TEST11 */ = {
 			isa = PBXGroup;
 			children = (
+				BDC0727E1B84677900587368 /* SearchBar */,
 				BDC5A9761B7DEFC500AC14C4 /* Gesture */,
 				BDF8F02E1B7C97D9007DAC63 /* TEST11.entitlements */,
 				BDAE12451B7C7FEC001908A5 /* LIbs */,
@@ -2204,6 +2210,16 @@
 			path = "UIView+Position";
 			sourceTree = "<group>";
 		};
+		BDC0727E1B84677900587368 /* SearchBar */ = {
+			isa = PBXGroup;
+			children = (
+				BDC0727F1B8467BD00587368 /* SearchBarInstanceView.h */,
+				BDC072801B8467BD00587368 /* SearchBarInstanceView.m */,
+				BDC072811B8467BD00587368 /* SearchBarInstanceView.xib */,
+			);
+			name = SearchBar;
+			sourceTree = "<group>";
+		};
 		BDC5A9761B7DEFC500AC14C4 /* Gesture */ = {
 			isa = PBXGroup;
 			children = (
@@ -2340,6 +2356,7 @@
 				BDAE15C21B7C7FED001908A5 /* LICENSE.txt in Resources */,
 				BDAE10451B7C7D48001908A5 /* AutoLayoutViewInstance.xib in Resources */,
 				51F410BF1B522661008DD35E /* slidermin.png in Resources */,
+				BDC072831B8467BD00587368 /* SearchBarInstanceView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2538,6 +2555,7 @@
 				BDAE15BD1B7C7FED001908A5 /* SVProgressHUD.m in Sources */,
 				51E10DD31B481BD4009B162E /* NSDate+Utilities.m in Sources */,
 				BDAE15541B7C7FED001908A5 /* MJIvar.m in Sources */,
+				BDC072821B8467BD00587368 /* SearchBarInstanceView.m in Sources */,
 				51E10E1E1B481BD4009B162E /* UIImage+RoundedCorner.m in Sources */,
 				BDAE155A1B7C7FED001908A5 /* NSObject+MJKeyValue.m in Sources */,
 				51E10DE61B481BD4009B162E /* NSObject+KVOBlocks.m in Sources */,
