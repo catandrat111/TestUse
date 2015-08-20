@@ -30,6 +30,13 @@
     
      [self.button3 beginSubmitting:@"ddd"];
     
+    NSString* foidStr = @"124325";
+    NSMutableString* matchstr = [[NSMutableString alloc] init];
+    for (int i = 0; i < foidStr.length -2 ;i++) {
+       [matchstr appendString:@"*"];
+    }
+    foidStr = [foidStr stringByReplacingCharactersInRange:NSMakeRange(1, foidStr.length -2) withString:matchstr];
+    
 }
 
 - (void)didReceiveMemoryWarning {
