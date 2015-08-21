@@ -929,9 +929,6 @@
 				5158D1981B7E253000ACF3AD /* CircleViewController.h */,
 				5158D1991B7E253000ACF3AD /* CircleViewController.m */,
 				5158D19A1B7E253000ACF3AD /* CircleViewController.xib */,
-				5158D19D1B7E355000ACF3AD /* PanGestureInstance.h */,
-				5158D19E1B7E355000ACF3AD /* PanGestureInstance.m */,
-				5158D19F1B7E355000ACF3AD /* PanGestureInstance.xib */,
 			);
 			name = Draw;
 			sourceTree = "<group>";
@@ -2245,6 +2242,9 @@
 		BDC5A9761B7DEFC500AC14C4 /* Gesture */ = {
 			isa = PBXGroup;
 			children = (
+				5158D19D1B7E355000ACF3AD /* PanGestureInstance.h */,
+				5158D19E1B7E355000ACF3AD /* PanGestureInstance.m */,
+				5158D19F1B7E355000ACF3AD /* PanGestureInstance.xib */,
 				BDC5A96E1B7DEF5800AC14C4 /* HSCButton.h */,
 				BDC5A96F1B7DEF5800AC14C4 /* HSCButton.m */,
 				BDC5A9711B7DEF9100AC14C4 /* GestureViewController.h */,

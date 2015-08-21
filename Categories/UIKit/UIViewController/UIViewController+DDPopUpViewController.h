@@ -42,6 +42,7 @@ typedef NS_ENUM(NSInteger, DDPopUpAnimationType){
     DDPopUpAnimationTypeSlideVertical,  //默认的动画类型，从屏幕底部向上滑出
     DDPopUpAnimationTypeFade,           //渐现渐隐
     DDPopUpAnimationTypeSlideLTR,       //从屏幕左边向右滑出
+    DDPopUpAnimationTypeSlideRTL,
     DDPopUpAnimationTypeSlideVerticalFromTop,//屏幕从上面滑出 //user add
 };
 
