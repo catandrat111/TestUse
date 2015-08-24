@@ -74,36 +74,61 @@
     }
     
     if (([(UIPanGestureRecognizer *)recognizer state] == UIGestureRecognizerStateEnded) || ([(UIPanGestureRecognizer *)recognizer state] == UIGestureRecognizerStateCancelled)) {
-        CGFloat x = recognizer.view.center.x;
-        CGFloat y = recognizer.view.center.y;
+//        CGFloat x = recognizer.view.center.x;
+//        CGFloat y = recognizer.view.center.y;
+//        
+//        if (x > firstX) {
+//            x = self.view.width - recognizer.view.width / 2.0;
+//        } else {
+//            x = recognizer.view.width / 2.0;
+//        }
+//        
+//        if (y > firstY) {
+//            y = self.view.height - recognizer.view.height / 2.0;
+//        } else {
+//            y = recognizer.view.height / 2.0;
+//        }
+//        
+//        CGFloat velocityX = (0.2 *[recognizer velocityInView:self.view].x);
+//        
+//        [UIView beginAnimations:nil context:NULL];
+//        
+//        [UIView setAnimationDuration:ABS(velocityX * 0.00002 + 0.2)];
+//        
+//        [UIView setAnimationCurve:UIViewAnimationCurveEaseOut];
+//        
+//        recognizer.view.center = CGPointMake(x, y);
+//        
+//        [UIView commitAnimations];
+//        
+//        NSLog(@"gesture translatedPoint  end is %@", NSStringFromCGPoint(translatedPoint));
+//        
+//        NSLog(@"pan gesture testPanView end  is %@,%@", NSStringFromCGPoint([recognizer view].center), NSStringFromCGRect([recognizer view].frame));
         
-        if (x > firstX) {
-            x = self.view.width - recognizer.view.width / 2.0;
-        } else {
-            x = recognizer.view.width / 2.0;
-        }
         
-        if (y > firstY) {
-            y = self.view.height - recognizer.view.height / 2.0;
-        } else {
-            y = recognizer.view.height / 2.0;
-        }
+        CGPoint velocity = [recognizer velocityInView:self.view];
         
-        CGFloat velocityX = (0.2 *[recognizer velocityInView:self.view].x);
+        CGFloat magnitude = sqrtf((velocity.x * velocity.x) + (velocity.y * velocity.y));
         
-        [UIView beginAnimations:nil context:NULL];
+        CGFloat slideMult = magnitude / 200;
         
-        [UIView setAnimationDuration:ABS(velocityX * 0.00002 + 0.2)];
+        NSLog(@"magnitude: %f, slideMult: %f", magnitude, slideMult);
         
-        [UIView setAnimationCurve:UIViewAnimationCurveEaseOut];
+        float slideFactor = 0.1 * slideMult; // Increase for more of a slide
         
-        recognizer.view.center = CGPointMake(x, y);
+        CGPoint finalPoint = CGPointMake(recognizer.view.center.x + (velocity.x * slideFactor),
+                                         
+                                         recognizer.view.center.y + (velocity.y * slideFactor));
         
-        [UIView commitAnimations];
+        finalPoint.x = MIN(MAX(finalPoint.x, 0), self.view.bounds.size.width);
         
-        NSLog(@"gesture translatedPoint  end is %@", NSStringFromCGPoint(translatedPoint));
+        finalPoint.y = MIN(MAX(finalPoint.y, 0), self.view.bounds.size.height);
         
-        NSLog(@"pan gesture testPanView end  is %@,%@", NSStringFromCGPoint([recognizer view].center), NSStringFromCGRect([recognizer view].frame));
+        [UIView animateWithDuration:slideFactor*2 delay:0 options:UIViewAnimationOptionCurveEaseOut animations:^{
+            
+            recognizer.view.center = finalPoint;
+            
+        } completion:nil];
     }
 }
 @end

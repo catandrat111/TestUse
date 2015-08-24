@@ -303,6 +303,8 @@
 		BDC5A9751B7DEF9100AC14C4 /* GestureViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BDC5A9731B7DEF9100AC14C4 /* GestureViewController.xib */; };
 		BDC5A97A1B7DF18D00AC14C4 /* SimpleDragInstance.m in Sources */ = {isa = PBXBuildFile; fileRef = BDC5A9781B7DF18D00AC14C4 /* SimpleDragInstance.m */; };
 		BDC5A97B1B7DF18D00AC14C4 /* SimpleDragInstance.xib in Resources */ = {isa = PBXBuildFile; fileRef = BDC5A9791B7DF18D00AC14C4 /* SimpleDragInstance.xib */; };
+		BDD373F11B86BBB20047313A /* AlgorithmClass.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD373F01B86BBB10047313A /* AlgorithmClass.m */; };
+		BDD373F41B86BC740047313A /* AL_sort.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD373F31B86BC740047313A /* AL_sort.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -870,6 +872,10 @@
 		BDC5A9771B7DF18D00AC14C4 /* SimpleDragInstance.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleDragInstance.h; sourceTree = "<group>"; };
 		BDC5A9781B7DF18D00AC14C4 /* SimpleDragInstance.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimpleDragInstance.m; sourceTree = "<group>"; };
 		BDC5A9791B7DF18D00AC14C4 /* SimpleDragInstance.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SimpleDragInstance.xib; sourceTree = "<group>"; };
+		BDD373EF1B86BBB10047313A /* AlgorithmClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlgorithmClass.h; sourceTree = "<group>"; };
+		BDD373F01B86BBB10047313A /* AlgorithmClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlgorithmClass.m; sourceTree = "<group>"; };
+		BDD373F21B86BC740047313A /* AL_sort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AL_sort.h; sourceTree = "<group>"; };
+		BDD373F31B86BC740047313A /* AL_sort.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AL_sort.m; sourceTree = "<group>"; };
 		BDF8F02E1B7C97D9007DAC63 /* TEST11.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = TEST11.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -962,6 +968,7 @@
 		5195B3EC1AB70284007CFA8B /* TEST11 */ = {
 			isa = PBXGroup;
 			children = (
+				BDD373EE1B86BB1E0047313A /* Algorithm */,
 				5158D18F1B7E23D000ACF3AD /* Draw */,
 				51FA7A191B70F99E0002990E /* Model */,
 				BDC5A9761B7DEFC500AC14C4 /* Gesture */,
@@ -2257,6 +2264,17 @@
 			name = Gesture;
 			sourceTree = "<group>";
 		};
+		BDD373EE1B86BB1E0047313A /* Algorithm */ = {
+			isa = PBXGroup;
+			children = (
+				BDD373EF1B86BBB10047313A /* AlgorithmClass.h */,
+				BDD373F01B86BBB10047313A /* AlgorithmClass.m */,
+				BDD373F21B86BC740047313A /* AL_sort.h */,
+				BDD373F31B86BC740047313A /* AL_sort.m */,
+			);
+			name = Algorithm;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -2480,6 +2498,7 @@
 				51E10E0D1B481BD4009B162E /* UIColor+Web.m in Sources */,
 				BDAE15A41B7C7FED001908A5 /* NSData+ImageContentType.m in Sources */,
 				BDAE15DF1B7C8905001908A5 /* Constant.m in Sources */,
+				BDD373F41B86BC740047313A /* AL_sort.m in Sources */,
 				51E10DD81B481BD4009B162E /* NSDictionary+Merge.m in Sources */,
 				51E10E2E1B481BD4009B162E /* UIScrollView+Addition.m in Sources */,
 				51E10E271B481BD4009B162E /* UINavigationController+KeyboardFix.m in Sources */,
@@ -2494,6 +2513,7 @@
 				51E10DC51B481BD4009B162E /* CLLocation+CH1903.m in Sources */,
 				51E10E3E1B481BD4009B162E /* UIView+Frame.m in Sources */,
 				51E10DD71B481BD4009B162E /* NSDictionary+JSONString.m in Sources */,
+				BDD373F11B86BBB20047313A /* AlgorithmClass.m in Sources */,
 				51E10E3D1B481BD4009B162E /* UIView+Find.m in Sources */,
 				51E10DD21B481BD4009B162E /* NSDate+TimeAgo.m in Sources */,
 				51E10E091B481BD4009B162E /* UIColor+Gradient.m in Sources */,
