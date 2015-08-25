@@ -25,8 +25,12 @@
 //    }
 //    return nil;
 //}
+//先pointInside 后 touchesBegan
+-(BOOL)pointInside:(CGPoint)point withEvent:(UIEvent *)event{
+    return YES;
+}
 
-//-(BOOL)pointInside:(CGPoint)point withEvent:(UIEvent *)event{
-//    return NO;
-//}
+-(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event{
+    NSLog(@"touch");
+}
 @end
