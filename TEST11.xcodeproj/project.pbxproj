@@ -202,6 +202,12 @@
 		51FA7A231B70FB2A0002990E /* UsageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 51FA7A211B70FB2A0002990E /* UsageViewController.m */; };
 		51FA7A241B70FB2A0002990E /* UsageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51FA7A221B70FB2A0002990E /* UsageViewController.xib */; };
 		51FA7A2B1B7105180002990E /* Person+GHAssociatedObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 51FA7A2A1B7105180002990E /* Person+GHAssociatedObject.m */; };
+		BD25F7741B8C05DE00C0BC8E /* HitTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD25F7731B8C05DE00C0BC8E /* HitTestViewController.m */; };
+		BD25F7771B8C076E00C0BC8E /* HitTestAView.m in Sources */ = {isa = PBXBuildFile; fileRef = BD25F7761B8C076E00C0BC8E /* HitTestAView.m */; };
+		BD25F77A1B8C07B500C0BC8E /* HiTestBView.m in Sources */ = {isa = PBXBuildFile; fileRef = BD25F7791B8C07B500C0BC8E /* HiTestBView.m */; };
+		BD25F77D1B8C07E600C0BC8E /* HitTestCView.m in Sources */ = {isa = PBXBuildFile; fileRef = BD25F77C1B8C07E600C0BC8E /* HitTestCView.m */; };
+		BD25F7801B8C081100C0BC8E /* HiTestDview.m in Sources */ = {isa = PBXBuildFile; fileRef = BD25F77F1B8C081100C0BC8E /* HiTestDview.m */; };
+		BD25F7821B8C151300C0BC8E /* hit-test-depth-first-traversal.png in Resources */ = {isa = PBXBuildFile; fileRef = BD25F7811B8C151300C0BC8E /* hit-test-depth-first-traversal.png */; };
 		BDAE103D1B7C786F001908A5 /* AutoSizeViewInstance.m in Sources */ = {isa = PBXBuildFile; fileRef = BDAE103B1B7C786F001908A5 /* AutoSizeViewInstance.m */; };
 		BDAE103E1B7C786F001908A5 /* AutoSizeViewInstance.xib in Resources */ = {isa = PBXBuildFile; fileRef = BDAE103C1B7C786F001908A5 /* AutoSizeViewInstance.xib */; };
 		BDAE10401B7C7B31001908A5 /* autosize.png in Resources */ = {isa = PBXBuildFile; fileRef = BDAE103F1B7C7B31001908A5 /* autosize.png */; };
@@ -684,6 +690,17 @@
 		51FA7A221B70FB2A0002990E /* UsageViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UsageViewController.xib; sourceTree = "<group>"; };
 		51FA7A291B7105180002990E /* Person+GHAssociatedObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Person+GHAssociatedObject.h"; sourceTree = "<group>"; };
 		51FA7A2A1B7105180002990E /* Person+GHAssociatedObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Person+GHAssociatedObject.m"; sourceTree = "<group>"; };
+		BD25F7721B8C05DE00C0BC8E /* HitTestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HitTestViewController.h; sourceTree = "<group>"; };
+		BD25F7731B8C05DE00C0BC8E /* HitTestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HitTestViewController.m; sourceTree = "<group>"; };
+		BD25F7751B8C076E00C0BC8E /* HitTestAView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HitTestAView.h; sourceTree = "<group>"; };
+		BD25F7761B8C076E00C0BC8E /* HitTestAView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HitTestAView.m; sourceTree = "<group>"; };
+		BD25F7781B8C07B500C0BC8E /* HiTestBView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HiTestBView.h; sourceTree = "<group>"; };
+		BD25F7791B8C07B500C0BC8E /* HiTestBView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HiTestBView.m; sourceTree = "<group>"; };
+		BD25F77B1B8C07E600C0BC8E /* HitTestCView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HitTestCView.h; sourceTree = "<group>"; };
+		BD25F77C1B8C07E600C0BC8E /* HitTestCView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HitTestCView.m; sourceTree = "<group>"; };
+		BD25F77E1B8C081100C0BC8E /* HiTestDview.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HiTestDview.h; sourceTree = "<group>"; };
+		BD25F77F1B8C081100C0BC8E /* HiTestDview.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HiTestDview.m; sourceTree = "<group>"; };
+		BD25F7811B8C151300C0BC8E /* hit-test-depth-first-traversal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "hit-test-depth-first-traversal.png"; sourceTree = "<group>"; };
 		BDAE10391B7C77AE001908A5 /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		BDAE103A1B7C786F001908A5 /* AutoSizeViewInstance.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AutoSizeViewInstance.h; sourceTree = "<group>"; };
 		BDAE103B1B7C786F001908A5 /* AutoSizeViewInstance.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AutoSizeViewInstance.m; sourceTree = "<group>"; };
@@ -1034,6 +1051,7 @@
 		51B1C61D1B50E12200E68110 /* Image */ = {
 			isa = PBXGroup;
 			children = (
+				BD25F7811B8C151300C0BC8E /* hit-test-depth-first-traversal.png */,
 				512CB77E1B5E841B0084E5AB /* Selected.png */,
 				51F410BC1B522638008DD35E /* slidermax.png */,
 				51B1C61E1B50E13B00E68110 /* Slice1.png */,
@@ -2260,6 +2278,16 @@
 				BDC5A9771B7DF18D00AC14C4 /* SimpleDragInstance.h */,
 				BDC5A9781B7DF18D00AC14C4 /* SimpleDragInstance.m */,
 				BDC5A9791B7DF18D00AC14C4 /* SimpleDragInstance.xib */,
+				BD25F7721B8C05DE00C0BC8E /* HitTestViewController.h */,
+				BD25F7731B8C05DE00C0BC8E /* HitTestViewController.m */,
+				BD25F7751B8C076E00C0BC8E /* HitTestAView.h */,
+				BD25F7761B8C076E00C0BC8E /* HitTestAView.m */,
+				BD25F7781B8C07B500C0BC8E /* HiTestBView.h */,
+				BD25F7791B8C07B500C0BC8E /* HiTestBView.m */,
+				BD25F77B1B8C07E600C0BC8E /* HitTestCView.h */,
+				BD25F77C1B8C07E600C0BC8E /* HitTestCView.m */,
+				BD25F77E1B8C081100C0BC8E /* HiTestDview.h */,
+				BD25F77F1B8C081100C0BC8E /* HiTestDview.m */,
 			);
 			name = Gesture;
 			sourceTree = "<group>";
@@ -2387,6 +2415,7 @@
 				51E10C591B480CE8009B162E /* TableInstanceInitCell.xib in Resources */,
 				51F410BD1B522638008DD35E /* slidermax.png in Resources */,
 				51B1C61F1B50E13B00E68110 /* Slice1.png in Resources */,
+				BD25F7821B8C151300C0BC8E /* hit-test-depth-first-traversal.png in Resources */,
 				51E10C5E1B48113E009B162E /* TableInstanceInitCellXib.xib in Resources */,
 				51F410C51B525041008DD35E /* TableInstanceStyle.xib in Resources */,
 				51E10C3E1B47AE9F009B162E /* LabelInstance.xib in Resources */,
@@ -2468,6 +2497,7 @@
 				51E10E001B481BD4009B162E /* UIBarButtonItem+Action.m in Sources */,
 				BDAE15A61B7C7FED001908A5 /* SDWebImageCompat.m in Sources */,
 				BDAE15A51B7C7FED001908A5 /* SDImageCache.m in Sources */,
+				BD25F7741B8C05DE00C0BC8E /* HitTestViewController.m in Sources */,
 				BDAE15B21B7C7FED001908A5 /* UIView+WebCacheOperation.m in Sources */,
 				51E10E311B481BD4009B162E /* UISplitViewController+QuickAccess.m in Sources */,
 				51E10E441B481BD4009B162E /* UIView+ViewController.m in Sources */,
@@ -2587,6 +2617,7 @@
 				51E10E431B481BD4009B162E /* UIView+Toast.m in Sources */,
 				51E10DD51B481BD4009B162E /* NSDateFormatter+Make.m in Sources */,
 				51E10DC91B481BD4009B162E /* NSBundle+AppIcon.m in Sources */,
+				BD25F77D1B8C07E600C0BC8E /* HitTestCView.m in Sources */,
 				BDAE15511B7C7FED001908A5 /* MJArgument.m in Sources */,
 				BDAE15C51B7C7FED001908A5 /* TPKeyboardAvoidingScrollView.m in Sources */,
 				BDAE14FF1B7C7FED001908A5 /* README.md in Sources */,
@@ -2620,6 +2651,7 @@
 				51E10E211B481BD4009B162E /* UILabel+AutoSize.m in Sources */,
 				51E10E3A1B481BD4009B162E /* UIView+BlockGesture.m in Sources */,
 				51E10E141B481BD4009B162E /* UIImage+Capture.m in Sources */,
+				BD25F7771B8C076E00C0BC8E /* HitTestAView.m in Sources */,
 				BDAE15C41B7C7FED001908A5 /* TPKeyboardAvoidingCollectionView.m in Sources */,
 				51E10E151B481BD4009B162E /* UIImage+Color.m in Sources */,
 				51E10C5D1B48113E009B162E /* TableInstanceInitCellXib.m in Sources */,
@@ -2629,6 +2661,7 @@
 				BDAE15D01B7C7FED001908A5 /* UIImageView+AnimationCompletion.m in Sources */,
 				51E10E411B481BD4009B162E /* UIView+Screenshot.m in Sources */,
 				51FA7A231B70FB2A0002990E /* UsageViewController.m in Sources */,
+				BD25F7801B8C081100C0BC8E /* HiTestDview.m in Sources */,
 				51E10DD01B481BD4009B162E /* NSDate+Formatter.m in Sources */,
 				BDAE15D51B7C7FED001908A5 /* UIView+Position.m in Sources */,
 				BDAE12301B7C7E17001908A5 /* UITableView+iOS7Style.m in Sources */,
@@ -2664,6 +2697,7 @@
 				51E10DC21B481BD4009B162E /* NSManagedObjectContext+Fetching.m in Sources */,
 				BDAE12091B7C7E17001908A5 /* NSDate-Utilities.m in Sources */,
 				51E10E401B481BD4009B162E /* UIView+RecursiveDescription.m in Sources */,
+				BD25F77A1B8C07B500C0BC8E /* HiTestBView.m in Sources */,
 				51E10E3F1B481BD4009B162E /* UIView+Nib.m in Sources */,
 				BDAE15A81B7C7FED001908A5 /* SDWebImageDownloader.m in Sources */,
 				51E10E221B481BD4009B162E /* UILabel+ESAdjustableLabel.m in Sources */,
