@@ -9,6 +9,12 @@
 #import <UIKit/UIKit.h>
 
 @interface UITableView (iOS7Style)
+//有边框
 -(void)applyiOS7SettingsStyleGrouping:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath;
--(void)applyiOS7SettingsStyleGrouping1:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath;
+
+//无边框
+-(void)applyiOS7SettingsStyleGroupingWithoutBorder:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath;
+
+//修改分割线
+-(void)modifySeparatorInset:(UITableViewCell*)cell forRowAtIndexPath:(NSIndexPath *)indexPath;
 @end

@@ -7,7 +7,9 @@
 //
 
 #import "TableInstanceStyle.h"
+#import "UIImage+Color.h"
 #import "UITableView+iOS7Style.h"
+
 @interface TableInstanceStyle ()<UITableViewDataSource,UITableViewDelegate>{
  NSDictionary* dataSource;
     NSMutableArray* dataArray;
@@ -50,7 +52,16 @@
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:v1];
     // self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"edit" style:UIBarButtonItemStyleDone target:self action:@selector(tableViewEdit:)];
     self.tableView.tableFooterView = [UIView new];
-    self.tableView.allowsMultipleSelection = YES;
+    //self.tableView.allowsMultipleSelection = YES;
+    
+    // 设置毛玻璃 //记得要把cell 设置成透明效果 适用于8。0后
+    UIBlurEffect *blurEffect = [UIBlurEffect effectWithStyle:UIBlurEffectStyleDark];
+    UIVibrancyEffect *vibrancyEffect = [UIVibrancyEffect effectForBlurEffect:blurEffect];
+    self.tableView.separatorEffect = vibrancyEffect;
+    self.tableView.separatorColor = UIColorFromRGB(0xff0000);
+   self.tableView.backgroundColor=[UIColor clearColor];
+    self.tableView.backgroundView = [[UIImageView alloc] initWithImage:[UIImage imageWithColor:[UIColor blueColor]]];
+
 }
 
 - (void)didReceiveMemoryWarning {
@@ -111,6 +122,7 @@
     cell.detailTextLabel.text = dataArray[indexPath.row];
     cell.backgroundColor = [UIColor whiteColor];
     cell.imageView.image = [UIImage imageNamed:@"Selected"];
+    cell.backgroundColor = [UIColor clearColor];
     //[self.tableView applyiOS7SettingsStyleGrouping:cell forRowAtIndexPath:indexPath];
     return cell;
 }
@@ -192,6 +204,113 @@
     return proposedDestinationIndexPath;
 }
 
+//将要出现删除按钮时的回调，调整subview的位置
+- (void)tableView:(UITableView*)tableView willBeginEditingRowAtIndexPath:(NSIndexPath *)indexPath{
+//    UITableViewCell* cell = [tableView cellForRowAtIndexPath:indexPath];
+//    UIButton* b = (UIButton*)[cell viewWithTag:1];
+//    [UIView beginAnimations:@"" context:nil];
+//    [UIView animateWithDuration:0.5 animations:^{
+//        b.frame = CGRectMake(b.frame.origin.x-15, b.frame.origin.y, b.frame.size.width, b.frame.size.height);
+//        
+//    }];
+//    [UIView commitAnimations];
+}
+
+//删除按钮消失后的回调，用于重新调整subview到原来位置
+-(void)tableView:(UITableView *)tableView didEndEditingRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+//    UITableViewCell* cell = [tableView cellForRowAtIndexPath:indexPath];
+//    UIButton* b = (UIButton*)[cell viewWithTag:1];
+//    [UIView beginAnimations:@"" context:nil];
+//    [UIView animateWithDuration:0.5 animations:^{
+//        b.frame = CGRectMake(b.frame.origin.x+15, b.frame.origin.y, b.frame.size.width, b.frame.size.height);
+//        
+//    }];
+//    [UIView commitAnimations];
+}
 
 
+//回调设置长按cell时会否弹出菜单栏
+- (BOOL)tableView:(UITableView *)tableView shouldShowMenuForRowAtIndexPath:(NSIndexPath *)indexPath NS_AVAILABLE_IOS(5_0){
+    
+    return YES;
+}
+
+//回调设置哪些菜单选项能显示给用户使用
+- (BOOL)tableView:(UITableView *)tableView canPerformAction:(SEL)action forRowAtIndexPath:(NSIndexPath *)indexPath withSender:(id)sender NS_AVAILABLE_IOS(5_0){
+    /*
+     
+     – copy:
+     – cut:
+     – delete:
+     – paste:
+     
+     Handling Selection Commands
+     
+     – select:
+     – selectAll:
+     
+     Handling Styled Text Editing
+     
+     – toggleBoldface:
+     – toggleItalics:
+     – toggleUnderline:
+     
+     Handling Writing Direction Changes
+     
+     – makeTextWritingDirectionLeftToRight:
+     – makeTextWritingDirectionRightToLeft:
+     */
+    return YES;
+}
+
+//回调当点击了菜单栏选项后的事件，根据不同SEL进行动作的实现
+- (void)tableView:(UITableView *)tableView performAction:(SEL)action forRowAtIndexPath:(NSIndexPath *)indexPath withSender:(id)sender NS_AVAILABLE_IOS(5_0){
+    
+    if(action==@selector(copy:)){
+        //[UIPasteboard generalPasteboard].string = [_value objectAtIndex:indexPath.row];
+    }
+    
+    
+}
+
+//适用于8.0后 编辑模式 删除按钮前加上收藏和置顶
+- (NSArray *)tableView:(UITableView *)tableView editActionsForRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    //设置删除按钮
+    UITableViewRowAction *deleteRowAction = [UITableViewRowAction rowActionWithStyle:UITableViewRowActionStyleDestructive title:@"删除"handler:^(UITableViewRowAction *action,NSIndexPath *indexPath) {
+        
+        [dataArray removeObjectAtIndex:indexPath.row];
+        [self.tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
+        
+    }];
+    
+    //设置收藏按钮
+    UITableViewRowAction *collectRowAction = [UITableViewRowAction rowActionWithStyle:UITableViewRowActionStyleDefault title:@"收藏"handler:^(UITableViewRowAction *action,NSIndexPath *indexPath) {
+        
+        
+        collectRowAction.backgroundColor = [UIColor greenColor];
+        
+        UIAlertView *alertView = [[UIAlertView alloc]initWithTitle:@"收藏" message:@"收藏成功" delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
+        [alertView show];
+        
+        
+    }];
+    //设置置顶按钮
+    UITableViewRowAction *topRowAction = [UITableViewRowAction rowActionWithStyle:UITableViewRowActionStyleDefault title:@"置顶" handler:^(UITableViewRowAction *action, NSIndexPath *indexPath) {
+        
+        
+        [dataArray exchangeObjectAtIndex:indexPath.row withObjectAtIndex:0];
+        
+        NSIndexPath *firstIndexPath = [NSIndexPath indexPathForRow:0 inSection:indexPath.section];
+        [tableView moveRowAtIndexPath:indexPath toIndexPath:firstIndexPath];
+        
+    }];
+    
+    collectRowAction.backgroundEffect = [UIBlurEffect effectWithStyle:UIBlurEffectStyleLight];
+    topRowAction.backgroundColor = [UIColor blueColor];
+    collectRowAction.backgroundColor = [UIColor grayColor];
+    
+    return  @[deleteRowAction,collectRowAction,topRowAction];
+}
 @end

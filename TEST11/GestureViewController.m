@@ -20,7 +20,25 @@
     [super viewDidLoad];
     self.dataSource = @[@"simpleDrag",@"PanGesture",@"hitTest"];
     self.dataSourceDict = @{@"simpleDrag" :@"SimpleDragInstance",@"PanGesture":@"PanGestureInstance",@"hitTest":@"HitTestViewController"};
+    NSRunLoop *runloop = [NSRunLoop currentRunLoop];
+    
 }
+
+-(void)viewWillAppear:(BOOL)animated{
+    int y = 0;
+    for (int i = 0; i < 100; i++) {
+        y++;
+    }
+}
+
+-(void)viewDidAppear:(BOOL)animated{
+    int y = 0;
+    for (int i = 0; i < 100; i++) {
+        y++;
+    }
+
+}
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

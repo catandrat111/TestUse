@@ -45,4 +45,9 @@
 {
     return [_name hash] ^ [_age hash];
 }
+
+-(void)dealloc{
+    
+}
+
 @end

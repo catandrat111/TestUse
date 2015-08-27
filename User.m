@@ -13,4 +13,8 @@
     
     return [self.age compare:otherUser.age];
 }
+
+-(void)dealloc{
+    
+}
 @end
