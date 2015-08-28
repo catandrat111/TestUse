@@ -311,6 +311,8 @@
 		BDC5A97B1B7DF18D00AC14C4 /* SimpleDragInstance.xib in Resources */ = {isa = PBXBuildFile; fileRef = BDC5A9791B7DF18D00AC14C4 /* SimpleDragInstance.xib */; };
 		BDCCA7AE1B8F04B8007ED1C9 /* RRPSectionFootView.m in Sources */ = {isa = PBXBuildFile; fileRef = BDCCA7AD1B8F04B8007ED1C9 /* RRPSectionFootView.m */; };
 		BDCCA7B11B8F0531007ED1C9 /* RRPSectionHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = BDCCA7B01B8F0531007ED1C9 /* RRPSectionHeaderView.m */; };
+		BDD1E1071B8FF29C0037A457 /* SearchBarInstanceView.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD1E1051B8FF29C0037A457 /* SearchBarInstanceView.m */; };
+		BDD1E1081B8FF29C0037A457 /* SearchBarInstanceView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BDD1E1061B8FF29C0037A457 /* SearchBarInstanceView.xib */; };
 		BDD373F11B86BBB20047313A /* AlgorithmClass.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD373F01B86BBB10047313A /* AlgorithmClass.m */; };
 		BDD373F41B86BC740047313A /* AL_sort.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD373F31B86BC740047313A /* AL_sort.m */; };
 		BDF987C11B8DB7040039838B /* RunLoopInstance.m in Sources */ = {isa = PBXBuildFile; fileRef = BDF987BF1B8DB7040039838B /* RunLoopInstance.m */; };
@@ -897,6 +899,9 @@
 		BDCCA7AD1B8F04B8007ED1C9 /* RRPSectionFootView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RRPSectionFootView.m; sourceTree = "<group>"; };
 		BDCCA7AF1B8F0531007ED1C9 /* RRPSectionHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RRPSectionHeaderView.h; sourceTree = "<group>"; };
 		BDCCA7B01B8F0531007ED1C9 /* RRPSectionHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RRPSectionHeaderView.m; sourceTree = "<group>"; };
+		BDD1E1041B8FF29C0037A457 /* SearchBarInstanceView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchBarInstanceView.h; sourceTree = "<group>"; };
+		BDD1E1051B8FF29C0037A457 /* SearchBarInstanceView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchBarInstanceView.m; sourceTree = "<group>"; };
+		BDD1E1061B8FF29C0037A457 /* SearchBarInstanceView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchBarInstanceView.xib; sourceTree = "<group>"; };
 		BDD373EF1B86BBB10047313A /* AlgorithmClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlgorithmClass.h; sourceTree = "<group>"; };
 		BDD373F01B86BBB10047313A /* AlgorithmClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlgorithmClass.m; sourceTree = "<group>"; };
 		BDD373F21B86BC740047313A /* AL_sort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AL_sort.h; sourceTree = "<group>"; };
@@ -996,6 +1001,7 @@
 		5195B3EC1AB70284007CFA8B /* TEST11 */ = {
 			isa = PBXGroup;
 			children = (
+				BDD1E1031B8FF2780037A457 /* UISearchBar */,
 				BDF987BD1B8DB6AA0039838B /* RUNLOOP */,
 				BDD373EE1B86BB1E0047313A /* Algorithm */,
 				5158D18F1B7E23D000ACF3AD /* Draw */,
@@ -2308,6 +2314,16 @@
 			name = Gesture;
 			sourceTree = "<group>";
 		};
+		BDD1E1031B8FF2780037A457 /* UISearchBar */ = {
+			isa = PBXGroup;
+			children = (
+				BDD1E1041B8FF29C0037A457 /* SearchBarInstanceView.h */,
+				BDD1E1051B8FF29C0037A457 /* SearchBarInstanceView.m */,
+				BDD1E1061B8FF29C0037A457 /* SearchBarInstanceView.xib */,
+			);
+			name = UISearchBar;
+			sourceTree = "<group>";
+		};
 		BDD373EE1B86BB1E0047313A /* Algorithm */ = {
 			isa = PBXGroup;
 			children = (
@@ -2447,6 +2463,7 @@
 				51F410C51B525041008DD35E /* TableInstanceStyle.xib in Resources */,
 				51E10C3E1B47AE9F009B162E /* LabelInstance.xib in Resources */,
 				515DFBD91B6CE3BA003C7B8E /* NavigationBarInstanceView.xib in Resources */,
+				BDD1E1081B8FF29C0037A457 /* SearchBarInstanceView.xib in Resources */,
 				BDAE155C1B7C7FED001908A5 /* MJRefresh.bundle in Resources */,
 				BDAE15C81B7C7FED001908A5 /* LICENSE in Resources */,
 				512CB77F1B5E841B0084E5AB /* Selected.png in Resources */,
@@ -2581,6 +2598,7 @@
 				BDAE155D1B7C7FED001908A5 /* MJRefreshBaseView.m in Sources */,
 				51E10DF51B481BD4009B162E /* NSString+UrlEncode.m in Sources */,
 				BDC5A97A1B7DF18D00AC14C4 /* SimpleDragInstance.m in Sources */,
+				BDD1E1071B8FF29C0037A457 /* SearchBarInstanceView.m in Sources */,
 				BDAE15B91B7C7FED001908A5 /* SSKeychainQuery.m in Sources */,
 				51E10DE91B481BD4009B162E /* NSObject+Runtime.m in Sources */,
 				BDAE11D81B7C7E17001908A5 /* CALayer+Addition.m in Sources */,

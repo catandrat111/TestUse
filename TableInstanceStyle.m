@@ -56,7 +56,7 @@
     
     // 设置毛玻璃 //记得要把cell 设置成透明效果 适用于8。0后
     UIBlurEffect *blurEffect = [UIBlurEffect effectWithStyle:UIBlurEffectStyleDark];
-    UIVibrancyEffect *vibrancyEffect = [UIVibrancyEffect effectForBlurEffect:blurEffect];
+    UIVibrancyEffect *vibrancyEffect = [UIVibrancyEffect effectForBlurEffect:blurEffect];//TODO
     self.tableView.separatorEffect = vibrancyEffect;
     self.tableView.separatorColor = UIColorFromRGB(0xff0000);
    self.tableView.backgroundColor=[UIColor clearColor];
@@ -204,7 +204,7 @@
     return proposedDestinationIndexPath;
 }
 
-//将要出现删除按钮时的回调，调整subview的位置
+//将要出现删除按钮时的回调，调整subview的位置 //TODO
 - (void)tableView:(UITableView*)tableView willBeginEditingRowAtIndexPath:(NSIndexPath *)indexPath{
 //    UITableViewCell* cell = [tableView cellForRowAtIndexPath:indexPath];
 //    UIButton* b = (UIButton*)[cell viewWithTag:1];
