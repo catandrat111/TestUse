@@ -313,6 +313,8 @@
 		BDCCA7B11B8F0531007ED1C9 /* RRPSectionHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = BDCCA7B01B8F0531007ED1C9 /* RRPSectionHeaderView.m */; };
 		BDD1E1071B8FF29C0037A457 /* SearchBarInstanceView.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD1E1051B8FF29C0037A457 /* SearchBarInstanceView.m */; };
 		BDD1E1081B8FF29C0037A457 /* SearchBarInstanceView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BDD1E1061B8FF29C0037A457 /* SearchBarInstanceView.xib */; };
+		BDD1E10D1B9062F40037A457 /* SegmentControlInstanceView.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD1E10B1B9062F40037A457 /* SegmentControlInstanceView.m */; };
+		BDD1E10E1B9062F40037A457 /* SegmentControlInstanceView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BDD1E10C1B9062F40037A457 /* SegmentControlInstanceView.xib */; };
 		BDD373F11B86BBB20047313A /* AlgorithmClass.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD373F01B86BBB10047313A /* AlgorithmClass.m */; };
 		BDD373F41B86BC740047313A /* AL_sort.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD373F31B86BC740047313A /* AL_sort.m */; };
 		BDF987C11B8DB7040039838B /* RunLoopInstance.m in Sources */ = {isa = PBXBuildFile; fileRef = BDF987BF1B8DB7040039838B /* RunLoopInstance.m */; };
@@ -902,6 +904,9 @@
 		BDD1E1041B8FF29C0037A457 /* SearchBarInstanceView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchBarInstanceView.h; sourceTree = "<group>"; };
 		BDD1E1051B8FF29C0037A457 /* SearchBarInstanceView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchBarInstanceView.m; sourceTree = "<group>"; };
 		BDD1E1061B8FF29C0037A457 /* SearchBarInstanceView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchBarInstanceView.xib; sourceTree = "<group>"; };
+		BDD1E10A1B9062F30037A457 /* SegmentControlInstanceView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SegmentControlInstanceView.h; sourceTree = "<group>"; };
+		BDD1E10B1B9062F40037A457 /* SegmentControlInstanceView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SegmentControlInstanceView.m; sourceTree = "<group>"; };
+		BDD1E10C1B9062F40037A457 /* SegmentControlInstanceView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SegmentControlInstanceView.xib; sourceTree = "<group>"; };
 		BDD373EF1B86BBB10047313A /* AlgorithmClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlgorithmClass.h; sourceTree = "<group>"; };
 		BDD373F01B86BBB10047313A /* AlgorithmClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlgorithmClass.m; sourceTree = "<group>"; };
 		BDD373F21B86BC740047313A /* AL_sort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AL_sort.h; sourceTree = "<group>"; };
@@ -1001,6 +1006,7 @@
 		5195B3EC1AB70284007CFA8B /* TEST11 */ = {
 			isa = PBXGroup;
 			children = (
+				BDD1E1091B9062990037A457 /* UISegmentControl */,
 				BDD1E1031B8FF2780037A457 /* UISearchBar */,
 				BDF987BD1B8DB6AA0039838B /* RUNLOOP */,
 				BDD373EE1B86BB1E0047313A /* Algorithm */,
@@ -2324,6 +2330,16 @@
 			name = UISearchBar;
 			sourceTree = "<group>";
 		};
+		BDD1E1091B9062990037A457 /* UISegmentControl */ = {
+			isa = PBXGroup;
+			children = (
+				BDD1E10A1B9062F30037A457 /* SegmentControlInstanceView.h */,
+				BDD1E10B1B9062F40037A457 /* SegmentControlInstanceView.m */,
+				BDD1E10C1B9062F40037A457 /* SegmentControlInstanceView.xib */,
+			);
+			name = UISegmentControl;
+			sourceTree = "<group>";
+		};
 		BDD373EE1B86BB1E0047313A /* Algorithm */ = {
 			isa = PBXGroup;
 			children = (
@@ -2460,6 +2476,7 @@
 				51B1C61F1B50E13B00E68110 /* Slice1.png in Resources */,
 				BD25F7821B8C151300C0BC8E /* hit-test-depth-first-traversal.png in Resources */,
 				51E10C5E1B48113E009B162E /* TableInstanceInitCellXib.xib in Resources */,
+				BDD1E10E1B9062F40037A457 /* SegmentControlInstanceView.xib in Resources */,
 				51F410C51B525041008DD35E /* TableInstanceStyle.xib in Resources */,
 				51E10C3E1B47AE9F009B162E /* LabelInstance.xib in Resources */,
 				515DFBD91B6CE3BA003C7B8E /* NavigationBarInstanceView.xib in Resources */,
@@ -2539,6 +2556,7 @@
 				51E10DED1B481BD4009B162E /* NSString+DictionaryValue.m in Sources */,
 				51E10DDD1B481BD4009B162E /* NSNotificationCenter+MainThread.m in Sources */,
 				51E10E001B481BD4009B162E /* UIBarButtonItem+Action.m in Sources */,
+				BDD1E10D1B9062F40037A457 /* SegmentControlInstanceView.m in Sources */,
 				BDAE15A61B7C7FED001908A5 /* SDWebImageCompat.m in Sources */,
 				BDAE15A51B7C7FED001908A5 /* SDImageCache.m in Sources */,
 				BD25F7741B8C05DE00C0BC8E /* HitTestViewController.m in Sources */,

@@ -11,7 +11,7 @@
 #import "UIButton+CountDown.h"
 #import "UIButton+Indicator.h"
 #import "UIButton+Submitting.h"
-
+#import  <objc/runtime.h>
 #import "NSString+Score.h"
 
 @interface ButtonInstance ()
