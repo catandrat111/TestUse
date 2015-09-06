@@ -20,4 +20,16 @@
     // Configure the view for the selected state
 }
 
+//-(UIView *)hitTest:(CGPoint)point withEvent:(UIEvent *)event{
+//    UIView* view = [super hitTest:point withEvent:event];
+//  
+//    if(view.frameOrigin.x == 0){
+//        return nil;
+//    }
+//    
+//    return view;
+//}
+
+
+
 @end

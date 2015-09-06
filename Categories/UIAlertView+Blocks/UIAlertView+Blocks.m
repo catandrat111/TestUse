@@ -56,7 +56,7 @@ static const void *UIAlertViewShouldEnableFirstOtherButtonBlockKey  = &UIAlertVi
                                                 delegate:nil
                                        cancelButtonTitle:cancelButtonTitle
                                        otherButtonTitles:firstObject, nil];
-    BOOL b = [NSThread isMainThread];
+    
     alertView.alertViewStyle = style;
     
     if (otherButtonTitles.count > 1) {
@@ -70,7 +70,7 @@ static const void *UIAlertViewShouldEnableFirstOtherButtonBlockKey  = &UIAlertVi
     }
     
     [alertView show];
-   //[alertView performSelectorOnMainThread:@selector(show) withObject:nil waitUntilDone:NO];
+    
 #if !__has_feature(objc_arc)
     return [alertView autorelease];
 #else
@@ -261,7 +261,4 @@ static const void *UIAlertViewShouldEnableFirstOtherButtonBlockKey  = &UIAlertVi
     return YES;
 }
 
--(void)dealloc{
-    
-}
 @end

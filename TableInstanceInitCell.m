@@ -9,6 +9,7 @@
 #import "TableInstanceInitCell.h"
 #import "TableInstanceInitCellNoXib.h"
 #import "TableInstanceInitCellXib.h"
+#import "UIAlertView+Blocks.h"
 static NSString* cellIdentifier = @"cell";
 @interface TableInstanceInitCell ()<UITableViewDataSource,UITableViewDelegate>{
     NSArray* dataSource;
@@ -20,8 +21,8 @@ static NSString* cellIdentifier = @"cell";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    dataSource = @[self.title];
-    
+    dataSource = @[self.title,@"bbb",@"cccc"];
+    [self.tableView setEditing:YES];
     switch (self.initType) {
         case UITableViewCellNoRegisterNoXib:
             
@@ -45,6 +46,10 @@ static NSString* cellIdentifier = @"cell";
 }
 
 #pragma mark uitabkeview datasource
+
+- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath{
+    return YES;
+}
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     return dataSource.count;
@@ -104,7 +109,22 @@ static NSString* cellIdentifier = @"cell";
 
 #pragma mark ---- uitableviewdelegate
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-   
+    NSString *message = [NSString stringWithFormat:@"\"%@\"，在去程飞机起飞日期时，年龄未超过12周岁，但在返程飞机起飞日期时，年龄已超过12周岁，因此无法以“儿童”身份购买往返儿童票。您可以重新预订两个单程订单，购买一张儿童票，一张成人票。",@"aa"];
+
+    
+        
+        [UIAlertView showWithTitle:@"提示" message:message cancelButtonTitle:nil otherButtonTitles:@[@"确定"] tapBlock:^(UIAlertView *alertView, NSInteger buttonIndex) {
+            dispatch_async(dispatch_get_main_queue(), ^{
+                if (buttonIndex == 0) {
+                }
+            });
+            
+        }];
+
+    
+    return;
+
+    
 }
 
 

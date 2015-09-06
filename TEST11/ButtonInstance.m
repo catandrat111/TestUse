@@ -13,7 +13,9 @@
 #import "UIButton+Submitting.h"
 #import  <objc/runtime.h>
 #import "NSString+Score.h"
-
+#import "UIAlertView+Blocks.h"
+#import "TextFieldInstanceView.h"
+#define alterViewDisapperTime 0.5
 @interface ButtonInstance ()
 
 @end
@@ -53,8 +55,40 @@
 -(IBAction)p2:(UIButton*)sender{
     [self.button1 hideIndicator];
     [self.button3 endSubmitting];
+     //NSString *message = [NSString stringWithFormat:@"\"%@\"，在去程飞机起飞日期时，年龄未超过12周岁，但在返程飞机起飞日期时，年龄已超过12周岁，因此无法以“儿童”身份购买往返儿童票。您可以重新预订两个单程订单，购买一张儿童票，一张成人票。",@"aa"];
+//    [UIAlertView showWithTitle:@"提示" message:message cancelButtonTitle:nil otherButtonTitles:@[@"确定",@"返回"] tapBlock:^(UIAlertView *alertView, NSInteger buttonIndex) {
+//        dispatch_async(dispatch_get_main_queue(), ^{//有cancle 为0 ，没有其他从0开始
+//                       if (buttonIndex == 0) {
+//                        }
+//                       else if(buttonIndex == 1){
+//                           
+//                       }
+//                       else {
+//                       }
+//        });
+//        
+//    }];
+    
+    __weak __typeof(self)weakSelf = self;
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:nil message:@"您已成功注册四川航空APP会员" delegate:nil  cancelButtonTitle:nil otherButtonTitles:nil];
+    [alert show];
+    [weakSelf performSelector:@selector(dimissAlert:) withObject:alert afterDelay:alterViewDisapperTime];
+    
+    //TEST
+    
+    TextFieldInstanceView* test = [[TextFieldInstanceView alloc] init];
+    [self.navigationController pushViewController:test animated:YES];
 }
+
 -(IBAction)p3:(UIButton*)sender{
     
 }
+
+
+- (void) dimissAlert:(UIAlertView *)alert {
+    if(alert)     {
+        [alert dismissWithClickedButtonIndex:[alert cancelButtonIndex] animated:YES];
+    }
+}
+
 @end

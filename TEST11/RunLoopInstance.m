@@ -11,14 +11,18 @@
 #import "User.h"
 #import "GestureViewController.h"
 @interface RunLoopInstance ()
-
+{
+    
+    __weak id reference;
+     __weak id reference1;
+}
 @end
 
 @implementation RunLoopInstance
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    User* user = [User new];
+   // User* user = [User new];
     UIButton* button  = [[UIButton alloc] initWithFrame:CGRectMake(0, 64, 100, 60)];
     [button setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
     [button setTitle:@"1" forState:UIControlStateNormal];
@@ -33,16 +37,23 @@
 
     
       NSLog(@"%@",[NSThread currentThread]);
-   // User* user = [User new];//立马释放
+    User* user = [User new];//立马释放
+    
+    NSString *str = [NSString stringWithFormat:@"sunnyxx"];
+    // str是一个autorelease对象，设置一个weak的引用来观察它
+    reference = str;
+    reference1 = user;
 }
 
 -(void)viewWillAppear:(BOOL)animated{
-    
+    NSLog(@"%@", reference);
+     NSLog(@"%@", reference1);
     
 }
 
 -(void)viewDidAppear:(BOOL)animated{
-    
+    NSLog(@"%@", reference);
+     NSLog(@"%@", reference1);
     
 }
 
