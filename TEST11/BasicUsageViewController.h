@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface BasicUsageViewController : UIViewController
-
+@property(weak,nonatomic) IBOutlet UITextField* textField;
 @end

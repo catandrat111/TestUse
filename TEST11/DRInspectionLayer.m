@@ -11,7 +11,6 @@
 @implementation DRInspectionLayer
 - (void)addAnimation:(CAAnimation *)anim forKey:(NSString *)key
 {
-   id action = [self actionForKey:key];
     NSLog(@"adding animation: %@", [anim debugDescription]);
     [super addAnimation:anim forKey:key];
 }
@@ -21,9 +20,9 @@
 
 
 @implementation DRInspectionView
-//+ (Class)layerClass
-//{
-//    return [DRInspectionLayer class];
-//}
++ (Class)layerClass
+{
+    return [DRInspectionLayer class];
+}
 
 @end

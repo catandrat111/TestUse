@@ -76,4 +76,34 @@
     return udid;
 
 }
+
+
++(void)saveAccount:(NSString*)account{
+    [SSKeychain setPassword:account forService: @"com.scal.zsch" account:@"loginUserId"];
+}
+
++(NSString*)getAccount{
+    NSString* accountStr = [SSKeychain passwordForService:@"com.scal.zsch" account:@"loginUserId"];
+    return accountStr;
+}
+
+
++(void)removeAccount{
+    [SSKeychain deletePasswordForService:@"com.scal.zsch" account:@"loginUserId"];
+}
+
++(void)savePwd:(NSString*)pwd{
+    [SSKeychain setPassword:pwd forService: @"com.scal.zsch" account:@"loginPassWord"];
+}
+
++(void)removePwd{
+    [SSKeychain deletePasswordForService:@"com.scal.zsch" account:@"loginPassWord"];
+}
+
++(NSString*)getPwd{
+    NSString* pwdStr = [SSKeychain passwordForService:@"com.scal.zsch" account:@"loginPassWord"];
+    return pwdStr;
+}
+
+
 @end

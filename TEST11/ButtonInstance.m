@@ -15,6 +15,9 @@
 #import "NSString+Score.h"
 #import "UIAlertView+Blocks.h"
 #import "TextFieldInstanceView.h"
+#import "ZHAdvertisementView.h"
+#import "RNBlurModalView.h"
+
 #define alterViewDisapperTime 0.5
 @interface ButtonInstance ()
 
@@ -28,7 +31,7 @@
     self.edgesForExtendedLayout = UIRectEdgeNone;
     [self.button1 showIndicator];
     
-    [self.button2 startTime:5 title:@"hello" waitTittle:@"world"];
+    //[self.button2 startTime:5 title:@"hello" waitTittle:@"world"];
     
      [self.button3 beginSubmitting:@"ddd"];
     
@@ -69,15 +72,30 @@
 //        
 //    }];
     
-    __weak __typeof(self)weakSelf = self;
-    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:nil message:@"您已成功注册四川航空APP会员" delegate:nil  cancelButtonTitle:nil otherButtonTitles:nil];
-    [alert show];
-    [weakSelf performSelector:@selector(dimissAlert:) withObject:alert afterDelay:alterViewDisapperTime];
+//    __weak __typeof(self)weakSelf = self;
+//    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:nil message:@"您已成功注册四川航空APP会员" delegate:nil  cancelButtonTitle:nil otherButtonTitles:nil];
+//    [alert show];
+//    [weakSelf performSelector:@selector(dimissAlert:) withObject:alert afterDelay:alterViewDisapperTime];
     
     //TEST
+    ZHAdvertisementView* advertisementView = [[ZHAdvertisementView alloc] initWithFrame:CGRectZero];
+    advertisementView.titleLab.text = @"dd";
+    advertisementView.activityLab1.text = @"dddd";
+    advertisementView.backgroundColor = [UIColor greenColor];
     
+//    RNBlurModalView * modal = [[RNBlurModalView alloc] initWithView:advertisementView];
+//    advertisementView.modalView = modal;
+//    [modal show];
+    
+    [[[UIApplication sharedApplication].delegate window].rootViewController.view  addSubview:advertisementView];
+
+    advertisementView.center = [[UIApplication sharedApplication].delegate window].rootViewController.view.center;
     TextFieldInstanceView* test = [[TextFieldInstanceView alloc] init];
     [self.navigationController pushViewController:test animated:YES];
+    
+    for (UIView* v1 in [[UIApplication sharedApplication].delegate window].rootViewController.view.subviews) {
+        NSLog(@"%@",v1);;
+    }
 }
 
 -(IBAction)p3:(UIButton*)sender{
@@ -89,6 +107,10 @@
     if(alert)     {
         [alert dismissWithClickedButtonIndex:[alert cancelButtonIndex] animated:YES];
     }
+}
+
+-(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event{
+    
 }
 
 @end

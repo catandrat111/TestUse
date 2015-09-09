@@ -12,4 +12,12 @@
 +(NSString*)getDeviceType;
 +(NSString*)getUDID;
 +(NSString*)getUDID1;
+
++(void)saveAccount:(NSString*)account;
++(NSString*)getAccount;
++(void)removeAccount;
+
++(void)savePwd:(NSString*)pwd;
++(NSString*)getPwd;
++(void)removePwd;
 @end

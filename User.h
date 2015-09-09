@@ -7,8 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
-
-@interface User : NSObject
-@property (nonatomic, copy) NSString *name;
-@property (nonatomic, copy) NSNumber *age;
+#import "Person.h"
+@interface User : NSObject<NSCopying>
+@property (nonatomic, strong) NSString *name;
+@property (nonatomic, strong) NSNumber *age;
+- (void)userTest;
 @end

@@ -20,8 +20,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    dataSource = @[@"BasicUsage"];
-    dict = @{@"BasicUsage":@"BasicUsageViewController"};
+    dataSource = @[@"BasicUsage",@"BascicAnimation",@"DR_popAnimation",@"AnimationGroup"];
+    dict = @{@"BasicUsage":@"BasicUsageViewController",@"BascicAnimation":@"BasicAnimationController",@"DR_popAnimation":@"DR_popAnimationController",@"AnimationGroup":@"AnimationGroupController"};
 }
 
 - (void)didReceiveMemoryWarning {

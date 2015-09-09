@@ -202,6 +202,11 @@
 		51FA7A231B70FB2A0002990E /* UsageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 51FA7A211B70FB2A0002990E /* UsageViewController.m */; };
 		51FA7A241B70FB2A0002990E /* UsageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51FA7A221B70FB2A0002990E /* UsageViewController.xib */; };
 		51FA7A2B1B7105180002990E /* Person+GHAssociatedObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 51FA7A2A1B7105180002990E /* Person+GHAssociatedObject.m */; };
+		BD01262A1B9D1CD800D22ACB /* AnimationGroupController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD0126281B9D1CD800D22ACB /* AnimationGroupController.m */; };
+		BD01262B1B9D1CD800D22ACB /* AnimationGroupController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BD0126291B9D1CD800D22ACB /* AnimationGroupController.xib */; };
+		BD01262E1B9D242900D22ACB /* BasicAnimationController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD01262D1B9D242900D22ACB /* BasicAnimationController.m */; };
+		BD0126311B9D311800D22ACB /* DR_popAnimationController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD0126301B9D311800D22ACB /* DR_popAnimationController.m */; };
+		BD0126331B9D58E900D22ACB /* bezier.png in Resources */ = {isa = PBXBuildFile; fileRef = BD0126321B9D58E900D22ACB /* bezier.png */; };
 		BD25F7741B8C05DE00C0BC8E /* HitTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD25F7731B8C05DE00C0BC8E /* HitTestViewController.m */; };
 		BD25F7771B8C076E00C0BC8E /* HitTestAView.m in Sources */ = {isa = PBXBuildFile; fileRef = BD25F7761B8C076E00C0BC8E /* HitTestAView.m */; };
 		BD25F77A1B8C07B500C0BC8E /* HiTestBView.m in Sources */ = {isa = PBXBuildFile; fileRef = BD25F7791B8C07B500C0BC8E /* HiTestBView.m */; };
@@ -304,6 +309,8 @@
 		BDAE15DC1B7C7FED001908A5 /* WGS84TOGCJ02.m in Sources */ = {isa = PBXBuildFile; fileRef = BDAE14D21B7C7FED001908A5 /* WGS84TOGCJ02.m */; };
 		BDAE15DF1B7C8905001908A5 /* Constant.m in Sources */ = {isa = PBXBuildFile; fileRef = BDAE15DE1B7C8905001908A5 /* Constant.m */; };
 		BDAE15E11B7C8ABB001908A5 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BDAE15E01B7C8ABB001908A5 /* libsqlite3.dylib */; };
+		BDBD75351BA004ED00168A8B /* 消息派发1.png in Resources */ = {isa = PBXBuildFile; fileRef = BDBD75341BA004ED00168A8B /* 消息派发1.png */; };
+		BDBD75381BA01B2200168A8B /* NSNull+XY_InternalNullExtention.m in Sources */ = {isa = PBXBuildFile; fileRef = BDBD75371BA01B2200168A8B /* NSNull+XY_InternalNullExtention.m */; };
 		BDC5A9701B7DEF5800AC14C4 /* HSCButton.m in Sources */ = {isa = PBXBuildFile; fileRef = BDC5A96F1B7DEF5800AC14C4 /* HSCButton.m */; };
 		BDC5A9741B7DEF9100AC14C4 /* GestureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BDC5A9721B7DEF9100AC14C4 /* GestureViewController.m */; };
 		BDC5A9751B7DEF9100AC14C4 /* GestureViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BDC5A9731B7DEF9100AC14C4 /* GestureViewController.xib */; };
@@ -327,6 +334,13 @@
 		BDD31C5F1B9C2F1F00E1A496 /* DRSavedPopAnimationState.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD31C5E1B9C2F1F00E1A496 /* DRSavedPopAnimationState.m */; };
 		BDD373F11B86BBB20047313A /* AlgorithmClass.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD373F01B86BBB10047313A /* AlgorithmClass.m */; };
 		BDD373F41B86BC740047313A /* AL_sort.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD373F31B86BC740047313A /* AL_sort.m */; };
+		BDE20E7B1B9EA83F00C5F90E /* copy.png in Resources */ = {isa = PBXBuildFile; fileRef = BDE20E7A1B9EA83F00C5F90E /* copy.png */; };
+		BDE557FA1B9FBD9B000B9231 /* metaClass.png in Resources */ = {isa = PBXBuildFile; fileRef = BDE557F91B9FBD9B000B9231 /* metaClass.png */; };
+		BDE557FC1B9FC849000B9231 /* 消息派发.png in Resources */ = {isa = PBXBuildFile; fileRef = BDE557FB1B9FC849000B9231 /* 消息派发.png */; };
+		BDE558021B9FD2E8000B9231 /* RNBlurModalView.m in Sources */ = {isa = PBXBuildFile; fileRef = BDE557FF1B9FD2E8000B9231 /* RNBlurModalView.m */; };
+		BDE558031B9FD2E8000B9231 /* ZHPopBaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = BDE558011B9FD2E8000B9231 /* ZHPopBaseView.m */; };
+		BDE558061B9FD33C000B9231 /* ZHAdvertisementView.m in Sources */ = {isa = PBXBuildFile; fileRef = BDE558051B9FD33C000B9231 /* ZHAdvertisementView.m */; };
+		BDE558081B9FD350000B9231 /* ZHAdvertisementView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BDE558071B9FD350000B9231 /* ZHAdvertisementView.xib */; };
 		BDF987C11B8DB7040039838B /* RunLoopInstance.m in Sources */ = {isa = PBXBuildFile; fileRef = BDF987BF1B8DB7040039838B /* RunLoopInstance.m */; };
 		BDF987C21B8DB7040039838B /* RunLoopInstance.xib in Resources */ = {isa = PBXBuildFile; fileRef = BDF987C01B8DB7040039838B /* RunLoopInstance.xib */; };
 /* End PBXBuildFile section */
@@ -708,6 +722,14 @@
 		51FA7A221B70FB2A0002990E /* UsageViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UsageViewController.xib; sourceTree = "<group>"; };
 		51FA7A291B7105180002990E /* Person+GHAssociatedObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Person+GHAssociatedObject.h"; sourceTree = "<group>"; };
 		51FA7A2A1B7105180002990E /* Person+GHAssociatedObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Person+GHAssociatedObject.m"; sourceTree = "<group>"; };
+		BD0126271B9D1CD800D22ACB /* AnimationGroupController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnimationGroupController.h; sourceTree = "<group>"; };
+		BD0126281B9D1CD800D22ACB /* AnimationGroupController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnimationGroupController.m; sourceTree = "<group>"; };
+		BD0126291B9D1CD800D22ACB /* AnimationGroupController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AnimationGroupController.xib; sourceTree = "<group>"; };
+		BD01262C1B9D242900D22ACB /* BasicAnimationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BasicAnimationController.h; sourceTree = "<group>"; };
+		BD01262D1B9D242900D22ACB /* BasicAnimationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BasicAnimationController.m; sourceTree = "<group>"; };
+		BD01262F1B9D311800D22ACB /* DR_popAnimationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DR_popAnimationController.h; sourceTree = "<group>"; };
+		BD0126301B9D311800D22ACB /* DR_popAnimationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DR_popAnimationController.m; sourceTree = "<group>"; };
+		BD0126321B9D58E900D22ACB /* bezier.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bezier.png; sourceTree = "<group>"; };
 		BD25F7721B8C05DE00C0BC8E /* HitTestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HitTestViewController.h; sourceTree = "<group>"; };
 		BD25F7731B8C05DE00C0BC8E /* HitTestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HitTestViewController.m; sourceTree = "<group>"; };
 		BD25F7751B8C076E00C0BC8E /* HitTestAView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HitTestAView.h; sourceTree = "<group>"; };
@@ -899,6 +921,9 @@
 		BDAE15DD1B7C8905001908A5 /* Constant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Constant.h; path = WeixinActivity/Constant.h; sourceTree = "<group>"; };
 		BDAE15DE1B7C8905001908A5 /* Constant.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Constant.m; path = WeixinActivity/Constant.m; sourceTree = "<group>"; };
 		BDAE15E01B7C8ABB001908A5 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		BDBD75341BA004ED00168A8B /* 消息派发1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "消息派发1.png"; sourceTree = "<group>"; };
+		BDBD75361BA01B2200168A8B /* NSNull+XY_InternalNullExtention.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSNull+XY_InternalNullExtention.h"; sourceTree = "<group>"; };
+		BDBD75371BA01B2200168A8B /* NSNull+XY_InternalNullExtention.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSNull+XY_InternalNullExtention.m"; sourceTree = "<group>"; };
 		BDC5A96E1B7DEF5800AC14C4 /* HSCButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HSCButton.h; path = ../HSCButton.h; sourceTree = "<group>"; };
 		BDC5A96F1B7DEF5800AC14C4 /* HSCButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HSCButton.m; path = ../HSCButton.m; sourceTree = "<group>"; };
 		BDC5A9711B7DEF9100AC14C4 /* GestureViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GestureViewController.h; sourceTree = "<group>"; };
@@ -937,6 +962,16 @@
 		BDD373F01B86BBB10047313A /* AlgorithmClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlgorithmClass.m; sourceTree = "<group>"; };
 		BDD373F21B86BC740047313A /* AL_sort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AL_sort.h; sourceTree = "<group>"; };
 		BDD373F31B86BC740047313A /* AL_sort.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AL_sort.m; sourceTree = "<group>"; };
+		BDE20E7A1B9EA83F00C5F90E /* copy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = copy.png; sourceTree = "<group>"; };
+		BDE557F91B9FBD9B000B9231 /* metaClass.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = metaClass.png; sourceTree = "<group>"; };
+		BDE557FB1B9FC849000B9231 /* 消息派发.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "消息派发.png"; sourceTree = "<group>"; };
+		BDE557FE1B9FD2E8000B9231 /* RNBlurModalView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RNBlurModalView.h; sourceTree = "<group>"; };
+		BDE557FF1B9FD2E8000B9231 /* RNBlurModalView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RNBlurModalView.m; sourceTree = "<group>"; };
+		BDE558001B9FD2E8000B9231 /* ZHPopBaseView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZHPopBaseView.h; sourceTree = "<group>"; };
+		BDE558011B9FD2E8000B9231 /* ZHPopBaseView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZHPopBaseView.m; sourceTree = "<group>"; };
+		BDE558041B9FD327000B9231 /* ZHAdvertisementView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ZHAdvertisementView.h; path = ../ZHAdvertisementView.h; sourceTree = "<group>"; };
+		BDE558051B9FD33C000B9231 /* ZHAdvertisementView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZHAdvertisementView.m; sourceTree = "<group>"; };
+		BDE558071B9FD350000B9231 /* ZHAdvertisementView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZHAdvertisementView.xib; sourceTree = "<group>"; };
 		BDF8F02E1B7C97D9007DAC63 /* TEST11.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = TEST11.entitlements; sourceTree = "<group>"; };
 		BDF987BE1B8DB7040039838B /* RunLoopInstance.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RunLoopInstance.h; sourceTree = "<group>"; };
 		BDF987BF1B8DB7040039838B /* RunLoopInstance.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RunLoopInstance.m; sourceTree = "<group>"; };
@@ -1102,6 +1137,7 @@
 		51B1C61D1B50E12200E68110 /* Image */ = {
 			isa = PBXGroup;
 			children = (
+				BD0126321B9D58E900D22ACB /* bezier.png */,
 				BD25F7811B8C151300C0BC8E /* hit-test-depth-first-traversal.png */,
 				512CB77E1B5E841B0084E5AB /* Selected.png */,
 				51F410BC1B522638008DD35E /* slidermax.png */,
@@ -1153,6 +1189,7 @@
 		51E10C621B481BD3009B162E /* Categories */ = {
 			isa = PBXGroup;
 			children = (
+				BDE557FD1B9FD2E8000B9231 /* PopView */,
 				BDC766091B942A5D00EC31D7 /* UIAlertView+Blocks */,
 				BDAE10471B7C7DA9001908A5 /* Custom */,
 				51E10C631B481BD3009B162E /* CoreData */,
@@ -1921,9 +1958,13 @@
 		51FA7A251B70FB360002990E /* Usage */ = {
 			isa = PBXGroup;
 			children = (
+				BDBD75341BA004ED00168A8B /* 消息派发1.png */,
+				BDE557FB1B9FC849000B9231 /* 消息派发.png */,
+				BDE557F91B9FBD9B000B9231 /* metaClass.png */,
 				51FA7A201B70FB2A0002990E /* UsageViewController.h */,
 				51FA7A211B70FB2A0002990E /* UsageViewController.m */,
 				51FA7A221B70FB2A0002990E /* UsageViewController.xib */,
+				BDE20E7A1B9EA83F00C5F90E /* copy.png */,
 				BDAE103F1B7C7B31001908A5 /* autosize.png */,
 				BDAE103A1B7C786F001908A5 /* AutoSizeViewInstance.h */,
 				BDAE103B1B7C786F001908A5 /* AutoSizeViewInstance.m */,
@@ -1948,6 +1989,8 @@
 				BDAE11871B7C7E16001908A5 /* UIButton+Parameter.m */,
 				BDAE11881B7C7E16001908A5 /* UIDevice+Info.h */,
 				BDAE11891B7C7E17001908A5 /* UIDevice+Info.m */,
+				BDBD75361BA01B2200168A8B /* NSNull+XY_InternalNullExtention.h */,
+				BDBD75371BA01B2200168A8B /* NSNull+XY_InternalNullExtention.m */,
 			);
 			name = Custom;
 			sourceTree = "<group>";
@@ -2394,6 +2437,13 @@
 				BDD31C5B1B9C2DBD00E1A496 /* UIView+DR_CustomBlockAnimations.m */,
 				BDD31C5D1B9C2F1F00E1A496 /* DRSavedPopAnimationState.h */,
 				BDD31C5E1B9C2F1F00E1A496 /* DRSavedPopAnimationState.m */,
+				BD0126271B9D1CD800D22ACB /* AnimationGroupController.h */,
+				BD0126281B9D1CD800D22ACB /* AnimationGroupController.m */,
+				BD0126291B9D1CD800D22ACB /* AnimationGroupController.xib */,
+				BD01262C1B9D242900D22ACB /* BasicAnimationController.h */,
+				BD01262D1B9D242900D22ACB /* BasicAnimationController.m */,
+				BD01262F1B9D311800D22ACB /* DR_popAnimationController.h */,
+				BD0126301B9D311800D22ACB /* DR_popAnimationController.m */,
 			);
 			name = Animation;
 			sourceTree = "<group>";
@@ -2407,6 +2457,20 @@
 				BDD373F31B86BC740047313A /* AL_sort.m */,
 			);
 			name = Algorithm;
+			sourceTree = "<group>";
+		};
+		BDE557FD1B9FD2E8000B9231 /* PopView */ = {
+			isa = PBXGroup;
+			children = (
+				BDE558041B9FD327000B9231 /* ZHAdvertisementView.h */,
+				BDE558051B9FD33C000B9231 /* ZHAdvertisementView.m */,
+				BDE558071B9FD350000B9231 /* ZHAdvertisementView.xib */,
+				BDE557FE1B9FD2E8000B9231 /* RNBlurModalView.h */,
+				BDE557FF1B9FD2E8000B9231 /* RNBlurModalView.m */,
+				BDE558001B9FD2E8000B9231 /* ZHPopBaseView.h */,
+				BDE558011B9FD2E8000B9231 /* ZHPopBaseView.m */,
+			);
+			path = PopView;
 			sourceTree = "<group>";
 		};
 		BDF987BD1B8DB6AA0039838B /* RUNLOOP */ = {
@@ -2508,13 +2572,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BDE558081B9FD350000B9231 /* ZHAdvertisementView.xib in Resources */,
 				BDAE15BC1B7C7FED001908A5 /* SVProgressHUD.bundle in Resources */,
 				BDF987C21B8DB7040039838B /* RunLoopInstance.xib in Resources */,
 				BDAE15BA1B7C7FED001908A5 /* LICENSE.txt in Resources */,
 				510281C51B5B4678009EDCA0 /* ButtonInstance.xib in Resources */,
 				5195B3FE1AB70284007CFA8B /* LaunchScreen.xib in Resources */,
+				BDBD75351BA004ED00168A8B /* 消息派发1.png in Resources */,
 				BDC5A97B1B7DF18D00AC14C4 /* SimpleDragInstance.xib in Resources */,
 				5195B3FB1AB70284007CFA8B /* Images.xcassets in Resources */,
+				BDE557FA1B9FBD9B000B9231 /* metaClass.png in Resources */,
 				512933461B6FA6B4002634D5 /* TextFieldInstanceView.xib in Resources */,
 				51E10C381B47A8EB009B162E /* TableInstanceView.xib in Resources */,
 				BDAE10401B7C7B31001908A5 /* autosize.png in Resources */,
@@ -2531,14 +2598,17 @@
 				51E10DD41B481BD4009B162E /* NSDateTimeAgo.bundle in Resources */,
 				BDD31C591B9C121600E1A496 /* BasicUsageViewController.xib in Resources */,
 				51E10C591B480CE8009B162E /* TableInstanceInitCell.xib in Resources */,
+				BDE557FC1B9FC849000B9231 /* 消息派发.png in Resources */,
 				51F410BD1B522638008DD35E /* slidermax.png in Resources */,
 				BDD31C4E1B9C0E9600E1A496 /* AnimationInstanceView.xib in Resources */,
 				51B1C61F1B50E13B00E68110 /* Slice1.png in Resources */,
+				BD0126331B9D58E900D22ACB /* bezier.png in Resources */,
 				BD25F7821B8C151300C0BC8E /* hit-test-depth-first-traversal.png in Resources */,
 				51E10C5E1B48113E009B162E /* TableInstanceInitCellXib.xib in Resources */,
 				BDD1E10E1B9062F40037A457 /* SegmentControlInstanceView.xib in Resources */,
 				51F410C51B525041008DD35E /* TableInstanceStyle.xib in Resources */,
 				51E10C3E1B47AE9F009B162E /* LabelInstance.xib in Resources */,
+				BDE20E7B1B9EA83F00C5F90E /* copy.png in Resources */,
 				515DFBD91B6CE3BA003C7B8E /* NavigationBarInstanceView.xib in Resources */,
 				BDD1E1081B8FF29C0037A457 /* SearchBarInstanceView.xib in Resources */,
 				BDAE155C1B7C7FED001908A5 /* MJRefresh.bundle in Resources */,
@@ -2547,6 +2617,7 @@
 				BDC7660E1B942A5D00EC31D7 /* LICENSE in Resources */,
 				BDC5A9751B7DEF9100AC14C4 /* GestureViewController.xib in Resources */,
 				BDAE15B61B7C7FED001908A5 /* SSKeychain.strings in Resources */,
+				BD01262B1B9D1CD800D22ACB /* AnimationGroupController.xib in Resources */,
 				BDAE15C21B7C7FED001908A5 /* LICENSE.txt in Resources */,
 				BDAE10451B7C7D48001908A5 /* AutoLayoutViewInstance.xib in Resources */,
 				51F410BF1B522661008DD35E /* slidermin.png in Resources */,
@@ -2601,6 +2672,7 @@
 				5195B3F61AB70284007CFA8B /* ViewController.m in Sources */,
 				51E10E321B481BD4009B162E /* UITableView+FDTemplateLayoutCell.m in Sources */,
 				BDAE15CC1B7C7FED001908A5 /* README.md in Sources */,
+				BD01262A1B9D1CD800D22ACB /* AnimationGroupController.m in Sources */,
 				BDAE15C01B7C7FED001908A5 /* SWRevealViewController.m in Sources */,
 				BDAE15521B7C7FED001908A5 /* MJConst.m in Sources */,
 				51E10E241B481BD4009B162E /* UINavigationBar+Awesome.m in Sources */,
@@ -2643,6 +2715,7 @@
 				512933451B6FA6B4002634D5 /* TextFieldInstanceView.m in Sources */,
 				51FA7A1C1B70F9CF0002990E /* Person.m in Sources */,
 				BDAE155F1B7C7FED001908A5 /* MJRefreshFooterView.m in Sources */,
+				BDE558021B9FD2E8000B9231 /* RNBlurModalView.m in Sources */,
 				51E10E1C1B481BD4009B162E /* UIImage+RemoteSize.m in Sources */,
 				51E10E4E1B481BD4009B162E /* UIWebView+Load.m in Sources */,
 				51E10E1A1B481BD4009B162E /* UIImage+Orientation.m in Sources */,
@@ -2665,6 +2738,7 @@
 				BDC5A9741B7DEF9100AC14C4 /* GestureViewController.m in Sources */,
 				51F410C41B525041008DD35E /* TableInstanceStyle.m in Sources */,
 				51E10E021B481BD4009B162E /* UIBezierPath+SVG.m in Sources */,
+				BDE558061B9FD33C000B9231 /* ZHAdvertisementView.m in Sources */,
 				51E10E501B481BD4009B162E /* WebView+Debug.m in Sources */,
 				BDAE15AB1B7C7FED001908A5 /* SDWebImagePrefetcher.m in Sources */,
 				51E10DC51B481BD4009B162E /* CLLocation+CH1903.m in Sources */,
@@ -2679,6 +2753,7 @@
 				BDAE15AA1B7C7FED001908A5 /* SDWebImageManager.m in Sources */,
 				51E10C581B480CE8009B162E /* TableInstanceInitCell.m in Sources */,
 				BDAE155D1B7C7FED001908A5 /* MJRefreshBaseView.m in Sources */,
+				BDE558031B9FD2E8000B9231 /* ZHPopBaseView.m in Sources */,
 				BDC7660F1B942A5D00EC31D7 /* README.md in Sources */,
 				51E10DF51B481BD4009B162E /* NSString+UrlEncode.m in Sources */,
 				BDC5A97A1B7DF18D00AC14C4 /* SimpleDragInstance.m in Sources */,
@@ -2694,6 +2769,7 @@
 				BDAE15B11B7C7FED001908A5 /* UIImageView+WebCache.m in Sources */,
 				51E10E4C1B481BD4009B162E /* UIWebView+Canvas.m in Sources */,
 				51E10DC11B481BD4009B162E /* NSManagedObjectContext+Extensions.m in Sources */,
+				BD0126311B9D311800D22ACB /* DR_popAnimationController.m in Sources */,
 				51E10C371B47A8EB009B162E /* TableInstanceView.m in Sources */,
 				BDAE15BF1B7C7FED001908A5 /* README.md in Sources */,
 				BDAE15C91B7C7FED001908A5 /* README.md in Sources */,
@@ -2735,6 +2811,7 @@
 				51E10DE11B481BD4009B162E /* NSObject+AddProperty.m in Sources */,
 				BDAE15B41B7C7FED001908A5 /* README.md in Sources */,
 				BDAE103D1B7C786F001908A5 /* AutoSizeViewInstance.m in Sources */,
+				BD01262E1B9D242900D22ACB /* BasicAnimationController.m in Sources */,
 				BDAE15AD1B7C7FED001908A5 /* UIImage+GIF.m in Sources */,
 				5195B3F01AB70284007CFA8B /* main.m in Sources */,
 				51E10E381B481BD4009B162E /* UITextView+Select.m in Sources */,
@@ -2803,6 +2880,7 @@
 				BDAE15AF1B7C7FED001908A5 /* UIImage+WebP.m in Sources */,
 				51E10E4A1B481BD4009B162E /* UIWebView+Alert.m in Sources */,
 				BDAE15491B7C7FED001908A5 /* MASConstraint.m in Sources */,
+				BDBD75381BA01B2200168A8B /* NSNull+XY_InternalNullExtention.m in Sources */,
 				BDAE15391B7C7FED001908A5 /* GZIP.m in Sources */,
 				51E10E391B481BD4009B162E /* UIView+Animation.m in Sources */,
 				51E10E4B1B481BD4009B162E /* UIWebView+Blocks.m in Sources */,
