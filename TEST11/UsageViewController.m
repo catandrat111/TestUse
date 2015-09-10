@@ -10,6 +10,7 @@
 #import "User.h"
 #import <objc/runtime.h>
 #import "NSNull+XY_InternalNullExtention.h"
+#import "NSInvocation+Improved.h"
 @interface UsageViewController ()
 @property(strong,nonatomic) NSMutableArray* array;
 @end
@@ -32,6 +33,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    char* aaa = @encode(Class);
+    NSLog(@"%@",[NSString stringWithUTF8String:aaa]);
     self.array = [NSMutableArray new];
     User* user1 = [User new];
     user1.age = @(10);
@@ -86,8 +89,10 @@
     };
     
     NSArray *arr = dict[@"备胎们1"];
-    
-    UXY_EXPECTED( ((NSArray *)[NSNull null])[1] == nil );
+    [self invocationTest];
+    [self commonOperation];
+    [self improvedOperation];
+   
 
  
 }
@@ -278,6 +283,119 @@ struct objc_class {
     [p1 performSelector:@selector(setPersonName:)withObject:@"NAME" withObject:@"name"];
     NSString* result = [p1 performSelector:@selector(getPersonName:)];
     NSLog(@"%@",result);
+    
+}
+
+
+//解释NSInvocation
+- (void)invocationTest{
+    User *myClass = [[User alloc] init];
+    NSString *myString = @"My string";
+    
+    //普通调用
+   // NSString *normalInvokeString = [myClass appendMyString:myString age:5];
+     NSString *normalInvokeString = [myClass appendTestMyString:myString];
+    NSLog(@"The normal invoke string is: %@", normalInvokeString);
+
+    //NSInvocation调用
+    SEL mySelector = @selector(appendTestMyString:);
+    NSMethodSignature * sig = [[myClass class] instanceMethodSignatureForSelector:mySelector];
+     NSLog(@"%@",sig);
+    NSInvocation * myInvocation = [NSInvocation invocationWithMethodSignature: sig];
+    NSLog(@"%@",myInvocation);
+    [myInvocation setTarget: myClass];
+    [myInvocation setSelector: mySelector];
+
+    [myInvocation setArgument: &myString atIndex: 2];
+
+    //void *result;
+    [myInvocation retainArguments];
+    [myInvocation invoke];
+    
+    //获得返回值类型
+    const char *returnType = sig.methodReturnType;
+    //声明返回值变量
+   __autoreleasing id returnValue;//不加会报错returnValue会被释放  __autoreleasing
+    //如果没有返回值，也就是消息声明为void，那么returnValue=nil
+    if( !strcmp(returnType, @encode(void)) ){
+        returnValue =  nil;
+    }
+    //如果返回值为对象，那么为变量赋值
+    else if( !strcmp(returnType, @encode(id)) ){
+        [myInvocation getReturnValue:&returnValue];
+    }
+    else{
+        //如果返回值为普通类型NSInteger  BOOL
+        
+        //返回值长度
+        NSUInteger length = [sig methodReturnLength];
+        //根据长度申请内存
+        void *buffer = (void *)malloc(length);
+        //为变量赋值
+        [myInvocation getReturnValue:buffer];
+    
+        if( !strcmp(returnType, @encode(BOOL)) ) {
+            returnValue = [NSNumber numberWithBool:*((BOOL*)buffer)];
+        }
+        else if( !strcmp(returnType, @encode(NSInteger)) ){
+            returnValue = [NSNumber numberWithInteger:*((NSInteger*)buffer)];
+        }
+        returnValue = [NSValue valueWithBytes:buffer objCType:returnType];
+    }
+    
+    
+    
+   // [myInvocation getReturnValue: &result];
+   // NSString *result1 = (__bridge NSString*)result;
+    //NSLog(@"The NSInvocation invoke string is: %@", result1);
+    
+    NSLog(@"The NSInvocation invoke string is: %@", returnValue);
+    
+}
+
+
+
+- (void)commonOperation
+{
+    NSDate *date = [NSDate date];
+    NSDictionary *user = [NSDictionary dictionaryWithObjectsAndKeys:@"value1", @"key1", nil];
+    SEL method = @selector(fireTimer:andDate:);
+    NSMethodSignature *signature = [[self class] instanceMethodSignatureForSelector:method];
+    NSLog(@"%@",signature);
+    NSInvocation *invocation = [NSInvocation invocationWithMethodSignature:signature];
+    NSLog(@"%@",invocation);
+    [invocation setTarget:self];
+    [invocation setSelector:method];
+    [invocation setArgument:&user atIndex:2];
+    [invocation setArgument:&date atIndex:3];
+    //    [NSTimer scheduledTimerWithTimeInterval:0.1 invocation:invocation repeats:YES];
+    [invocation invoke];
+}
+
+- (void)improvedOperation
+{
+    //1.创建一个没有参数的NSInvocation
+    //    SEL selector = @selector(fireTimer:andDate:);
+    //    NSInvocation *invocation = [NSInvocation invocationWithTarget:self andSelector:selector];
+    
+    //2.创建带有两个参数的NSInvocation
+    NSDate *date = [NSDate date];
+    NSDictionary *user = [NSDictionary dictionaryWithObjectsAndKeys:@"value1", @"key1", nil];
+    NSInvocation *invocation = [NSInvocation invocationWithTarget:self andSelector:@selector(fireTimer:andDate:) andArguments:&user, &date];
+    [invocation invoke];
+}
+
+- (void)fireTimer:(NSDictionary *)user andDate:(NSDate *)startTime
+{
+    /*
+     sleep 与 sleepForTimeInterval的区别
+     sleep直接让线程停掉，sleepForTimeInterval是让runLoop停掉。比如说，你有2个APP，分别是A和B，A启动B，然后去取B的进程号，如果你用sleep等B启动再去取，你会发现取不到，因为你只是把代码加到runloop里面去，而runloop并没有执行到这句，sleep就直接让系统停在那里，所以取不到，而后者就没问题，因为它是让runloop执行到这句的时候停1s
+     */
+     NSLog(@"user: %@", user);
+    [NSThread sleepForTimeInterval:2];
+    NSTimeInterval timeInterval = -1 * [startTime timeIntervalSinceNow];
+    NSString *timeStr = [NSString stringWithFormat:@"%.2f", timeInterval];
+    NSLog(@"fireTime: %@", timeStr);
 }
 
 @end

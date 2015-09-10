@@ -33,6 +33,21 @@
 - (void)userTest {
     NSLog(@"user:test");
 }
+
+//解释NSInvocation
+- (NSString *)appendMyString:(NSString *)string age:(NSInteger)age
+{
+    NSString *mString = [NSString stringWithFormat:@"%@ after append method", string];
+    return mString;
+}
+
+- (NSString *)appendTestMyString:(NSString *)string {
+    NSString *mString = [NSString stringWithFormat:@"%@ after append method", string];
+    return mString;
+    
+}
+
+
 @end
 
 

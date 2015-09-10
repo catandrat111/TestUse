@@ -18,4 +18,7 @@
 
 
 - (void)blocktest;
+//解释NSInvocation
+- (NSString *)appendMyString:(NSString *)string age:(NSInteger)age;
+- (NSString *)appendTestMyString:(NSString *)string;
 @end

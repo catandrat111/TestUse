@@ -12,4 +12,7 @@
 @property (nonatomic, strong) NSString *name;
 @property (nonatomic, strong) NSNumber *age;
 - (void)userTest;
+//解释NSInvocation
+- (NSString *)appendMyString:(NSString *)string age:(NSInteger)age;
+- (NSString *)appendTestMyString:(NSString *)string;
 @end

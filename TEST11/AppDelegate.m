@@ -35,7 +35,7 @@
     NSString* uuid1 = [UIDevice  getUDID1];
     DLog(@"%@",uuid1);
 
-    
+    [UIDevice removePwd];
     return YES;
 }
 

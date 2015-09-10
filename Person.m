@@ -172,4 +172,33 @@ void exampleD() {
 - (void)blocktest {
     exampleD();
 }
+
+
+//解释NSInvocation
+- (void)invocationTest{
+    Person *myClass = [[Person alloc] init];
+    NSString *myString = @"My string";
+    
+    //普通调用
+    // NSString *normalInvokeString = [myClass appendMyString:myString age:5];
+    NSString *normalInvokeString = [myClass appendTestMyString:myString];
+    NSLog(@"The normal invoke string is: %@", normalInvokeString);
+    
+    //NSInvocation调用
+    SEL mySelector = @selector(appendTestMyString:);
+    NSMethodSignature * sig = [[myClass class] instanceMethodSignatureForSelector: mySelector];
+    
+    NSInvocation * myInvocation = [NSInvocation invocationWithMethodSignature: sig];
+    [myInvocation setTarget: myClass];
+    [myInvocation setSelector: mySelector];
+    
+    [myInvocation setArgument: &myString atIndex: 2];
+    
+    NSString * result = nil;
+    [myInvocation retainArguments];
+    [myInvocation invoke];
+    [myInvocation getReturnValue: &result];
+    NSLog(@"The NSInvocation invoke string is: %@", result);
+}
+
 @end
