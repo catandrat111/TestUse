@@ -11,8 +11,13 @@
 #import <objc/runtime.h>
 #import "NSNull+XY_InternalNullExtention.h"
 #import "NSInvocation+Improved.h"
+#import "UserList.h"
+static int const PrivateKVOContext;
+
 @interface UsageViewController ()
 @property(strong,nonatomic) NSMutableArray* array;
+
+@property(strong,nonatomic) User* observeUser;
 @end
 
 @implementation UsageViewController
@@ -38,19 +43,19 @@
     self.array = [NSMutableArray new];
     User* user1 = [User new];
     user1.age = @(10);
-    user1.name = @"g";
+    user1.name = @"u1";
    
     [self.array addObject:user1];
     
     
     User* user2 = [User new];
     user2.age = @(1);
-    user2.name = @"d";
+    user2.name = @"u2";
     [self.array addObject:user2];
     
     User* user3 = [User new];
     user3.age = @(11);
-    user1.name = @"v";
+    user1.name = @"u3";
     [self.array addObject:user3];
     
     Person* p1 = [Person new];
@@ -71,7 +76,7 @@
     
     User* user4 = [User new];
     user4.age = @(11);
-    user4.name = @"v";
+    user4.name = @"u4";
     [self.array addObject:user4];
 
     [self copyTest];
@@ -88,18 +93,35 @@
         @"年纪":@(1)
     };
     
-    NSArray *arr = dict[@"备胎们1"];
+  //  NSArray *arr = dict[@"备胎们1"];
     [self invocationTest];
     [self commonOperation];
     [self improvedOperation];
    
-
- 
+    self.observeUser = [User new];
+    self.observeUser.name = @"sdfvgfs";
+    self.observeUser.age = @(10);
+;
+    //:NSKeyValueObservingOptionOld 带就值 NSKeyValueObservingOptionNew 带新值
+    //[self.observeUser addObserver:self forKeyPath:@"name" options:NSKeyValueObservingOptionOld  context:nil];
+   // [self.observeUser addObserver:self forKeyPath:@"age" options: NSKeyValueObservingOptionNew context:nil];
+    //NSKeyValueObservingOptionPrior 分2次调用。在值改变之前和值改变之后。 里面么有新旧值
+    //NSKeyValueObservingOptionInitial 把初始化的值提供给处理方法，一旦注册，立马就会调用一次。通常它会带有新值，而不会带有旧值。
+    [self.observeUser addObserver:self forKeyPath:@"name" options:NSKeyValueObservingOptionInitial  context:nil];
+    [self.observeUser addObserver:self forKeyPath:@"age" options: NSKeyValueObservingOptionPrior context:nil];
+    
+    [self addObserver:self forKeyPath:@"lab" options:NSKeyValueObservingOptionNew context:(void*)&PrivateKVOContext];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     
+}
+
+- (void)dealloc {
+    [self.observeUser removeObserver:self forKeyPath:@"name"];
+    [self.observeUser removeObserver:self forKeyPath:@"age"];
+
 }
 
 -(IBAction)sortAction:(id)sender{
@@ -121,13 +143,54 @@
     
 }
 
-
+//简单集合运算符共有@avg，@count，@max，@min，@sum
 -(IBAction)quchongAction:(id)sender{
+    //对象运算符 比集合运算符稍微复杂，能以数组的方式返回指定的内容，一共有两种：
+//    @distinctUnionOfObjects
+//    @unionOfObjects
     NSArray *result1 = [self.array valueForKeyPath:@"@distinctUnionOfObjects.self"];
     NSLog(@"%@",result1);
     //只想返回一个由user数组中的姓名组成的不重复的新数组
     NSArray *result2 = [self.array valueForKeyPath:@"@distinctUnionOfObjects.name"];
     NSLog(@"%@",result2);
+    //返回的元素是全集
+    NSArray *result3 = [self.array valueForKeyPath:@"@unionOfObjects.name"];
+    NSLog(@"%@",result3);
+    
+    //简单集合运算符共有@avg，@count，@max，@min，@sum
+    //获取age的平均值
+     NSNumber *averageAge = [self.array valueForKeyPath:@"@avg.age"];
+     NSLog(@"%@",averageAge);
+    
+    //要获取transactions集合中元素数目可以这样：@count是这些集合运算符中比较特殊的一个，因为它没有右路经，原因很容易理解。
+    NSNumber *numberOfArray = [self.array  valueForKeyPath:@"@count"];
+    NSLog(@"%@",numberOfArray);
+    
+  //  Array和Set操作符
+    //@distinctUnionOfArrays
+   // @unionOfArrays
+    //@distinctUnionOfSets
+    
+    NSMutableArray* arrays = [[NSMutableArray alloc] init];
+    NSMutableArray* array1 = [NSMutableArray new];
+    User *user = [User new];
+    user.name = @"d";
+    user.age = @(5);
+    [array1 addObject:user];
+    [arrays addObject:self.array];
+    [arrays addObject:array1];
+    NSArray *names = [arrays valueForKeyPath:@"@unionOfArrays.name"];
+    NSLog(@"%@",names);
+
+    NSArray *names1 = [self.array valueForKey:@"name"];
+    NSLog(@"%@",names1);
+    
+    UserList* list = [UserList new];
+    NSLog(@"The list prime is %@", list);
+//    NSLog(@"The last prime is %@", [user.primes lastObject]);
+//     NSLog(@"The last prime is %@", [user valueForKey:@"primes"]);
+//    
+//    NSLog(@"The last prime is %@", [[user contacts] lastObject]);
     
 }
 
@@ -308,7 +371,6 @@ struct objc_class {
 
     [myInvocation setArgument: &myString atIndex: 2];
 
-    //void *result;
     [myInvocation retainArguments];
     [myInvocation invoke];
     
@@ -343,13 +405,7 @@ struct objc_class {
         returnValue = [NSValue valueWithBytes:buffer objCType:returnType];
     }
     
-    
-    
-   // [myInvocation getReturnValue: &result];
-   // NSString *result1 = (__bridge NSString*)result;
-    //NSLog(@"The NSInvocation invoke string is: %@", result1);
-    
-    NSLog(@"The NSInvocation invoke string is: %@", returnValue);
+   NSLog(@"The NSInvocation invoke string is: %@", returnValue);
     
 }
 
@@ -397,5 +453,82 @@ struct objc_class {
     NSString *timeStr = [NSString stringWithFormat:@"%.2f", timeInterval];
     NSLog(@"fireTime: %@", timeStr);
 }
+
+
+/**
+ *  OBSERVE
+ */
+- (IBAction)observeLab:(id)sender {
+    self.lab.text = @"asd";
+    self.observeUser.name = @"test";
+    self.observeUser.age = @(13);
+    
+    //手动触发
+//    [self willChangeValueForKey:@"name"];
+//    
+//    self.observeUser.name = @"name1";
+//    
+//    [self didChangeValueForKey:@"name"];
+    
+}
+
+- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context {
+    if ([keyPath isEqualToString:@"name"]) {
+        NSLog(@"%@",change);
+       NSString* newstr =  [change objectForKey:NSKeyValueChangeNewKey];
+       newstr = change[@"new"];
+        NSLog(@"%@",newstr);
+        NSString* oldstr =  [change objectForKey:NSKeyValueChangeOldKey];
+        oldstr = change[@"old"];
+         NSLog(@"%@",oldstr);
+        self.lab.text = newstr;
+    }
+    
+    if([keyPath isEqualToString:@"age"]){
+        NSLog(@"%@",change);
+        NSString* newstr =  [change objectForKey:NSKeyValueChangeNewKey];
+        newstr = change[@"new"];
+         NSLog(@"%@",newstr);
+        NSString* oldstr =  [change objectForKey:NSKeyValueChangeOldKey];
+        oldstr = change[@"old"];
+         NSLog(@"%@",oldstr);
+        
+        NSString* priorStr =  [change objectForKey:NSKeyValueChangeNotificationIsPriorKey];
+        NSLog(@"%@",priorStr);
+    }
+    
+}
+
+//- (void)observeValueForKeyPath:(NSString *)keyPath
+//                      ofObject:(id)object
+//                        change:(NSDictionary *)change
+//                       context:(void *)context
+//{
+//    if (context == &PrivateKVOContext) {
+//        
+//        // 这里写相关的观察代码
+//    } else {
+//        [super observeValueForKeyPath:keyPath ofObject:object change:change context:context];
+//    }
+//}
+
+//重新实现NSObject类中的automaticallyNotifiesObserversForKey:方法，返回yes表示自动通知。
+//+ (BOOL)automaticallyNotifiesObserversForKey:(NSString*)key
+//
+//{
+//    
+//    //当这两个值改变时，使用自动通知已注册过的观察者，观察者需要实现observeValueForKeyPath:ofObject:change:context:方法
+//    if ([key isEqualToString:@"name"])
+//        
+//    {
+//        
+//        return NO;
+//        
+//    }
+//    
+//    return [super automaticallyNotifiesObserversForKey:key];
+//    
+//} 
+
 
 @end
