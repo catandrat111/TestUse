@@ -158,7 +158,6 @@
 		51E10E2F1B481BD4009B162E /* UIScrollView+Pages.m in Sources */ = {isa = PBXBuildFile; fileRef = 51E10D701B481BD4009B162E /* UIScrollView+Pages.m */; };
 		51E10E301B481BD4009B162E /* UISearchBar+Blocks.m in Sources */ = {isa = PBXBuildFile; fileRef = 51E10D731B481BD4009B162E /* UISearchBar+Blocks.m */; };
 		51E10E311B481BD4009B162E /* UISplitViewController+QuickAccess.m in Sources */ = {isa = PBXBuildFile; fileRef = 51E10D761B481BD4009B162E /* UISplitViewController+QuickAccess.m */; };
-		51E10E321B481BD4009B162E /* UITableView+FDTemplateLayoutCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 51E10D791B481BD4009B162E /* UITableView+FDTemplateLayoutCell.m */; };
 		51E10E331B481BD4009B162E /* UITableView+iOS7Style.m in Sources */ = {isa = PBXBuildFile; fileRef = 51E10D7B1B481BD4009B162E /* UITableView+iOS7Style.m */; };
 		51E10E341B481BD4009B162E /* UITableViewCell+NIB.m in Sources */ = {isa = PBXBuildFile; fileRef = 51E10D7E1B481BD4009B162E /* UITableViewCell+NIB.m */; };
 		51E10E351B481BD4009B162E /* UITextField+Blocks.m in Sources */ = {isa = PBXBuildFile; fileRef = 51E10D811B481BD4009B162E /* UITextField+Blocks.m */; };
@@ -350,6 +349,12 @@
 		BDE558031B9FD2E8000B9231 /* ZHPopBaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = BDE558011B9FD2E8000B9231 /* ZHPopBaseView.m */; };
 		BDE558061B9FD33C000B9231 /* ZHAdvertisementView.m in Sources */ = {isa = PBXBuildFile; fileRef = BDE558051B9FD33C000B9231 /* ZHAdvertisementView.m */; };
 		BDE558081B9FD350000B9231 /* ZHAdvertisementView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BDE558071B9FD350000B9231 /* ZHAdvertisementView.xib */; };
+		BDE62A771BA6C9C000870499 /* UITableView+FDTemplateLayoutCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BDE62A761BA6C9C000870499 /* UITableView+FDTemplateLayoutCell.m */; };
+		BDE62A7B1BA6CAD200870499 /* TableViewLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = BDE62A791BA6CAD200870499 /* TableViewLayout.m */; };
+		BDE62A7C1BA6CAD200870499 /* TableViewLayout.xib in Resources */ = {isa = PBXBuildFile; fileRef = BDE62A7A1BA6CAD200870499 /* TableViewLayout.xib */; };
+		BDE62A801BA6CB7200870499 /* TableViewLayoutCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BDE62A7E1BA6CB7200870499 /* TableViewLayoutCell.m */; };
+		BDE62A811BA6CB7200870499 /* TableViewLayoutCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BDE62A7F1BA6CB7200870499 /* TableViewLayoutCell.xib */; };
+		BDE62A841BA6CC6500870499 /* LayoutModel.m in Sources */ = {isa = PBXBuildFile; fileRef = BDE62A831BA6CC6500870499 /* LayoutModel.m */; };
 		BDF987C11B8DB7040039838B /* RunLoopInstance.m in Sources */ = {isa = PBXBuildFile; fileRef = BDF987BF1B8DB7040039838B /* RunLoopInstance.m */; };
 		BDF987C21B8DB7040039838B /* RunLoopInstance.xib in Resources */ = {isa = PBXBuildFile; fileRef = BDF987C01B8DB7040039838B /* RunLoopInstance.xib */; };
 /* End PBXBuildFile section */
@@ -650,8 +655,6 @@
 		51E10D731B481BD4009B162E /* UISearchBar+Blocks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UISearchBar+Blocks.m"; sourceTree = "<group>"; };
 		51E10D751B481BD4009B162E /* UISplitViewController+QuickAccess.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UISplitViewController+QuickAccess.h"; sourceTree = "<group>"; };
 		51E10D761B481BD4009B162E /* UISplitViewController+QuickAccess.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UISplitViewController+QuickAccess.m"; sourceTree = "<group>"; };
-		51E10D781B481BD4009B162E /* UITableView+FDTemplateLayoutCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+FDTemplateLayoutCell.h"; sourceTree = "<group>"; };
-		51E10D791B481BD4009B162E /* UITableView+FDTemplateLayoutCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+FDTemplateLayoutCell.m"; sourceTree = "<group>"; };
 		51E10D7A1B481BD4009B162E /* UITableView+iOS7Style.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+iOS7Style.h"; sourceTree = "<group>"; };
 		51E10D7B1B481BD4009B162E /* UITableView+iOS7Style.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+iOS7Style.m"; sourceTree = "<group>"; };
 		51E10D7D1B481BD4009B162E /* UITableViewCell+NIB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableViewCell+NIB.h"; sourceTree = "<group>"; };
@@ -993,6 +996,16 @@
 		BDE558041B9FD327000B9231 /* ZHAdvertisementView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ZHAdvertisementView.h; path = ../ZHAdvertisementView.h; sourceTree = "<group>"; };
 		BDE558051B9FD33C000B9231 /* ZHAdvertisementView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZHAdvertisementView.m; sourceTree = "<group>"; };
 		BDE558071B9FD350000B9231 /* ZHAdvertisementView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZHAdvertisementView.xib; sourceTree = "<group>"; };
+		BDE62A751BA6C9C000870499 /* UITableView+FDTemplateLayoutCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+FDTemplateLayoutCell.h"; sourceTree = "<group>"; };
+		BDE62A761BA6C9C000870499 /* UITableView+FDTemplateLayoutCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+FDTemplateLayoutCell.m"; sourceTree = "<group>"; };
+		BDE62A781BA6CAD200870499 /* TableViewLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewLayout.h; sourceTree = "<group>"; };
+		BDE62A791BA6CAD200870499 /* TableViewLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewLayout.m; sourceTree = "<group>"; };
+		BDE62A7A1BA6CAD200870499 /* TableViewLayout.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TableViewLayout.xib; sourceTree = "<group>"; };
+		BDE62A7D1BA6CB7200870499 /* TableViewLayoutCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewLayoutCell.h; sourceTree = "<group>"; };
+		BDE62A7E1BA6CB7200870499 /* TableViewLayoutCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewLayoutCell.m; sourceTree = "<group>"; };
+		BDE62A7F1BA6CB7200870499 /* TableViewLayoutCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TableViewLayoutCell.xib; sourceTree = "<group>"; };
+		BDE62A821BA6CC6500870499 /* LayoutModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LayoutModel.h; sourceTree = "<group>"; };
+		BDE62A831BA6CC6500870499 /* LayoutModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LayoutModel.m; sourceTree = "<group>"; };
 		BDF8F02E1B7C97D9007DAC63 /* TEST11.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = TEST11.entitlements; sourceTree = "<group>"; };
 		BDF987BE1B8DB7040039838B /* RunLoopInstance.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RunLoopInstance.h; sourceTree = "<group>"; };
 		BDF987BF1B8DB7040039838B /* RunLoopInstance.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RunLoopInstance.m; sourceTree = "<group>"; };
@@ -1194,6 +1207,12 @@
 				BDCCA7AD1B8F04B8007ED1C9 /* RRPSectionFootView.m */,
 				BDCCA7AF1B8F0531007ED1C9 /* RRPSectionHeaderView.h */,
 				BDCCA7B01B8F0531007ED1C9 /* RRPSectionHeaderView.m */,
+				BDE62A781BA6CAD200870499 /* TableViewLayout.h */,
+				BDE62A791BA6CAD200870499 /* TableViewLayout.m */,
+				BDE62A7A1BA6CAD200870499 /* TableViewLayout.xib */,
+				BDE62A7D1BA6CB7200870499 /* TableViewLayoutCell.h */,
+				BDE62A7E1BA6CB7200870499 /* TableViewLayoutCell.m */,
+				BDE62A7F1BA6CB7200870499 /* TableViewLayoutCell.xib */,
 			);
 			name = Table;
 			path = ..;
@@ -1839,8 +1858,8 @@
 		51E10D771B481BD4009B162E /* UITableView */ = {
 			isa = PBXGroup;
 			children = (
-				51E10D781B481BD4009B162E /* UITableView+FDTemplateLayoutCell.h */,
-				51E10D791B481BD4009B162E /* UITableView+FDTemplateLayoutCell.m */,
+				BDE62A751BA6C9C000870499 /* UITableView+FDTemplateLayoutCell.h */,
+				BDE62A761BA6C9C000870499 /* UITableView+FDTemplateLayoutCell.m */,
 				51E10D7A1B481BD4009B162E /* UITableView+iOS7Style.h */,
 				51E10D7B1B481BD4009B162E /* UITableView+iOS7Style.m */,
 			);
@@ -1978,6 +1997,8 @@
 				51FA7A2A1B7105180002990E /* Person+GHAssociatedObject.m */,
 				BD5674681BA2AE4300DAF744 /* UserList.h */,
 				BD5674691BA2AE4300DAF744 /* UserList.mm */,
+				BDE62A821BA6CC6500870499 /* LayoutModel.h */,
+				BDE62A831BA6CC6500870499 /* LayoutModel.m */,
 			);
 			name = Model;
 			path = ..;
@@ -2627,6 +2648,7 @@
 				BDAE15BE1B7C7FED001908A5 /* LICENSE.txt in Resources */,
 				5158D19C1B7E253000ACF3AD /* CircleViewController.xib in Resources */,
 				BDAE15B31B7C7FED001908A5 /* LICENSE in Resources */,
+				BDE62A7C1BA6CAD200870499 /* TableViewLayout.xib in Resources */,
 				51FA7A241B70FB2A0002990E /* UsageViewController.xib in Resources */,
 				5158D1A11B7E355000ACF3AD /* PanGestureInstance.xib in Resources */,
 				BDAE15CB1B7C7FED001908A5 /* LICENSE in Resources */,
@@ -2635,6 +2657,7 @@
 				51E10C591B480CE8009B162E /* TableInstanceInitCell.xib in Resources */,
 				BDE557FC1B9FC849000B9231 /* 消息派发.png in Resources */,
 				51F410BD1B522638008DD35E /* slidermax.png in Resources */,
+				BDE62A811BA6CB7200870499 /* TableViewLayoutCell.xib in Resources */,
 				BDD31C4E1B9C0E9600E1A496 /* AnimationInstanceView.xib in Resources */,
 				51B1C61F1B50E13B00E68110 /* Slice1.png in Resources */,
 				BD0126331B9D58E900D22ACB /* bezier.png in Resources */,
@@ -2718,6 +2741,7 @@
 				51E10DD91B481BD4009B162E /* NSDictionary+SafeAccess.m in Sources */,
 				BDAE154A1B7C7FED001908A5 /* MASConstraintMaker.m in Sources */,
 				51E10DC61B481BD4009B162E /* CLLocationManager+Blocks.m in Sources */,
+				BDE62A841BA6CC6500870499 /* LayoutModel.m in Sources */,
 				BDAE15A71B7C7FED001908A5 /* SDWebImageDecoder.m in Sources */,
 				BDAE15B81B7C7FED001908A5 /* SSKeychain.m in Sources */,
 				51E10DC71B481BD4009B162E /* NSArray+Block.m in Sources */,
@@ -2727,7 +2751,6 @@
 				51E10E451B481BD4009B162E /* UIViewController+DDPopUpViewController.m in Sources */,
 				BD56746D1BA2DE4000DAF744 /* KeyValueObserver.m in Sources */,
 				5195B3F61AB70284007CFA8B /* ViewController.m in Sources */,
-				51E10E321B481BD4009B162E /* UITableView+FDTemplateLayoutCell.m in Sources */,
 				BDAE15CC1B7C7FED001908A5 /* README.md in Sources */,
 				BD01262A1B9D1CD800D22ACB /* AnimationGroupController.m in Sources */,
 				BDAE15C01B7C7FED001908A5 /* SWRevealViewController.m in Sources */,
@@ -2800,9 +2823,11 @@
 				BDAE15AB1B7C7FED001908A5 /* SDWebImagePrefetcher.m in Sources */,
 				51E10DC51B481BD4009B162E /* CLLocation+CH1903.m in Sources */,
 				51E10E3E1B481BD4009B162E /* UIView+Frame.m in Sources */,
+				BDE62A7B1BA6CAD200870499 /* TableViewLayout.m in Sources */,
 				51E10DD71B481BD4009B162E /* NSDictionary+JSONString.m in Sources */,
 				BDD373F11B86BBB20047313A /* AlgorithmClass.m in Sources */,
 				51E10E3D1B481BD4009B162E /* UIView+Find.m in Sources */,
+				BDE62A801BA6CB7200870499 /* TableViewLayoutCell.m in Sources */,
 				51E10DD21B481BD4009B162E /* NSDate+TimeAgo.m in Sources */,
 				51E10E091B481BD4009B162E /* UIColor+Gradient.m in Sources */,
 				51E10E2B1B481BD4009B162E /* UIResponder+Chain.m in Sources */,
@@ -2818,6 +2843,7 @@
 				BDAE15B91B7C7FED001908A5 /* SSKeychainQuery.m in Sources */,
 				51E10DE91B481BD4009B162E /* NSObject+Runtime.m in Sources */,
 				BDAE11D81B7C7E17001908A5 /* CALayer+Addition.m in Sources */,
+				BDE62A771BA6C9C000870499 /* UITableView+FDTemplateLayoutCell.m in Sources */,
 				51E10E061B481BD4009B162E /* UIButton+CountDown.m in Sources */,
 				51E10DE81B481BD4009B162E /* NSObject+Property.m in Sources */,
 				512933401B6FA65F002634D5 /* myUILabel.m in Sources */,

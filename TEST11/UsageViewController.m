@@ -12,7 +12,9 @@
 #import "NSNull+XY_InternalNullExtention.h"
 #import "NSInvocation+Improved.h"
 #import "UserList.h"
-static int const PrivateKVOContext;
+#import "NSDecimalNumber+Extensions.h"
+#import "NSNumber+Round.h"
+
 
 @interface UsageViewController ()
 @property(strong,nonatomic) NSMutableArray* array;
@@ -109,8 +111,9 @@ static int const PrivateKVOContext;
     //NSKeyValueObservingOptionInitial 把初始化的值提供给处理方法，一旦注册，立马就会调用一次。通常它会带有新值，而不会带有旧值。
     [self.observeUser addObserver:self forKeyPath:@"name" options:NSKeyValueObservingOptionInitial  context:nil];
     [self.observeUser addObserver:self forKeyPath:@"age" options: NSKeyValueObservingOptionPrior context:nil];
+    [self decimalTest];
+    [self numberTest];
     
-    [self addObserver:self forKeyPath:@"lab" options:NSKeyValueObservingOptionNew context:(void*)&PrivateKVOContext];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -123,6 +126,58 @@ static int const PrivateKVOContext;
     [self.observeUser removeObserver:self forKeyPath:@"age"];
 
 }
+
+
+- (void)decimalTest{
+    float testFloat = 2.689;
+    NSDecimalNumber *decimal = [[NSDecimalNumber alloc]initWithFloat:testFloat];
+    NSDecimalNumber *testFloat1 = [decimal roundToScale:2.0];
+    NSLog(@"%@",testFloat1);
+    
+   NSDecimalNumber *testFloat2 = [decimal decimalNumberWithPercentage:100];
+    NSLog(@"%@",testFloat1);
+}
+
+- (void)numberTest{
+//    NSNumberFormatterNoStyle = kCFNumberFormatterNoStyle, [1243:403] Formatted number string:123456789
+//    
+//    NSNumberFormatterDecimalStyle = kCFNumberFormatterDecimalStyle,  [1243:403] Formatted number string:123,456,789
+//    
+//    NSNumberFormatterCurrencyStyle = kCFNumberFormatterCurrencyStyle, [1243:403] Formatted number string:￥123,456,789.00
+//    
+//    NSNumberFormatterPercentStyle = kCFNumberFormatterPercentStyle,  [1243:403] Formatted number string:-539,222,988%
+//    
+//    NSNumberFormatterScientificStyle = kCFNumberFormatterScientificStyle,   [1243:403] Formatted number string:1.23456789E8
+//    
+//    NSNumberFormatterSpellOutStyle = kCFNumberFormatterSpellOutStyle  [1243:403] Formatted number string:一亿二千三百四十五万六千七百八十九
+    
+//    [1243:403] Formatted number string:123456789
+//    NSNumberFormatterRoundCeiling =
+//    kCFNumberFormatterRoundCeiling,//四舍五入，原值2.7999999999,直接输出3
+//    NSNumberFormatterRoundFloor =
+//    kCFNumberFormatterRoundFloor,//保留小数输出2.8 正是想要的
+//    NSNumberFormatterRoundDown =
+//    kCFNumberFormatterRoundDown,//加上了人民币标志，原值输出￥2.8
+//    NSNumberFormatterRoundUp =
+//    kCFNumberFormatterRoundUp,//本身数值乘以100后用百分号表示,输出280%
+//    NSNumberFormatterRoundHalfEven =
+//    kCFNumberFormatterRoundHalfEven,//原值表示，输出2.799999999E0
+//    NSNumberFormatterRoundHalfDown =
+//    kCFNumberFormatterRoundHalfDown,//原值的中文表示，输出二点七九九九。。。。
+//    NSNumberFormatterRoundHalfUp =
+//    kCFNumberFormatterRoundHalfUp //原值中文表示，输出第三
+    
+    NSNumber *numTest = [NSNumber numberWithFloat:12342.45657];
+    NSLog(@"%@", [numTest doCeilWithDigit:2]); //TEST11[3014:159534] 12342.46
+     NSLog(@"%@", [numTest doFloorWithDigit:2]);//TEST11[3014:159534] 12342.45
+     NSLog(@"%@", [numTest doRoundWithDigit:2]);//TEST11[3014:159534] 12342.46
+    
+    NSLog(@"%@", [numTest toDisplayNumberWithDigit:2]);// TEST11[3014:159534] 12,342.46
+    NSLog(@"%@", [numTest toDisplayPercentageWithDigit:2]);//TEST11[3014:159534] 1,234,245.75%
+
+
+}
+
 
 -(IBAction)sortAction:(id)sender{
     NSArray *sortDescriptors = @[[NSSortDescriptor sortDescriptorWithKey:@"age" ascending:YES],[NSSortDescriptor sortDescriptorWithKey:@"name" ascending:YES]];
