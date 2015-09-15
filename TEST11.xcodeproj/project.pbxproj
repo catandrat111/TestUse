@@ -210,6 +210,7 @@
 		BD1658421BA7CC1B00874780 /* TableViewLayoutCell1.m in Sources */ = {isa = PBXBuildFile; fileRef = BD1658401BA7CC1B00874780 /* TableViewLayoutCell1.m */; };
 		BD1658431BA7CC1B00874780 /* TableViewLayoutCell1.xib in Resources */ = {isa = PBXBuildFile; fileRef = BD1658411BA7CC1B00874780 /* TableViewLayoutCell1.xib */; };
 		BD1658461BA7EEA600874780 /* RunLoopTestModel.m in Sources */ = {isa = PBXBuildFile; fileRef = BD1658451BA7EEA600874780 /* RunLoopTestModel.m */; };
+		BD1658491BA810D200874780 /* AntiAlias.m in Sources */ = {isa = PBXBuildFile; fileRef = BD1658481BA810D100874780 /* AntiAlias.m */; };
 		BD25F7741B8C05DE00C0BC8E /* HitTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD25F7731B8C05DE00C0BC8E /* HitTestViewController.m */; };
 		BD25F7771B8C076E00C0BC8E /* HitTestAView.m in Sources */ = {isa = PBXBuildFile; fileRef = BD25F7761B8C076E00C0BC8E /* HitTestAView.m */; };
 		BD25F77A1B8C07B500C0BC8E /* HiTestBView.m in Sources */ = {isa = PBXBuildFile; fileRef = BD25F7791B8C07B500C0BC8E /* HiTestBView.m */; };
@@ -751,6 +752,8 @@
 		BD1658411BA7CC1B00874780 /* TableViewLayoutCell1.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TableViewLayoutCell1.xib; sourceTree = "<group>"; };
 		BD1658441BA7EEA600874780 /* RunLoopTestModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RunLoopTestModel.h; sourceTree = "<group>"; };
 		BD1658451BA7EEA600874780 /* RunLoopTestModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RunLoopTestModel.m; sourceTree = "<group>"; };
+		BD1658471BA810D100874780 /* AntiAlias.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AntiAlias.h; sourceTree = "<group>"; };
+		BD1658481BA810D100874780 /* AntiAlias.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AntiAlias.m; sourceTree = "<group>"; };
 		BD25F7721B8C05DE00C0BC8E /* HitTestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HitTestViewController.h; sourceTree = "<group>"; };
 		BD25F7731B8C05DE00C0BC8E /* HitTestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HitTestViewController.m; sourceTree = "<group>"; };
 		BD25F7751B8C076E00C0BC8E /* HitTestAView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HitTestAView.h; sourceTree = "<group>"; };
@@ -2058,6 +2061,8 @@
 				BDAE11891B7C7E17001908A5 /* UIDevice+Info.m */,
 				BDBD75361BA01B2200168A8B /* NSNull+XY_InternalNullExtention.h */,
 				BDBD75371BA01B2200168A8B /* NSNull+XY_InternalNullExtention.m */,
+				BD1658471BA810D100874780 /* AntiAlias.h */,
+				BD1658481BA810D100874780 /* AntiAlias.m */,
 			);
 			name = Custom;
 			sourceTree = "<group>";
@@ -2951,6 +2956,7 @@
 				51E10E0C1B481BD4009B162E /* UIColor+Random.m in Sources */,
 				51E10E1D1B481BD4009B162E /* UIImage+Resize.m in Sources */,
 				BD754A7B1BA17E7C00BE410D /* NSInvocation+Improved.m in Sources */,
+				BD1658491BA810D200874780 /* AntiAlias.m in Sources */,
 				51E10DCB1B481BD4009B162E /* NSData+Encrypt.m in Sources */,
 				51E10DC01B481BD4009B162E /* NSManagedObject+Extensions.m in Sources */,
 				51E10DDF1B481BD4009B162E /* NSNumber+Round.m in Sources */,
