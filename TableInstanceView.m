@@ -44,6 +44,7 @@
     if(cell == nil){
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIndentifier];;
     }
+    cell.autoresizingMask = UIViewAutoresizingFlexibleWidth;
     cell.textLabel.text = dataSource[indexPath.row];
     return cell;
 }

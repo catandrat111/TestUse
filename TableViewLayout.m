@@ -8,6 +8,7 @@
 
 #import "TableViewLayout.h"
 #import "TableViewLayoutCell.h"
+#import "TableViewLayoutCell1.h"
 #import "LayoutModel.h"
 #import "UITableView+FDTemplateLayoutCell.h"
 @interface TableViewLayout ()<UITableViewDelegate,UITableViewDataSource>{
@@ -22,13 +23,14 @@
     [super viewDidLoad];
     LayoutModel *model = [LayoutModel new];
     model.name1 = @"fdfggffgghghhjhjjhjkjkjkjkjkkjkjkjjkkjfdfggffgghghhjhjjhjkjkjkjkjkkjkjkjjkkj";
-    model.name2 = @"dfgfcbvmjhliozxdfdfggpowrewtfreygdfgfcbvmjhliozxdfdfggpowrewtfreygdfgfcbvmjhliozxdfdfggpowrewtfreyg";
+    model.name2 = @"dfgfcbvmjhliozxdfdfggpowrewtfreygdfgfcbvmjhliozxdfdfggpowrewtfdfgfcbvmjhliozxdfdfggpowrewtfreygdfgfcbvmjhliozxdfdfggpowrewtfdfgfcbvmjhliozxdfdfggpowrewtfreygdfgfcbvmjhliozxdfdfggpowrewtfdfgfcbvmjhliozxdfdfggpowrewtfreygdfgfcbvmjhliozxdfdfggpowrewtfdfgfcbvmjhliozxdfdfggpowrewtfreygdfgfcbvmjhliozxdfdfggpowrewtfdfgfcbvmjhliozxdfdfggpowrewtfreygdfgfcbvmjhliozxdfdfggpowrewtfdfgfcbvmjhliozxdfdfggpowrewtfreygdfgfcbvmjhliozxdfdfggpowrewtfdfgfcbvmjhliozxdfdfggpowrewtfreygdfgfcbvmjhliozxdfdfggpowrewtfaaaaaa";
     LayoutModel *model1 = [LayoutModel new];
-    model1.name1 = @"fdfggffgghghhjhjjhjkjkjkjkjkkjkjkjjkkjfdfggffgghghhjhjjhjkjkjkjkjkkjkjkjjkkj";
-    model1.name2 = @"dfgfcbvmjhliozxdfdfggpowrewtfreygdfgfcbvmjhliozxdfdfggpowrewtfreygdfgfcbvmjhliozxdfdfggpowrewtfreyg";
+    model1.name1 = @"dgvfdbgfhc bnbvthytjuyiebvnbnbv";
+    model1.name2 = @"dfgfcbvmjhliozxdfdfggpowrewtfreygdfgfcbvmjhliozxdfdfggpowrewtfreygdfgfcbvmjhliozxdfdfggpowrewtfreygdfgfcbvmjhliozxdfdfggpowrewtfreygdfgfcbvmjhliozxdfdfggpowrewtfreygdfgfcbvmjhggfglzxmmmmm";
     
     dataSource = @[model,model1];
-    [self.tableView registerNib:[UINib nibWithNibName:@"TableViewLayoutCell" bundle:nil] forCellReuseIdentifier:@"layoutcell"];
+    //[self.tableView registerNib:[UINib nibWithNibName:@"TableViewLayoutCell" bundle:nil] forCellReuseIdentifier:@"layoutcell"];
+    [self.tableView registerNib:[UINib nibWithNibName:@"TableViewLayoutCell1" bundle:nil] forCellReuseIdentifier:@"layoutcell"];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -43,14 +45,14 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    TableViewLayoutCell* cell = nil;
+    TableViewLayoutCell1* cell = nil;
     static NSString* cellIndentifier = @"layoutcell";
     cell = [tableView dequeueReusableCellWithIdentifier:cellIndentifier];
      [self configureCell:cell atIndexPath:indexPath];
     return cell;
 }
 
-- (void)configureCell:(TableViewLayoutCell *)cell atIndexPath:(NSIndexPath *)indexPath
+- (void)configureCell:(TableViewLayoutCell1 *)cell atIndexPath:(NSIndexPath *)indexPath
 {
     cell.fd_enforceFrameLayout = NO; // Enable to use "-sizeThatFits:"
     if (indexPath.row % 2 == 0) {
@@ -64,7 +66,7 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return [tableView fd_heightForCellWithIdentifier:@"layoutcell" cacheByIndexPath:indexPath configuration:^(TableViewLayoutCell *cell) {
+    return [tableView fd_heightForCellWithIdentifier:@"layoutcell" cacheByIndexPath:indexPath configuration:^(TableViewLayoutCell1 *cell) {
        [self configureCell:cell atIndexPath:indexPath];
     }];
 }

@@ -473,7 +473,7 @@ static CGFloat const _FDTemplateLayoutCellHeightCacheAbsentValue = -1;
 
     // If auto layout enabled, cell's contentView must have some constraints.
     BOOL autoLayoutEnabled = cell.contentView.constraints.count > 0 && !cell.fd_enforceFrameLayout;
-    if (NO) {
+    if (autoLayoutEnabled) {
         
         // Add a hard width constraint to make dynamic content views (like labels) expand vertically instead
         // of growing horizontally, in a flow-layout manner.

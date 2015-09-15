@@ -10,6 +10,7 @@
 #import "Person.h"
 #import "User.h"
 #import "GestureViewController.h"
+#import "RunLoopTestModel.h"
 @interface RunLoopInstance ()
 {
     
@@ -37,13 +38,34 @@
 
     
       NSLog(@"%@",[NSThread currentThread]);
-    User* user = [User new];//立马释放
+    RunLoopTestModel* model = [RunLoopTestModel new];
     
     NSString *str = [NSString stringWithFormat:@"sunnyxx"];
     // str是一个autorelease对象，设置一个weak的引用来观察它
     reference = str;
-    reference1 = user;
+    reference1 = model;
+    NSLog(@"%@", reference1);
+    
+    CFRunLoopRef runLoop = CFRunLoopGetCurrent();
+    
+    // This is a idle mode of RunLoop, when UIScrollView scrolls, it jumps into "UITrackingRunLoopMode"
+    // and won't perform any cache task to keep a smooth scroll.
+    CFStringRef runLoopMode = kCFRunLoopDefaultMode;
+    
+    // Collect all index paths to be precached.
+    
+    // Setup a observer to get a perfect moment for precaching tasks.
+    // We use a "kCFRunLoopBeforeWaiting" state to keep RunLoop has done everything and about to sleep
+    // (mach_msg_trap), when all tasks finish, it will remove itself.
+    CFRunLoopObserverRef observer = CFRunLoopObserverCreateWithHandler
+    (kCFAllocatorDefault, kCFRunLoopBeforeWaiting, true, 0, ^(CFRunLoopObserverRef observer, CFRunLoopActivity _) {
+        NSLog(@"reference:%@", reference);
+        NSLog(@"reference1:%@", reference1);
+    });
+    
+    CFRunLoopAddObserver(runLoop, observer, runLoopMode);
 }
+
 
 -(void)viewWillAppear:(BOOL)animated{
     NSLog(@"%@", reference);
@@ -140,8 +162,9 @@ static void runloopObserverCallback(CFRunLoopObserverRef observer, CFRunLoopActi
     CFRunLoopAddObserver([[NSRunLoop currentRunLoop] getCFRunLoop], observerRef, kCFRunLoopCommonModes);
     [loop run];
   
-   
-}
+
+    
+    }
 
 -(void)p3{
     GestureViewController* ges = [GestureViewController new];
