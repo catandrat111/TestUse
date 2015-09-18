@@ -49,6 +49,8 @@
    CGSize size =  [self.lab sizeThatFits:CGSizeMake(self.lab.frameWidth, 0)];
     self.lab.frameHeight = size.height;
     
+    self.imgView.image = [UIImage imageNamed:@"Selected"];
+    
 }
 
 - (void)didReceiveMemoryWarning {

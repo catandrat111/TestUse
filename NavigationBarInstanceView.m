@@ -39,7 +39,7 @@ translucent: 是否透明
     
     //标题垂直偏移
     [self.navigationController.navigationBar setTitleVerticalPositionAdjustment:20 forBarMetrics:UIBarMetricsDefault];
-    
+   
 }
 
 - (void)didReceiveMemoryWarning {
