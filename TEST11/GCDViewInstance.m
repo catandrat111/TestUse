@@ -1,14 +1,14 @@
 //
-//  AutoLayoutViewInstance.m
+//  GCDViewInstance.m
 //  TEST11
 //
-//  Created by dongjl on 15-8-13.
-//  Copyright (c) 2015年 djl. All rights reserved.
+//  Created by dongjl on 15/9/24.
+//  Copyright © 2015年 djl. All rights reserved.
 //
 
-#import "AutoLayoutViewInstance.h"
+#import "GCDViewInstance.h"
 
-@interface AutoLayoutViewInstance ()<UITableViewDataSource,UITableViewDelegate>{
+@interface GCDViewInstance ()<UITableViewDataSource,UITableViewDelegate>{
     NSArray* dataSource;
     NSDictionary* dict;
 }
@@ -16,19 +16,20 @@
 
 @end
 
-@implementation AutoLayoutViewInstance
+@implementation GCDViewInstance
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    dataSource = @[@"Collapsible View Demo",@"Collapsible Cell Demo",@"Custom"];
-    dict = @{@"Collapsible View Demo":@"AutoLayoutFDViewController",@"Collapsible Cell Demo":@"FDTableViewController",@"Custom":@"AutoLayoutCustomController"};
+    dataSource = @[@"Basic",@"Apply"];
+    dict = @{@"Basic":@"GCDBasicViewController",@"Apply":@"GCDApplyViewController"};
+    
+
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
 
 #pragma mark uitabkeview datasource
 
@@ -43,6 +44,7 @@
     if(cell == nil){
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIndentifier];;
     }
+    cell.autoresizingMask = UIViewAutoresizingFlexibleWidth;
     cell.textLabel.text = dataSource[indexPath.row];
     return cell;
 }
@@ -57,8 +59,11 @@
     NSString* classKey = dataSource[indexPath.row];
     NSString* className = dict[classKey];
     Class contrllerClass = NSClassFromString(className);
-    UIViewController *controller = [[contrllerClass alloc] init];
+    UIViewController* controller = [[contrllerClass alloc] init];
     [self.navigationController pushViewController:controller animated:YES];
 }
+
+
+
 
 @end
