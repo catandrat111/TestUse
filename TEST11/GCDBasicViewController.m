@@ -72,6 +72,11 @@
     dispatch_after(time, dispatch_get_main_queue(), ^{
         NSLog(@"至少等待3秒钟以后再执行");
     });
+//    该方法在那个线程调用，那么run就在哪个线程执行（当前线程），通常是主线程。
+//    [self performSelector:@selector(run) withObject:nil afterDelay:3.0];
+//    
+//    说明：在3秒钟之后，执行run函数
+    
     
     dispatch_time_t nowtime = [self getDispatchTimeByDate:[NSDate date]];
     NSLog(@"%@",@(nowtime));

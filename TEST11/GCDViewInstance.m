@@ -20,8 +20,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    dataSource = @[@"Basic",@"Apply"];
-    dict = @{@"Basic":@"GCDBasicViewController",@"Apply":@"GCDApplyViewController"};
+    dataSource = @[@"Basic",@"Apply",@"Notification"];
+    dict = @{@"Basic":@"GCDBasicViewController",@"Apply":@"GCDApplyViewController",@"Notification":@"GCDNotificationViewController"};
     
 
 }

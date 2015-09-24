@@ -376,6 +376,8 @@
 		BDF49D451BB3DFB900BEFE26 /* GCDBasicViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BDF49D431BB3DFB900BEFE26 /* GCDBasicViewController.xib */; settings = {ASSET_TAGS = (); }; };
 		BDF49D491BB3E2CF00BEFE26 /* GCDApplyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BDF49D471BB3E2CF00BEFE26 /* GCDApplyViewController.m */; settings = {ASSET_TAGS = (); }; };
 		BDF49D4A1BB3E2CF00BEFE26 /* GCDApplyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BDF49D481BB3E2CF00BEFE26 /* GCDApplyViewController.xib */; settings = {ASSET_TAGS = (); }; };
+		BDF49D4E1BB3FBAA00BEFE26 /* GCDNotificationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BDF49D4C1BB3FBAA00BEFE26 /* GCDNotificationViewController.m */; settings = {ASSET_TAGS = (); }; };
+		BDF49D4F1BB3FBAA00BEFE26 /* GCDNotificationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BDF49D4D1BB3FBAA00BEFE26 /* GCDNotificationViewController.xib */; settings = {ASSET_TAGS = (); }; };
 		BDF987C11B8DB7040039838B /* RunLoopInstance.m in Sources */ = {isa = PBXBuildFile; fileRef = BDF987BF1B8DB7040039838B /* RunLoopInstance.m */; };
 		BDF987C21B8DB7040039838B /* RunLoopInstance.xib in Resources */ = {isa = PBXBuildFile; fileRef = BDF987C01B8DB7040039838B /* RunLoopInstance.xib */; };
 /* End PBXBuildFile section */
@@ -1061,6 +1063,9 @@
 		BDF49D461BB3E2CF00BEFE26 /* GCDApplyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDApplyViewController.h; sourceTree = "<group>"; };
 		BDF49D471BB3E2CF00BEFE26 /* GCDApplyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCDApplyViewController.m; sourceTree = "<group>"; };
 		BDF49D481BB3E2CF00BEFE26 /* GCDApplyViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GCDApplyViewController.xib; sourceTree = "<group>"; };
+		BDF49D4B1BB3FBAA00BEFE26 /* GCDNotificationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDNotificationViewController.h; sourceTree = "<group>"; };
+		BDF49D4C1BB3FBAA00BEFE26 /* GCDNotificationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCDNotificationViewController.m; sourceTree = "<group>"; };
+		BDF49D4D1BB3FBAA00BEFE26 /* GCDNotificationViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GCDNotificationViewController.xib; sourceTree = "<group>"; };
 		BDF8F02E1B7C97D9007DAC63 /* TEST11.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = TEST11.entitlements; sourceTree = "<group>"; };
 		BDF987BE1B8DB7040039838B /* RunLoopInstance.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RunLoopInstance.h; sourceTree = "<group>"; };
 		BDF987BF1B8DB7040039838B /* RunLoopInstance.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RunLoopInstance.m; sourceTree = "<group>"; };
@@ -2653,6 +2658,9 @@
 				BDF49D461BB3E2CF00BEFE26 /* GCDApplyViewController.h */,
 				BDF49D471BB3E2CF00BEFE26 /* GCDApplyViewController.m */,
 				BDF49D481BB3E2CF00BEFE26 /* GCDApplyViewController.xib */,
+				BDF49D4B1BB3FBAA00BEFE26 /* GCDNotificationViewController.h */,
+				BDF49D4C1BB3FBAA00BEFE26 /* GCDNotificationViewController.m */,
+				BDF49D4D1BB3FBAA00BEFE26 /* GCDNotificationViewController.xib */,
 			);
 			name = GCD;
 			sourceTree = "<group>";
@@ -2789,6 +2797,7 @@
 				BDD61C181BB3924600BC4264 /* AutoLayoutFDViewController.xib in Resources */,
 				51E10C591B480CE8009B162E /* TableInstanceInitCell.xib in Resources */,
 				BDE557FC1B9FC849000B9231 /* 消息派发.png in Resources */,
+				BDF49D4F1BB3FBAA00BEFE26 /* GCDNotificationViewController.xib in Resources */,
 				BDD61C211BB39DDD00BC4264 /* AutoLayoutCustomController.xib in Resources */,
 				BD1658431BA7CC1B00874780 /* TableViewLayoutCell1.xib in Resources */,
 				51F410BD1B522638008DD35E /* slidermax.png in Resources */,
@@ -2910,6 +2919,7 @@
 				51E10E2F1B481BD4009B162E /* UIScrollView+Pages.m in Sources */,
 				BDAE15DC1B7C7FED001908A5 /* WGS84TOGCJ02.m in Sources */,
 				51E10DE41B481BD4009B162E /* NSObject+Blocks.m in Sources */,
+				BDF49D4E1BB3FBAA00BEFE26 /* GCDNotificationViewController.m in Sources */,
 				51E10DED1B481BD4009B162E /* NSString+DictionaryValue.m in Sources */,
 				51E10DDD1B481BD4009B162E /* NSNotificationCenter+MainThread.m in Sources */,
 				51E10E001B481BD4009B162E /* UIBarButtonItem+Action.m in Sources */,
