@@ -21,6 +21,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self testNotification1]; //测试Notification的发送与接收处理都是在同一个线程中
+    [self testNotification2];//子线程推送 主线程接收  （一般推送和接收实在同一个线程）
     
 }
 

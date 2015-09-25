@@ -8,6 +8,8 @@
 
 #import "GCDBasicViewController.h"
 
+
+
 @interface GCDBasicViewController ()
 
 @end
@@ -34,7 +36,7 @@
     dispatch_release(myConcurrentDispatchQueue);
 #endif
     //下面这个宏可以得到项目的最低部署SDK版本。
-    __IPHONE_OS_VERSION_MIN_REQUIRED >= 60000;
+  //  __IPHONE_OS_VERSION_MIN_REQUIRED >= 60000;
     
     
     
@@ -80,6 +82,8 @@
     
     dispatch_time_t nowtime = [self getDispatchTimeByDate:[NSDate date]];
     NSLog(@"%@",@(nowtime));
+    
+    [self test_block];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -105,4 +109,41 @@
     
 }
 
+//
+//_NSConcreteStackBlock
+//_NSConcreteGlobalBlock
+//_NSConcreteMallocBlock
+//他们分别对应的存储区域如下所示：
+//
+//类	设置对象的存储区域
+//_NSConcreteStackBlock	栈
+//_NSConcreteGlobalBlock	程序的数据区域(.data区域)
+//_NSConcreteMallocBlock	堆
+
+//这段代码我声明了全局的Block变量blk，然后在if语句中定义。如果你不理解block那么就很容易写出这样的代码，其实这段代码是很危险的。因为全局的blk变量是分配在栈上的。在if和else语句中定义的blk内容，编译器会给每个块分配好栈内存，然后等离开了相应的范围之后，编译器有可能把分配给块的内存覆写了。如果编译器未覆写这块栈内存则程序照常运行，如果这块内容被覆写那么程序就会崩溃。解决上面问题的方法就是使用copy方法，将block拷贝到堆中。拷贝完之后就是接下来要将的_NSConcreteMallocBlock类型。该类型是带有引用计数的对象，如果在ARC下，只要引用计数不为0，可以随意的访问，后继的内存管理就交给编译器来完成了
+- (void)test_block {
+    void (^blk)();
+    if (/* DISABLES CODE */ (1)) {
+        blk = ^{
+            NSLog(@"Block A");
+        };
+    }else {
+        blk = ^{
+            NSLog(@"Block B");
+        };
+    }
+    NSLog(@"%@",blk);//2015-09-25 11:21:40.917 TEST11[5181:97516] <__NSGlobalBlock__: 0x101dac270>
+    blk();
+    
+    
+    __block int val = 0;
+    
+    void (^blk1) (void) = [^{val++;} copy];
+    
+    ++val;
+    
+    blk1();
+    
+    NSLog(@"val:%d",val);
+}
 @end

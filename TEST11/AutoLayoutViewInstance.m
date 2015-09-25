@@ -20,8 +20,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    dataSource = @[@"Collapsible View Demo",@"Collapsible Cell Demo",@"Custom"];
-    dict = @{@"Collapsible View Demo":@"AutoLayoutFDViewController",@"Collapsible Cell Demo":@"FDTableViewController",@"Custom":@"AutoLayoutCustomController"};
+    dataSource = @[@"Collapsible View Demo",@"Collapsible Cell Demo",@"Custom",@"Masonry+FDTemp"];
+    dict = @{@"Collapsible View Demo":@"AutoLayoutFDViewController",@"Collapsible Cell Demo":@"FDTableViewController",@"Custom":@"AutoLayoutCustomController",@"Masonry+FDTemp":@"YFAutoLayoutCellViewController"};
 }
 
 - (void)didReceiveMemoryWarning {

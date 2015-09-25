@@ -841,22 +841,6 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Categories/UIKit/UITableView/UITableView+FDTemplateLayoutCell.m"
-            timestampString = "464755616.169517"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "438"
-            endingLineNumber = "438"
-            landmarkName = "-fd_heightForCellWithIdentifier:configuration:"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
             filePath = "../UIView-FDCollapsibleConstraints/Demo/Demo/UITableView+FDTemplateLayoutCell/UITableView+FDTemplateLayoutCell.m"
             timestampString = "464755709.472181"
             startingColumnNumber = "9223372036854775807"
@@ -928,6 +912,22 @@
             startingLineNumber = "135"
             endingLineNumber = "135"
             landmarkName = "-test_dispatch_barrier_async"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TEST11/GCDBasicViewController.m"
+            timestampString = "464854645.061356"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "124"
+            endingLineNumber = "124"
+            landmarkName = "-test_block"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

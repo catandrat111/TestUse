@@ -220,6 +220,15 @@
 		BD3570A91BB29F2A00559A9A /* libz.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BD3570A81BB29F2900559A9A /* libz.1.dylib */; };
 		BD56746A1BA2AE4300DAF744 /* UserList.mm in Sources */ = {isa = PBXBuildFile; fileRef = BD5674691BA2AE4300DAF744 /* UserList.mm */; };
 		BD56746D1BA2DE4000DAF744 /* KeyValueObserver.m in Sources */ = {isa = PBXBuildFile; fileRef = BD56746C1BA2DE4000DAF744 /* KeyValueObserver.m */; };
+		BD5E8EA51BB4E0860088FE6D /* YFAutoLayoutCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BD5E8EA01BB4E0860088FE6D /* YFAutoLayoutCell.m */; settings = {ASSET_TAGS = (); }; };
+		BD5E8EA61BB4E0860088FE6D /* YFAutoLayoutCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = BD5E8EA21BB4E0860088FE6D /* YFAutoLayoutCellModel.m */; settings = {ASSET_TAGS = (); }; };
+		BD5E8EA71BB4E0860088FE6D /* YFAutoLayoutCellViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD5E8EA41BB4E0860088FE6D /* YFAutoLayoutCellViewController.m */; settings = {ASSET_TAGS = (); }; };
+		BD5E8EAA1BB4E3B90088FE6D /* ViewController+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = BD5E8EA91BB4E3B90088FE6D /* ViewController+MASAdditions.m */; settings = {ASSET_TAGS = (); }; };
+		BD5E8EAD1BB51BE80088FE6D /* GCDOperationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD5E8EAC1BB51BE80088FE6D /* GCDOperationViewController.m */; settings = {ASSET_TAGS = (); }; };
+		BD5E8EB51BB51CAE0088FE6D /* HCDCreateBlockOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = BD5E8EB41BB51CAE0088FE6D /* HCDCreateBlockOperation.m */; settings = {ASSET_TAGS = (); }; };
+		BD5E8EB81BB51CC40088FE6D /* HCDCreateInvocationOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = BD5E8EB71BB51CC40088FE6D /* HCDCreateInvocationOperation.m */; settings = {ASSET_TAGS = (); }; };
+		BD5E8EBB1BB51CE00088FE6D /* HCDConcurrentOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = BD5E8EBA1BB51CE00088FE6D /* HCDConcurrentOperation.m */; settings = {ASSET_TAGS = (); }; };
+		BD5E8EBE1BB51CF30088FE6D /* HCDNonConcurrentOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = BD5E8EBD1BB51CF30088FE6D /* HCDNonConcurrentOperation.m */; settings = {ASSET_TAGS = (); }; };
 		BD66F0D21BB387B400C4D76A /* UIView+FDCollapsibleConstraints.m in Sources */ = {isa = PBXBuildFile; fileRef = BD66F0D11BB387B400C4D76A /* UIView+FDCollapsibleConstraints.m */; settings = {ASSET_TAGS = (); }; };
 		BD66F0D61BB389F300C4D76A /* AutoLayoutFDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD66F0D51BB389F300C4D76A /* AutoLayoutFDViewController.m */; settings = {ASSET_TAGS = (); }; };
 		BD754A781BA16CFD00BE410D /* 类型编码.png in Resources */ = {isa = PBXBuildFile; fileRef = BD754A771BA16CFD00BE410D /* 类型编码.png */; };
@@ -790,6 +799,24 @@
 		BD5674691BA2AE4300DAF744 /* UserList.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = UserList.mm; sourceTree = "<group>"; };
 		BD56746B1BA2DE4000DAF744 /* KeyValueObserver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeyValueObserver.h; sourceTree = "<group>"; };
 		BD56746C1BA2DE4000DAF744 /* KeyValueObserver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeyValueObserver.m; sourceTree = "<group>"; };
+		BD5E8E9F1BB4E0860088FE6D /* YFAutoLayoutCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YFAutoLayoutCell.h; sourceTree = "<group>"; };
+		BD5E8EA01BB4E0860088FE6D /* YFAutoLayoutCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YFAutoLayoutCell.m; sourceTree = "<group>"; };
+		BD5E8EA11BB4E0860088FE6D /* YFAutoLayoutCellModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YFAutoLayoutCellModel.h; sourceTree = "<group>"; };
+		BD5E8EA21BB4E0860088FE6D /* YFAutoLayoutCellModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YFAutoLayoutCellModel.m; sourceTree = "<group>"; };
+		BD5E8EA31BB4E0860088FE6D /* YFAutoLayoutCellViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YFAutoLayoutCellViewController.h; sourceTree = "<group>"; };
+		BD5E8EA41BB4E0860088FE6D /* YFAutoLayoutCellViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YFAutoLayoutCellViewController.m; sourceTree = "<group>"; };
+		BD5E8EA81BB4E3B90088FE6D /* ViewController+MASAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ViewController+MASAdditions.h"; sourceTree = "<group>"; };
+		BD5E8EA91BB4E3B90088FE6D /* ViewController+MASAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ViewController+MASAdditions.m"; sourceTree = "<group>"; };
+		BD5E8EAB1BB51BE80088FE6D /* GCDOperationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDOperationViewController.h; sourceTree = "<group>"; };
+		BD5E8EAC1BB51BE80088FE6D /* GCDOperationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCDOperationViewController.m; sourceTree = "<group>"; };
+		BD5E8EB31BB51CAE0088FE6D /* HCDCreateBlockOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HCDCreateBlockOperation.h; path = "../../GCD-OperationQueue-Exploration/OprerationQueue/OprerationQueue/HCDCreateBlockOperation.h"; sourceTree = "<group>"; };
+		BD5E8EB41BB51CAE0088FE6D /* HCDCreateBlockOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HCDCreateBlockOperation.m; path = "../../GCD-OperationQueue-Exploration/OprerationQueue/OprerationQueue/HCDCreateBlockOperation.m"; sourceTree = "<group>"; };
+		BD5E8EB61BB51CC40088FE6D /* HCDCreateInvocationOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCDCreateInvocationOperation.h; sourceTree = "<group>"; };
+		BD5E8EB71BB51CC40088FE6D /* HCDCreateInvocationOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCDCreateInvocationOperation.m; sourceTree = "<group>"; };
+		BD5E8EB91BB51CE00088FE6D /* HCDConcurrentOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCDConcurrentOperation.h; sourceTree = "<group>"; };
+		BD5E8EBA1BB51CE00088FE6D /* HCDConcurrentOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCDConcurrentOperation.m; sourceTree = "<group>"; };
+		BD5E8EBC1BB51CF30088FE6D /* HCDNonConcurrentOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCDNonConcurrentOperation.h; sourceTree = "<group>"; };
+		BD5E8EBD1BB51CF30088FE6D /* HCDNonConcurrentOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCDNonConcurrentOperation.m; sourceTree = "<group>"; };
 		BD66F0D01BB387B400C4D76A /* UIView+FDCollapsibleConstraints.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+FDCollapsibleConstraints.h"; sourceTree = "<group>"; };
 		BD66F0D11BB387B400C4D76A /* UIView+FDCollapsibleConstraints.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+FDCollapsibleConstraints.m"; sourceTree = "<group>"; };
 		BD66F0D41BB389F300C4D76A /* AutoLayoutFDViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AutoLayoutFDViewController.h; sourceTree = "<group>"; };
@@ -2104,6 +2131,64 @@
 			name = Usage;
 			sourceTree = "<group>";
 		};
+		BD5E8E9E1BB4E0860088FE6D /* autoLayoutCell */ = {
+			isa = PBXGroup;
+			children = (
+				BD5E8E9F1BB4E0860088FE6D /* YFAutoLayoutCell.h */,
+				BD5E8EA01BB4E0860088FE6D /* YFAutoLayoutCell.m */,
+				BD5E8EA11BB4E0860088FE6D /* YFAutoLayoutCellModel.h */,
+				BD5E8EA21BB4E0860088FE6D /* YFAutoLayoutCellModel.m */,
+				BD5E8EA31BB4E0860088FE6D /* YFAutoLayoutCellViewController.h */,
+				BD5E8EA41BB4E0860088FE6D /* YFAutoLayoutCellViewController.m */,
+			);
+			path = autoLayoutCell;
+			sourceTree = "<group>";
+		};
+		BD5E8EAE1BB51BFE0088FE6D /* CustomOperation */ = {
+			isa = PBXGroup;
+			children = (
+				BD5E8EB01BB51C300088FE6D /* 非并发 */,
+				BD5E8EAF1BB51C230088FE6D /* 并发 */,
+			);
+			name = CustomOperation;
+			sourceTree = "<group>";
+		};
+		BD5E8EAF1BB51C230088FE6D /* 并发 */ = {
+			isa = PBXGroup;
+			children = (
+				BD5E8EB91BB51CE00088FE6D /* HCDConcurrentOperation.h */,
+				BD5E8EBA1BB51CE00088FE6D /* HCDConcurrentOperation.m */,
+			);
+			name = "并发";
+			sourceTree = "<group>";
+		};
+		BD5E8EB01BB51C300088FE6D /* 非并发 */ = {
+			isa = PBXGroup;
+			children = (
+				BD5E8EBC1BB51CF30088FE6D /* HCDNonConcurrentOperation.h */,
+				BD5E8EBD1BB51CF30088FE6D /* HCDNonConcurrentOperation.m */,
+			);
+			name = "非并发";
+			sourceTree = "<group>";
+		};
+		BD5E8EB11BB51C4F0088FE6D /* BlockOperation */ = {
+			isa = PBXGroup;
+			children = (
+				BD5E8EB31BB51CAE0088FE6D /* HCDCreateBlockOperation.h */,
+				BD5E8EB41BB51CAE0088FE6D /* HCDCreateBlockOperation.m */,
+			);
+			name = BlockOperation;
+			sourceTree = "<group>";
+		};
+		BD5E8EB21BB51C620088FE6D /* InvocationOperation */ = {
+			isa = PBXGroup;
+			children = (
+				BD5E8EB61BB51CC40088FE6D /* HCDCreateInvocationOperation.h */,
+				BD5E8EB71BB51CC40088FE6D /* HCDCreateInvocationOperation.m */,
+			);
+			name = InvocationOperation;
+			sourceTree = "<group>";
+		};
 		BD66F0CF1BB387A800C4D76A /* FDCollapsibleConstraints */ = {
 			isa = PBXGroup;
 			children = (
@@ -2116,6 +2201,7 @@
 		BD66F0D31BB3880800C4D76A /* AutoLayout */ = {
 			isa = PBXGroup;
 			children = (
+				BD5E8E9E1BB4E0860088FE6D /* autoLayoutCell */,
 				BDD61C0F1BB391CD00BC4264 /* Cell Demo */,
 				BDE8983B1BB390FF00D7EB34 /* data.json */,
 				BDAE10411B7C7D48001908A5 /* AutoLayoutViewInstance.h */,
@@ -2246,6 +2332,8 @@
 		BDAE13901B7C7FEC001908A5 /* Masonry */ = {
 			isa = PBXGroup;
 			children = (
+				BD5E8EA81BB4E3B90088FE6D /* ViewController+MASAdditions.h */,
+				BD5E8EA91BB4E3B90088FE6D /* ViewController+MASAdditions.m */,
 				BDAE13911B7C7FEC001908A5 /* MASCompositeConstraint.h */,
 				BDAE13921B7C7FEC001908A5 /* MASCompositeConstraint.m */,
 				BDAE13931B7C7FEC001908A5 /* MASConstraint+Private.h */,
@@ -2649,6 +2737,9 @@
 		BDF49D3B1BB3DB2800BEFE26 /* GCD */ = {
 			isa = PBXGroup;
 			children = (
+				BD5E8EB21BB51C620088FE6D /* InvocationOperation */,
+				BD5E8EB11BB51C4F0088FE6D /* BlockOperation */,
+				BD5E8EAE1BB51BFE0088FE6D /* CustomOperation */,
 				BDF49D3C1BB3DB5400BEFE26 /* GCDViewInstance.h */,
 				BDF49D3D1BB3DB5400BEFE26 /* GCDViewInstance.m */,
 				BDF49D3E1BB3DB5400BEFE26 /* GCDViewInstance.xib */,
@@ -2661,6 +2752,8 @@
 				BDF49D4B1BB3FBAA00BEFE26 /* GCDNotificationViewController.h */,
 				BDF49D4C1BB3FBAA00BEFE26 /* GCDNotificationViewController.m */,
 				BDF49D4D1BB3FBAA00BEFE26 /* GCDNotificationViewController.xib */,
+				BD5E8EAB1BB51BE80088FE6D /* GCDOperationViewController.h */,
+				BD5E8EAC1BB51BE80088FE6D /* GCDOperationViewController.m */,
 			);
 			name = GCD;
 			sourceTree = "<group>";
@@ -2884,6 +2977,7 @@
 				51E10E491B481BD4009B162E /* UIViewController+Visible.m in Sources */,
 				51E10E361B481BD4009B162E /* UITextField+Select.m in Sources */,
 				BDAE15AE1B7C7FED001908A5 /* UIImage+MultiFormat.m in Sources */,
+				BD5E8EAD1BB51BE80088FE6D /* GCDOperationViewController.m in Sources */,
 				51E10DE01B481BD4009B162E /* NSObject+Additions.m in Sources */,
 				51E10C611B48115F009B162E /* TableInstanceInitCellNoXib.m in Sources */,
 				BDD31C5C1B9C2DBD00E1A496 /* UIView+DR_CustomBlockAnimations.m in Sources */,
@@ -2896,6 +2990,7 @@
 				BDAE15A71B7C7FED001908A5 /* SDWebImageDecoder.m in Sources */,
 				BDAE15B81B7C7FED001908A5 /* SSKeychain.m in Sources */,
 				51E10DC71B481BD4009B162E /* NSArray+Block.m in Sources */,
+				BD5E8EA71BB4E0860088FE6D /* YFAutoLayoutCellViewController.m in Sources */,
 				51E10DF31B481BD4009B162E /* NSString+Score.m in Sources */,
 				51E10E281B481BD4009B162E /* UINavigationController+StackManager.m in Sources */,
 				51E10E511B481BD4009B162E /* UIWindow+Hierarchy.m in Sources */,
@@ -2945,6 +3040,7 @@
 				BDAE14EE1B7C7FED001908A5 /* ALAssetsLibrary+CustomPhotoAlbum.m in Sources */,
 				51E10DEA1B481BD4009B162E /* NSSet+Block.m in Sources */,
 				5195B3F31AB70284007CFA8B /* AppDelegate.m in Sources */,
+				BD5E8EA51BB4E0860088FE6D /* YFAutoLayoutCell.m in Sources */,
 				512933451B6FA6B4002634D5 /* TextFieldInstanceView.m in Sources */,
 				51FA7A1C1B70F9CF0002990E /* Person.m in Sources */,
 				BDAE155F1B7C7FED001908A5 /* MJRefreshFooterView.m in Sources */,
@@ -2954,6 +3050,7 @@
 				51E10E4E1B481BD4009B162E /* UIWebView+Load.m in Sources */,
 				51E10E1A1B481BD4009B162E /* UIImage+Orientation.m in Sources */,
 				BDD31C541B9C10E000E1A496 /* DRInspectionLayer.m in Sources */,
+				BD5E8EBE1BB51CF30088FE6D /* HCDNonConcurrentOperation.m in Sources */,
 				BDAE14FE1B7C7FED001908A5 /* LICENCE.md in Sources */,
 				51E10DF41B481BD4009B162E /* NSString+Trims.m in Sources */,
 				51E10E041B481BD4009B162E /* UIButton+BackgroundColor.m in Sources */,
@@ -3009,6 +3106,8 @@
 				51E10DC11B481BD4009B162E /* NSManagedObjectContext+Extensions.m in Sources */,
 				BD0126311B9D311800D22ACB /* DR_popAnimationController.m in Sources */,
 				51E10C371B47A8EB009B162E /* TableInstanceView.m in Sources */,
+				BD5E8EB81BB51CC40088FE6D /* HCDCreateInvocationOperation.m in Sources */,
+				BD5E8EBB1BB51CE00088FE6D /* HCDConcurrentOperation.m in Sources */,
 				BDAE15BF1B7C7FED001908A5 /* README.md in Sources */,
 				BDAE15C91B7C7FED001908A5 /* README.md in Sources */,
 				51E10DF81B481BD4009B162E /* NSTimer+Addition.m in Sources */,
@@ -3037,6 +3136,7 @@
 				BDAE15CA1B7C7FED001908A5 /* UIActionSheet+Blocks.m in Sources */,
 				BDAE154C1B7C7FED001908A5 /* MASViewAttribute.m in Sources */,
 				51E10DBF1B481BD4009B162E /* NSFetchRequest+Extensions.m in Sources */,
+				BD5E8EA61BB4E0860088FE6D /* YFAutoLayoutCellModel.m in Sources */,
 				51E10E201B481BD4009B162E /* UILabel+AutomaticWriting.m in Sources */,
 				BDAE15631B7C7FED001908A5 /* UIView+MJExtension.m in Sources */,
 				BDF987C11B8DB7040039838B /* RunLoopInstance.m in Sources */,
@@ -3120,12 +3220,14 @@
 				BDAE15D51B7C7FED001908A5 /* UIView+Position.m in Sources */,
 				BDAE12301B7C7E17001908A5 /* UITableView+iOS7Style.m in Sources */,
 				BDAE155B1B7C7FED001908A5 /* NSObject+MJMember.m in Sources */,
+				BD5E8EB51BB51CAE0088FE6D /* HCDCreateBlockOperation.m in Sources */,
 				5158D19B1B7E253000ACF3AD /* CircleViewController.m in Sources */,
 				BDAE15AF1B7C7FED001908A5 /* UIImage+WebP.m in Sources */,
 				51E10E4A1B481BD4009B162E /* UIWebView+Alert.m in Sources */,
 				BDAE15491B7C7FED001908A5 /* MASConstraint.m in Sources */,
 				BDBD75381BA01B2200168A8B /* NSNull+XY_InternalNullExtention.m in Sources */,
 				BDAE15391B7C7FED001908A5 /* GZIP.m in Sources */,
+				BD5E8EAA1BB4E3B90088FE6D /* ViewController+MASAdditions.m in Sources */,
 				51E10E391B481BD4009B162E /* UIView+Animation.m in Sources */,
 				51E10E4B1B481BD4009B162E /* UIWebView+Blocks.m in Sources */,
 				51E10E161B481BD4009B162E /* UIImage+FileName.m in Sources */,
