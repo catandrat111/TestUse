@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "ViewController.h"
+#import "ButtonInstance.h"
 @interface AppDelegate ()
 
 @end
@@ -38,6 +39,47 @@
     [UIDevice removePwd];
     return YES;
 }
+
+
+//testddd://?action=my_action_1&sourceurl=http://weibo.com/1692391497/CkirQtS1I?from=page_1005051692391497_profile&wvr=6&mod=weibotime&type=comment#_rnd1433007524429
+
+//http://tinyurl.com/ 制作网址别名
+//http://tinyurl.com/psobuqp
+//- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {
+//    if ([[url scheme] isEqualToString:@"testddd"]) {
+//        // Get a dictionary with the query items from the external url
+//        NSURLComponents *urlComponents = [NSURLComponents componentsWithURL:url resolvingAgainstBaseURL:NO];
+//        NSArray *queryItemsArray = [urlComponents queryItems];
+//        NSMutableDictionary *queryItems = [NSMutableDictionary dictionary];
+//        for (NSURLQueryItem *item in queryItemsArray) {
+//            [queryItems setObject:item.value forKey:item.name];
+//        }
+//        if ([[queryItems valueForKey:@"action"] isEqualToString:@"my_action_1"]) {
+//            // code to call your view controller for my_action_1
+//            NSURL *sourceURL = [NSURL URLWithString:[queryItems objectForKey:@"sourceurl"]];
+//            ButtonInstance *controller = [ButtonInstance new];
+//            controller.sourceURL = sourceURL;
+//            [(UINavigationController *)self.window.rootViewController pushViewController:controller animated:YES];
+//            return YES;
+//        } else if ([[queryItems valueForKey:@"action"] isEqualToString:@"my_action_2"]) {
+//            // code to call the view controller for my_action_2
+//            return YES;
+//        }
+//    }
+//    return NO;
+//}
+
+
+//testd:// 浏览器输入
+- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {
+    if ([[url scheme] isEqualToString:@"testddd"]) {
+       
+        return YES;
+    }
+    return NO;
+}
+
+
 
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

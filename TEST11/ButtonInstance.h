@@ -14,7 +14,10 @@
 @property(weak,nonatomic) IBOutlet UIButton* button3;
 @property(weak,nonatomic) IBOutlet UILabel* lab;
 @property(weak,nonatomic) IBOutlet UIImageView* imgView;
+@property(strong,nonatomic) NSURL* sourceURL; //@s///
+
 -(IBAction)p1:(id)sender;
 -(IBAction)p2:(id)sender;
 -(IBAction)p3:(id)sender;
+
 @end

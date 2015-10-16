@@ -25,7 +25,7 @@ static NSInteger linewidth = 1;
         CGRect bounds = CGRectInset(cell.bounds, 0, 0);
         BOOL addLine = NO;
         layer.path = pathRef;
-        CFRelease(pathRef);
+       // CFRelease(pathRef);
         
         UIView *testView = [[UIView alloc] initWithFrame:bounds];
         [testView.layer insertSublayer:layer atIndex:0];
@@ -64,13 +64,13 @@ static NSInteger linewidth = 1;
         layer.fillColor = UIColorFromRGB(0xffffff).CGColor;
         layer.strokeColor = UIColorFromRGB(0xe3e3e3).CGColor;
         layer.lineWidth= linewidth;
-        
+        CFRelease(pathRef);
         if (addLine == YES) {
             CAShapeLayer *lineLayer = [[CAShapeLayer alloc] init];
             CGMutablePathRef linePathRef = CGPathCreateMutable();
             CGFloat lineHeight = (1.f / [UIScreen mainScreen].scale);
-            CGPathMoveToPoint(linePathRef, nil, CGRectGetMinX(bounds)+10, bounds.size.height-lineHeight);
-            CGPathAddLineToPoint(linePathRef, nil, CGRectGetMaxX(bounds)-10, bounds.size.height-lineHeight);
+            CGPathMoveToPoint(linePathRef, nil, CGRectGetMinX(bounds)+0, bounds.size.height-lineHeight);
+            CGPathAddLineToPoint(linePathRef, nil, CGRectGetMaxX(bounds)-0, bounds.size.height-lineHeight);
             lineLayer.path = linePathRef;
             CFRelease(linePathRef);
             

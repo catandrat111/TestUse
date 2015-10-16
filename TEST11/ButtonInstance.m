@@ -85,25 +85,26 @@
 //    [alert show];
 //    [weakSelf performSelector:@selector(dimissAlert:) withObject:alert afterDelay:alterViewDisapperTime];
     
-    //TEST
-    ZHAdvertisementView* advertisementView = [[ZHAdvertisementView alloc] initWithFrame:CGRectZero];
-    advertisementView.titleLab.text = @"dd";
-    advertisementView.activityLab1.text = @"dddd";
-    advertisementView.backgroundColor = [UIColor greenColor];
+//    //TEST
+//    ZHAdvertisementView* advertisementView = [[ZHAdvertisementView alloc] initWithFrame:CGRectZero];
+//    advertisementView.titleLab.text = @"dd";
+//    advertisementView.activityLab1.text = @"dddd";
+//    advertisementView.backgroundColor = [UIColor greenColor];
+//    
+////    RNBlurModalView * modal = [[RNBlurModalView alloc] initWithView:advertisementView];
+////    advertisementView.modalView = modal;
+////    [modal show];
+//    
+//    [[[UIApplication sharedApplication].delegate window].rootViewController.view  addSubview:advertisementView];
+//
+//    advertisementView.center = [[UIApplication sharedApplication].delegate window].rootViewController.view.center;
+//    TextFieldInstanceView* test = [[TextFieldInstanceView alloc] init];
+//    [self.navigationController pushViewController:test animated:YES];
+//    
+//    for (UIView* v1 in [[UIApplication sharedApplication].delegate window].rootViewController.view.subviews) {
+//        NSLog(@"%@",v1);;
+//    }
     
-//    RNBlurModalView * modal = [[RNBlurModalView alloc] initWithView:advertisementView];
-//    advertisementView.modalView = modal;
-//    [modal show];
-    
-    [[[UIApplication sharedApplication].delegate window].rootViewController.view  addSubview:advertisementView];
-
-    advertisementView.center = [[UIApplication sharedApplication].delegate window].rootViewController.view.center;
-    TextFieldInstanceView* test = [[TextFieldInstanceView alloc] init];
-    [self.navigationController pushViewController:test animated:YES];
-    
-    for (UIView* v1 in [[UIApplication sharedApplication].delegate window].rootViewController.view.subviews) {
-        NSLog(@"%@",v1);;
-    }
 }
 
 -(IBAction)p3:(UIButton*)sender{
@@ -119,6 +120,11 @@
 
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event{
     
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return 0;
 }
 
 @end

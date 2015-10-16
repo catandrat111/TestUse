@@ -14,7 +14,7 @@
 #import "UserList.h"
 #import "NSDecimalNumber+Extensions.h"
 #import "NSNumber+Round.h"
-
+#import "DateTools.h"
 
 @interface UsageViewController ()
 @property(strong,nonatomic) NSMutableArray* array;
@@ -113,6 +113,9 @@
     [self.observeUser addObserver:self forKeyPath:@"age" options: NSKeyValueObservingOptionPrior context:nil];
     [self decimalTest];
     [self numberTest];
+    [self arrayTest];
+    [self stringTest];
+    [self dateTest];
     
 }
 
@@ -127,6 +130,34 @@
 
 }
 
+
+- (void) arrayTest {
+    User* u1 = [User new];
+    u1.age = @(21);
+    u1.name = @"r4";
+    
+    User* u2 = [User new];
+    u2.age = @(11);
+    u2.name = @"u4";
+    NSMutableArray * array = [NSMutableArray new];
+    [array addObject:u1];
+    [array addObject:u2];
+    
+     User* u2copy = [User copy];
+    
+    if ([array containsObject:u2copy]) {
+        NSLog(@"have yes");
+    }
+    [array removeObject:u2copy];
+    NSLog(@"%@",array);
+   
+}
+
+- (NSInteger)giveMeFive {
+    NSString *foo;
+ #pragma unused (foo)
+    return 5;
+}
 
 - (void)decimalTest{
     float testFloat = 2.689;
@@ -586,4 +617,65 @@ struct objc_class {
 //} 
 
 
+
+- (void)stringTest {
+    NSString *s1 = @"The weather on \U0001F30D is \U0001F31E today.";
+    // The weather on 🌍 is 🌞 today.
+    NSRange fullRange = NSMakeRange(0, [s1 length]);
+    [s1 enumerateSubstringsInRange:fullRange
+                          options:NSStringEnumerationByComposedCharacterSequences
+                       usingBlock:^(NSString *substring, NSRange substringRange, NSRange enclosingRange, BOOL *stop)
+    {
+        NSLog(@"%@ %@", substring, NSStringFromRange(substringRange));
+    }];
+    
+    NSString *s = @"\u00E9"; // é
+    NSString *t = @"e\u0301"; // e + ´
+    BOOL isEqual = [s isEqualToString:t];
+    NSLog(@"%@ is %@ to %@", s, isEqual ? @"equal" : @"not equal", t);
+    // => é is not equal to é
+    
+    // Normalizing to form C
+    NSString *sNorm = [s precomposedStringWithCanonicalMapping];
+    NSString *tNorm = [t precomposedStringWithCanonicalMapping];
+    BOOL isEqualNorm = [sNorm isEqualToString:tNorm];
+    NSLog(@"%@ is %@ to %@", sNorm, isEqualNorm ? @"equal" : @"not equal", tNorm);
+    // => é is equal to é
+}
+
+- (void)dateTest {
+    NSDate* date = [NSDate date];
+    NSString * dateStr = [date formattedDateWithStyle: NSDateFormatterFullStyle];//2015年10月12日 星期一
+    
+    NSLog(@"%@", dateStr);
+    
+    dateStr =  [date formattedDateWithFormat:@"YYYY/MM/dd HH:mm:ss"];
+    NSLog(@"%@", dateStr);
+    NSString* str = @"2014";
+    NSDateFormatter* formatter = [[NSDateFormatter alloc] init];
+    [formatter setDateFormat:@"yyyy"];
+    NSDate* date1 = [formatter dateFromString:str];
+    date1 = [date dateBySubtractingYears:1];
+    NSInteger yearsApart = [date yearsFrom:date1];
+    NSInteger hoursApart = [date monthsFrom:date1];
+    NSInteger h1 = date.hour;
+    NSInteger m1 = date.minute;
+
+    NSDate *timeAgoDate = [NSDate dateWithTimeIntervalSinceNow:-4];
+    NSLog(@"Time Ago: %@", timeAgoDate.timeAgoSinceNow);
+    NSLog(@"Time Ago: %@", timeAgoDate.shortTimeAgoSinceNow);
+    
+    NSInteger oldYear = date.year;
+    
+    NSDate *newDate = [date dateByAddingYears:1];
+    NSInteger newYear = newDate.year;
+    
+    NSLog(@"oldYear: %ld newYear: %ld", (long)oldYear, (long)newYear); // 输出: oldYear: 2015 newYear: 2016
+    
+    // 创建一个时间段,从现在开始,共5个小时.
+    DTTimePeriod *timePeriod = [DTTimePeriod timePeriodWithSize:DTTimePeriodSizeHour amount:5 startingAt:[NSDate date]];
+    DTTimePeriod *timePeriod1 = [[DTTimePeriod alloc] initWithStartDate:date endDate: [date dateByAddingDays: 10]];
+    
+    NSLog(@"相差 %g 天", [timePeriod1 durationInDays]); // 输出: 相差 10 天
+}
 @end
