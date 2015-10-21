@@ -84,7 +84,8 @@
     //    UIBaselineAdjustmentAlignCenters,   文本中线与label中线对齐。
     //    UIBaselineAdjustmentNone,  文本最低端与label中线对齐。;
     [self.view addSubview:label];
-    label.translatesAutoresizingMaskIntoConstraints
+    
+
     /*
      字体名如下：
      Font Family: American Typewriter

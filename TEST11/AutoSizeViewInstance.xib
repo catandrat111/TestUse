@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="8191" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
@@ -12,13 +12,17 @@
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+        <view contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="64" width="320" height="504"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="ZGm-gc-pr6">
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZGm-gc-pr6">
                     <rect key="frame" x="123" y="373" width="46" height="30"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <animations/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="aSa-yS-JkH"/>
+                        <constraint firstAttribute="width" constant="46" id="sjc-Y8-VBa"/>
+                    </constraints>
                     <state key="normal" title="Button">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
@@ -26,14 +30,37 @@
                         <action selector="p1:" destination="-1" eventType="touchUpInside" id="qMo-zh-Vs7"/>
                     </connections>
                 </button>
-                <view contentMode="scaleToFill" id="ESh-5a-SVD">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ESh-5a-SVD">
                     <rect key="frame" x="70" y="97" width="180" height="100"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <animations/>
                     <color key="backgroundColor" red="0.84313725490000002" green="0.0" blue="0.058823529409999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="180" id="G4h-wH-pFX"/>
+                        <constraint firstAttribute="height" constant="100" id="JD9-uz-7Dd"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oUN-ZY-kij">
+                    <rect key="frame" x="137" y="0.0" width="65" height="100"/>
+                    <animations/>
+                    <color key="backgroundColor" red="0.23969229785800769" green="0.40786842092103737" blue="0.79549491405487061" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="100" id="Zh4-d0-AEF"/>
+                        <constraint firstAttribute="width" constant="65" id="Zwa-2c-l43"/>
+                    </constraints>
                 </view>
             </subviews>
-            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-            <nil key="simulatedTopBarMetrics"/>
+            <animations/>
+            <color key="backgroundColor" red="0.67726370849999995" green="1" blue="0.3878110937" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="ZGm-gc-pr6" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="123" id="aic-QV-c39"/>
+                <constraint firstItem="ESh-5a-SVD" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="97" id="dwM-iW-00Z"/>
+                <constraint firstItem="ZGm-gc-pr6" firstAttribute="top" secondItem="oUN-ZY-kij" secondAttribute="bottom" constant="273" id="eOc-kK-QD1"/>
+                <constraint firstItem="ZGm-gc-pr6" firstAttribute="top" secondItem="ESh-5a-SVD" secondAttribute="bottom" constant="176" id="klM-6G-N8f"/>
+                <constraint firstItem="oUN-ZY-kij" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="137" id="liU-iu-Ro6"/>
+                <constraint firstItem="oUN-ZY-kij" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="nTP-nL-NXT"/>
+                <constraint firstItem="ESh-5a-SVD" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="70" id="x5h-p2-zsq"/>
+            </constraints>
+            <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
             <point key="canvasLocation" x="326" y="446"/>
         </view>
     </objects>
