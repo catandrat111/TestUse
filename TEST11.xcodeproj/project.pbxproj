@@ -205,6 +205,11 @@
 		BD01262E1B9D242900D22ACB /* BasicAnimationController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD01262D1B9D242900D22ACB /* BasicAnimationController.m */; };
 		BD0126311B9D311800D22ACB /* DR_popAnimationController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD0126301B9D311800D22ACB /* DR_popAnimationController.m */; };
 		BD0126331B9D58E900D22ACB /* bezier.png in Resources */ = {isa = PBXBuildFile; fileRef = BD0126321B9D58E900D22ACB /* bezier.png */; };
+		BD047E631BD8780000D020E3 /* AutoCustom1ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD047E611BD8780000D020E3 /* AutoCustom1ViewController.m */; settings = {ASSET_TAGS = (); }; };
+		BD047E641BD8780000D020E3 /* AutoCustom1ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BD047E621BD8780000D020E3 /* AutoCustom1ViewController.xib */; settings = {ASSET_TAGS = (); }; };
+		BD047E671BD8797600D020E3 /* MyView.m in Sources */ = {isa = PBXBuildFile; fileRef = BD047E661BD8797600D020E3 /* MyView.m */; settings = {ASSET_TAGS = (); }; };
+		BD047E6B1BD8C5CB00D020E3 /* AutoCustom2ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD047E691BD8C5CB00D020E3 /* AutoCustom2ViewController.m */; settings = {ASSET_TAGS = (); }; };
+		BD047E6C1BD8C5CB00D020E3 /* AutoCustom2ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BD047E6A1BD8C5CB00D020E3 /* AutoCustom2ViewController.xib */; settings = {ASSET_TAGS = (); }; };
 		BD16583E1BA7B9F600874780 /* TableViewLayoutCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BD16583D1BA7B9F600874780 /* TableViewLayoutCell.xib */; };
 		BD1658421BA7CC1B00874780 /* TableViewLayoutCell1.m in Sources */ = {isa = PBXBuildFile; fileRef = BD1658401BA7CC1B00874780 /* TableViewLayoutCell1.m */; };
 		BD1658431BA7CC1B00874780 /* TableViewLayoutCell1.xib in Resources */ = {isa = PBXBuildFile; fileRef = BD1658411BA7CC1B00874780 /* TableViewLayoutCell1.xib */; };
@@ -808,6 +813,14 @@
 		BD01262F1B9D311800D22ACB /* DR_popAnimationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DR_popAnimationController.h; sourceTree = "<group>"; };
 		BD0126301B9D311800D22ACB /* DR_popAnimationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DR_popAnimationController.m; sourceTree = "<group>"; };
 		BD0126321B9D58E900D22ACB /* bezier.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bezier.png; sourceTree = "<group>"; };
+		BD047E601BD8780000D020E3 /* AutoCustom1ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AutoCustom1ViewController.h; sourceTree = "<group>"; };
+		BD047E611BD8780000D020E3 /* AutoCustom1ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AutoCustom1ViewController.m; sourceTree = "<group>"; };
+		BD047E621BD8780000D020E3 /* AutoCustom1ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AutoCustom1ViewController.xib; sourceTree = "<group>"; };
+		BD047E651BD8797600D020E3 /* MyView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyView.h; sourceTree = "<group>"; };
+		BD047E661BD8797600D020E3 /* MyView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyView.m; sourceTree = "<group>"; };
+		BD047E681BD8C5CB00D020E3 /* AutoCustom2ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AutoCustom2ViewController.h; sourceTree = "<group>"; };
+		BD047E691BD8C5CB00D020E3 /* AutoCustom2ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AutoCustom2ViewController.m; sourceTree = "<group>"; };
+		BD047E6A1BD8C5CB00D020E3 /* AutoCustom2ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AutoCustom2ViewController.xib; sourceTree = "<group>"; };
 		BD16583D1BA7B9F600874780 /* TableViewLayoutCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TableViewLayoutCell.xib; sourceTree = "<group>"; };
 		BD16583F1BA7CC1B00874780 /* TableViewLayoutCell1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewLayoutCell1.h; sourceTree = "<group>"; };
 		BD1658401BA7CC1B00874780 /* TableViewLayoutCell1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewLayoutCell1.m; sourceTree = "<group>"; };
@@ -2314,6 +2327,14 @@
 				BDD61C1D1BB39DDD00BC4264 /* AutoLayoutCustomController.h */,
 				BDD61C1E1BB39DDD00BC4264 /* AutoLayoutCustomController.m */,
 				BDD61C1F1BB39DDD00BC4264 /* AutoLayoutCustomController.xib */,
+				BD047E601BD8780000D020E3 /* AutoCustom1ViewController.h */,
+				BD047E611BD8780000D020E3 /* AutoCustom1ViewController.m */,
+				BD047E621BD8780000D020E3 /* AutoCustom1ViewController.xib */,
+				BD047E681BD8C5CB00D020E3 /* AutoCustom2ViewController.h */,
+				BD047E691BD8C5CB00D020E3 /* AutoCustom2ViewController.m */,
+				BD047E6A1BD8C5CB00D020E3 /* AutoCustom2ViewController.xib */,
+				BD047E651BD8797600D020E3 /* MyView.h */,
+				BD047E661BD8797600D020E3 /* MyView.m */,
 			);
 			name = AutoLayout;
 			sourceTree = "<group>";
@@ -3124,6 +3145,7 @@
 				5158D19C1B7E253000ACF3AD /* CircleViewController.xib in Resources */,
 				BDAE15B31B7C7FED001908A5 /* LICENSE in Resources */,
 				BDE62A7C1BA6CAD200870499 /* TableViewLayout.xib in Resources */,
+				BD047E641BD8780000D020E3 /* AutoCustom1ViewController.xib in Resources */,
 				51FA7A241B70FB2A0002990E /* UsageViewController.xib in Resources */,
 				5158D1A11B7E355000ACF3AD /* PanGestureInstance.xib in Resources */,
 				BDAE15CB1B7C7FED001908A5 /* LICENSE in Resources */,
@@ -3158,6 +3180,7 @@
 				BDD1E1081B8FF29C0037A457 /* SearchBarInstanceView.xib in Resources */,
 				BDAE155C1B7C7FED001908A5 /* MJRefresh.bundle in Resources */,
 				BDAE15C81B7C7FED001908A5 /* LICENSE in Resources */,
+				BD047E6C1BD8C5CB00D020E3 /* AutoCustom2ViewController.xib in Resources */,
 				512CB77F1B5E841B0084E5AB /* Selected.png in Resources */,
 				BD754A781BA16CFD00BE410D /* 类型编码.png in Resources */,
 				BDC7660E1B942A5D00EC31D7 /* LICENSE in Resources */,
@@ -3376,6 +3399,7 @@
 				BDAE122B1B7C7E17001908A5 /* UIDevice+Info.m in Sources */,
 				BDAE15B11B7C7FED001908A5 /* UIImageView+WebCache.m in Sources */,
 				51E10E4C1B481BD4009B162E /* UIWebView+Canvas.m in Sources */,
+				BD047E6B1BD8C5CB00D020E3 /* AutoCustom2ViewController.m in Sources */,
 				51E10DC11B481BD4009B162E /* NSManagedObjectContext+Extensions.m in Sources */,
 				BD79F6A41BCBAE9000AE64FD /* DTTimePeriod.m in Sources */,
 				BD0126311B9D311800D22ACB /* DR_popAnimationController.m in Sources */,
@@ -3475,6 +3499,7 @@
 				BD1658491BA810D200874780 /* AntiAlias.m in Sources */,
 				51E10DCB1B481BD4009B162E /* NSData+Encrypt.m in Sources */,
 				51E10DC01B481BD4009B162E /* NSManagedObject+Extensions.m in Sources */,
+				BD047E631BD8780000D020E3 /* AutoCustom1ViewController.m in Sources */,
 				51E10DDF1B481BD4009B162E /* NSNumber+Round.m in Sources */,
 				51E10E251B481BD4009B162E /* UINavigationController+BATransitions.m in Sources */,
 				BD66F0D21BB387B400C4D76A /* UIView+FDCollapsibleConstraints.m in Sources */,
@@ -3520,6 +3545,7 @@
 				51E10E3C1B481BD4009B162E /* UIView+Debug.m in Sources */,
 				51E10DCA1B481BD4009B162E /* NSData+Base64.m in Sources */,
 				BDAE15CD1B7C7FED001908A5 /* UIAlertView+Blocks.m in Sources */,
+				BD047E671BD8797600D020E3 /* MyView.m in Sources */,
 				51E10DC31B481BD4009B162E /* NSManagedObjectContext+FetchRequestsConstructors.m in Sources */,
 				BDAE15D31B7C7FED001908A5 /* UIViewController+Swizzle.m in Sources */,
 				51E10E261B481BD4009B162E /* UINavigationController+FDFullscreenPopGesture.m in Sources */,

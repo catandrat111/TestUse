@@ -22,10 +22,10 @@
     UINavigationController* navi = [[UINavigationController alloc] initWithRootViewController:main];
     self.window.rootViewController = navi;
     [self.window makeKeyAndVisible];
-  //  navi.navigationBar.translucent = YES;
+    navi.navigationBar.translucent = NO;
    // navi.navigationBar.barStyle = UIBarStyleBlackTranslucent;
     //更改STATUSBAR
-    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
+    //[[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
     //[[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleDefault];
     
     
@@ -37,14 +37,14 @@
     NSString* uuid1 = [UIDevice  getUDID1];
     DLog(@"%@",uuid1);
   //  [[UINavigationBar appearance] setBarTintColor:UIColorFromRGB(0xd7000f)];
-    [[UINavigationBar appearance] setTitleTextAttributes:@{
-                                                           UITextAttributeTextColor: [UIColor whiteColor],
-                                                           }];
-    [[UINavigationBar appearance] setBackgroundImage:[[UIImage alloc] init]
-                                      forBarPosition:UIBarPositionAny
-                                          barMetrics:UIBarMetricsDefault];
-    
-    [[UINavigationBar appearance] setShadowImage:[[UIImage alloc] init]];
+//    [[UINavigationBar appearance] setTitleTextAttributes:@{
+//                                                           UITextAttributeTextColor: [UIColor whiteColor],
+//                                                           }];
+//    [[UINavigationBar appearance] setBackgroundImage:[[UIImage alloc] init]
+//                                      forBarPosition:UIBarPositionAny
+//                                          barMetrics:UIBarMetricsDefault];
+//    
+//    [[UINavigationBar appearance] setShadowImage:[[UIImage alloc] init]];
 
     [UIDevice removePwd];
     return YES;

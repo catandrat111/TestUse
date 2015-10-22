@@ -224,7 +224,7 @@
                 <constraint firstItem="OxZ-cy-uIH" firstAttribute="top" secondItem="YYo-RN-1Lg" secondAttribute="top" id="Qht-TY-5qQ"/>
                 <constraint firstItem="OxZ-cy-uIH" firstAttribute="width" secondItem="YYo-RN-1Lg" secondAttribute="width" id="RxL-KT-K3L"/>
             </constraints>
-            <point key="canvasLocation" x="306" y="279"/>
+            <point key="canvasLocation" x="-74" y="235"/>
         </view>
         <view contentMode="scaleToFill" id="Hqa-AA-QNf">
             <rect key="frame" x="0.0" y="0.0" width="320" height="800"/>
@@ -304,6 +304,15 @@
                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xML-Go-5Go">
+                                    <rect key="frame" x="137" y="364" width="46" height="30"/>
+                                    <animations/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="46" id="Ayp-mq-Rny"/>
+                                        <constraint firstAttribute="height" constant="30" id="NIq-yY-0hk"/>
+                                    </constraints>
+                                    <state key="normal" title="Button"/>
+                                </button>
                             </subviews>
                             <animations/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -313,7 +322,9 @@
                                 <constraint firstItem="K9N-yN-Kgt" firstAttribute="top" secondItem="NN1-Gk-kbz" secondAttribute="top" constant="48" id="BHN-Ed-UE7"/>
                                 <constraint firstAttribute="bottom" secondItem="WGX-sn-n1I" secondAttribute="bottom" constant="7" id="G7w-wX-YjR"/>
                                 <constraint firstItem="K9N-yN-Kgt" firstAttribute="leading" secondItem="NN1-Gk-kbz" secondAttribute="leading" constant="114" id="P6m-4l-okq"/>
+                                <constraint firstItem="xML-Go-5Go" firstAttribute="top" secondItem="K9N-yN-Kgt" secondAttribute="bottom" constant="275" id="iUe-Mr-pCN"/>
                                 <constraint firstItem="WGX-sn-n1I" firstAttribute="top" secondItem="K9N-yN-Kgt" secondAttribute="bottom" constant="683" id="ipd-Ws-Xrz"/>
+                                <constraint firstItem="xML-Go-5Go" firstAttribute="leading" secondItem="NN1-Gk-kbz" secondAttribute="leading" constant="137" id="oak-7h-dSw"/>
                             </constraints>
                         </view>
                     </subviews>
