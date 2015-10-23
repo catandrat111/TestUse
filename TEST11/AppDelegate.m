@@ -47,6 +47,7 @@
 //    [[UINavigationBar appearance] setShadowImage:[[UIImage alloc] init]];
 
     [UIDevice removePwd];
+    [self testVersion ];
     return YES;
 }
 
@@ -79,6 +80,18 @@
 //    return NO;
 //}
 
+
+
+//版本号 Version：在plist文件中的key是“CFBundleShortVersionString”，和AppStore上的版本号保持一致；
+//Version: 程序版本号{主版本号.次版本号.维护号}
+//Build: 编译次数统计
+//Build：在plist中的key是“CFBundleVersion”，代表build的版本号，该值每次build之后都应该增加1；//通过脚本实现
+- (void)testVersion {
+    NSString* version1 = [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"];
+    NSString* version2 =  [[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleShortVersionString"];
+    NSString* build = [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleVersion"];
+    DLog(@"version1:%@,version2:%@,build:%@",version1,version2,build);
+}
 
 //testd:// 浏览器输入
 - (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {

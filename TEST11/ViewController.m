@@ -9,7 +9,7 @@
 #import "ViewController.h"
 #import "ZOCKintsugiPhotoViewController_iPad.h"
 #import "UITableView+iOS7Style.h"
-
+#import "GifViewController.h"
 @interface ViewController ()<UITableViewDelegate,UITableViewDataSource>
 {
     UITableView* tableView_;
@@ -27,15 +27,15 @@
     self.view.backgroundColor = [UIColor colorWithRed:242 green:242 blue:242 alpha:1.0];
 
 
-    tableView_ = [[UITableView alloc] initWithFrame:CGRectMake(10, 10, self.view.frameWidth - 20, self.view.frameHeight - 10)];
+    tableView_ = [[UITableView alloc] initWithFrame:CGRectMake(10, 10, self.view.frameWidth - 20, self.view.frameHeight - 74)];
     [tableView_ setSeparatorStyle:UITableViewCellSeparatorStyleNone];
     tableView_.backgroundColor = [UIColor colorWithRed:242 green:242 blue:242 alpha:1.0];
 //    [tableView setAutoresizingMask:UIViewAutoresizingFlexibleTopMargin | UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleBottomMargin];
     tableView_.delegate = self;
     tableView_.dataSource = self;
     tableView_.backgroundColor = [UIColor clearColor];
-    dataSource = @[@"UILABEL",@"UIBUTTON",@"UITABLEVIEW",@"UISTATUSBAR",@"UINAVIGATIONBAR",@"UISLIDER",@"UITEXTFILED",@"AUTOSIZE",@"Gesture",@"UISEARCHBAR",@"Algorithm",@"RunLoop",@"UISegmentControl",@"Animation",@"Usage",@"AutoLayout",@"GCD",@"DESIGNATEINIT"];
-    dict = @{@"UITABLEVIEW":@"TableInstanceView",@"UILABEL":@"LabelInstance",@"UISLIDER":@"SliderInstance",@"UIBUTTON":@"ButtonInstance",@"UINAVIGATIONBAR":@"NavigationBarInstanceView",@"UITEXTFILED":@"TextFieldInstanceView",@"AUTOSIZE":@"AutoSizeViewInstance",@"Gesture":@"GestureViewController",@"UISEARCHBAR":@"SearchBarInstanceView",@"DrawView":@"DrawViewInstance",@"Algorithm":@"AlgorithmClass",@"RunLoop":@"RunLoopInstance",@"UISegmentControl":@"SegmentControlInstanceView",@"Animation":@"AnimationInstanceView",@"Usage":@"UsageViewController",@"AutoLayout":@"AutoLayoutViewInstance",@"GCD":@"GCDViewInstance",@"DESIGNATEINIT":@"ZOCKintsugiPhotoViewController_iPad"};
+    dataSource = @[@"UILABEL",@"UIBUTTON",@"UITABLEVIEW",@"UISTATUSBAR",@"UINAVIGATIONBAR",@"UISLIDER",@"UITEXTFILED",@"AUTOSIZE",@"Gesture",@"UISEARCHBAR",@"Algorithm",@"RunLoop",@"UISegmentControl",@"Animation",@"Usage",@"AutoLayout",@"GCD",@"DESIGNATEINIT",@"GIF"];
+    dict = @{@"UITABLEVIEW":@"TableInstanceView",@"UILABEL":@"LabelInstance",@"UISLIDER":@"SliderInstance",@"UIBUTTON":@"ButtonInstance",@"UINAVIGATIONBAR":@"NavigationBarInstanceView",@"UITEXTFILED":@"TextFieldInstanceView",@"AUTOSIZE":@"AutoSizeViewInstance",@"Gesture":@"GestureViewController",@"UISEARCHBAR":@"SearchBarInstanceView",@"DrawView":@"DrawViewInstance",@"Algorithm":@"AlgorithmClass",@"RunLoop":@"RunLoopInstance",@"UISegmentControl":@"SegmentControlInstanceView",@"Animation":@"AnimationInstanceView",@"Usage":@"UsageViewController",@"AutoLayout":@"AutoLayoutViewInstance",@"GCD":@"GCDViewInstance",@"DESIGNATEINIT":@"ZOCKintsugiPhotoViewController_iPad",@"GIF":@"GifViewController"};
 
     [self.view addSubview:tableView_];
 }
