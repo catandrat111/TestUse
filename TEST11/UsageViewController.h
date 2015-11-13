@@ -10,7 +10,8 @@
 
 @interface UsageViewController : UIViewController
 
-@property(weak,nonatomic) IBOutlet UILabel* lab;
+@property (nonatomic,weak) IBOutlet UILabel* lab;
+
 -(IBAction)sortAction:(id)sender;
 -(IBAction)quchongAction:(id)sender;
 -(IBAction)filterAction:(id)sender;

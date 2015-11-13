@@ -88,5 +88,22 @@
 }
 
 
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+//    if (editingStyle == UITableViewCellEditingStyleDelete) {
+//        dispatch_async(dispatch_get_main_queue(), ^{
+//            
+//        });
+//    }
+    if (editingStyle == UITableViewCellEditingStyleInsert) {
+        dispatch_async(dispatch_get_main_queue(), ^{
+            
+        });
+    }
+    
+}
+
+
+
 
 @end

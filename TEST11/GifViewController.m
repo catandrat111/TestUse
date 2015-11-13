@@ -16,25 +16,25 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    NSString *filePath = [[NSBundle mainBundle] pathForResource:@"railway" ofType:@"gif"];
-    NSData *gif = [NSData dataWithContentsOfFile:filePath];
-    
-    UIWebView *webViewBG = [[UIWebView alloc] initWithFrame:self.view.frame];
-    [webViewBG loadData:gif MIMEType:@"image/gif" textEncodingName:nil baseURL:nil];
-    webViewBG.userInteractionEnabled = NO;
-    [self.view addSubview:webViewBG];
-    
-    UIView *filter = [[UIView alloc] initWithFrame:self.view.frame];
-    filter.backgroundColor = [UIColor blackColor];
-    filter.alpha = 0.05;
-    [self.view addSubview:filter];
-    
-    UILabel *welcomeLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 100, self.view.bounds.size.width, 100)];
-    welcomeLabel.text = @"WELCOME";
-    welcomeLabel.textColor = [UIColor whiteColor];
-    welcomeLabel.font = [UIFont systemFontOfSize:50];
-    welcomeLabel.textAlignment = NSTextAlignmentCenter;
-    [self.view addSubview:welcomeLabel];
+//    NSString *filePath = [[NSBundle mainBundle] pathForResource:@"railway" ofType:@"gif"];
+//    NSData *gif = [NSData dataWithContentsOfFile:filePath];
+//    
+//    UIWebView *webViewBG = [[UIWebView alloc] initWithFrame:self.view.frame];
+//    [webViewBG loadData:gif MIMEType:@"image/gif" textEncodingName:nil baseURL:nil];
+//    webViewBG.userInteractionEnabled = NO;
+//    [self.view addSubview:webViewBG];
+//    
+//    UIView *filter = [[UIView alloc] initWithFrame:self.view.frame];
+//    filter.backgroundColor = [UIColor blackColor];
+//    filter.alpha = 0.05;
+//    [self.view addSubview:filter];
+//    
+//    UILabel *welcomeLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 100, self.view.bounds.size.width, 100)];
+//    welcomeLabel.text = @"WELCOME";
+//    welcomeLabel.textColor = [UIColor whiteColor];
+//    welcomeLabel.font = [UIFont systemFontOfSize:50];
+//    welcomeLabel.textAlignment = NSTextAlignmentCenter;
+//    [self.view addSubview:welcomeLabel];
     
 //    UIButton *loginBtn = [[UIButton alloc] initWithFrame:CGRectMake(40, 360, 240, 40)];
 //    loginBtn.layer.borderColor = [[UIColor whiteColor] CGColor];

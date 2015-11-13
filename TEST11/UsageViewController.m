@@ -15,11 +15,14 @@
 #import "NSDecimalNumber+Extensions.h"
 #import "NSNumber+Round.h"
 #import "DateTools.h"
+#import "NSDate+Utilities.h"
+#import "FBKVOController.h"
 
 @interface UsageViewController ()
 @property(strong,nonatomic) NSMutableArray* array;
 
 @property(strong,nonatomic) User* observeUser;
+@property (strong,nonatomic) FBKVOController* KVOController;
 @end
 
 @implementation UsageViewController
@@ -81,12 +84,13 @@
     user4.name = @"u4";
     [self.array addObject:user4];
 
-    [self copyTest];
-    [self TestMetaClass1];
-    [self methodTransmit1];
-    [self methodTransmit2];
-    [self methodTransmit3];
-    [p1 blocktest];
+//    [self copyTest];
+//    [self TestMetaClass1];
+//    [self methodTransmit1];
+//    [self methodTransmit2];
+//    [self methodTransmit3];
+//    [p1 blocktest];
+   
     
     
     NSDictionary *dict = @{
@@ -109,13 +113,19 @@
    // [self.observeUser addObserver:self forKeyPath:@"age" options: NSKeyValueObservingOptionNew context:nil];
     //NSKeyValueObservingOptionPrior 分2次调用。在值改变之前和值改变之后。 里面么有新旧值
     //NSKeyValueObservingOptionInitial 把初始化的值提供给处理方法，一旦注册，立马就会调用一次。通常它会带有新值，而不会带有旧值。
-    [self.observeUser addObserver:self forKeyPath:@"name" options:NSKeyValueObservingOptionInitial  context:nil];
-    [self.observeUser addObserver:self forKeyPath:@"age" options: NSKeyValueObservingOptionPrior context:nil];
-    [self decimalTest];
-    [self numberTest];
-    [self arrayTest];
-    [self stringTest];
-    [self dateTest];
+//    [self.observeUser addObserver:self forKeyPath:@"name" options:NSKeyValueObservingOptionInitial  context:nil];
+//    [self.observeUser addObserver:self forKeyPath:@"age" options: NSKeyValueObservingOptionPrior context:nil];
+//    [self decimalTest];
+//    [self numberTest];
+//    [self arrayTest];
+//    [self stringTest];
+//    [self dateTest];
+    
+    
+    
+    [self dateTest1];
+    [self vaFunc:@"var1",@"var2",@"var3",nil];
+    [self observerTest];
     
 }
 
@@ -558,6 +568,21 @@ struct objc_class {
     
 }
 
+- (void)observerTest {
+    // create KVO controller with observer
+    FBKVOController *KVOController = [FBKVOController controllerWithObserver:self];
+    self.KVOController = KVOController;
+
+    // observe clock date property
+    __weak __typeof(self)weakSelf = self;
+    [self.KVOController observe:self.observeUser keyPath:@"name" options:NSKeyValueObservingOptionInitial|NSKeyValueObservingOptionNew block:^(id observer, User *user, NSDictionary *change) {
+        
+        // update clock view with new value
+        weakSelf.lab.text = change[NSKeyValueChangeNewKey];
+    }];
+    self.observeUser.name = @"test";
+}
+
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context {
     if ([keyPath isEqualToString:@"name"]) {
         NSLog(@"%@",change);
@@ -678,4 +703,34 @@ struct objc_class {
     
     NSLog(@"相差 %g 天", [timePeriod1 durationInDays]); // 输出: 相差 10 天
 }
+
+- (void)dateTest1 {
+    NSDate* date1 = [NSDate date];
+    NSDate* other = [date1 dateByAddingHours:2];
+    BOOL b1 = [date1 isEqualToDate:other];
+
+    NSLog(@"b1:%@",@(b1));
+    
+    BOOL b2 = [date1 isEqualToDateIgnoringTime:other];
+    NSLog(@"b2:%@",@(b2));
+}
+
+- (void)vaFunc:(NSObject*)string,... {
+    va_list args;
+    va_start(args, string);
+    NSMutableArray *mArray = [@[string] mutableCopy];
+        
+    for ( ;; )
+    {
+        id tempSpec = va_arg( args, id );
+        if (tempSpec == nil)
+            break;
+        [mArray addObject:tempSpec];
+        NSLog(@"%@",mArray);
+    }
+    NSLog(@"%@",mArray);
+    va_end(args);
+}
+
+
 @end

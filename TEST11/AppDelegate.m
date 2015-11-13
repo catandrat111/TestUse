@@ -9,11 +9,45 @@
 #import "AppDelegate.h"
 #import "ViewController.h"
 #import "ButtonInstance.h"
+#import "CoreLaunchLite.h"
+#import "CoreLaunchCool.h"
+#import "CoreLaunchPro.h"
+#import "CoreLaunchPlus.h"
+#import "CoreLaunchFlip.h"
+
 @interface AppDelegate ()
 
 @end
 
 @implementation AppDelegate
+//升级9.0  Xcode7.0之后微信API提示未安装微信客户端的问题怎么解决？
+//增加白名单
+//<key>LSApplicationQueriesSchemes</key>
+//<array>
+//<string>weixin</string>
+//<string>wechat</string>
+//<string>tbopen</string>
+//<string>TencentWeibo</string>
+//<string>tencentweiboSdkv2</string>
+//<string>sinaweibo</string>
+//<string>sinaweibohd</string>
+//<string>sinaweibosso</string>
+//<string>sinaweibohdsso</string>
+//<string>alipay</string>
+//<string>alipayshare</string>
+//<string>mqzoneopensdk</string>
+//<string>mqzoneopensdkapi</string>
+//<string>mqzoneopensdkapi19</string>
+//<string>mqzoneopensdkapiV2</string>
+//<string>mqqOpensdkSSoLogin</string>
+//<string>mqqopensdkapiV2</string>
+//<string>mqqopensdkapiV3</string>
+//<string>wtloginmqq2</string>
+//<string>mqqapi</string>
+//<string>mqqwpa</string>
+//<string>mqzone</string>
+//<string>mqq</string>
+//</array>
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
@@ -23,6 +57,8 @@
     self.window.rootViewController = navi;
     [self.window makeKeyAndVisible];
     navi.navigationBar.translucent = NO;
+    
+    
    // navi.navigationBar.barStyle = UIBarStyleBlackTranslucent;
     //更改STATUSBAR
     //[[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
@@ -48,6 +84,22 @@
 
     [UIDevice removePwd];
     [self testVersion ];
+    
+    /** Lite版本 */
+       // [CoreLaunchLite animWithWindow:self.window image:nil];
+    
+    /** Plus版本 */
+    //    [CoreLaunchPlus animWithWindow:self.window image:nil];
+    
+    /** Cool版本 */
+    //    [CoreLaunchCool animWithWindow:self.window image:nil];
+    
+    /** Pro版本 */
+    [CoreLaunchPro animWithWindow:self.window image:nil];
+    
+    /** Flip版本 */
+     [CoreLaunchFlip animWithWindow:self.window image:nil];
+
     return YES;
 }
 

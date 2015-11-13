@@ -50,7 +50,7 @@
     self.lab.frameHeight = size.height;
     
     self.imgView.image = [UIImage imageNamed:@"Selected"];
-    
+    [self configureButton];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -126,5 +126,42 @@
 {
     return 0;
 }
+//http://natashatherobot.com/ios-stretchable-button-uiedgeinsetsmake/
+//STRETCG_FULL
+- (void)configureButton
+{
+    UIEdgeInsets edgeInsets = UIEdgeInsetsMake(0, 0, 0, 0);
+    UIImage *backgroundButtonImage = [[UIImage imageNamed:@"purple_button.png"]
+                                      resizableImageWithCapInsets:edgeInsets];
+    [self.stretchButton setBackgroundImage:backgroundButtonImage
+                                 forState:UIControlStateNormal];
+}
+//stretch_vertically
+- (void)configureButton1
+{
+    UIEdgeInsets edgeInsets = UIEdgeInsetsMake(0, 8, 0, 8);
+    UIImage *backgroundButtonImage = [[UIImage imageNamed:@"purple_button.png"]
+                                      resizableImageWithCapInsets:edgeInsets];
+    [self.stretchButton setBackgroundImage:backgroundButtonImage
+                                 forState:UIControlStateNormal];
+}
 
+//stretch_horizontal
+- (void)configureButton2
+{
+    UIEdgeInsets edgeInsets = UIEdgeInsetsMake(8, 0, 8, 0);
+    UIImage *backgroundButtonImage = [[UIImage imageNamed:@"purple_button.png"]
+                                      resizableImageWithCapInsets:edgeInsets];
+    [self.stretchButton setBackgroundImage:backgroundButtonImage
+                                 forState:UIControlStateNormal];
+}
+
+- (void)configureButton3
+{
+    UIEdgeInsets edgeInsets = UIEdgeInsetsMake(8, 8, 8, 8);
+    UIImage *backgroundButtonImage = [[UIImage imageNamed:@"purple_button.png"]
+                                      resizableImageWithCapInsets:edgeInsets];
+    [self.stretchButton setBackgroundImage:backgroundButtonImage
+                                 forState:UIControlStateNormal];
+}
 @end

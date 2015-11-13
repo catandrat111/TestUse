@@ -20,8 +20,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    dataSource = @[@"BasicUsage",@"BascicAnimation",@"DR_popAnimation",@"AnimationGroup"];
-    dict = @{@"BasicUsage":@"BasicUsageViewController",@"BascicAnimation":@"BasicAnimationController",@"DR_popAnimation":@"DR_popAnimationController",@"AnimationGroup":@"AnimationGroupController"};
+    dataSource = @[@"BasicUsage",@"BascicAnimation",@"DR_popAnimation",@"AnimationGroup",@"KCAnimation1",@"KCAnimation2",@"KCAnimation3",@"KCAnimation4",@"KCAnimation5",@"KCAnimation6",@"KCAnimation7",@"KCAnimation8"];
+    dict = @{@"BasicUsage":@"BasicUsageViewController",@"BascicAnimation":@"BasicAnimationController",@"DR_popAnimation":@"DR_popAnimationController",@"AnimationGroup":@"AnimationGroupController",@"KCAnimation1":@"KCAnimationViewController1",@"KCAnimation2":@"KCAnimationViewController2",@"KCAnimation3":@"KCAnimationViewController3",@"KCAnimation4":@"KCAnimationViewController4",@"KCAnimation5":@"KCAnimationViewController5",@"KCAnimation6":@"KCAnimationViewController6",@"KCAnimation7":@"KCAnimationViewController7",@"KCAnimation8":@"KCAnimationViewController8"};
 }
 
 - (void)didReceiveMemoryWarning {

@@ -28,7 +28,7 @@
 //    dataArray = @[@"section0"];
     
     dataArray = [NSMutableArray arrayWithCapacity:0];
-    for (int i = 0; i < 10; i++) {
+    for (int i = 0; i < 20; i++) {
         NSString *str = [NSString stringWithFormat:@"%d",i];
         [dataArray addObject:str];
     }
@@ -54,7 +54,7 @@
     self.tableView.tableFooterView = [UIView new];
     //self.tableView.allowsMultipleSelection = YES;
     
-    // 设置毛玻璃 //记得要把cell 设置成透明效果 适用于8。0后
+    // 设置毛玻璃 //记得要把cell 设置成透明效果 适用于8。0后 warn
     UIBlurEffect *blurEffect = [UIBlurEffect effectWithStyle:UIBlurEffectStyleDark];
     UIVibrancyEffect *vibrancyEffect = [UIVibrancyEffect effectForBlurEffect:blurEffect];//TODO
     self.tableView.separatorEffect = vibrancyEffect;
@@ -62,6 +62,8 @@
    self.tableView.backgroundColor=[UIColor clearColor];
     self.tableView.backgroundView = [[UIImageView alloc] initWithImage:[UIImage imageWithColor:[UIColor blueColor]]];
 
+    self.tableView.contentInset = UIEdgeInsetsMake(0, 0, 0, 0);
+    self.tableView.contentOffset = CGPointMake(0, 60);
 }
 
 - (void)didReceiveMemoryWarning {

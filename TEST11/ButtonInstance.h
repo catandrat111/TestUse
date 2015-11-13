@@ -12,6 +12,7 @@
 @property(weak,nonatomic) IBOutlet UIButton* button1;
 @property(weak,nonatomic) IBOutlet UIButton* button2;
 @property(weak,nonatomic) IBOutlet UIButton* button3;
+@property(weak,nonatomic) IBOutlet UIButton* stretchButton;
 @property(weak,nonatomic) IBOutlet UILabel* lab;
 @property(weak,nonatomic) IBOutlet UIImageView* imgView;
 @property(strong,nonatomic) NSURL* sourceURL; //@s///
