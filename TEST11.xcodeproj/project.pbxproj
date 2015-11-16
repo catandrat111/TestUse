@@ -22,7 +22,6 @@
 		5158D1A11B7E355000ACF3AD /* PanGestureInstance.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5158D19F1B7E355000ACF3AD /* PanGestureInstance.xib */; };
 		515DFBD81B6CE3BA003C7B8E /* NavigationBarInstanceView.m in Sources */ = {isa = PBXBuildFile; fileRef = 515DFBD61B6CE3BA003C7B8E /* NavigationBarInstanceView.m */; };
 		515DFBD91B6CE3BA003C7B8E /* NavigationBarInstanceView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 515DFBD71B6CE3BA003C7B8E /* NavigationBarInstanceView.xib */; };
-		5166F55B1B57F43200D440FC /* Reveal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5166F55A1B57F43200D440FC /* Reveal.framework */; };
 		5195B3F01AB70284007CFA8B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5195B3EF1AB70284007CFA8B /* main.m */; };
 		5195B3F31AB70284007CFA8B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5195B3F21AB70284007CFA8B /* AppDelegate.m */; };
 		5195B3F61AB70284007CFA8B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5195B3F51AB70284007CFA8B /* ViewController.m */; };
@@ -314,6 +313,25 @@
 		BD8CDF8F1BE33B460026D74E /* UINavigationController+PortalTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = BD8CDF7D1BE33B460026D74E /* UINavigationController+PortalTransition.m */; };
 		BD8CDF901BE33B460026D74E /* UIViewController+PortalTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = BD8CDF7F1BE33B460026D74E /* UIViewController+PortalTransition.m */; };
 		BD8CDF911BE33B460026D74E /* ProVC.m in Sources */ = {isa = PBXBuildFile; fileRef = BD8CDF811BE33B460026D74E /* ProVC.m */; };
+		BDADA29E1BF975110076BFDF /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = BDADA29D1BF975110076BFDF /* background.png */; };
+		BDADA2A01BF9751B0076BFDF /* petal.png in Resources */ = {isa = PBXBuildFile; fileRef = BDADA29F1BF9751B0076BFDF /* petal.png */; };
+		BDADA2A21BF975DF0076BFDF /* animationtype.png in Resources */ = {isa = PBXBuildFile; fileRef = BDADA2A11BF975DF0076BFDF /* animationtype.png */; };
+		BDADA2A51BF976770076BFDF /* KCAnimationBacicAnimationViewController1.m in Sources */ = {isa = PBXBuildFile; fileRef = BDADA2A41BF976770076BFDF /* KCAnimationBacicAnimationViewController1.m */; };
+		BDADA2A81BF978DF0076BFDF /* KCAnimationBacicAnimationViewController11.m in Sources */ = {isa = PBXBuildFile; fileRef = BDADA2A71BF978DF0076BFDF /* KCAnimationBacicAnimationViewController11.m */; };
+		BDADA2AA1BF981AC0076BFDF /* animation.png in Resources */ = {isa = PBXBuildFile; fileRef = BDADA2A91BF981AC0076BFDF /* animation.png */; };
+		BDADA2AD1BF9830B0076BFDF /* KCAnimationBacicAnimationViewController12.m in Sources */ = {isa = PBXBuildFile; fileRef = BDADA2AC1BF9830B0076BFDF /* KCAnimationBacicAnimationViewController12.m */; };
+		BDADA2B01BF983D80076BFDF /* KCAnimationBacicAnimationViewController13.m in Sources */ = {isa = PBXBuildFile; fileRef = BDADA2AF1BF983D80076BFDF /* KCAnimationBacicAnimationViewController13.m */; };
+		BDADA2B31BF98A7A0076BFDF /* KCAnimationKeyPathAnimationViewController11.m in Sources */ = {isa = PBXBuildFile; fileRef = BDADA2B21BF98A7A0076BFDF /* KCAnimationKeyPathAnimationViewController11.m */; };
+		BDADA2B61BF98A8E0076BFDF /* KCAnimationKeyPathAnimationViewController12.m in Sources */ = {isa = PBXBuildFile; fileRef = BDADA2B51BF98A8E0076BFDF /* KCAnimationKeyPathAnimationViewController12.m */; };
+		BDADA2B81BF9A2EA0076BFDF /* animationparameter.png in Resources */ = {isa = PBXBuildFile; fileRef = BDADA2B71BF9A2EA0076BFDF /* animationparameter.png */; };
+		BDADA2BB1BF9A3FC0076BFDF /* KCAnimationGroupViewController11.m in Sources */ = {isa = PBXBuildFile; fileRef = BDADA2BA1BF9A3FC0076BFDF /* KCAnimationGroupViewController11.m */; };
+		BDADA2BD1BF9A5830076BFDF /* 0.png in Resources */ = {isa = PBXBuildFile; fileRef = BDADA2BC1BF9A5830076BFDF /* 0.png */; };
+		BDADA2C01BF9A60D0076BFDF /* KCAnimationSwitchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BDADA2BF1BF9A60D0076BFDF /* KCAnimationSwitchViewController.m */; };
+		BDADA2C21BF9A6950076BFDF /* 1.png in Resources */ = {isa = PBXBuildFile; fileRef = BDADA2C11BF9A6950076BFDF /* 1.png */; };
+		BDADA2C41BF9B38D0076BFDF /* ball.png in Resources */ = {isa = PBXBuildFile; fileRef = BDADA2C31BF9B38D0076BFDF /* ball.png */; };
+		BDADA2C71BF9B3D10076BFDF /* KCAnimationSpringViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BDADA2C61BF9B3D10076BFDF /* KCAnimationSpringViewController.m */; };
+		BDADA2CA1BF9B46B0076BFDF /* KCAnimationStepViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BDADA2C91BF9B46B0076BFDF /* KCAnimationStepViewController.m */; };
+		BDADA2CC1BF9C28D0076BFDF /* Reveal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDADA2CB1BF9C28D0076BFDF /* Reveal.framework */; };
 		BDAE103D1B7C786F001908A5 /* AutoSizeViewInstance.m in Sources */ = {isa = PBXBuildFile; fileRef = BDAE103B1B7C786F001908A5 /* AutoSizeViewInstance.m */; };
 		BDAE103E1B7C786F001908A5 /* AutoSizeViewInstance.xib in Resources */ = {isa = PBXBuildFile; fileRef = BDAE103C1B7C786F001908A5 /* AutoSizeViewInstance.xib */; };
 		BDAE10401B7C7B31001908A5 /* autosize.png in Resources */ = {isa = PBXBuildFile; fileRef = BDAE103F1B7C7B31001908A5 /* autosize.png */; };
@@ -535,7 +553,6 @@
 		515DFBD51B6CE3BA003C7B8E /* NavigationBarInstanceView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavigationBarInstanceView.h; sourceTree = "<group>"; };
 		515DFBD61B6CE3BA003C7B8E /* NavigationBarInstanceView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NavigationBarInstanceView.m; sourceTree = "<group>"; };
 		515DFBD71B6CE3BA003C7B8E /* NavigationBarInstanceView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NavigationBarInstanceView.xib; sourceTree = "<group>"; };
-		5166F55A1B57F43200D440FC /* Reveal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Reveal.framework; sourceTree = "<group>"; };
 		5195B3EA1AB70284007CFA8B /* TEST11.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TEST11.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5195B3EE1AB70284007CFA8B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5195B3EF1AB70284007CFA8B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -1068,6 +1085,35 @@
 		BD8CDF7F1BE33B460026D74E /* UIViewController+PortalTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+PortalTransition.m"; sourceTree = "<group>"; };
 		BD8CDF801BE33B460026D74E /* ProVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProVC.h; sourceTree = "<group>"; };
 		BD8CDF811BE33B460026D74E /* ProVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProVC.m; sourceTree = "<group>"; };
+		BDADA29D1BF975110076BFDF /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
+		BDADA29F1BF9751B0076BFDF /* petal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = petal.png; sourceTree = "<group>"; };
+		BDADA2A11BF975DF0076BFDF /* animationtype.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = animationtype.png; sourceTree = "<group>"; };
+		BDADA2A31BF976770076BFDF /* KCAnimationBacicAnimationViewController1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KCAnimationBacicAnimationViewController1.h; sourceTree = "<group>"; };
+		BDADA2A41BF976770076BFDF /* KCAnimationBacicAnimationViewController1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KCAnimationBacicAnimationViewController1.m; sourceTree = "<group>"; };
+		BDADA2A61BF978DF0076BFDF /* KCAnimationBacicAnimationViewController11.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KCAnimationBacicAnimationViewController11.h; sourceTree = "<group>"; };
+		BDADA2A71BF978DF0076BFDF /* KCAnimationBacicAnimationViewController11.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KCAnimationBacicAnimationViewController11.m; sourceTree = "<group>"; };
+		BDADA2A91BF981AC0076BFDF /* animation.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = animation.png; sourceTree = "<group>"; };
+		BDADA2AB1BF9830B0076BFDF /* KCAnimationBacicAnimationViewController12.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KCAnimationBacicAnimationViewController12.h; sourceTree = "<group>"; };
+		BDADA2AC1BF9830B0076BFDF /* KCAnimationBacicAnimationViewController12.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KCAnimationBacicAnimationViewController12.m; sourceTree = "<group>"; };
+		BDADA2AE1BF983D80076BFDF /* KCAnimationBacicAnimationViewController13.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KCAnimationBacicAnimationViewController13.h; sourceTree = "<group>"; };
+		BDADA2AF1BF983D80076BFDF /* KCAnimationBacicAnimationViewController13.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KCAnimationBacicAnimationViewController13.m; sourceTree = "<group>"; };
+		BDADA2B11BF98A7A0076BFDF /* KCAnimationKeyPathAnimationViewController11.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KCAnimationKeyPathAnimationViewController11.h; sourceTree = "<group>"; };
+		BDADA2B21BF98A7A0076BFDF /* KCAnimationKeyPathAnimationViewController11.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KCAnimationKeyPathAnimationViewController11.m; sourceTree = "<group>"; };
+		BDADA2B41BF98A8E0076BFDF /* KCAnimationKeyPathAnimationViewController12.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KCAnimationKeyPathAnimationViewController12.h; sourceTree = "<group>"; };
+		BDADA2B51BF98A8E0076BFDF /* KCAnimationKeyPathAnimationViewController12.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KCAnimationKeyPathAnimationViewController12.m; sourceTree = "<group>"; };
+		BDADA2B71BF9A2EA0076BFDF /* animationparameter.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = animationparameter.png; sourceTree = "<group>"; };
+		BDADA2B91BF9A3FC0076BFDF /* KCAnimationGroupViewController11.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KCAnimationGroupViewController11.h; sourceTree = "<group>"; };
+		BDADA2BA1BF9A3FC0076BFDF /* KCAnimationGroupViewController11.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KCAnimationGroupViewController11.m; sourceTree = "<group>"; };
+		BDADA2BC1BF9A5830076BFDF /* 0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 0.png; sourceTree = "<group>"; };
+		BDADA2BE1BF9A60D0076BFDF /* KCAnimationSwitchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KCAnimationSwitchViewController.h; sourceTree = "<group>"; };
+		BDADA2BF1BF9A60D0076BFDF /* KCAnimationSwitchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KCAnimationSwitchViewController.m; sourceTree = "<group>"; };
+		BDADA2C11BF9A6950076BFDF /* 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1.png; sourceTree = "<group>"; };
+		BDADA2C31BF9B38D0076BFDF /* ball.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ball.png; sourceTree = "<group>"; };
+		BDADA2C51BF9B3D10076BFDF /* KCAnimationSpringViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KCAnimationSpringViewController.h; sourceTree = "<group>"; };
+		BDADA2C61BF9B3D10076BFDF /* KCAnimationSpringViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KCAnimationSpringViewController.m; sourceTree = "<group>"; };
+		BDADA2C81BF9B46B0076BFDF /* KCAnimationStepViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KCAnimationStepViewController.h; sourceTree = "<group>"; };
+		BDADA2C91BF9B46B0076BFDF /* KCAnimationStepViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KCAnimationStepViewController.m; sourceTree = "<group>"; };
+		BDADA2CB1BF9C28D0076BFDF /* Reveal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Reveal.framework; sourceTree = "<group>"; };
 		BDAE10391B7C77AE001908A5 /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		BDAE103A1B7C786F001908A5 /* AutoSizeViewInstance.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AutoSizeViewInstance.h; sourceTree = "<group>"; };
 		BDAE103B1B7C786F001908A5 /* AutoSizeViewInstance.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AutoSizeViewInstance.m; sourceTree = "<group>"; };
@@ -1378,9 +1424,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BDADA2CC1BF9C28D0076BFDF /* Reveal.framework in Frameworks */,
 				BD3570A91BB29F2A00559A9A /* libz.1.dylib in Frameworks */,
 				BD3570A71BB29EF900559A9A /* libsqlite3.dylib in Frameworks */,
-				5166F55B1B57F43200D440FC /* Reveal.framework in Frameworks */,
 				51E10E551B482FE2009B162E /* CoreData.framework in Frameworks */,
 				51E10E531B482F9B009B162E /* CoreLocation.framework in Frameworks */,
 				5195B41A1AB70338007CFA8B /* QuartzCore.framework in Frameworks */,
@@ -1478,11 +1524,11 @@
 		5195B3E11AB70283007CFA8B = {
 			isa = PBXGroup;
 			children = (
+				BDADA2CB1BF9C28D0076BFDF /* Reveal.framework */,
 				BD80F1321BF464B90046FA80 /* LaunchScreen.xib */,
 				BD3570A81BB29F2900559A9A /* libz.1.dylib */,
 				BD3570A61BB29EF900559A9A /* libsqlite3.dylib */,
 				BDAE10391B7C77AE001908A5 /* PrefixHeader.pch */,
-				5166F55A1B57F43200D440FC /* Reveal.framework */,
 				51E10E541B482FE2009B162E /* CoreData.framework */,
 				51E10E521B482F9B009B162E /* CoreLocation.framework */,
 				5195B4191AB70338007CFA8B /* QuartzCore.framework */,
@@ -1587,6 +1633,10 @@
 		51B1C61D1B50E12200E68110 /* Image */ = {
 			isa = PBXGroup;
 			children = (
+				BDADA2C11BF9A6950076BFDF /* 1.png */,
+				BDADA2BC1BF9A5830076BFDF /* 0.png */,
+				BDADA29F1BF9751B0076BFDF /* petal.png */,
+				BDADA29D1BF975110076BFDF /* background.png */,
 				BD8877EC1BF5E25D00F0EA08 /* photo.png */,
 				BD8877A51BF58F5300F0EA08 /* photo2.png */,
 				BD88779E1BF5826900F0EA08 /* image2.png */,
@@ -3197,6 +3247,10 @@
 		BDD31C491B9C0B4300E1A496 /* Animation */ = {
 			isa = PBXGroup;
 			children = (
+				BDADA2C31BF9B38D0076BFDF /* ball.png */,
+				BDADA2B71BF9A2EA0076BFDF /* animationparameter.png */,
+				BDADA2A91BF981AC0076BFDF /* animation.png */,
+				BDADA2A11BF975DF0076BFDF /* animationtype.png */,
 				BD8877CF1BF5DA6D00F0EA08 /* position.png */,
 				BD8877CB1BF5D18400F0EA08 /* layer.png */,
 				BD8877CD1BF5D1FB00F0EA08 /* animationproperty.png */,
@@ -3237,6 +3291,26 @@
 				BD8877E71BF5E09F00F0EA08 /* KCAnimationView1.m */,
 				BD8877E91BF5E0E600F0EA08 /* KCAnimationLayer1.h */,
 				BD8877EA1BF5E0E600F0EA08 /* KCAnimationLayer1.m */,
+				BDADA2A31BF976770076BFDF /* KCAnimationBacicAnimationViewController1.h */,
+				BDADA2A41BF976770076BFDF /* KCAnimationBacicAnimationViewController1.m */,
+				BDADA2A61BF978DF0076BFDF /* KCAnimationBacicAnimationViewController11.h */,
+				BDADA2A71BF978DF0076BFDF /* KCAnimationBacicAnimationViewController11.m */,
+				BDADA2AB1BF9830B0076BFDF /* KCAnimationBacicAnimationViewController12.h */,
+				BDADA2AC1BF9830B0076BFDF /* KCAnimationBacicAnimationViewController12.m */,
+				BDADA2AE1BF983D80076BFDF /* KCAnimationBacicAnimationViewController13.h */,
+				BDADA2AF1BF983D80076BFDF /* KCAnimationBacicAnimationViewController13.m */,
+				BDADA2B11BF98A7A0076BFDF /* KCAnimationKeyPathAnimationViewController11.h */,
+				BDADA2B21BF98A7A0076BFDF /* KCAnimationKeyPathAnimationViewController11.m */,
+				BDADA2B41BF98A8E0076BFDF /* KCAnimationKeyPathAnimationViewController12.h */,
+				BDADA2B51BF98A8E0076BFDF /* KCAnimationKeyPathAnimationViewController12.m */,
+				BDADA2B91BF9A3FC0076BFDF /* KCAnimationGroupViewController11.h */,
+				BDADA2BA1BF9A3FC0076BFDF /* KCAnimationGroupViewController11.m */,
+				BDADA2BE1BF9A60D0076BFDF /* KCAnimationSwitchViewController.h */,
+				BDADA2BF1BF9A60D0076BFDF /* KCAnimationSwitchViewController.m */,
+				BDADA2C51BF9B3D10076BFDF /* KCAnimationSpringViewController.h */,
+				BDADA2C61BF9B3D10076BFDF /* KCAnimationSpringViewController.m */,
+				BDADA2C81BF9B46B0076BFDF /* KCAnimationStepViewController.h */,
+				BDADA2C91BF9B46B0076BFDF /* KCAnimationStepViewController.m */,
 			);
 			name = Animation;
 			sourceTree = "<group>";
@@ -3533,10 +3607,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				BDE558081B9FD350000B9231 /* ZHAdvertisementView.xib in Resources */,
+				BDADA29E1BF975110076BFDF /* background.png in Resources */,
 				BD80F13E1BF46CB10046FA80 /* stretch13.png in Resources */,
 				BDAE15BC1B7C7FED001908A5 /* SVProgressHUD.bundle in Resources */,
 				BDF987C21B8DB7040039838B /* RunLoopInstance.xib in Resources */,
 				BDAE15BA1B7C7FED001908A5 /* LICENSE.txt in Resources */,
+				BDADA2C41BF9B38D0076BFDF /* ball.png in Resources */,
 				510281C51B5B4678009EDCA0 /* ButtonInstance.xib in Resources */,
 				BDBD75351BA004ED00168A8B /* 消息派发1.png in Resources */,
 				BDD3ABFE1BA131CC002CF012 /* resizedRibbon.png in Resources */,
@@ -3552,6 +3628,7 @@
 				BDAE10401B7C7B31001908A5 /* autosize.png in Resources */,
 				BD80F13F1BF46CB10046FA80 /* stretch_horizontal-2.png in Resources */,
 				BDAE103E1B7C786F001908A5 /* AutoSizeViewInstance.xib in Resources */,
+				BDADA2BD1BF9A5830076BFDF /* 0.png in Resources */,
 				BDF49D451BB3DFB900BEFE26 /* GCDBasicViewController.xib in Resources */,
 				BDAE15B71B7C7FED001908A5 /* Info.plist in Resources */,
 				BD80F15B1BF47E100046FA80 /* Icon-Small.png in Resources */,
@@ -3563,6 +3640,7 @@
 				5158D19C1B7E253000ACF3AD /* CircleViewController.xib in Resources */,
 				BDAE15B31B7C7FED001908A5 /* LICENSE in Resources */,
 				BDE62A7C1BA6CAD200870499 /* TableViewLayout.xib in Resources */,
+				BDADA2A21BF975DF0076BFDF /* animationtype.png in Resources */,
 				BD80F1471BF46E7B0046FA80 /* stretch_full.png in Resources */,
 				BD047E641BD8780000D020E3 /* AutoCustom1ViewController.xib in Resources */,
 				51FA7A241B70FB2A0002990E /* UsageViewController.xib in Resources */,
@@ -3578,6 +3656,7 @@
 				BDF49D4F1BB3FBAA00BEFE26 /* GCDNotificationViewController.xib in Resources */,
 				BDD61C211BB39DDD00BC4264 /* AutoLayoutCustomController.xib in Resources */,
 				BD1658431BA7CC1B00874780 /* TableViewLayoutCell1.xib in Resources */,
+				BDADA2AA1BF981AC0076BFDF /* animation.png in Resources */,
 				BD80F1351BF4656A0046FA80 /* Default-414w-736h@3x.png in Resources */,
 				51F410BD1B522638008DD35E /* slidermax.png in Resources */,
 				BDF49D401BB3DB5400BEFE26 /* GCDViewInstance.xib in Resources */,
@@ -3589,6 +3668,7 @@
 				BD8877CC1BF5D18400F0EA08 /* layer.png in Resources */,
 				51B1C61F1B50E13B00E68110 /* Slice1.png in Resources */,
 				BD0126331B9D58E900D22ACB /* bezier.png in Resources */,
+				BDADA2B81BF9A2EA0076BFDF /* animationparameter.png in Resources */,
 				BD25F7821B8C151300C0BC8E /* hit-test-depth-first-traversal.png in Resources */,
 				BD8877D01BF5DA6D00F0EA08 /* position.png in Resources */,
 				51E10C5E1B48113E009B162E /* TableInstanceInitCellXib.xib in Resources */,
@@ -3610,6 +3690,7 @@
 				BDD3ABFC1BA131CC002CF012 /* debugRibbon.png in Resources */,
 				BD8877A01BF5826900F0EA08 /* image2.png in Resources */,
 				515DFBD91B6CE3BA003C7B8E /* NavigationBarInstanceView.xib in Resources */,
+				BDADA2C21BF9A6950076BFDF /* 1.png in Resources */,
 				BDD1E1081B8FF29C0037A457 /* SearchBarInstanceView.xib in Resources */,
 				BDAE155C1B7C7FED001908A5 /* MJRefresh.bundle in Resources */,
 				BD80F13C1BF46CB10046FA80 /* stretch_vertically-2.png in Resources */,
@@ -3618,6 +3699,7 @@
 				BD8877AF1BF5AB9400F0EA08 /* MultiThreadViewInstance.xib in Resources */,
 				512CB77F1B5E841B0084E5AB /* Selected.png in Resources */,
 				BD754A781BA16CFD00BE410D /* 类型编码.png in Resources */,
+				BDADA2A01BF9751B0076BFDF /* petal.png in Resources */,
 				BDC7660E1B942A5D00EC31D7 /* LICENSE in Resources */,
 				BDC5A9751B7DEF9100AC14C4 /* GestureViewController.xib in Resources */,
 				BDD3ABFD1BA131CC002CF012 /* resizedBetaRibbon.png in Resources */,
@@ -3755,6 +3837,7 @@
 				51E10E011B481BD4009B162E /* UIBezierPath+BasicShapes.m in Sources */,
 				51E10DEC1B481BD4009B162E /* NSString+Contains.m in Sources */,
 				51E10E081B481BD4009B162E /* UIButton+Submitting.m in Sources */,
+				BDADA2B01BF983D80076BFDF /* KCAnimationBacicAnimationViewController13.m in Sources */,
 				51E10E121B481BD4009B162E /* UIImage+animatedGIF.m in Sources */,
 				BDAE15BB1B7C7FED001908A5 /* README.md in Sources */,
 				BD8CDF8B1BE33B460026D74E /* CYNavigationControllerDelegate.m in Sources */,
@@ -3860,6 +3943,7 @@
 				BDC7660F1B942A5D00EC31D7 /* README.md in Sources */,
 				51E10DF51B481BD4009B162E /* NSString+UrlEncode.m in Sources */,
 				BDC5A97A1B7DF18D00AC14C4 /* SimpleDragInstance.m in Sources */,
+				BDADA2B61BF98A8E0076BFDF /* KCAnimationKeyPathAnimationViewController12.m in Sources */,
 				BDD1E1071B8FF29C0037A457 /* SearchBarInstanceView.m in Sources */,
 				BDAE15B91B7C7FED001908A5 /* SSKeychainQuery.m in Sources */,
 				51E10DE91B481BD4009B162E /* NSObject+Runtime.m in Sources */,
@@ -3898,6 +3982,7 @@
 				BDAE15AC1B7C7FED001908A5 /* UIButton+WebCache.m in Sources */,
 				51E10DD61B481BD4009B162E /* NSDictionary+Block.m in Sources */,
 				BD79F6A81BCBAE9000AE64FD /* NSDate+DateTools.m in Sources */,
+				BDADA2CA1BF9B46B0076BFDF /* KCAnimationStepViewController.m in Sources */,
 				BDD7697E1BBA631C006A4CF4 /* ZOCNews.m in Sources */,
 				BDF49D441BB3DFB900BEFE26 /* GCDBasicViewController.m in Sources */,
 				51E10E471B481BD4009B162E /* UIViewController+RecursiveDescription.m in Sources */,
@@ -3912,6 +3997,7 @@
 				BDAE15531B7C7FED001908A5 /* MJFoundation.m in Sources */,
 				BDCCA7B11B8F0531007ED1C9 /* RRPSectionHeaderView.m in Sources */,
 				BDAE15B01B7C7FED001908A5 /* UIImageView+HighlightedWebCache.m in Sources */,
+				BDADA2BB1BF9A3FC0076BFDF /* KCAnimationGroupViewController11.m in Sources */,
 				51E10DFD1B481BD4009B162E /* MKMapView+ZoomLevel.m in Sources */,
 				51E10DCE1B481BD4009B162E /* NSData+SDDataCache.m in Sources */,
 				BDAE15CA1B7C7FED001908A5 /* UIActionSheet+Blocks.m in Sources */,
@@ -3972,16 +4058,19 @@
 				51E10E1E1B481BD4009B162E /* UIImage+RoundedCorner.m in Sources */,
 				5158D1A01B7E355000ACF3AD /* PanGestureInstance.m in Sources */,
 				BDAE155A1B7C7FED001908A5 /* NSObject+MJKeyValue.m in Sources */,
+				BDADA2C71BF9B3D10076BFDF /* KCAnimationSpringViewController.m in Sources */,
 				BD8877C11BF5BE4300F0EA08 /* GCD_SyncViewController.m in Sources */,
 				51E10DE61B481BD4009B162E /* NSObject+KVOBlocks.m in Sources */,
 				51E10DCF1B481BD4009B162E /* NSDate+Extension.m in Sources */,
 				51E10DDA1B481BD4009B162E /* NSException+Trace.m in Sources */,
+				BDADA2A51BF976770076BFDF /* KCAnimationBacicAnimationViewController1.m in Sources */,
 				51E10E3B1B481BD4009B162E /* UIView+Constraints.m in Sources */,
 				51E10DF11B481BD4009B162E /* NSString+MIME.m in Sources */,
 				51E10DDE1B481BD4009B162E /* NSDecimalNumber+Extensions.m in Sources */,
 				51E10E0C1B481BD4009B162E /* UIColor+Random.m in Sources */,
 				51E10E1D1B481BD4009B162E /* UIImage+Resize.m in Sources */,
 				BD8CDF911BE33B460026D74E /* ProVC.m in Sources */,
+				BDADA2C01BF9A60D0076BFDF /* KCAnimationSwitchViewController.m in Sources */,
 				BD754A7B1BA17E7C00BE410D /* NSInvocation+Improved.m in Sources */,
 				BD1658491BA810D200874780 /* AntiAlias.m in Sources */,
 				51E10DCB1B481BD4009B162E /* NSData+Encrypt.m in Sources */,
@@ -3995,6 +4084,7 @@
 				51E10E211B481BD4009B162E /* UILabel+AutoSize.m in Sources */,
 				51E10E3A1B481BD4009B162E /* UIView+BlockGesture.m in Sources */,
 				51E10E141B481BD4009B162E /* UIImage+Capture.m in Sources */,
+				BDADA2A81BF978DF0076BFDF /* KCAnimationBacicAnimationViewController11.m in Sources */,
 				BD25F7771B8C076E00C0BC8E /* HitTestAView.m in Sources */,
 				BDAE15C41B7C7FED001908A5 /* TPKeyboardAvoidingCollectionView.m in Sources */,
 				51E10E151B481BD4009B162E /* UIImage+Color.m in Sources */,
@@ -4023,6 +4113,7 @@
 				BDAE15391B7C7FED001908A5 /* GZIP.m in Sources */,
 				BD5E8EAA1BB4E3B90088FE6D /* ViewController+MASAdditions.m in Sources */,
 				51E10E391B481BD4009B162E /* UIView+Animation.m in Sources */,
+				BDADA2AD1BF9830B0076BFDF /* KCAnimationBacicAnimationViewController12.m in Sources */,
 				51E10E4B1B481BD4009B162E /* UIWebView+Blocks.m in Sources */,
 				51E10E161B481BD4009B162E /* UIImage+FileName.m in Sources */,
 				BD8CDF871BE33B460026D74E /* UIView+JDFlipImageView.m in Sources */,
@@ -4044,6 +4135,7 @@
 				BDAE15D31B7C7FED001908A5 /* UIViewController+Swizzle.m in Sources */,
 				51E10E261B481BD4009B162E /* UINavigationController+FDFullscreenPopGesture.m in Sources */,
 				51E10E101B481BD4009B162E /* UIDevice+Hardware.m in Sources */,
+				BDADA2B31BF98A7A0076BFDF /* KCAnimationKeyPathAnimationViewController11.m in Sources */,
 				51E10E4F1B481BD4009B162E /* UIWebView+Style.m in Sources */,
 				BDAE15591B7C7FED001908A5 /* NSObject+MJCoding.m in Sources */,
 				BDAE10441B7C7D48001908A5 /* AutoLayoutViewInstance.m in Sources */,

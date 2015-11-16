@@ -4,7 +4,7 @@
 //
 //  Created by dongjl on 15/11/13.
 //  Copyright © 2015年 djl. All rights reserved.
-//
+//如果设置了masksToBounds=YES之后确实可以显示图片圆角效果，但遗憾的是设置了这个属性之后就无法设置阴影效果。因为masksToBounds=YES就意味着外边框不能显示，而阴影恰恰作为外边框绘制的，这样两个设置就产生了矛盾。要解决这个问题不妨换个思路:使用两个大小一样的图层，下面的图层负责绘制阴影，上面的图层用来显示图片。
 
 #import "KCAnimationViewController3.h"
 #define PHOTO_HEIGHT 150

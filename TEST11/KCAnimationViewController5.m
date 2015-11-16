@@ -4,7 +4,7 @@
 //
 //  Created by dongjl on 15/11/13.
 //  Copyright © 2015年 djl. All rights reserved.
-//
+//大家不难发现使用Core Graphics绘制图片时会倒立显示，对图层的图形上下文进行了反转。在前一篇文章中也采用了类似的方法去解决这个问题，但是在那篇文章中也提到过如果直接让图像沿着x轴旋转180度同样可以达到正确显示的目的，只是当时的旋转靠图形上下文还无法绕x轴旋转。今天学习了图层之后，其实可以控制图层直接旋转而不用借助于图形上下文的形变操作，而且这么操作起来会更加简单和直观。对于上面的程序，只需要设置图层的transform属性即可。需要注意的是transform是CATransform3D类型，形变可以在三个维度上进行，使用方法和前面介绍的二维形变是类似的，而且都有对应的形变设置方法（如：CATransform3DMakeTranslation()、CATransform3DMakeScale()、CATransform3DMakeRotation()）。下面的代码通过CATransform3DMakeRotation()方法在x轴旋转180度解决倒立问题：
 
 #import "KCAnimationViewController5.h"
 #define PHOTO_HEIGHT 150

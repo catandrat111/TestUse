@@ -4,7 +4,7 @@
 //
 //  Created by dongjl on 15/11/13.
 //  Copyright © 2015年 djl. All rights reserved.
-//
+//通过代理方法进行图层绘图只要指定图层的代理，然后在代理对象中重写-(void)drawLayer:(CALayer *)layer inContext:(CGContextRef)ctx方法即可。需要注意这个方法虽然是代理方法但是不用手动实现CALayerDelegate，因为CALayer定义中给NSObject做了分类扩展，所有的NSObject都包含这个方法。另外设置完代理后必须要调用图层的setNeedDisplay方法，否则绘制的内容无法显示。
 
 #import "KCAnimationViewController2.h"
 #define PHOTO_HEIGHT 150
