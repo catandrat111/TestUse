@@ -221,6 +221,7 @@
 		BD25F7821B8C151300C0BC8E /* hit-test-depth-first-traversal.png in Resources */ = {isa = PBXBuildFile; fileRef = BD25F7811B8C151300C0BC8E /* hit-test-depth-first-traversal.png */; };
 		BD3570A71BB29EF900559A9A /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BD3570A61BB29EF900559A9A /* libsqlite3.dylib */; };
 		BD3570A91BB29F2A00559A9A /* libz.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BD3570A81BB29F2900559A9A /* libz.1.dylib */; };
+		BD54BCEB1BFB250B00FAEDAE /* RecordingCircleOverlayView.m in Sources */ = {isa = PBXBuildFile; fileRef = BD54BCEA1BFB250B00FAEDAE /* RecordingCircleOverlayView.m */; };
 		BD56746A1BA2AE4300DAF744 /* UserList.mm in Sources */ = {isa = PBXBuildFile; fileRef = BD5674691BA2AE4300DAF744 /* UserList.mm */; };
 		BD56746D1BA2DE4000DAF744 /* KeyValueObserver.m in Sources */ = {isa = PBXBuildFile; fileRef = BD56746C1BA2DE4000DAF744 /* KeyValueObserver.m */; };
 		BD5E8EA51BB4E0860088FE6D /* YFAutoLayoutCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BD5E8EA01BB4E0860088FE6D /* YFAutoLayoutCell.m */; };
@@ -234,6 +235,7 @@
 		BD5E8EBE1BB51CF30088FE6D /* HCDNonConcurrentOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = BD5E8EBD1BB51CF30088FE6D /* HCDNonConcurrentOperation.m */; };
 		BD66F0D21BB387B400C4D76A /* UIView+FDCollapsibleConstraints.m in Sources */ = {isa = PBXBuildFile; fileRef = BD66F0D11BB387B400C4D76A /* UIView+FDCollapsibleConstraints.m */; };
 		BD66F0D61BB389F300C4D76A /* AutoLayoutFDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD66F0D51BB389F300C4D76A /* AutoLayoutFDViewController.m */; };
+		BD70B1C21BFDC81800027F33 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BD70B1C11BFDC81800027F33 /* main.m */; };
 		BD754A781BA16CFD00BE410D /* 类型编码.png in Resources */ = {isa = PBXBuildFile; fileRef = BD754A771BA16CFD00BE410D /* 类型编码.png */; };
 		BD754A7B1BA17E7C00BE410D /* NSInvocation+Improved.m in Sources */ = {isa = PBXBuildFile; fileRef = BD754A7A1BA17E7B00BE410D /* NSInvocation+Improved.m */; };
 		BD79F6A11BCBAE9000AE64FD /* DateTools.bundle in Resources */ = {isa = PBXBuildFile; fileRef = BD79F6911BCBAE9000AE64FD /* DateTools.bundle */; };
@@ -459,6 +461,8 @@
 		BDD3ABFD1BA131CC002CF012 /* resizedBetaRibbon.png in Resources */ = {isa = PBXBuildFile; fileRef = BDD3ABF91BA131CC002CF012 /* resizedBetaRibbon.png */; };
 		BDD3ABFE1BA131CC002CF012 /* resizedRibbon.png in Resources */ = {isa = PBXBuildFile; fileRef = BDD3ABFA1BA131CC002CF012 /* resizedRibbon.png */; };
 		BDD3AC001BA134EE002CF012 /* AppIcon60x60@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BDD3ABFF1BA134EE002CF012 /* AppIcon60x60@2x.png */; };
+		BDD51D2D1BFC210A00D27C22 /* ProgressGradientView.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD51D2C1BFC210900D27C22 /* ProgressGradientView.m */; };
+		BDD51D301BFC790400D27C22 /* BlockModel.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD51D2F1BFC790400D27C22 /* BlockModel.m */; };
 		BDD61C101BB391CD00BC4264 /* FDListEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD61C0A1BB391CD00BC4264 /* FDListEntity.m */; };
 		BDD61C111BB391CD00BC4264 /* FDTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD61C0C1BB391CD00BC4264 /* FDTableViewCell.m */; };
 		BDD61C121BB391CD00BC4264 /* FDTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD61C0E1BB391CD00BC4264 /* FDTableViewController.m */; };
@@ -528,6 +532,18 @@
 			remoteInfo = SwiftTest;
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		BD70B1BD1BFDC81800027F33 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		510281C11B5B4678009EDCA0 /* ButtonInstance.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ButtonInstance.h; sourceTree = "<group>"; };
@@ -929,6 +945,8 @@
 		BD25F7811B8C151300C0BC8E /* hit-test-depth-first-traversal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "hit-test-depth-first-traversal.png"; sourceTree = "<group>"; };
 		BD3570A61BB29EF900559A9A /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = ../../../../../usr/lib/libsqlite3.dylib; sourceTree = "<group>"; };
 		BD3570A81BB29F2900559A9A /* libz.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.dylib; path = ../../../../../usr/lib/libz.1.dylib; sourceTree = "<group>"; };
+		BD54BCE91BFB250B00FAEDAE /* RecordingCircleOverlayView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecordingCircleOverlayView.h; sourceTree = "<group>"; };
+		BD54BCEA1BFB250B00FAEDAE /* RecordingCircleOverlayView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecordingCircleOverlayView.m; sourceTree = "<group>"; };
 		BD5674681BA2AE4300DAF744 /* UserList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserList.h; sourceTree = "<group>"; };
 		BD5674691BA2AE4300DAF744 /* UserList.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = UserList.mm; sourceTree = "<group>"; };
 		BD56746B1BA2DE4000DAF744 /* KeyValueObserver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeyValueObserver.h; sourceTree = "<group>"; };
@@ -955,6 +973,8 @@
 		BD66F0D11BB387B400C4D76A /* UIView+FDCollapsibleConstraints.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+FDCollapsibleConstraints.m"; sourceTree = "<group>"; };
 		BD66F0D41BB389F300C4D76A /* AutoLayoutFDViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AutoLayoutFDViewController.h; sourceTree = "<group>"; };
 		BD66F0D51BB389F300C4D76A /* AutoLayoutFDViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AutoLayoutFDViewController.m; sourceTree = "<group>"; };
+		BD70B1BF1BFDC81800027F33 /* BlockTest */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = BlockTest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BD70B1C11BFDC81800027F33 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		BD754A771BA16CFD00BE410D /* 类型编码.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "类型编码.png"; sourceTree = "<group>"; };
 		BD754A791BA17E7B00BE410D /* NSInvocation+Improved.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSInvocation+Improved.h"; sourceTree = "<group>"; };
 		BD754A7A1BA17E7B00BE410D /* NSInvocation+Improved.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSInvocation+Improved.m"; sourceTree = "<group>"; };
@@ -1344,6 +1364,10 @@
 		BDD3ABF91BA131CC002CF012 /* resizedBetaRibbon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = resizedBetaRibbon.png; path = ../resizedBetaRibbon.png; sourceTree = "<group>"; };
 		BDD3ABFA1BA131CC002CF012 /* resizedRibbon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = resizedRibbon.png; path = ../resizedRibbon.png; sourceTree = "<group>"; };
 		BDD3ABFF1BA134EE002CF012 /* AppIcon60x60@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AppIcon60x60@2x.png"; sourceTree = "<group>"; };
+		BDD51D2B1BFC210900D27C22 /* ProgressGradientView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProgressGradientView.h; sourceTree = "<group>"; };
+		BDD51D2C1BFC210900D27C22 /* ProgressGradientView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProgressGradientView.m; sourceTree = "<group>"; };
+		BDD51D2E1BFC790400D27C22 /* BlockModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlockModel.h; sourceTree = "<group>"; };
+		BDD51D2F1BFC790400D27C22 /* BlockModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BlockModel.m; sourceTree = "<group>"; };
 		BDD61C091BB391CD00BC4264 /* FDListEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FDListEntity.h; sourceTree = "<group>"; };
 		BDD61C0A1BB391CD00BC4264 /* FDListEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FDListEntity.m; sourceTree = "<group>"; };
 		BDD61C0B1BB391CD00BC4264 /* FDTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FDTableViewCell.h; sourceTree = "<group>"; };
@@ -1441,6 +1465,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		BD70B1BC1BFDC81800027F33 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		BDFA0B6B1BC61741003BC5EA /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -1503,6 +1534,8 @@
 		5158D18F1B7E23D000ACF3AD /* Draw */ = {
 			isa = PBXGroup;
 			children = (
+				BD54BCE91BFB250B00FAEDAE /* RecordingCircleOverlayView.h */,
+				BD54BCEA1BFB250B00FAEDAE /* RecordingCircleOverlayView.m */,
 				5158D1901B7E242000ACF3AD /* DrawViewInstance.h */,
 				5158D1911B7E242000ACF3AD /* DrawViewInstance.m */,
 				5158D1921B7E242000ACF3AD /* DrawViewInstance.xib */,
@@ -1517,6 +1550,8 @@
 				BD80F16C1BF491FE0046FA80 /* KCView.m */,
 				BD8877A21BF58A4A00F0EA08 /* KCMainViewController.h */,
 				BD8877A31BF58A4A00F0EA08 /* KCMainViewController.m */,
+				BDD51D2B1BFC210900D27C22 /* ProgressGradientView.h */,
+				BDD51D2C1BFC210900D27C22 /* ProgressGradientView.m */,
 			);
 			name = Draw;
 			sourceTree = "<group>";
@@ -1538,6 +1573,7 @@
 				BDFA0B6F1BC61742003BC5EA /* SwiftTest */,
 				BDFA0B841BC61744003BC5EA /* SwiftTestTests */,
 				BDFA0B8F1BC61748003BC5EA /* SwiftTestUITests */,
+				BD70B1C01BFDC81800027F33 /* BlockTest */,
 				5195B3EB1AB70284007CFA8B /* Products */,
 				4B57CB8D439273592D6CB7DC /* Frameworks */,
 			);
@@ -1551,6 +1587,7 @@
 				BDFA0B6E1BC61741003BC5EA /* SwiftTest.app */,
 				BDFA0B811BC61743003BC5EA /* SwiftTestTests.xctest */,
 				BDFA0B8C1BC61746003BC5EA /* SwiftTestUITests.xctest */,
+				BD70B1BF1BFDC81800027F33 /* BlockTest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -2484,6 +2521,8 @@
 				BDE62A831BA6CC6500870499 /* LayoutModel.m */,
 				BD1658441BA7EEA600874780 /* RunLoopTestModel.h */,
 				BD1658451BA7EEA600874780 /* RunLoopTestModel.m */,
+				BDD51D2E1BFC790400D27C22 /* BlockModel.h */,
+				BDD51D2F1BFC790400D27C22 /* BlockModel.m */,
 			);
 			name = Model;
 			path = ..;
@@ -2604,6 +2643,14 @@
 				BD047E661BD8797600D020E3 /* MyView.m */,
 			);
 			name = AutoLayout;
+			sourceTree = "<group>";
+		};
+		BD70B1C01BFDC81800027F33 /* BlockTest */ = {
+			isa = PBXGroup;
+			children = (
+				BD70B1C11BFDC81800027F33 /* main.m */,
+			);
+			path = BlockTest;
 			sourceTree = "<group>";
 		};
 		BD79F6901BCBAE9000AE64FD /* DateTools */ = {
@@ -3486,6 +3533,23 @@
 			productReference = 5195B4031AB70285007CFA8B /* TEST11Tests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		BD70B1BE1BFDC81800027F33 /* BlockTest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BD70B1C31BFDC81800027F33 /* Build configuration list for PBXNativeTarget "BlockTest" */;
+			buildPhases = (
+				BD70B1BB1BFDC81800027F33 /* Sources */,
+				BD70B1BC1BFDC81800027F33 /* Frameworks */,
+				BD70B1BD1BFDC81800027F33 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BlockTest;
+			productName = BlockTest;
+			productReference = BD70B1BF1BFDC81800027F33 /* BlockTest */;
+			productType = "com.apple.product-type.tool";
+		};
 		BDFA0B6D1BC61741003BC5EA /* SwiftTest */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = BDFA0B9C1BC61749003BC5EA /* Build configuration list for PBXNativeTarget "SwiftTest" */;
@@ -3566,6 +3630,9 @@
 						CreatedOnToolsVersion = 6.1.1;
 						TestTargetID = 5195B3E91AB70284007CFA8B;
 					};
+					BD70B1BE1BFDC81800027F33 = {
+						CreatedOnToolsVersion = 7.1;
+					};
 					BDFA0B6D1BC61741003BC5EA = {
 						CreatedOnToolsVersion = 7.0;
 					};
@@ -3597,6 +3664,7 @@
 				BDFA0B6D1BC61741003BC5EA /* SwiftTest */,
 				BDFA0B801BC61743003BC5EA /* SwiftTestTests */,
 				BDFA0B8B1BC61745003BC5EA /* SwiftTestUITests */,
+				BD70B1BE1BFDC81800027F33 /* BlockTest */,
 			);
 		};
 /* End PBXProject section */
@@ -3796,6 +3864,7 @@
 				51E10DEB1B481BD4009B162E /* NSString+Base64.m in Sources */,
 				51E10E2A1B481BD4009B162E /* UINavigationItem+Lock.m in Sources */,
 				BDAE154E1B7C7FED001908A5 /* NSArray+MASAdditions.m in Sources */,
+				BDD51D301BFC790400D27C22 /* BlockModel.m in Sources */,
 				BDD61C121BB391CD00BC4264 /* FDTableViewController.m in Sources */,
 				BDAE15481B7C7FED001908A5 /* MASCompositeConstraint.m in Sources */,
 				51E10DFF1B481BD4009B162E /* UIApplication+KeyboardFrame.m in Sources */,
@@ -4036,6 +4105,7 @@
 				51E10DE21B481BD4009B162E /* NSObject+AssociatedObject.m in Sources */,
 				51E10DCC1B481BD4009B162E /* NSData+Gzip.m in Sources */,
 				BDAE15A91B7C7FED001908A5 /* SDWebImageDownloaderOperation.m in Sources */,
+				BD54BCEB1BFB250B00FAEDAE /* RecordingCircleOverlayView.m in Sources */,
 				51E10E431B481BD4009B162E /* UIView+Toast.m in Sources */,
 				51E10DD51B481BD4009B162E /* NSDateFormatter+Make.m in Sources */,
 				51E10DC91B481BD4009B162E /* NSBundle+AppIcon.m in Sources */,
@@ -4102,6 +4172,7 @@
 				51E10DD01B481BD4009B162E /* NSDate+Formatter.m in Sources */,
 				BDAE15D51B7C7FED001908A5 /* UIView+Position.m in Sources */,
 				BD8CDF831BE33B460026D74E /* CoreLaunchCool.m in Sources */,
+				BDD51D2D1BFC210A00D27C22 /* ProgressGradientView.m in Sources */,
 				BDAE12301B7C7E17001908A5 /* UITableView+iOS7Style.m in Sources */,
 				BDAE155B1B7C7FED001908A5 /* NSObject+MJMember.m in Sources */,
 				BD5E8EB51BB51CAE0088FE6D /* HCDCreateBlockOperation.m in Sources */,
@@ -4166,6 +4237,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				5195B40A1AB70285007CFA8B /* TEST11Tests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BD70B1BB1BFDC81800027F33 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BD70B1C21BFDC81800027F33 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -4415,6 +4494,45 @@
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TEST11.app/TEST11";
 			};
 			name = Release;
+		};
+		BD70B1C41BFDC81800027F33 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_TESTABILITY = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		BD70B1C51BFDC81800027F33 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_NO_COMMON_BLOCKS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		BD70B1C61BFDC81800027F33 /* Beta */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_NO_COMMON_BLOCKS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Beta;
 		};
 		BD754A741BA15F0700BE410D /* Beta */ = {
 			isa = XCBuildConfiguration;
@@ -4672,6 +4790,15 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		BD70B1C31BFDC81800027F33 /* Build configuration list for PBXNativeTarget "BlockTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BD70B1C41BFDC81800027F33 /* Debug */,
+				BD70B1C51BFDC81800027F33 /* Release */,
+				BD70B1C61BFDC81800027F33 /* Beta */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 		BDFA0B9C1BC61749003BC5EA /* Build configuration list for PBXNativeTarget "SwiftTest" */ = {
 			isa = XCConfigurationList;

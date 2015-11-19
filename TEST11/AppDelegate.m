@@ -95,10 +95,10 @@
     //    [CoreLaunchCool animWithWindow:self.window image:nil];
     
     /** Pro版本 */
-    [CoreLaunchPro animWithWindow:self.window image:nil];
+    //[CoreLaunchPro animWithWindow:self.window image:nil];
     
     /** Flip版本 */
-     [CoreLaunchFlip animWithWindow:self.window image:nil];
+     //[CoreLaunchFlip animWithWindow:self.window image:nil];
 
     return YES;
 }

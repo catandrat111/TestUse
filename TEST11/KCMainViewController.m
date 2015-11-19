@@ -8,6 +8,8 @@
 
 #import "KCMainViewController.h"
 #import "KCView.h"
+#import "RecordingCircleOverlayView.h"
+#import "ProgressGradientView.h"
 #define CONSTROLPANEL_FONTSIZE 12
 @interface KCMainViewController ()<UIPickerViewDataSource,UIPickerViewDelegate,UINavigationControllerDelegate,UIImagePickerControllerDelegate>{
     KCView *_contentView;
@@ -28,7 +30,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.view.backgroundColor = [UIColor lightGrayColor];
+    self.view.backgroundColor = [UIColor darkGrayColor];
     
     NSString* temp = [NSString stringWithFormat:@"%@:",self.type];
     CGContextRef context = UIGraphicsGetCurrentContext();
@@ -342,5 +344,200 @@
     [self setImage];
 }
 
+//keyPath = strokeStart  动画的fromValue = 0，toValue = 1表示从路径的0位置画到1 怎么画是按照清除开始的位置也就是清除0 一直清除到1 效果就是一条路径慢慢的消失
+
+//2 keyPath = strokeStart  动画的fromValue = 1，toValue = 0
+//
+//表示从路径的1位置画到0 怎么画是按照清除开始的位置也就是1 这样开始的路径是空的（即都被清除掉了）一直清除到0 效果就是一条路径被反方向画出来
+//
+//
+//
+//3 keyPath = strokeEnd  动画的fromValue = 0，toValue = 1
+//
+//表示 这里我们分3个点说明动画的顺序  strokeEnd从结尾开始清除 首先整条路径先清除后2/3，接着清除1/3 效果就是正方向画出路径
+//
+//
+//
+//3 keyPath = strokeEnd  动画的fromValue = 1，toValue = 0
+//
+//效果就是反方向路径慢慢消失
+//
+//注释： 动画的0-1（fromValue = 0，toValue = 1） 或1-0 （fromValue = 1，toValue = 0） 表示执行的方向 和路径的范围。
+- (void)drawBezierPathLine1:(CGContextRef)context {
+    // 创建path
+
+    UIBezierPath *path = [UIBezierPath bezierPath];
+    // 添加路径[1条点(100,100)到点(200,100)的线段]到path
+    [path moveToPoint:CGPointMake(0 , 30)];
+    [path addLineToPoint:CGPointMake(200, 30)];
+
+    
+    CAShapeLayer* layer = [CAShapeLayer new];
+    layer.path = path.CGPath;
+    [self.view.layer addSublayer:layer];
+    layer.strokeColor = [UIColor redColor].CGColor;
+
+    
+    UIBezierPath *path1 = [UIBezierPath bezierPath];
+    // 添加圆到path
+    [path1 addArcWithCenter:CGPointMake(160, 160) radius:100.0 startAngle:0.0 endAngle:M_PI*2 clockwise:YES];
+    // 设置描边宽度（为了让描边看上去更清楚）
+    [path1 setLineWidth:5.0];
+
+    CAShapeLayer* layer1 = [CAShapeLayer new];
+    layer1.path = path1.CGPath;
+    [self.view.layer addSublayer:layer1];
+    layer1.strokeColor = [UIColor redColor].CGColor;
+    layer1.fillColor = [UIColor blueColor].CGColor;
+    
+    CABasicAnimation *pathAnimation = [CABasicAnimation animationWithKeyPath:@"strokeEnd"];
+    pathAnimation.duration = 1.5;
+    pathAnimation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
+    pathAnimation.fromValue = [NSNumber numberWithFloat:0.0f];
+    pathAnimation.toValue = [NSNumber numberWithFloat:1.0f];
+    pathAnimation.autoreverses = NO;
+    [layer addAnimation:pathAnimation forKey:@"strokeEndAnimation"];
+    
+    
+}
+
+- (void)drawBezierPathLine2:(CGContextRef)context {
+    // 创建path
+    
+    UIBezierPath *path = [UIBezierPath bezierPath];
+    // 添加路径[1条点(100,100)到点(200,100)的线段]到path
+    [path moveToPoint:CGPointMake(0 , 30)];
+    [path addLineToPoint:CGPointMake(200, 30)];
+    
+    
+    CAShapeLayer* layer = [CAShapeLayer new];
+    layer.path = path.CGPath;
+    [self.view.layer addSublayer:layer];
+    layer.strokeColor = [UIColor redColor].CGColor;
+    
+    
+    UIBezierPath *path1 = [UIBezierPath bezierPath];
+    // 添加圆到path
+    [path1 addArcWithCenter:CGPointMake(160, 160) radius:100.0 startAngle:0.0 endAngle:M_PI*2 clockwise:YES];
+    // 设置描边宽度（为了让描边看上去更清楚）
+    [path1 setLineWidth:5.0];
+    
+    CAShapeLayer* layer1 = [CAShapeLayer new];
+    layer1.path = path1.CGPath;
+    [self.view.layer addSublayer:layer1];
+    layer1.strokeColor = [UIColor redColor].CGColor;
+    layer1.fillColor = [UIColor blueColor].CGColor;
+    
+    CABasicAnimation *pathAnimation = [CABasicAnimation animationWithKeyPath:@"strokeEnd"];
+    pathAnimation.duration = 1.5;
+    pathAnimation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
+    pathAnimation.fromValue = [NSNumber numberWithFloat:1.0f];
+    pathAnimation.toValue = [NSNumber numberWithFloat:0.0f];
+    pathAnimation.autoreverses = NO;
+    pathAnimation.fillMode = kCAFillModeForwards;
+    pathAnimation.removedOnCompletion = NO;
+    [layer addAnimation:pathAnimation forKey:@"strokeEndAnimation"];
+
+
+    
+}
+
+- (void)drawBezierPathLine3:(CGContextRef)context {
+    // 创建path
+    
+    UIBezierPath *path = [UIBezierPath bezierPath];
+    // 添加路径[1条点(100,100)到点(200,100)的线段]到path
+    [path moveToPoint:CGPointMake(0 , 30)];
+    [path addLineToPoint:CGPointMake(200, 30)];
+    
+    
+    CAShapeLayer* layer = [CAShapeLayer new];
+    layer.path = path.CGPath;
+    [self.view.layer addSublayer:layer];
+    layer.strokeColor = [UIColor redColor].CGColor;
+    
+    
+    UIBezierPath *path1 = [UIBezierPath bezierPath];
+    // 添加圆到path
+    [path1 addArcWithCenter:CGPointMake(160, 160) radius:100.0 startAngle:0.0 endAngle:M_PI*2 clockwise:YES];
+    // 设置描边宽度（为了让描边看上去更清楚）
+    [path1 setLineWidth:5.0];
+    
+    CAShapeLayer* layer1 = [CAShapeLayer new];
+    layer1.path = path1.CGPath;
+    [self.view.layer addSublayer:layer1];
+    layer1.strokeColor = [UIColor redColor].CGColor;
+    layer1.fillColor = [UIColor blueColor].CGColor;
+    
+    CABasicAnimation *pathAnimation = [CABasicAnimation animationWithKeyPath:@"strokeStart"];
+    pathAnimation.duration = 1.5;
+    pathAnimation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
+    pathAnimation.fromValue = [NSNumber numberWithFloat:0.0f];
+    pathAnimation.toValue = [NSNumber numberWithFloat:1.0f];
+    pathAnimation.autoreverses = NO;
+    pathAnimation.fillMode = kCAFillModeForwards;
+    pathAnimation.removedOnCompletion = NO;
+
+    [layer addAnimation:pathAnimation forKey:@"strokeEndAnimation"];
+  
+
+    
+}
+
+
+- (void)drawBezierPathLine4:(CGContextRef)context {
+    // 创建path
+    
+//    UIBezierPath *path = [UIBezierPath bezierPath];
+//    // 添加路径[1条点(100,100)到点(200,100)的线段]到path
+//    [path moveToPoint:CGPointMake(0 , 30)];
+//    [path addLineToPoint:CGPointMake(200, 30)];
+//    
+//    
+//    CAShapeLayer* layer = [CAShapeLayer new];
+//    layer.path = path.CGPath;
+//    [self.view.layer addSublayer:layer];
+//    layer.strokeColor = [UIColor redColor].CGColor;
+//    
+    
+    UIBezierPath *path1 = [UIBezierPath bezierPath];
+    // 添加圆到path
+    [path1 addArcWithCenter:CGPointMake(160, 160) radius:100.0 startAngle:0.0 endAngle:M_PI*2 clockwise:YES];
+    // 设置描边宽度（为了让描边看上去更清楚）
+    [path1 setLineWidth:5.0];
+    
+    CAShapeLayer* layer1 = [CAShapeLayer new];
+    layer1.path = path1.CGPath;
+    [self.view.layer addSublayer:layer1];
+    layer1.strokeColor = [UIColor redColor].CGColor;
+    layer1.fillColor = [UIColor blueColor].CGColor;
+    
+    CABasicAnimation *pathAnimation = [CABasicAnimation animationWithKeyPath:@"strokeStart"];
+    pathAnimation.duration = 1.5;
+    pathAnimation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
+    pathAnimation.fromValue = [NSNumber numberWithFloat:1.0f];
+    pathAnimation.toValue = [NSNumber numberWithFloat:0.3f];
+    pathAnimation.autoreverses = NO;
+    pathAnimation.fillMode = kCAFillModeForwards;
+    pathAnimation.removedOnCompletion = NO;
+    [layer1 addAnimation:pathAnimation forKey:@"strokeEndAnimation"];
+    
+    
+}
+
+- (void)drawBezierPathLine5:(CGContextRef)context {
+    RecordingCircleOverlayView *recordingCircleOverlayView = [[RecordingCircleOverlayView alloc] initWithFrame:self.view.bounds strokeWidth:7.f insets:UIEdgeInsetsMake(10.f, 0.f, 10.f, 0.f)];
+    recordingCircleOverlayView.autoresizingMask = UIViewAutoresizingFlexibleHeight|UIViewAutoresizingFlexibleWidth;
+    recordingCircleOverlayView.duration = 10.f;
+    [self.view addSubview:recordingCircleOverlayView];
+}
+
+- (void)drawProgress:(CGContextRef)context {
+    ProgressGradientView *progressView = [[ProgressGradientView alloc] initWithFrame:CGRectMake(0, 10, 320, 51)];
+    progressView.progress = 1.0;
+    [progressView performAnimation];
+   
+    [self.view addSubview:progressView];
+}
 
 @end

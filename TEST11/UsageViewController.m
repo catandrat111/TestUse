@@ -17,7 +17,8 @@
 #import "DateTools.h"
 #import "NSDate+Utilities.h"
 #import "FBKVOController.h"
-
+int global_val = 1;
+static int static_global_val = 2;
 @interface UsageViewController ()
 @property(strong,nonatomic) NSMutableArray* array;
 
@@ -126,6 +127,8 @@
     [self dateTest1];
     [self vaFunc:@"var1",@"var2",@"var3",nil];
     [self observerTest];
+    
+    [self testblock1];
     
 }
 
@@ -730,6 +733,23 @@ struct objc_class {
     }
     NSLog(@"%@",mArray);
     va_end(args);
+}
+
+- (void)testblock1 {
+    static int static_val = 3;
+    void (^blk)(void) = ^(void) {
+        global_val *= 2;
+        static_global_val *= 3;
+        static_val *= 4;
+        
+        NSLog(@"global_val:%d,static_global_val:%d,static_val:%d",global_val,static_global_val,static_val);
+    };//2015-11-18 15:09:07.947 TEST11[5447:175041] global_val:2,static_global_val:6,static_val:12
+    
+    blk();
+    
+    NSLog(@"%@",blk);//TEST11[5550:184349] <__NSGlobalBlock__: 0x10685fd50>
+
+
 }
 
 
