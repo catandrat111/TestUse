@@ -31,11 +31,34 @@ void t2() {
     }
 }
 
+blk_t t3(int rate) {
+    blk_t b3  = ^(int count) {return rate * count;};//作为函数值返回
+    NSLog(@"%@", b3);//2015-11-23 10:38:14.242 BlockTest[14399:79840] <__NSMallocBlock__: 0x100603b00>
+    return b3;
+}
+
+id getBlockArray() {
+    int val = 10;
+   // return [[NSArray alloc] initWithObjects:[^{NSLog(@"blo:%d",val);} copy], [^{NSLog(@"bl1:%d",val);} copy],nil];
+    
+    NSArray* arr = [[NSArray alloc] initWithObjects:^{NSLog(@"blo:%d",val);}, ^{NSLog(@"bl1:%d",val);} ,nil];
+    NSLog(@"%@",arr[0]);
+    return arr;
+
+}
+
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
         //t1();
-        t2();
-
+        //t2();
+        
+       // blk_t b3 = t3(5);
+       // NSLog(@"%@", b3);//2015-11-23 10:37:18.412 BlockTest[14381:79110] <__NSMallocBlock__: 0x100200370>
+        
+        typedef void (^blk_t1)(void);
+        NSArray* arr = getBlockArray();
+        blk_t1 b4 = (blk_t1)arr[0];
+        b4();
     }
     return 0;
 }

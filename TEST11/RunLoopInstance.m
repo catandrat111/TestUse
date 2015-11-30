@@ -11,11 +11,13 @@
 #import "User.h"
 #import "GestureViewController.h"
 #import "RunLoopTestModel.h"
+static int count;
 @interface RunLoopInstance ()
 {
     
     __weak id reference;
      __weak id reference1;
+
 }
 @end
 
@@ -23,6 +25,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    count = 0;
    // User* user = [User new];
     UIButton* button  = [[UIButton alloc] initWithFrame:CGRectMake(0, 64, 100, 60)];
     [button setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
@@ -35,6 +38,13 @@
     [button1 setTitle:@"2" forState:UIControlStateNormal];
     [button1 addTarget:self action:@selector(p3) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:button1];
+    
+    UIButton* button2  = [[UIButton alloc] initWithFrame:CGRectMake(0, 200, 100, 60)];
+    [button2 setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
+    [button2 setTitle:@"3" forState:UIControlStateNormal];
+    [button2 addTarget:self action:@selector(p4) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:button2];
+
 
     
       NSLog(@"%@",[NSThread currentThread]);
@@ -45,7 +55,7 @@
     reference = str;
     reference1 = model;
     NSLog(@"%@", reference1);
-    
+      NSLog(@"%@",[NSThread currentThread]);
     CFRunLoopRef runLoop = CFRunLoopGetCurrent();
     
     // This is a idle mode of RunLoop, when UIScrollView scrolls, it jumps into "UITrackingRunLoopMode"
@@ -61,10 +71,13 @@
     (kCFAllocatorDefault, kCFRunLoopBeforeWaiting, true, 0, ^(CFRunLoopObserverRef observer, CFRunLoopActivity _) {
         NSLog(@"reference:%@", reference);
         NSLog(@"reference1:%@", reference1);
+    
     });
     
-    CFRunLoopAddObserver(runLoop, observer, runLoopMode);
+    //CFRunLoopAddObserver(runLoop, observer, runLoopMode);
 }
+
+
 
 
 -(void)viewWillAppear:(BOOL)animated{
@@ -85,6 +98,12 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (void)p4 {
+   
+        [self test];
+
+   
+}
 
 +(void)initialize{
     
@@ -142,29 +161,34 @@ static void runloopObserverCallback(CFRunLoopObserverRef observer, CFRunLoopActi
     }//到这释放
     NSLog(@"%@",[NSThread currentThread]);
     [self test];
-    
-    NSRunLoop *runloop = [NSRunLoop currentRunLoop];
-    if (!runloop) {
-        return ;
-    }
-    
-    // NSTimer *timer = [NSTimer scheduledTimerWithTimeInterval:5.0f target:self selector:@selector(onTimerFired:) userInfo:nil repeats:NO];
-    //[runloop addTimer:timer forMode:NSRunLoopCommonModes];
-    CFRunLoopObserverContext context = {
-        0,
-        (__bridge void *)(self),
-        NULL,
-        NULL,
-        NULL
-    };
-    NSRunLoop* loop = [NSRunLoop currentRunLoop];
-    CFRunLoopObserverRef observerRef = CFRunLoopObserverCreate(kCFAllocatorDefault, kCFRunLoopAllActivities, YES, 0, &runloopObserverCallback, &context);
-    CFRunLoopAddObserver([[NSRunLoop currentRunLoop] getCFRunLoop], observerRef, kCFRunLoopCommonModes);
-    [loop run];
-  
 
     
+
+    if (count == 0) {
+        count++;
+        NSRunLoop *runloop = [NSRunLoop currentRunLoop];
+        if (!runloop) {
+            return ;
+        }
+        
+        // NSTimer *timer = [NSTimer scheduledTimerWithTimeInterval:5.0f target:self selector:@selector(onTimerFired:) userInfo:nil repeats:NO];
+        //[runloop addTimer:timer forMode:NSRunLoopCommonModes];
+        CFRunLoopObserverContext context = {
+            0,
+            (__bridge void *)(self),
+            NULL,
+            NULL,
+            NULL
+        };
+        NSRunLoop* loop = [NSRunLoop currentRunLoop];
+        CFRunLoopObserverRef observerRef = CFRunLoopObserverCreate(kCFAllocatorDefault, kCFRunLoopAllActivities, YES, 0, &runloopObserverCallback, &context);
+        CFRunLoopAddObserver([[NSRunLoop currentRunLoop] getCFRunLoop], observerRef, kCFRunLoopCommonModes);
+        [loop run];
+
     }
+   
+    
+}
 
 -(void)p3{
     GestureViewController* ges = [GestureViewController new];
