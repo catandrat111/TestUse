@@ -46,7 +46,7 @@
 #import "CoreLaunchPro.h"
 #import "CoreLaunchPlus.h"
 #import "CoreLaunchFlip.h"
-
+#import "EZNavigationController.h"
 @interface AppDelegate ()
 
 @end
@@ -85,7 +85,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     self.window  =[[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     ViewController* main = [[ViewController alloc] init];
-    UINavigationController* navi = [[UINavigationController alloc] initWithRootViewController:main];
+    EZNavigationController* navi = [[EZNavigationController alloc] initWithRootViewController:main];
     self.window.rootViewController = navi;
     [self.window makeKeyAndVisible];
     navi.navigationBar.translucent = NO;

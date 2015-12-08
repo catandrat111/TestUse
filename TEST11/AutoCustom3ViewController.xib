@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9059" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AutoCustom3ViewController">
+            <connections>
+                <outlet property="v1" destination="hen-3H-km9" id="THu-st-BSn"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uc2-FC-lMu">
+                    <rect key="frame" x="25" y="45" width="82" height="30"/>
+                    <animations/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="IHD-cL-C7d"/>
+                        <constraint firstAttribute="width" constant="82" id="Nid-jU-xSl"/>
+                    </constraints>
+                    <state key="normal" title="Button"/>
+                    <connections>
+                        <action selector="p1:" destination="-1" eventType="touchUpInside" id="rG8-u5-bPB"/>
+                    </connections>
+                </button>
+                <view contentMode="scaleToFill" horizontalHuggingPriority="12" translatesAutoresizingMaskIntoConstraints="NO" id="hen-3H-km9">
+                    <rect key="frame" x="140" y="270" width="120" height="120"/>
+                    <animations/>
+                    <color key="backgroundColor" red="1" green="0.40000000000000002" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="120" id="Cei-z7-7Gz"/>
+                        <constraint firstAttribute="height" constant="120" id="Dyh-7c-sD8"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <animations/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="hen-3H-km9" secondAttribute="trailing" constant="60" id="7IS-md-ho4"/>
+                <constraint firstItem="uc2-FC-lMu" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="25" id="Jvk-Ef-6SS"/>
+                <constraint firstItem="uc2-FC-lMu" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="45" id="kng-Yt-cfQ"/>
+                <constraint firstItem="hen-3H-km9" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="270" id="rCQ-BT-Ht5"/>
+            </constraints>
+            <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
+            <point key="canvasLocation" x="366" y="456"/>
+        </view>
+    </objects>
+</document>

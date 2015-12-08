@@ -11,11 +11,13 @@
 #import "User.h"
 #import "GestureViewController.h"
 #import "RunLoopTestModel.h"
+#define kCheckinMessage 100
+#import "MyWorkerClass.h"
 static int count;
-@interface RunLoopInstance ()
+@interface RunLoopInstance ()<NSMachPortDelegate>
 {
     
-    __weak id reference;
+    __weak id reference2;
      __weak id reference1;
 
 }
@@ -52,7 +54,10 @@ static int count;
     
     NSString *str = [NSString stringWithFormat:@"sunnyxx"];
     // str是一个autorelease对象，设置一个weak的引用来观察它
-    reference = str;
+    @autoreleasepool {
+         reference2 = [NSString stringWithFormat:@"sunnyxx"];
+    }
+  
     reference1 = model;
     NSLog(@"%@", reference1);
       NSLog(@"%@",[NSThread currentThread]);
@@ -68,26 +73,32 @@ static int count;
     // We use a "kCFRunLoopBeforeWaiting" state to keep RunLoop has done everything and about to sleep
     // (mach_msg_trap), when all tasks finish, it will remove itself.
     CFRunLoopObserverRef observer = CFRunLoopObserverCreateWithHandler
-    (kCFAllocatorDefault, kCFRunLoopBeforeWaiting, true, 0, ^(CFRunLoopObserverRef observer, CFRunLoopActivity _) {
-        NSLog(@"reference:%@", reference);
+    (kCFAllocatorDefault, kCFRunLoopAllActivities, true, 0, ^(CFRunLoopObserverRef observer, CFRunLoopActivity _) {
+        NSLog(@"reference:%@", reference2);
         NSLog(@"reference1:%@", reference1);
     
     });
     
-    //CFRunLoopAddObserver(runLoop, observer, runLoopMode);
+    CFRunLoopAddObserver(runLoop, observer, runLoopMode);
+//    [self  runUntilBlock:^BOOL{
+//        NSLog(@"reference:%@", reference2);
+//        NSLog(@"reference1:%@", reference1);
+//        return YES;
+//    } timeout:180000];
+ 
 }
 
 
 
 
 -(void)viewWillAppear:(BOOL)animated{
-    NSLog(@"%@", reference);
+    NSLog(@"%@", reference2);
      NSLog(@"%@", reference1);
     
 }
 
 -(void)viewDidAppear:(BOOL)animated{
-    NSLog(@"%@", reference);
+    NSLog(@"%@", reference2);
      NSLog(@"%@", reference1);
     
 }
@@ -155,48 +166,166 @@ static void runloopObserverCallback(CFRunLoopObserverRef observer, CFRunLoopActi
 }
 
 -(void)p2{
-    
-    @autoreleasepool {
-       // Person* person = [Person new];
-    }//到这释放
-    NSLog(@"%@",[NSThread currentThread]);
-    [self test];
-
-    
-
-    if (count == 0) {
-        count++;
-        NSRunLoop *runloop = [NSRunLoop currentRunLoop];
-        if (!runloop) {
-            return ;
-        }
+    // 子线程加入timer 需要timer周期性唤醒 如果加入输入源 输入员有事件才会唤醒
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        @autoreleasepool {
+            // Person* person = [Person new];
+        }//到这释放
+        NSLog(@"%@",[NSThread currentThread]);
+        //[self test];
         
-        // NSTimer *timer = [NSTimer scheduledTimerWithTimeInterval:5.0f target:self selector:@selector(onTimerFired:) userInfo:nil repeats:NO];
-        //[runloop addTimer:timer forMode:NSRunLoopCommonModes];
-        CFRunLoopObserverContext context = {
-            0,
-            (__bridge void *)(self),
-            NULL,
-            NULL,
-            NULL
-        };
-        NSRunLoop* loop = [NSRunLoop currentRunLoop];
-        CFRunLoopObserverRef observerRef = CFRunLoopObserverCreate(kCFAllocatorDefault, kCFRunLoopAllActivities, YES, 0, &runloopObserverCallback, &context);
-        CFRunLoopAddObserver([[NSRunLoop currentRunLoop] getCFRunLoop], observerRef, kCFRunLoopCommonModes);
-        [loop run];
+        
+        
+        if (count == 0) {
+            count++;
+            NSRunLoop *runloop = [NSRunLoop currentRunLoop];
+            if (!runloop) {
+                return ;
+            }
+            
+            // NSTimer *timer = [NSTimer scheduledTimerWithTimeInterval:5.0f target:self selector:@selector(onTimerFired:) userInfo:nil repeats:NO];
+            //[runloop addTimer:timer forMode:NSRunLoopCommonModes];
+            CFRunLoopObserverContext context = {
+                0,
+                (__bridge void *)(self),
+                NULL,
+                NULL,
+                NULL
+            };
+           
+            CFRunLoopObserverRef observerRef = CFRunLoopObserverCreate(kCFAllocatorDefault, kCFRunLoopAllActivities, YES, 0, &runloopObserverCallback, &context);
+            CFRunLoopAddObserver([[NSRunLoop currentRunLoop] getCFRunLoop], observerRef, kCFRunLoopCommonModes);
+           // [loop run];
+            
+            // Create and schedule the timer.
+            [NSTimer scheduledTimerWithTimeInterval:0.1 target:self
+                                           selector:@selector(doFireTimer:) userInfo:nil repeats:YES];
+            
+            NSInteger    loopCount = 10;
+            do
+            {
+                // Run the run loop 10 times to let the timer fire.
+                [runloop runUntilDate:[NSDate dateWithTimeIntervalSinceNow:1]];
+                loopCount--;
+            }
+            while (loopCount);
+            
+        }
 
-    }
-   
+    });
     
 }
 
--(void)p3{
+
+- (void)doFireTimer:(NSTimer*)timer {
+    
+}
+
+- (void)p3 {
     GestureViewController* ges = [GestureViewController new];
     [self.navigationController pushViewController:ges animated:YES];
 }
 
+- (void)p5 {
+    CFRunLoopRef runLoop = CFRunLoopGetCurrent();
+    CFRunLoopTimerContext context = {0, NULL, NULL, NULL, NULL};
+    CFRunLoopTimerRef timer = CFRunLoopTimerCreate(kCFAllocatorDefault, 0.1, 0.3, 0, 0,
+                                                   &myCFTimerCallback, &context);
+    
+    CFRunLoopAddTimer(runLoop, timer, kCFRunLoopCommonModes);
+    
+    
+    NSRunLoop* myRunLoop = [NSRunLoop currentRunLoop];
+    // Create and schedule the first timer.
+    NSDate* futureDate = [NSDate dateWithTimeIntervalSinceNow:1.0];
+    NSTimer* myTimer = [[NSTimer alloc] initWithFireDate:futureDate
+                                                interval:0.1
+                                                  target:self
+                                                selector:@selector(myDoFireTimer1:)
+                                                userInfo:nil
+                                                 repeats:YES];
+    [myRunLoop addTimer:myTimer forMode:NSDefaultRunLoopMode];
+    
+    // Create and schedule the second timer.
+    [NSTimer scheduledTimerWithTimeInterval:0.2
+                                     target:self
+                                   selector:@selector(myDoFireTimer2:)
+                                   userInfo:nil
+                                    repeats:YES];
+
+}
+
+static void myCFTimerCallback() {
+    
+}
+
 -(void)onTimerFired:(id)sender{
     
+}
+
+// Handle responses from the worker thread.
+- (void)handlePortMessage:(NSPortMessage *)portMessage
+{
+//    unsigned int message = [portMessage msgid];
+//    NSPort* distantPort = nil;
+//    
+//    if (message == kCheckinMessage)
+//    {
+//        // Get the worker thread’s communications port.
+//        distantPort = [portMessage sendPort];
+//        
+//        // Retain and save the worker port for later use.
+//        [self storeDistantPort:distantPort];
+//    }
+//    else
+//    {
+//        // Handle other messages.
+//    }
+}
+
+
+- (void)launchThread
+{
+    NSPort* myPort = [NSMachPort port];
+    if (myPort)
+    {
+        // This class handles incoming port messages.
+        [myPort setDelegate:self];
+        
+        // Install the port as an input source on the current run loop.
+        [[NSRunLoop currentRunLoop] addPort:myPort forMode:NSDefaultRunLoopMode];
+        
+        // Detach the thread. Let the worker release the port.
+        [NSThread detachNewThreadSelector:@selector(LaunchThreadWithPort:)
+                                 toTarget:self withObject:myPort];
+    }
+}
+
+- (void)LaunchThreadWithPort:(id)sender {
+    
+}
+
+- (BOOL)runUntilBlock:(BOOL(^)())block timeout:(NSTimeInterval)timeout{
+     NSLog(@"%@",[NSThread currentThread]);
+    __block Boolean fulfilled = NO;
+    void (^beforeWaiting) (CFRunLoopObserverRef observer, CFRunLoopActivity activity) =
+    ^(CFRunLoopObserverRef observer, CFRunLoopActivity activity) {
+        fulfilled = block();
+        if (fulfilled) {
+            CFRunLoopStop(CFRunLoopGetCurrent());
+        }
+    };
+    
+    CFRunLoopObserverRef observer = CFRunLoopObserverCreateWithHandler(NULL, kCFRunLoopBeforeWaiting, true, 0, beforeWaiting);
+    CFRunLoopAddObserver(CFRunLoopGetCurrent(), observer, kCFRunLoopDefaultMode);
+    
+    // Run!
+    CFRunLoopRunInMode(kCFRunLoopDefaultMode, timeout, false);
+    
+    CFRunLoopRemoveObserver(CFRunLoopGetCurrent(), observer, kCFRunLoopDefaultMode);
+    CFRelease(observer);
+    
+    return fulfilled;
 }
 
 -(Person*)strWithWithTest{

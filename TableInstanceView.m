@@ -22,8 +22,8 @@
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor colorWithRed:242 green:242 blue:242 alpha:1.0];
     self.tableView.backgroundColor = [UIColor colorWithRed:242 green:242 blue:242 alpha:1.0];
-    dataSource = @[@"register nib",@"register no xib",@"no register nib",@"no register no nib",@"tableviewstyle",@"tableviewlayout"];
-    dict = @{@"register nib":@"TableInstanceInitCell",@"register no xib":@"TableInstanceInitCell",@"no register nib":@"TableInstanceInitCell",@"no register no nib":@"TableInstanceInitCell",@"tableviewstyle":@"TableInstanceStyle",@"tableviewlayout":@"TableViewLayout"};
+    dataSource = @[@"register nib",@"register no xib",@"no register nib",@"no register no nib",@"tableviewstyle",@"tableviewlayout",@"lazytable"];
+    dict = @{@"register nib":@"TableInstanceInitCell",@"register no xib":@"TableInstanceInitCell",@"no register nib":@"TableInstanceInitCell",@"no register no nib":@"TableInstanceInitCell",@"tableviewstyle":@"TableInstanceStyle",@"tableviewlayout":@"TableViewLayout",@"lazytable":@"LazyTableViewController"};
  
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
 }

@@ -9,7 +9,7 @@
 #import "TableInstanceStyle.h"
 #import "UIImage+Color.h"
 #import "UITableView+iOS7Style.h"
-
+#import "UIImage+Color1.h"
 @interface TableInstanceStyle ()<UITableViewDataSource,UITableViewDelegate>{
  NSDictionary* dataSource;
     NSMutableArray* dataArray;
