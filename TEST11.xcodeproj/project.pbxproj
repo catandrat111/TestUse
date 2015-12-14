@@ -571,6 +571,7 @@
 		BDD61C1C1BB3952100BC4264 /* FDTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BDD61C1B1BB3952100BC4264 /* FDTableViewCell.xib */; };
 		BDD61C201BB39DDD00BC4264 /* AutoLayoutCustomController.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD61C1E1BB39DDD00BC4264 /* AutoLayoutCustomController.m */; };
 		BDD61C211BB39DDD00BC4264 /* AutoLayoutCustomController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BDD61C1F1BB39DDD00BC4264 /* AutoLayoutCustomController.xib */; };
+		BDD740851C1EB64F000B4CAC /* Test1.json in Resources */ = {isa = PBXBuildFile; fileRef = BDD740841C1EB421000B4CAC /* Test1.json */; };
 		BDD769711BBA620A006A4CF4 /* ZOCKintsugiPhotoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD769701BBA620A006A4CF4 /* ZOCKintsugiPhotoViewController.m */; };
 		BDD769741BBA622E006A4CF4 /* ZOCKintsugiPhotoViewController_iPad.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD769731BBA622E006A4CF4 /* ZOCKintsugiPhotoViewController_iPad.m */; };
 		BDD769771BBA6242006A4CF4 /* ZOCKintsugiPhotoViewController_iPhone.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD769761BBA6242006A4CF4 /* ZOCKintsugiPhotoViewController_iPhone.m */; };
@@ -1663,6 +1664,7 @@
 		BDD61C1D1BB39DDD00BC4264 /* AutoLayoutCustomController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AutoLayoutCustomController.h; sourceTree = "<group>"; };
 		BDD61C1E1BB39DDD00BC4264 /* AutoLayoutCustomController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AutoLayoutCustomController.m; sourceTree = "<group>"; };
 		BDD61C1F1BB39DDD00BC4264 /* AutoLayoutCustomController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AutoLayoutCustomController.xib; sourceTree = "<group>"; };
+		BDD740841C1EB421000B4CAC /* Test1.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Test1.json; sourceTree = "<group>"; };
 		BDD7696F1BBA620A006A4CF4 /* ZOCKintsugiPhotoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZOCKintsugiPhotoViewController.h; sourceTree = "<group>"; };
 		BDD769701BBA620A006A4CF4 /* ZOCKintsugiPhotoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZOCKintsugiPhotoViewController.m; sourceTree = "<group>"; };
 		BDD769721BBA622E006A4CF4 /* ZOCKintsugiPhotoViewController_iPad.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZOCKintsugiPhotoViewController_iPad.h; sourceTree = "<group>"; };
@@ -1946,6 +1948,7 @@
 		5195B3ED1AB70284007CFA8B /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				BDD740841C1EB421000B4CAC /* Test1.json */,
 				51B1C61D1B50E12200E68110 /* Image */,
 				5195B3EE1AB70284007CFA8B /* Info.plist */,
 				5195B3EF1AB70284007CFA8B /* main.m */,
@@ -4371,6 +4374,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BDD740851C1EB64F000B4CAC /* Test1.json in Resources */,
 				BDE558081B9FD350000B9231 /* ZHAdvertisementView.xib in Resources */,
 				BDADA29E1BF975110076BFDF /* background.png in Resources */,
 				BD80F13E1BF46CB10046FA80 /* stretch13.png in Resources */,

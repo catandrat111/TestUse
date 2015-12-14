@@ -649,7 +649,7 @@ CGFloat SVProgressHUDRingThickness = 6;
                              [hudView removeFromSuperview];
                              hudView = nil;
                              if (self.retainWindow!=nil) {
-                                 void *res=self.retainWindow;
+                                // void *res=self.retainWindow;
                                  
                                 CFBridgingRelease(self.retainWindow);
                                  self.retainWindow = nil;

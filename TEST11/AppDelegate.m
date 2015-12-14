@@ -47,6 +47,7 @@
 #import "CoreLaunchPlus.h"
 #import "CoreLaunchFlip.h"
 #import "EZNavigationController.h"
+
 @interface AppDelegate ()
 
 @end
@@ -116,6 +117,7 @@
 
     [UIDevice removePwd];
     [self testVersion ];
+    //[self test];
     
     /** Lite版本 */
        // [CoreLaunchLite animWithWindow:self.window image:nil];
@@ -131,10 +133,70 @@
     
     /** Flip版本 */
      //[CoreLaunchFlip animWithWindow:self.window image:nil];
+    
+    
+    //http://www.cnblogs.com/smileEvday/archive/2012/11/16/UIWindow.html
+    //程序默认的window先显示出来
+    
+//    　　2、默认的window再变成keyWindow
+//    
+//    　　3、AlertView的window显示出来
+//    
+//    　　4、默认的window变成非keyWindow
+//    
+//    　　5、最终AlertView的window变成keyWindow
+//    self.window = [[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
+//    // Override point for customization after application launch.
+//    self.viewController = [[[SvUIWindowViewController alloc] initWithNibName:@"SvUIWindowViewController" bundle:nil] autorelease];
+//    self.window.rootViewController = self.viewController;
+//    [self.window makeKeyAndVisible];
+//    
+//    UIWindow *window1 = [[UIWindow alloc] initWithFrame:CGRectMake(0, 80, 320, 320)];
+//    window1.backgroundColor = [UIColor redColor];
+//    window1.windowLevel = UIWindowLevelAlert;
+//    [window1 makeKeyAndVisible];
+    
+//    首先ActionSheet的window变成非keyWindow
+//    
+//    　　2、程序默认的window变成keyWindow
+//    
+//    　　3、ActionSheet的window在隐藏掉
+//    
+//    　　总体就是“想隐居幕后可以，但得先交出权利”。
 
     return YES;
 }
 
+
+- (void)test {
+    NSString *jsonString = @"[{\"@(3)\": \"1\", \"name\":\"Aaa\"}, {\"id\": \"2\", \"name\":\"Bbb\"}]";
+    jsonString = @"fff";
+    NSData *jsonData = [jsonString dataUsingEncoding:NSUTF8StringEncoding];
+    
+    NSString* path = [[NSBundle mainBundle] pathForResource:@"Test1" ofType:@"json"];
+    jsonData = [NSData dataWithContentsOfFile:path];
+
+    NSError *e = nil;
+    NSMutableArray *json = [NSJSONSerialization JSONObjectWithData:jsonData options:NSJSONReadingMutableContainers error:&e];
+    NSLog(@"%@", json);
+    
+    NSError *e1= nil;
+    NSDictionary *JSON = [NSJSONSerialization
+                          JSONObjectWithData: jsonData
+                          options: NSJSONReadingMutableContainers
+                          error: &e1];
+    
+    NSLog(@"%@",JSON);
+    
+    BOOL b1 = [json isKindOfClass:[NSDictionary class]];
+    NSString* str2 = [JSON valueForKeyPath:@"ss"];
+    if ([str2 isKindOfClass:[NSString class]]) {
+        BOOL b3 = [str2 isEqualToString:@"aa"];
+    }
+    
+    BOOL b = [[JSON valueForKeyPath:@"ss"] isEqualToString:@"aa"];
+     NSLog(@"%@",@(b));
+}
 
 //testddd://?action=my_action_1&sourceurl=http://weibo.com/1692391497/CkirQtS1I?from=page_1005051692391497_profile&wvr=6&mod=weibotime&type=comment#_rnd1433007524429
 
