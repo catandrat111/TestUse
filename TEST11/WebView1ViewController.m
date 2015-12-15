@@ -19,7 +19,9 @@
     NSString *path = [[NSBundle mainBundle] pathForResource:@"html1" ofType:@"html"];
     NSURLRequest *request1 = [NSURLRequest requestWithURL:[NSURL fileURLWithPath:path]];
      NSURLRequest *request2 = [NSURLRequest requestWithURL:[NSURL URLWithString:@"http://auto.163.com/photoview/5BD20008/180692.html#p=B96T07GT5BD20008"]];
-    
+    self.webview.scalesPageToFit = YES;//自动对页面进行缩放以适应屏幕
+    self.webview.dataDetectorTypes = UIDataDetectorTypePhoneNumber;//自动检测网页上的电话号码，单击可以拨打
+
     [self.webview loadRequest:request2];
     
     //NSString *path = [[NSBundle mainBundle] pathForResource:@"index" ofType:@"html"];

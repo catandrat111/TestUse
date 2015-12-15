@@ -626,6 +626,10 @@ struct objc_class {
 //    }
 //}
 
+
+//ocoa的KVO模型中，有两种通知观察者的方式，自动通知和手动通知。顾名思义，自动通知由cocoa在属性值变化时自动通知观察者，而手动通知需要在值变化时调用 willChangeValueForKey:和didChangeValueForKey: 方法通知调用者。为求简便，我们一般使用自动通知。
+
+//要使用手动通知，需要在 automaticallyNotifiesObserversForKey方法中明确告诉cocoa，哪些键值要使用自动通知：
 //重新实现NSObject类中的automaticallyNotifiesObserversForKey:方法，返回yes表示自动通知。
 //+ (BOOL)automaticallyNotifiesObserversForKey:(NSString*)key
 //

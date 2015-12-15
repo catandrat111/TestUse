@@ -291,6 +291,7 @@
 		BD5E8EB81BB51CC40088FE6D /* HCDCreateInvocationOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = BD5E8EB71BB51CC40088FE6D /* HCDCreateInvocationOperation.m */; };
 		BD5E8EBB1BB51CE00088FE6D /* HCDConcurrentOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = BD5E8EBA1BB51CE00088FE6D /* HCDConcurrentOperation.m */; };
 		BD5E8EBE1BB51CF30088FE6D /* HCDNonConcurrentOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = BD5E8EBD1BB51CF30088FE6D /* HCDNonConcurrentOperation.m */; };
+		BD6341C41C1FEDCD0039C9DE /* SystemSettingInstance.m in Sources */ = {isa = PBXBuildFile; fileRef = BD6341C31C1FEDCD0039C9DE /* SystemSettingInstance.m */; };
 		BD65ADEF1C0D3D6D00F3D855 /* MyWorkerClass.m in Sources */ = {isa = PBXBuildFile; fileRef = BD65ADEE1C0D3D6D00F3D855 /* MyWorkerClass.m */; };
 		BD65ADF11C0D417B00F3D855 /* runloop.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BD65ADF01C0D417B00F3D855 /* runloop.jpg */; };
 		BD66F0D21BB387B400C4D76A /* UIView+FDCollapsibleConstraints.m in Sources */ = {isa = PBXBuildFile; fileRef = BD66F0D11BB387B400C4D76A /* UIView+FDCollapsibleConstraints.m */; };
@@ -1177,6 +1178,8 @@
 		BD5E8EBA1BB51CE00088FE6D /* HCDConcurrentOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCDConcurrentOperation.m; sourceTree = "<group>"; };
 		BD5E8EBC1BB51CF30088FE6D /* HCDNonConcurrentOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCDNonConcurrentOperation.h; sourceTree = "<group>"; };
 		BD5E8EBD1BB51CF30088FE6D /* HCDNonConcurrentOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCDNonConcurrentOperation.m; sourceTree = "<group>"; };
+		BD6341C21C1FEDCD0039C9DE /* SystemSettingInstance.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SystemSettingInstance.h; sourceTree = "<group>"; };
+		BD6341C31C1FEDCD0039C9DE /* SystemSettingInstance.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SystemSettingInstance.m; sourceTree = "<group>"; };
 		BD65ADED1C0D3D6D00F3D855 /* MyWorkerClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyWorkerClass.h; sourceTree = "<group>"; };
 		BD65ADEE1C0D3D6D00F3D855 /* MyWorkerClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyWorkerClass.m; sourceTree = "<group>"; };
 		BD65ADF01C0D417B00F3D855 /* runloop.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = runloop.jpg; sourceTree = "<group>"; };
@@ -1905,6 +1908,7 @@
 		5195B3EC1AB70284007CFA8B /* TEST11 */ = {
 			isa = PBXGroup;
 			children = (
+				BD6341C11C1FED9A0039C9DE /* SystemSetting */,
 				BDA914E61C1A7D1B00007CDC /* gtview */,
 				BD7124D21C17D87F00072A5C /* AlterviewGroup */,
 				BD76412C1C0E7A7500846EF0 /* UIIMAGEVIEW */,
@@ -3124,6 +3128,15 @@
 				BD5E8EB71BB51CC40088FE6D /* HCDCreateInvocationOperation.m */,
 			);
 			name = InvocationOperation;
+			sourceTree = "<group>";
+		};
+		BD6341C11C1FED9A0039C9DE /* SystemSetting */ = {
+			isa = PBXGroup;
+			children = (
+				BD6341C21C1FEDCD0039C9DE /* SystemSettingInstance.h */,
+				BD6341C31C1FEDCD0039C9DE /* SystemSettingInstance.m */,
+			);
+			name = SystemSetting;
 			sourceTree = "<group>";
 		};
 		BD66F0CF1BB387A800C4D76A /* FDCollapsibleConstraints */ = {
@@ -4665,6 +4678,7 @@
 				BDF49D4E1BB3FBAA00BEFE26 /* GCDNotificationViewController.m in Sources */,
 				51E10DED1B481BD4009B162E /* NSString+DictionaryValue.m in Sources */,
 				BD8D3D341C08340D00B9B214 /* WebView1ViewController.m in Sources */,
+				BD6341C41C1FEDCD0039C9DE /* SystemSettingInstance.m in Sources */,
 				51E10DDD1B481BD4009B162E /* NSNotificationCenter+MainThread.m in Sources */,
 				51E10E001B481BD4009B162E /* UIBarButtonItem+Action.m in Sources */,
 				BDA9150B1C1A808A00007CDC /* Reachability.m in Sources */,
