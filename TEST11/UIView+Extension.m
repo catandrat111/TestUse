@@ -9,24 +9,24 @@
 #import "UIView+Extension.h"
 
 @implementation UIView (Extension)
-@dynamic layerCornerRadius;
-@dynamic layerBorderColor;
-@dynamic layerBorderWidth;
+@dynamic layer_CornerRadius;
+@dynamic layer_BorderColor;
+@dynamic layer_BorderWidth;
 
-- (void)setLayerCornerRadius:(CGFloat)layerCornerRadius {
+- (void)setLayer_CornerRadius:(CGFloat)layerCornerRadius {
     self.layer.cornerRadius = layerCornerRadius;
 }
 
 
-- (CGFloat)layerCornerRadius {
+- (CGFloat)layer_CornerRadius {
     return  self.layer.cornerRadius;
 }
 
-- (void)setLayerBorderWidth:(CGFloat)layerBorderWidth {
+- (void)setLayer_BorderWidth:(CGFloat)layerBorderWidth {
     self.layer.borderWidth = layerBorderWidth;
 }
 
-- (void)setLayerBorderColor:(UIColor *)layerBorderColor {
+- (void)setLayer_BorderColor:(UIColor *)layerBorderColor {
     self.layer.borderColor = layerBorderColor.CGColor;
 }
 @end

@@ -7,7 +7,7 @@
 //
 
 #import "Helper.h"
-
+#import "AppDelegate.h"
 #import <GTFramework/GTFramework.h>
 @implementation Helper
 /**
@@ -38,12 +38,16 @@
     NSLog(@"sessionID === %@",manager.sessionID);
     NSLog(@"从网站主服务器获取的id === %@",GT_captcha_id);
 
+    AppDelegate* appdelegate =  (AppDelegate*)[[UIApplication sharedApplication] delegate];
+    UIWindow* window = appdelegate.window;
+    NSLog(@"%@",window);
     
    BOOL b2 =   [manager serverStatusWithCaptcha_id:@"8f94938d139a3776cfc7e694c9089a63" ];
     BOOL b1 =   [manager requestGTest:@"8f94938d139a3776cfc7e694c9089a63" withChallenge: gt_chanllenge];
     if (YES) {
         [manager openGTViewAddFinishHandler:^(NSString *code, NSDictionary *result, NSString *message) {
              //__strong __typeof(weakSelf)strongSelf = weakSelf;
+             NSLog(@"%@",window);
             if ([code isEqualToString:@"1"]) {
                 //在用户服务器进行二次验证(start Secondery-Validate)
                 //[weakSelf seconderyValidate:code result:result message:message];

@@ -23,5 +23,9 @@
 - (IBAction)testAction:(id)sender {
     self.helper =   [[Helper alloc]init];
     [self.helper requestGTest];
+    
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        self.view.transform = CGAffineTransformMakeRotation(-M_2_PI);
+    });
 }
 @end

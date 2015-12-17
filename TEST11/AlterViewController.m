@@ -46,10 +46,9 @@
 //    sender.titleLabel.text = @"";
 //    [sender setTitle:@"" forState:UIControlStateNormal];
     
-    [SVProgressHUD  show];
     
     ZHTelephonyVoiceVerificationCodeView* contentView = [ZHTelephonyVoiceVerificationCodeView new];
-    self.alertView = [[DQAlertView alloc] initWithTitle:@"alterviewalterview" message:nil cancelButtonTitle:@"取消" otherButtonTitle:@"确认"];
+    self.alertView = [[DQAlertView alloc] initWithTitle:@"alterviewalterview" message:nil cancelButtonTitle:@"取消" otherButtonTitle:nil];
     self.alertView.contentView = contentView;
     
     [self.alertView show];
@@ -61,11 +60,7 @@
        // [weakSelf dismiss];
         
     };
-    
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        [SVProgressHUD dismiss];
-    });
-//    self.name = @"bbb";
+  //    self.name = @"bbb";
 //    FBKVOController *KVOController = [FBKVOController controllerWithObserver:self];
 //    self.KVOController = KVOController;
 //    [self performSelector:@selector(test) withObject:nil afterDelay:10];
