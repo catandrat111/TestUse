@@ -12,6 +12,7 @@
 @interface TableInstanceView ()<UITableViewDataSource,UITableViewDelegate>{
     NSArray* dataSource;
     NSDictionary* dict;
+    UIRefreshControl* refreshControl1;
 }
 
 @end
@@ -26,6 +27,12 @@
     dict = @{@"register nib":@"TableInstanceInitCell",@"register no xib":@"TableInstanceInitCell",@"no register nib":@"TableInstanceInitCell",@"no register no nib":@"TableInstanceInitCell",@"tableviewstyle":@"TableInstanceStyle",@"tableviewlayout":@"TableViewLayout",@"lazytable":@"LazyTableViewController"};
  
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+    
+    UIRefreshControl* refreshControl = [[UIRefreshControl alloc] init];
+    [refreshControl addTarget:self action:@selector(refresh) forControlEvents:UIControlEventValueChanged];
+    [self.tableView addSubview:refreshControl ];
+  
+    refreshControl1 = refreshControl;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -34,6 +41,9 @@
 }
 
 
+- (void)refresh {
+    [refreshControl1 endRefreshing];
+}
 #pragma mark uitabkeview datasource
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{

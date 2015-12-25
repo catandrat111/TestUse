@@ -13,6 +13,8 @@
 #import "FBKVOController.h"
 #import "UIAlertView+Blocks.h"
 #import "SVProgressHUD.h"
+//#import <TestFrame/TestFrameTest.h>
+
 //UIWindowLevelNormal;
 
 //UIWindowLevelAlert;
@@ -32,8 +34,26 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-   
+    
+    UIView* view1 = [[UIView alloc] initWithFrame:CGRectMake(10, 60, 100, 100)];
+    [self.view addSubview:view1];
+    
+//    UILayoutGuide* layoutGuideA = [[UILayoutGuide alloc] init];
+//    UILayoutGuide* layoutGuideB = [[UILayoutGuide alloc] init];
+//    [view1 addLayoutGuide:layoutGuideA];
+//    [view1 addLayoutGuide:layoutGuideB];
+//   // layoutGuideA.heightAnchor.constraintEqualToAnchor(layoutGuideB.heightAnchor).active = true
+//    [layoutGuideA.heightAnchor constraintEqualToAnchor:layoutGuideB.heightAnchor].active = YES;
+//    // 设置Identifier，为了方便DEBUG
+//    
+//       [view1 addLayoutGuide:layoutGuideA];
+//    [view1 addLayoutGuide:layoutGuideB];
+    
+  //  NSLog(@"layoutGuideA :%@    /n layoutGuideB:%@",layoutGuideA,layoutGuideB);
    // [self testEWindow1];
+    
+//    TestFrameTest* test = [[TestFrameTest alloc] init];
+//    [test test];
 
 }
 

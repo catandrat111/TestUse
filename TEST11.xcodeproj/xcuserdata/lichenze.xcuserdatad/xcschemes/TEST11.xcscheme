@@ -52,6 +52,36 @@
                ReferencedContainer = "container:TEST11.xcodeproj">
             </BuildableReference>
          </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "BD79677A1C2BEF93000B4395"
+               BuildableName = "Test111Test.xctest"
+               BlueprintName = "Test111Test"
+               ReferencedContainer = "container:TEST11.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "BD7967891C2BEFD8000B4395"
+               BuildableName = "TestUITests.xctest"
+               BlueprintName = "TestUITests"
+               ReferencedContainer = "container:TEST11.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "BD097ECE1C2CD22D00AF60B0"
+               BuildableName = "TEST11UITest.xctest"
+               BlueprintName = "TEST11UITest"
+               ReferencedContainer = "container:TEST11.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
@@ -106,10 +136,10 @@
       </BuildableProductRunnable>
    </ProfileAction>
    <AnalyzeAction
-      buildConfiguration = "Debug">
+      buildConfiguration = "Release">
    </AnalyzeAction>
    <ArchiveAction
-      buildConfiguration = "Release"
+      buildConfiguration = "Debug"
       revealArchiveInOrganizer = "YES">
    </ArchiveAction>
 </Scheme>

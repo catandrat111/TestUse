@@ -47,7 +47,7 @@
 #import "CoreLaunchPlus.h"
 #import "CoreLaunchFlip.h"
 #import "EZNavigationController.h"
-
+#import <objc/runtime.h>
 @interface AppDelegate ()
 
 @end
@@ -91,13 +91,20 @@
     [self.window makeKeyAndVisible];
     navi.navigationBar.translucent = NO;
     
+    //本地化
+    NSString* h1 = NSLocalizedString(@"hello", @"comment");//
+    NSLog(@"%@",h1);//你好
+    
+    NSString* h2 = NSLocalizedStringFromTable(@"hello", @"Localizable1", nil);
+    NSLog(@"%@",h2);//你好1
+    
     
    // navi.navigationBar.barStyle = UIBarStyleBlackTranslucent;
     //更改STATUSBAR
     //[[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
     //[[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleDefault];
     
-    
+    //_objc_autoreleasePoolPrint();
 
     NSString* uuid = [UIDevice  getUDID];
     DLog(@"%@",uuid);

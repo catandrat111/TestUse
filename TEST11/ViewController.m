@@ -26,6 +26,7 @@
     self.view.backgroundColor = [UIColor redColor];
     self.view.backgroundColor = [UIColor colorWithRed:242 green:242 blue:242 alpha:1.0];
 
+    
 
     tableView_ = [[UITableView alloc] initWithFrame:CGRectMake(10, 10, self.view.frameWidth - 20, self.view.frameHeight - 74)];
     [tableView_ setSeparatorStyle:UITableViewCellSeparatorStyleNone];

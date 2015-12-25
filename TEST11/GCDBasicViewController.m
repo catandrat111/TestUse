@@ -146,4 +146,67 @@
     
     NSLog(@"val:%d",val);
 }
+
+//http://blog.csdn.net/wuhanbo555/article/details/23770477
+-(void)doDispatchSetTargetQueue
+{
+    NSLog(@"=====dispatch_set_target_queue 用于改变手动创建Queue的优先级=====");
+    dispatch_queue_t serialDiapatchQueue=dispatch_queue_create("com.test.queue", NULL);
+    dispatch_queue_t dispatchgetglobalqueue=dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_LOW, 0);
+    dispatch_set_target_queue(serialDiapatchQueue, dispatchgetglobalqueue);
+    dispatch_async(serialDiapatchQueue, ^{
+        NSLog(@"2");
+    });
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        NSLog(@"1");
+    });
+    //简单的理解为我们自己创建的queue其实是位于global_queue中执行,所以改变global_queue的优先级，也就改变了我们自己所创建的queue的优先级。
+    //同时，我们用这个方法可以做到用队列管理子队列
+}
+//http://justsee.iteye.com/blog/2233252
+//修改用户队列的目标队列，使多个serial queue在目标queue上一次只有一个执行：
+//它会把需要执行的任务对象指定到不同的队列中去处理，这个任务对象可以是dispatch队列，也可以是dispatch源。而且这个过程可以是动态的，可以实现队列的动态调度管理等等。比如说有两个队列dispatchA和dispatchB，这时把dispatchA指派到dispatchB：
+//dispatch_set_target_queue(dispatchA, dispatchB);
+//那么dispatchA上还未运行的block会在dispatchB上运行。这时如果暂停dispatchA运行：
+//dispatch_suspend(dispatchA);
+//则只会暂停dispatchA上原来的block的执行，dispatchB的block则不受影响。而如果暂停dispatchB的运行，则会暂停dispatchA的运行。
+//demo：
+//一般都是把一个任务放到一个串行的queue中，如果这个任务被拆分了，被放置到多个串行的queue中，但实际还是需要这个任务同步执行，那么就会有问题，因为多个串行queue之间是并行的。这时使用dispatch_set_target_queue将多个串行的queue指定到了同一目标，那么着多个串行queue在目标queue上就是同步执行的，不再是并行执行。
++(void)testTargetQueue {
+    dispatch_queue_t targetQueue = dispatch_queue_create("test.target.queue", DISPATCH_QUEUE_SERIAL);
+    dispatch_queue_t queue1 = dispatch_queue_create("test.1", DISPATCH_QUEUE_SERIAL);
+    dispatch_queue_t queue2 = dispatch_queue_create("test.2", DISPATCH_QUEUE_SERIAL);
+    dispatch_queue_t queue3 = dispatch_queue_create("test.3", DISPATCH_QUEUE_SERIAL);
+    
+    dispatch_set_target_queue(queue1, targetQueue);
+    dispatch_set_target_queue(queue2, targetQueue);
+    dispatch_set_target_queue(queue3, targetQueue);
+    
+    
+    dispatch_async(queue1, ^{
+        NSLog(@"1 in");
+        [NSThread sleepForTimeInterval:3.f];
+        NSLog(@"1 out");
+    });
+    
+    dispatch_async(queue2, ^{
+        NSLog(@"2 in");
+        [NSThread sleepForTimeInterval:2.f];
+        NSLog(@"2 out");
+    });
+    dispatch_async(queue3, ^{
+        NSLog(@"3 in");
+        [NSThread sleepForTimeInterval:1.f];
+        NSLog(@"3 out");
+    });
+    
+}
+
+//输出
+//1 in
+//1 out
+//2 in
+//2 out
+//3 in
+//3 out
 @end

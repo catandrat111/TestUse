@@ -1,0 +1,9 @@
+/* 
+  Localizable.strings
+  TEST11
+
+  Created by dongjl on 15/12/23.
+  Copyright © 2015年 djl. All rights reserved.
+*/
+//英语Localizable.strings(English)文件
+"你好" = "hello";

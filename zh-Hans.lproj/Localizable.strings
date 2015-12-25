@@ -1,0 +1,10 @@
+/* 
+  Localizable.strings
+  TEST11
+
+  Created by dongjl on 15/12/23.
+  Copyright © 2015年 djl. All rights reserved.
+*/
+"你好" = "你好";//每一行一句，等号前面是key,等号后面是value,引号前不加@，分号结尾。
+
+"hello" = "你好";

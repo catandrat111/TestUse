@@ -22,6 +22,26 @@
                ReferencedContainer = "container:TEST11.xcodeproj">
             </BuildableReference>
          </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "BD79677A1C2BEF93000B4395"
+               BuildableName = "Test111Test.xctest"
+               BlueprintName = "Test111Test"
+               ReferencedContainer = "container:TEST11.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "BD7967891C2BEFD8000B4395"
+               BuildableName = "TestUITests.xctest"
+               BlueprintName = "TestUITests"
+               ReferencedContainer = "container:TEST11.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
       <AdditionalOptions>
       </AdditionalOptions>
