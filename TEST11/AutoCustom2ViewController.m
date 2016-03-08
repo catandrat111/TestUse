@@ -29,7 +29,7 @@
     NSLog(@"%@",rect);
 
     
-    //[self test2];
+    [self test2];
     //[self test1];
     
 }

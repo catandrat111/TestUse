@@ -10,4 +10,13 @@
 
 @interface LabelInstance : UIViewController
 @property(weak,nonatomic) IBOutlet UILabel *deleteLineLab;
+
+
+
+@property(weak,nonatomic) IBOutlet UILabel *lab1;
+@property(weak,nonatomic) IBOutlet UILabel *lab2;
+@property(weak,nonatomic) IBOutlet UILabel *lab3;
+@property(weak,nonatomic) IBOutlet UILabel *lab4;
+@property(weak,nonatomic) IBOutlet UILabel *lab5;
+@property(weak,nonatomic) IBOutlet UIView *v1;
 @end

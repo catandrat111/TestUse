@@ -54,6 +54,7 @@
 
 - (void)testSegmentControl {
     
+    
 //    XCUIApplication *app = [[XCUIApplication alloc] init];
 //    XCUIElement *secondButton = [app.segmentedControls containingType:XCUIElementTypeButton identifier:@"ffff"].buttons[@"Second"];
 //    [secondButton tap];

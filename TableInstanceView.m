@@ -9,6 +9,7 @@
 #import "TableInstanceView.h"
 #import "TableInstanceInitCell.h"
 #import "UITableView+iOS7Style.h"
+#import "TableGroupViewController.h"
 @interface TableInstanceView ()<UITableViewDataSource,UITableViewDelegate>{
     NSArray* dataSource;
     NSDictionary* dict;
@@ -23,8 +24,8 @@
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor colorWithRed:242 green:242 blue:242 alpha:1.0];
     self.tableView.backgroundColor = [UIColor colorWithRed:242 green:242 blue:242 alpha:1.0];
-    dataSource = @[@"register nib",@"register no xib",@"no register nib",@"no register no nib",@"tableviewstyle",@"tableviewlayout",@"lazytable"];
-    dict = @{@"register nib":@"TableInstanceInitCell",@"register no xib":@"TableInstanceInitCell",@"no register nib":@"TableInstanceInitCell",@"no register no nib":@"TableInstanceInitCell",@"tableviewstyle":@"TableInstanceStyle",@"tableviewlayout":@"TableViewLayout",@"lazytable":@"LazyTableViewController"};
+    dataSource = @[@"register nib",@"register no xib",@"no register nib",@"no register no nib",@"tableviewstyle",@"tableviewlayout",@"lazytable",@"TableGroupViewController",@"TestCorner"];
+    dict = @{@"register nib":@"TableInstanceInitCell",@"register no xib":@"TableInstanceInitCell",@"no register nib":@"TableInstanceInitCell",@"no register no nib":@"TableInstanceInitCell",@"tableviewstyle":@"TableInstanceStyle",@"tableviewlayout":@"TableViewLayout",@"lazytable":@"LazyTableViewController",@"TableGroupViewController":@"TableGroupViewController",@"TestCorner":@"TestCornerViewController"};
  
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     
@@ -92,6 +93,12 @@
     }
     else if(indexPath.row == 3){
         controller.initType = UITableViewCellNoRegisterNoXib;
+    }
+    
+    if ([className isEqualToString:@"TableGroupViewController"]) {
+       TableGroupViewController* controller1 = [[TableGroupViewController alloc] initWithStyle:UITableViewStyleGrouped];
+        [self.navigationController pushViewController:controller1 animated:YES];
+        return;
     }
     
     [self.navigationController pushViewController:controller animated:YES];

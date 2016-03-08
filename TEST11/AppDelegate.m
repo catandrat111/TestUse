@@ -48,6 +48,10 @@
 #import "CoreLaunchFlip.h"
 #import "EZNavigationController.h"
 #import <objc/runtime.h>
+#import "Person.h"
+#import "MJExtension.h"
+#import "NSDictionary+Log.h"
+#import "Constant.h"
 @interface AppDelegate ()
 
 @end
@@ -98,7 +102,7 @@
     NSString* h2 = NSLocalizedStringFromTable(@"hello", @"Localizable1", nil);
     NSLog(@"%@",h2);//你好1
     
-    
+   
    // navi.navigationBar.barStyle = UIBarStyleBlackTranslucent;
     //更改STATUSBAR
     //[[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
@@ -106,12 +110,12 @@
     
     //_objc_autoreleasePoolPrint();
 
-    NSString* uuid = [UIDevice  getUDID];
-    DLog(@"%@",uuid);
+   // NSString* uuid = [UIDevice  getUDID];
+    //DLog(@"%@",uuid);
     //6EAA3C6E-3DC6-4F52-B57A-6C29041C33CE//com.test
  
-    NSString* uuid1 = [UIDevice  getUDID1];
-    DLog(@"%@",uuid1);
+    //NSString* uuid1 = [UIDevice  getUDID1];
+   // DLog(@"%@",uuid1);
   //  [[UINavigationBar appearance] setBarTintColor:UIColorFromRGB(0xd7000f)];
 //    [[UINavigationBar appearance] setTitleTextAttributes:@{
 //                                                           UITextAttributeTextColor: [UIColor whiteColor],
@@ -122,8 +126,8 @@
 //    
 //    [[UINavigationBar appearance] setShadowImage:[[UIImage alloc] init]];
 
-    [UIDevice removePwd];
-    [self testVersion ];
+    //[UIDevice removePwd];
+    //[self testVersion ];
     //[self test];
     
     /** Lite版本 */
@@ -170,10 +174,143 @@
 //    　　3、ActionSheet的window在隐藏掉
 //    
 //    　　总体就是“想隐居幕后可以，但得先交出权利”。
+    [self testModel];
+    //[self assetrtTest];
+    
+    //后台抓取
+    [[UIApplication sharedApplication] setMinimumBackgroundFetchInterval:UIApplicationBackgroundFetchIntervalMinimum];
 
     return YES;
 }
+//http://blog.sina.com.cn/s/blog_4c925dca0102uzdi.html
+- (void)assetrtTest {
+    DLog(@"dlog test")
+    NSString* h3 = nil;
+    NSAssert(h3 != nil, @"名字不能为空！");
+}
 
+//os7新添加了两个可以在后台更新应用程序界面和内容的APIs。第一个API是后台获取（Background Fetch)，允许你在定期间隔内从网络获取新内容。第二个API是远程通知 （Remote Notification)，它是一个新特性，它在当新事件发生时利用推送通知（Push Notifications）去告知程序。这两个新的机制，帮助你保持程序界面最新，还可以在新的后台传输服务（Background Transfer Service）中安排任务，这允许你在进程外执行网络传输（下载和上传）
+//In Xcode 5 Debug mode, you can force a background fetch from the menu: Debug > Simulate Background Fetch.
+//从Project开始，接着是Capabilities，然后Put Background Modes ON，再选择Background Fetch
+//http://blog.jobbole.com/51660/
+-(void)application:(UIApplication *)application performFetchWithCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler {
+    
+    //在这里展示获取到数据后更新界面
+    BLog();
+    
+    /*
+     At the end of the fetch, invoke the completion handler.
+     */
+    //completionHandler(UIBackgroundFetchResultNewData);
+    
+    NSURLSessionConfiguration *sessionConfiguration = [NSURLSessionConfiguration defaultSessionConfiguration];
+    NSURLSession *session = [NSURLSession sessionWithConfiguration:sessionConfiguration];
+    
+    NSURL *url = [[NSURL alloc] initWithString:@"http://172.16.18.140:8080/home/hots.json"];
+    NSURLSessionDataTask *task = [session dataTaskWithURL:url
+                                        completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
+                                            
+                                            if (error) {
+                                                completionHandler(UIBackgroundFetchResultFailed);
+                                                return;
+                                            }
+                                            
+                                            
+                                            // Parse response/data and determine whether new content was available
+                                            BOOL hasNewData = YES;
+                                            if (hasNewData) {
+                                                completionHandler(UIBackgroundFetchResultNewData);
+                                            } else {
+                                                completionHandler(UIBackgroundFetchResultNoData);
+                                            }
+                                        }];
+    
+    
+    // Start the task
+    [task resume];
+    
+}
+
+- (NSURLSession *)backgroundURLSession
+{
+    static NSURLSession *session = nil;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        NSString *identifier = @"io.objc.backgroundTransferExample";
+        NSURLSessionConfiguration* sessionConfig = [NSURLSessionConfiguration backgroundSessionConfiguration:identifier];
+        session = [NSURLSession sessionWithConfiguration:sessionConfig
+                                                delegate:self
+                                           delegateQueue:[NSOperationQueue mainQueue]];
+    });
+    
+    return session;
+}
+
+- (void)           application:(UIApplication *)application
+  didReceiveRemoteNotification:(NSDictionary *)userInfo
+        fetchCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler
+{
+    NSLog(@"Received remote notification with userInfo %@", userInfo);
+    
+    NSNumber *contentID = userInfo[@"content-id"];
+    NSString *downloadURLString = [NSString stringWithFormat:@"http://yourserver.com/downloads/%d.mp3", [contentID intValue]];
+    NSURL* downloadURL = [NSURL URLWithString:downloadURLString];
+    
+    NSURLRequest *request = [NSURLRequest requestWithURL:downloadURL];
+    NSURLSessionDownloadTask *task = [[self backgroundURLSession] downloadTaskWithRequest:request];
+    task.taskDescription = [NSString stringWithFormat:@"Podcast Episode %d", [contentID intValue]];
+    [task resume];
+    
+    completionHandler(UIBackgroundFetchResultNewData);
+}
+
+
+
+- (void)testModel {
+    
+    
+    PersonModel* model = [[PersonModel alloc] init];
+    //model.cabinNo = @"F";
+    model.flightDate = @"2014-01-02";
+//    model.flightNo = @"3U8549";
+//    model.orderId = @"16N4379767";
+//    model.ticketIdList = @[@"aSj6rbN3Z7UPKC2CD1GyZQ=="];
+    
+    NSDictionary *param = @{
+                            @"head": @{
+                                    @"proVersion": @"2.0",
+                                    @"action": @"QUERY_ORDER_FLIGHT_CAN_CHANGE_DATE",
+                                    @"transAction": @"bfifacjhhfedijahdjej",
+                                    @"timestamp": @"20140211000000",
+                                    @"verify": @"",
+                                    @"platformId": @"ios",
+                                    @"channelId":@"appstore",
+                                    },
+                            @"body": [model keyValues]
+                            };
+    NSError* error = nil;
+    
+    NSData* str =  [NSJSONSerialization dataWithJSONObject:param options:NSJSONWritingPrettyPrinted error:&error];
+    
+    NSLog(@"%@",[[NSString alloc] initWithData:[NSJSONSerialization dataWithJSONObject:param options:NSJSONWritingPrettyPrinted error:nil] encoding:4]);
+
+
+    NSDictionary *param2 = @{
+                            @"head": @{
+                                    @"proVersion": @"2.0",
+                                    @"action": @"QUERY_ORDER_FLIGHT_CAN_CHANGE_DATE",
+                                    @"transAction": @"bfifacjhhfedijahdjej",
+                                    @"timestamp": @"20140211000000",
+                                    @"verify": @"",
+                                    @"platformId": @"ios",
+                                    @"channelId":@"appstore",
+                                    },
+                            @"body":@"fff"
+                            };
+    
+    NSLog(@"%@",param2);
+    
+}
 
 - (void)test {
     NSString *jsonString = @"[{\"@(3)\": \"1\", \"name\":\"Aaa\"}, {\"id\": \"2\", \"name\":\"Bbb\"}]";
@@ -263,8 +400,30 @@
 }
 
 - (void)applicationDidEnterBackground:(UIApplication *)application {
-    // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
-    // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        [self beginBackgroundUpdateTask];
+        NSURLResponse * response = nil;
+        NSError  * error = nil;
+        NSURL *downloadURL = [NSURL URLWithString:@"http://172.16.18.140:8080/home/hots.json"];
+        NSURLRequest *request = [NSURLRequest requestWithURL:downloadURL];
+
+        NSData * responseData = [NSURLConnection sendSynchronousRequest: request returningResponse: &response error: &error];
+        // Do something with the result
+        [self endBackgroundUpdateTask];
+    });
+}
+
+- (void) beginBackgroundUpdateTask
+{
+    self.backgroundUpdateTask = [[UIApplication sharedApplication] beginBackgroundTaskWithExpirationHandler:^{
+        [self endBackgroundUpdateTask];
+    }];
+}
+
+- (void) endBackgroundUpdateTask
+{
+    [[UIApplication sharedApplication] endBackgroundTask: self.backgroundUpdateTask];
+    self.backgroundUpdateTask = UIBackgroundTaskInvalid;
 }
 
 - (void)applicationWillEnterForeground:(UIApplication *)application {
@@ -278,5 +437,17 @@
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
+
+- (void)application:(UIApplication *)application handleEventsForBackgroundURLSession:(NSString *)identifier
+  completionHandler:(void (^)())completionHandler
+{
+    BLog();
+    /*
+     Store the completion handler. The completion handler is invoked by the view controller's checkForAllDownloadsHavingCompleted method (if all the download tasks have been completed).
+     */
+    self.backgroundSessionCompletionHandler = completionHandler;
+}
+
+
 
 @end

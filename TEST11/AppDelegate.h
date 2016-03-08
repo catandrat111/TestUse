@@ -7,11 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@interface AppDelegate : UIResponder <UIApplicationDelegate>
+#define BLog(formatString, ...) NSLog((@"%s " formatString), __PRETTY_FUNCTION__, ##__VA_ARGS__);
+@interface AppDelegate : UIResponder <UIApplicationDelegate,NSURLSessionDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
-
-
+@property (assign, nonatomic) UIBackgroundTaskIdentifier  backgroundUpdateTask;
+@property (copy) void (^backgroundSessionCompletionHandler)();
 @end
 

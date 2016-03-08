@@ -123,7 +123,7 @@
     cell.textLabel.text = dataArray[indexPath.row];
     cell.detailTextLabel.text = dataArray[indexPath.row];
     cell.backgroundColor = [UIColor whiteColor];
-    cell.imageView.image = [UIImage imageNamed:@"Selected"];
+    //cell.imageView.image = [UIImage imageNamed:@"Selected"];
     cell.backgroundColor = [UIColor clearColor];
     //[self.tableView applyiOS7SettingsStyleGrouping:cell forRowAtIndexPath:indexPath];
     return cell;

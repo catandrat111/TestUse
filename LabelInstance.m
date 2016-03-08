@@ -8,6 +8,7 @@
 
 #import "LabelInstance.h"
 #import <CoreText/CoreText.h>
+#import "UIView+Position.h"
 @interface LabelInstance ()
 
 @end
@@ -84,7 +85,7 @@
     //    UIBaselineAdjustmentAlignCenters,   文本中线与label中线对齐。
     //    UIBaselineAdjustmentNone,  文本最低端与label中线对齐。;
     [self.view addSubview:label];
-    
+    [self testLab];
 
     /*
      字体名如下：
@@ -274,7 +275,33 @@ UIFont * GetVariationOfFontWithTrait(UIFont *baseFont,
     CFRelease(ctFont);
     CFRelease(baseCTFont);
     return variantFont;  
-};  
+};
+
+
+- (void)testLab {
+
+    UIView* mask1 = [[UIView alloc] initWithFrame:self.lab2.bounds];
+    mask1.backgroundColor =[UIColor redColor];//要想mask 必须给背景色
+    self.lab2.maskView = mask1;
+    mask1.frameX+= 20;
+    self.lab2.clipsToBounds = YES;
+    
+    UIView* mask2 = [[UIView alloc] initWithFrame:self.lab4.bounds];
+    mask2.backgroundColor =[UIColor redColor];//要想mask 必须给背景色
+    self.lab4.maskView = mask2;
+
+    self.lab4.maskView.frameX = -mask1.frameX;
+    self.lab4.clipsToBounds = YES;
+    
+//    UIView* maskView = [[UIView alloc] initWithFrame:self.lab5.bounds];
+//    CAShapeLayer* shape = [[CAShapeLayer alloc] init];
+//    shape.backgroundColor = [UIColor greenColor].CGColor;
+//    [shape setFrame:self.lab5.bounds];
+//    [maskView.layer addSublayer:shape];
+//    maskView.backgroundColor =[UIColor redColor];
+//     self.lab5.maskView = maskView;
+//    maskView.frameX+= 20;
+}
 
 
 

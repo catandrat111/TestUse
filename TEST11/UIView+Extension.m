@@ -13,8 +13,8 @@
 @dynamic layer_BorderColor;
 @dynamic layer_BorderWidth;
 
-- (void)setLayer_CornerRadius:(CGFloat)layerCornerRadius {
-    self.layer.cornerRadius = layerCornerRadius;
+- (void)setLayer_CornerRadius:(CGFloat)layer_CornerRadius {
+    self.layer.cornerRadius = layer_CornerRadius;
 }
 
 
@@ -22,11 +22,13 @@
     return  self.layer.cornerRadius;
 }
 
-- (void)setLayer_BorderWidth:(CGFloat)layerBorderWidth {
-    self.layer.borderWidth = layerBorderWidth;
+- (void)setLayer_BorderWidth:(CGFloat)layer_BorderWidth {
+    self.layer.borderWidth = layer_BorderWidth;
 }
 
-- (void)setLayer_BorderColor:(UIColor *)layerBorderColor {
-    self.layer.borderColor = layerBorderColor.CGColor;
+- (void)setLayer_BorderColor:(UIColor *)layer_BorderColor {
+    self.layer.borderColor = layer_BorderColor.CGColor;
 }
+
+
 @end

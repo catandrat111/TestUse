@@ -22,3 +22,13 @@
 - (NSString *)appendMyString:(NSString *)string age:(NSInteger)age;
 - (NSString *)appendTestMyString:(NSString *)string;
 @end
+
+
+@interface PersonModel : NSObject
+//@property (nonatomic,strong) NSArray* ticketIdList;
+//@property (nonatomic,strong) NSString* orderId;
+//@property (nonatomic,strong) NSString* flightNo;
+//@property (nonatomic,strong) NSString* cabinNo;
+@property (nonatomic,strong) NSString* flightDate;
+
+@end
