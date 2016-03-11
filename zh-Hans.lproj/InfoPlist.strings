@@ -1,0 +1,10 @@
+/* 
+  InfoPlist.strings
+  TEST11
+
+  Created by dongjl on 16/3/11.
+  Copyright © 2016年 djl. All rights reserved.
+*/
+//http://www.cocoachina.com/appstore/20160310/15632.html
+"CFBundleDisplayName" = "测试";
+

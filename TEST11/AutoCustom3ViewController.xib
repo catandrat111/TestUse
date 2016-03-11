@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AutoCustom3ViewController">
             <connections>
                 <outlet property="v1" destination="hen-3H-km9" id="THu-st-BSn"/>
+                <outlet property="v2" destination="qp8-jz-fZD" id="P2t-bQ-48M"/>
+                <outlet property="v3" destination="Wd6-ms-IpY" id="Uzc-3z-pbf"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -22,9 +24,20 @@
                         <constraint firstAttribute="height" constant="30" id="IHD-cL-C7d"/>
                         <constraint firstAttribute="width" constant="82" id="Nid-jU-xSl"/>
                     </constraints>
-                    <state key="normal" title="Button"/>
+                    <state key="normal" title="p1"/>
                     <connections>
                         <action selector="p1:" destination="-1" eventType="touchUpInside" id="rG8-u5-bPB"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DQg-FY-33o">
+                    <rect key="frame" x="148" y="45" width="82" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="82" id="9Rc-X9-fEz"/>
+                        <constraint firstAttribute="height" constant="30" id="lk4-cz-LZ7"/>
+                    </constraints>
+                    <state key="normal" title="p2"/>
+                    <connections>
+                        <action selector="p2:" destination="-1" eventType="touchUpInside" id="1pb-oJ-GcS"/>
                     </connections>
                 </button>
                 <view contentMode="scaleToFill" horizontalHuggingPriority="12" translatesAutoresizingMaskIntoConstraints="NO" id="hen-3H-km9">
@@ -35,12 +48,48 @@
                         <constraint firstAttribute="height" constant="120" id="Dyh-7c-sD8"/>
                     </constraints>
                 </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qp8-jz-fZD">
+                    <rect key="frame" x="25" y="129" width="99" height="64"/>
+                    <color key="backgroundColor" red="1" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="99" id="SE6-fs-fjZ"/>
+                        <constraint firstAttribute="height" constant="64" id="urr-Qq-rmg"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wd6-ms-IpY">
+                    <rect key="frame" x="140" y="129" width="99" height="64"/>
+                    <color key="backgroundColor" red="1" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="99" id="Pjj-Ui-Dwi"/>
+                        <constraint firstAttribute="height" constant="64" id="mGc-Gd-lcU"/>
+                    </constraints>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ni9-m0-ajS">
+                    <rect key="frame" x="223" y="45" width="82" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="82" id="7rl-Yq-Olj"/>
+                        <constraint firstAttribute="height" constant="30" id="Ec0-cW-WSt"/>
+                    </constraints>
+                    <state key="normal" title="p3"/>
+                    <connections>
+                        <action selector="p3:" destination="-1" eventType="touchUpInside" id="XS0-fg-UdR"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
+                <constraint firstItem="qp8-jz-fZD" firstAttribute="top" secondItem="uc2-FC-lMu" secondAttribute="bottom" constant="54" id="6Ic-b6-D3d"/>
                 <constraint firstAttribute="trailing" secondItem="hen-3H-km9" secondAttribute="trailing" constant="60" id="7IS-md-ho4"/>
+                <constraint firstItem="DQg-FY-33o" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="45" id="9nt-EA-RRn"/>
+                <constraint firstItem="DQg-FY-33o" firstAttribute="leading" secondItem="uc2-FC-lMu" secondAttribute="trailing" constant="41" id="Hxj-Nb-9tR"/>
                 <constraint firstItem="uc2-FC-lMu" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="25" id="Jvk-Ef-6SS"/>
+                <constraint firstItem="Wd6-ms-IpY" firstAttribute="leading" secondItem="qp8-jz-fZD" secondAttribute="trailing" constant="16" id="LI8-iQ-2NS"/>
+                <constraint firstItem="Ni9-m0-ajS" firstAttribute="leading" secondItem="uc2-FC-lMu" secondAttribute="trailing" constant="116" id="NcV-cx-4SO"/>
+                <constraint firstItem="Wd6-ms-IpY" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="129" id="hAH-KL-ttp"/>
+                <constraint firstItem="Ni9-m0-ajS" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="45" id="iga-me-5DF"/>
+                <constraint firstItem="Wd6-ms-IpY" firstAttribute="leading" secondItem="qp8-jz-fZD" secondAttribute="trailing" constant="16" id="jKG-47-b5R"/>
                 <constraint firstItem="uc2-FC-lMu" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="45" id="kng-Yt-cfQ"/>
+                <constraint firstItem="qp8-jz-fZD" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="25" id="oVJ-Fn-7te"/>
                 <constraint firstItem="hen-3H-km9" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="270" id="rCQ-BT-Ht5"/>
             </constraints>
             <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>

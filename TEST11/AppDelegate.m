@@ -52,6 +52,7 @@
 #import "MJExtension.h"
 #import "NSDictionary+Log.h"
 #import "Constant.h"
+//#import <PonyDebugger/PonyDebugger.h>
 @interface AppDelegate ()
 
 @end
@@ -176,6 +177,7 @@
 //    　　总体就是“想隐居幕后可以，但得先交出权利”。
     [self testModel];
     //[self assetrtTest];
+    //[self testPony];
     
     //后台抓取
     [[UIApplication sharedApplication] setMinimumBackgroundFetchInterval:UIApplicationBackgroundFetchIntervalMinimum];
@@ -188,6 +190,18 @@
     NSString* h3 = nil;
     NSAssert(h3 != nil, @"名字不能为空！");
 }
+
+//- (void)testPony {
+//    PDDebugger *debugger = [PDDebugger defaultInstance];
+//    
+//    [debugger enableNetworkTrafficDebugging];
+//    
+//    [debugger forwardAllNetworkTraffic];
+//    
+//    [debugger enableCoreDataDebugging];
+//    
+//    [debugger connectToURL:[NSURL URLWithString:@"ws://172.16.18.165/device"]];
+//}
 
 //os7新添加了两个可以在后台更新应用程序界面和内容的APIs。第一个API是后台获取（Background Fetch)，允许你在定期间隔内从网络获取新内容。第二个API是远程通知 （Remote Notification)，它是一个新特性，它在当新事件发生时利用推送通知（Push Notifications）去告知程序。这两个新的机制，帮助你保持程序界面最新，还可以在新的后台传输服务（Background Transfer Service）中安排任务，这允许你在进程外执行网络传输（下载和上传）
 //In Xcode 5 Debug mode, you can force a background fetch from the menu: Debug > Simulate Background Fetch.

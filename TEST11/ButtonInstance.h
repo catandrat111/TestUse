@@ -16,6 +16,7 @@
 @property(weak,nonatomic) IBOutlet UIButton* stretchButton;
 @property(weak,nonatomic) IBOutlet UILabel* lab;
 @property(weak,nonatomic) IBOutlet UIImageView* imgView;
+@property(weak,nonatomic) IBOutlet UIImageView* imgView2;
 @property(strong,nonatomic) NSURL* sourceURL; //@s///
 
 -(IBAction)p1:(id)sender;

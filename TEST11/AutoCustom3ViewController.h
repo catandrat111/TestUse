@@ -10,5 +10,9 @@
 
 @interface AutoCustom3ViewController : UIViewController
 - (IBAction)p1:(id)sender;
+- (IBAction)p2:(id)sender;
+- (IBAction)p3:(id)sender;
 @property (nonatomic,weak) IBOutlet UIView* v1;
+@property (nonatomic,weak) IBOutlet UIView* v2;
+@property (nonatomic,weak) IBOutlet UIView* v3;
 @end

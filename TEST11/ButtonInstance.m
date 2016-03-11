@@ -51,6 +51,7 @@
     
     self.imgView.image = [UIImage imageNamed:@"Selected"];
     [self configureButton];
+    
 }
 
 - (void)didReceiveMemoryWarning {

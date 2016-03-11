@@ -360,6 +360,8 @@
 		BD80F16A1BF48E9C0046FA80 /* DrawViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD80F1691BF48E9C0046FA80 /* DrawViewController.m */; };
 		BD80F16D1BF491FE0046FA80 /* KCView.m in Sources */ = {isa = PBXBuildFile; fileRef = BD80F16C1BF491FE0046FA80 /* KCView.m */; };
 		BD84B6151C730C3F00456A2A /* NSDictionary+Log.m in Sources */ = {isa = PBXBuildFile; fileRef = BD84B6141C730C3F00456A2A /* NSDictionary+Log.m */; };
+		BD855DD91C9269BC00FD171A /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD855DD81C9269BC00FD171A /* Security.framework */; };
+		BD855DDB1C9269D400FD171A /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD855DDA1C9269D400FD171A /* MobileCoreServices.framework */; };
 		BD85847E1C2A78C1001468F3 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = BD8584801C2A78C1001468F3 /* Localizable.strings */; };
 		BD85848A1C2A82AA001468F3 /* Localizable1.strings in Resources */ = {isa = PBXBuildFile; fileRef = BD85848C1C2A82AA001468F3 /* Localizable1.strings */; };
 		BD8584931C2A8525001468F3 /* localizable_3.png in Resources */ = {isa = PBXBuildFile; fileRef = BD8584901C2A8525001468F3 /* localizable_3.png */; };
@@ -590,6 +592,11 @@
 		BDBBDBCC1BF2EAF50016768B /* NSObject+FBKVOController.m in Sources */ = {isa = PBXBuildFile; fileRef = BDBBDBCA1BF2EAF50016768B /* NSObject+FBKVOController.m */; };
 		BDBD75351BA004ED00168A8B /* 消息派发1.png in Resources */ = {isa = PBXBuildFile; fileRef = BDBD75341BA004ED00168A8B /* 消息派发1.png */; };
 		BDBD75381BA01B2200168A8B /* NSNull+XY_InternalNullExtention.m in Sources */ = {isa = PBXBuildFile; fileRef = BDBD75371BA01B2200168A8B /* NSNull+XY_InternalNullExtention.m */; };
+		BDC299541C8FFE5500C43370 /* ScrollViewScrollViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BDC299521C8FFE5500C43370 /* ScrollViewScrollViewController.m */; };
+		BDC299551C8FFE5500C43370 /* ScrollViewScrollViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BDC299531C8FFE5500C43370 /* ScrollViewScrollViewController.xib */; };
+		BDC44F291C929C7900BCE92E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = BDC44F2B1C929C7900BCE92E /* InfoPlist.strings */; };
+		BDC44F361C92BF1F00BCE92E /* 11@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BDC44F341C92BF1F00BCE92E /* 11@2x.png */; };
+		BDC44F371C92BF1F00BCE92E /* 12@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BDC44F351C92BF1F00BCE92E /* 12@2x.png */; };
 		BDC5A9701B7DEF5800AC14C4 /* HSCButton.m in Sources */ = {isa = PBXBuildFile; fileRef = BDC5A96F1B7DEF5800AC14C4 /* HSCButton.m */; };
 		BDC5A9741B7DEF9100AC14C4 /* GestureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BDC5A9721B7DEF9100AC14C4 /* GestureViewController.m */; };
 		BDC5A9751B7DEF9100AC14C4 /* GestureViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BDC5A9731B7DEF9100AC14C4 /* GestureViewController.xib */; };
@@ -598,6 +605,7 @@
 		BDC7660E1B942A5D00EC31D7 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = BDC7660A1B942A5D00EC31D7 /* LICENSE */; };
 		BDC7660F1B942A5D00EC31D7 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = BDC7660B1B942A5D00EC31D7 /* README.md */; };
 		BDC766101B942A5D00EC31D7 /* UIAlertView+Blocks.m in Sources */ = {isa = PBXBuildFile; fileRef = BDC7660D1B942A5D00EC31D7 /* UIAlertView+Blocks.m */; };
+		BDC9C51A1C8FF5D8002A6EE1 /* ScrollViewInstance.m in Sources */ = {isa = PBXBuildFile; fileRef = BDC9C5191C8FF5D8002A6EE1 /* ScrollViewInstance.m */; };
 		BDCCA7AE1B8F04B8007ED1C9 /* RRPSectionFootView.m in Sources */ = {isa = PBXBuildFile; fileRef = BDCCA7AD1B8F04B8007ED1C9 /* RRPSectionFootView.m */; };
 		BDCCA7B11B8F0531007ED1C9 /* RRPSectionHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = BDCCA7B01B8F0531007ED1C9 /* RRPSectionHeaderView.m */; };
 		BDD1E1071B8FF29C0037A457 /* SearchBarInstanceView.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD1E1051B8FF29C0037A457 /* SearchBarInstanceView.m */; };
@@ -1083,7 +1091,6 @@
 		51FA7A221B70FB2A0002990E /* UsageViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UsageViewController.xib; sourceTree = "<group>"; };
 		51FA7A291B7105180002990E /* Person+GHAssociatedObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Person+GHAssociatedObject.h"; sourceTree = "<group>"; };
 		51FA7A2A1B7105180002990E /* Person+GHAssociatedObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Person+GHAssociatedObject.m"; sourceTree = "<group>"; };
-		5256B14F253BC9B9E564524A /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD0126271B9D1CD800D22ACB /* AnimationGroupController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnimationGroupController.h; sourceTree = "<group>"; };
 		BD0126281B9D1CD800D22ACB /* AnimationGroupController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnimationGroupController.m; sourceTree = "<group>"; };
 		BD0126291B9D1CD800D22ACB /* AnimationGroupController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AnimationGroupController.xib; sourceTree = "<group>"; };
@@ -1360,6 +1367,8 @@
 		BD80F16C1BF491FE0046FA80 /* KCView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KCView.m; sourceTree = "<group>"; };
 		BD84B6131C730C3F00456A2A /* NSDictionary+Log.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+Log.h"; sourceTree = "<group>"; };
 		BD84B6141C730C3F00456A2A /* NSDictionary+Log.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+Log.m"; sourceTree = "<group>"; };
+		BD855DD81C9269BC00FD171A /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		BD855DDA1C9269D400FD171A /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		BD85847F1C2A78C1001468F3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
 		BD8584811C2A78CA001468F3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		BD8584821C2A79D4001468F3 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
@@ -1764,6 +1773,14 @@
 		BDBD75341BA004ED00168A8B /* 消息派发1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "消息派发1.png"; sourceTree = "<group>"; };
 		BDBD75361BA01B2200168A8B /* NSNull+XY_InternalNullExtention.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSNull+XY_InternalNullExtention.h"; sourceTree = "<group>"; };
 		BDBD75371BA01B2200168A8B /* NSNull+XY_InternalNullExtention.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSNull+XY_InternalNullExtention.m"; sourceTree = "<group>"; };
+		BDC299511C8FFE5500C43370 /* ScrollViewScrollViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScrollViewScrollViewController.h; sourceTree = "<group>"; };
+		BDC299521C8FFE5500C43370 /* ScrollViewScrollViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScrollViewScrollViewController.m; sourceTree = "<group>"; };
+		BDC299531C8FFE5500C43370 /* ScrollViewScrollViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ScrollViewScrollViewController.xib; sourceTree = "<group>"; };
+		BDC44F2A1C929C7900BCE92E /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		BDC44F2C1C929C8400BCE92E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		BDC44F2D1C929C8500BCE92E /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
+		BDC44F341C92BF1F00BCE92E /* 11@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "11@2x.png"; sourceTree = "<group>"; };
+		BDC44F351C92BF1F00BCE92E /* 12@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "12@2x.png"; sourceTree = "<group>"; };
 		BDC5A96E1B7DEF5800AC14C4 /* HSCButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HSCButton.h; path = ../HSCButton.h; sourceTree = "<group>"; };
 		BDC5A96F1B7DEF5800AC14C4 /* HSCButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HSCButton.m; path = ../HSCButton.m; sourceTree = "<group>"; };
 		BDC5A9711B7DEF9100AC14C4 /* GestureViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GestureViewController.h; sourceTree = "<group>"; };
@@ -1776,6 +1793,8 @@
 		BDC7660B1B942A5D00EC31D7 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		BDC7660C1B942A5D00EC31D7 /* UIAlertView+Blocks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAlertView+Blocks.h"; sourceTree = "<group>"; };
 		BDC7660D1B942A5D00EC31D7 /* UIAlertView+Blocks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertView+Blocks.m"; sourceTree = "<group>"; };
+		BDC9C5181C8FF5D8002A6EE1 /* ScrollViewInstance.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScrollViewInstance.h; sourceTree = "<group>"; };
+		BDC9C5191C8FF5D8002A6EE1 /* ScrollViewInstance.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScrollViewInstance.m; sourceTree = "<group>"; };
 		BDCCA7AC1B8F04B7007ED1C9 /* RRPSectionFootView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RRPSectionFootView.h; sourceTree = "<group>"; };
 		BDCCA7AD1B8F04B8007ED1C9 /* RRPSectionFootView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RRPSectionFootView.m; sourceTree = "<group>"; };
 		BDCCA7AF1B8F0531007ED1C9 /* RRPSectionHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RRPSectionHeaderView.h; sourceTree = "<group>"; };
@@ -1917,6 +1936,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BD855DDB1C9269D400FD171A /* MobileCoreServices.framework in Frameworks */,
+				BD855DD91C9269BC00FD171A /* Security.framework in Frameworks */,
 				BDB3C2491C759B200039E146 /* NewsstandKit.framework in Frameworks */,
 				BDB3C2471C759AFB0039E146 /* MapKit.framework in Frameworks */,
 				BDB3C2451C759AF30039E146 /* CoreMedia.framework in Frameworks */,
@@ -1983,6 +2004,8 @@
 		4B57CB8D439273592D6CB7DC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				BD855DDA1C9269D400FD171A /* MobileCoreServices.framework */,
+				BD855DD81C9269BC00FD171A /* Security.framework */,
 				BDB3C2481C759B200039E146 /* NewsstandKit.framework */,
 				BDB3C2461C759AFB0039E146 /* MapKit.framework */,
 				BDB3C2441C759AF30039E146 /* CoreMedia.framework */,
@@ -1990,7 +2013,6 @@
 				BDB3C2401C759ADD0039E146 /* AVFoundation.framework */,
 				BDB3C23E1C759AD20039E146 /* AudioToolbox.framework */,
 				BD8D3D3C1C083A7500B9B214 /* JavaScriptCore.framework */,
-				5256B14F253BC9B9E564524A /* Pods.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -2090,6 +2112,7 @@
 		5195B3EC1AB70284007CFA8B /* TEST11 */ = {
 			isa = PBXGroup;
 			children = (
+				BDC9C5171C8FF5A0002A6EE1 /* scrollview */,
 				BD9B2CE31C8D52AA004DAABC /* instrumenttest */,
 				BD6138C61C74493E00B0F4B7 /* nsurlconnection */,
 				BDFCFB0B1C20FD860066BCFE /* KVO */,
@@ -2165,6 +2188,8 @@
 		51B1C61D1B50E12200E68110 /* Image */ = {
 			isa = PBXGroup;
 			children = (
+				BDC44F341C92BF1F00BCE92E /* 11@2x.png */,
+				BDC44F351C92BF1F00BCE92E /* 12@2x.png */,
 				BDE08D861C16D03C00E47F61 /* Placeholder.png */,
 				BDE08D871C16D03C00E47F61 /* Placeholder@2x.png */,
 				BD1070D71C04610D00CC1612 /* 98_avatar_big.jpg */,
@@ -3546,6 +3571,7 @@
 				BD8584921C2A8525001468F3 /* localizable_1.png */,
 				BD85848C1C2A82AA001468F3 /* Localizable1.strings */,
 				BD8584801C2A78C1001468F3 /* Localizable.strings */,
+				BDC44F2B1C929C7900BCE92E /* InfoPlist.strings */,
 			);
 			name = localize;
 			sourceTree = "<group>";
@@ -4217,6 +4243,18 @@
 			path = "UIAlertView+Blocks";
 			sourceTree = "<group>";
 		};
+		BDC9C5171C8FF5A0002A6EE1 /* scrollview */ = {
+			isa = PBXGroup;
+			children = (
+				BDC9C5181C8FF5D8002A6EE1 /* ScrollViewInstance.h */,
+				BDC9C5191C8FF5D8002A6EE1 /* ScrollViewInstance.m */,
+				BDC299511C8FFE5500C43370 /* ScrollViewScrollViewController.h */,
+				BDC299521C8FFE5500C43370 /* ScrollViewScrollViewController.m */,
+				BDC299531C8FFE5500C43370 /* ScrollViewScrollViewController.xib */,
+			);
+			name = scrollview;
+			sourceTree = "<group>";
+		};
 		BDD1E1031B8FF2780037A457 /* UISearchBar */ = {
 			isa = PBXGroup;
 			children = (
@@ -4709,12 +4747,14 @@
 				BDB3C2351C7590770039E146 /* TBFirstViewController.xib in Resources */,
 				BD6E07831C22A0EC00B94F38 /* p.png in Resources */,
 				BDADA29E1BF975110076BFDF /* background.png in Resources */,
+				BDC44F371C92BF1F00BCE92E /* 12@2x.png in Resources */,
 				BD80F13E1BF46CB10046FA80 /* stretch13.png in Resources */,
 				BDAE15BC1B7C7FED001908A5 /* SVProgressHUD.bundle in Resources */,
 				BDF987C21B8DB7040039838B /* RunLoopInstance.xib in Resources */,
 				BDAE15BA1B7C7FED001908A5 /* LICENSE.txt in Resources */,
 				BD8584951C2A8525001468F3 /* localizable_1.png in Resources */,
 				BDADA2C41BF9B38D0076BFDF /* ball.png in Resources */,
+				BDC299551C8FFE5500C43370 /* ScrollViewScrollViewController.xib in Resources */,
 				510281C51B5B4678009EDCA0 /* ButtonInstance.xib in Resources */,
 				BDBD75351BA004ED00168A8B /* 消息派发1.png in Resources */,
 				BDB3C2331C7590770039E146 /* second@2x.png in Resources */,
@@ -4761,7 +4801,9 @@
 				BD047E641BD8780000D020E3 /* AutoCustom1ViewController.xib in Resources */,
 				51FA7A241B70FB2A0002990E /* UsageViewController.xib in Resources */,
 				BD6138CB1C744AE900B0F4B7 /* APLViewController.xib in Resources */,
+				BDC44F361C92BF1F00BCE92E /* 11@2x.png in Resources */,
 				5158D1A11B7E355000ACF3AD /* PanGestureInstance.xib in Resources */,
+				BDC44F291C929C7900BCE92E /* InfoPlist.strings in Resources */,
 				BD89E1DB1C313C03007C8D2A /* mask_3.png in Resources */,
 				BDAE15CB1B7C7FED001908A5 /* LICENSE in Resources */,
 				51E10DD41B481BD4009B162E /* NSDateTimeAgo.bundle in Resources */,
@@ -5011,6 +5053,7 @@
 				51E10DEC1B481BD4009B162E /* NSString+Contains.m in Sources */,
 				51E10E081B481BD4009B162E /* UIButton+Submitting.m in Sources */,
 				BDADA2B01BF983D80076BFDF /* KCAnimationBacicAnimationViewController13.m in Sources */,
+				BDC299541C8FFE5500C43370 /* ScrollViewScrollViewController.m in Sources */,
 				BD7641301C0E7ABA00846EF0 /* ImageviewInstance.m in Sources */,
 				BD5A39351C02F83D000E212F /* TWTOverlayExampleViewController.m in Sources */,
 				BD6B300C1C0FE601008C83C5 /* AFURLRequestSerialization.m in Sources */,
@@ -5176,6 +5219,7 @@
 				51E10DC11B481BD4009B162E /* NSManagedObjectContext+Extensions.m in Sources */,
 				BD79F6A41BCBAE9000AE64FD /* DTTimePeriod.m in Sources */,
 				BD0126311B9D311800D22ACB /* DR_popAnimationController.m in Sources */,
+				BDC9C51A1C8FF5D8002A6EE1 /* ScrollViewInstance.m in Sources */,
 				BDE08D821C16C96000E47F61 /* IconDownloader.m in Sources */,
 				51E10C371B47A8EB009B162E /* TableInstanceView.m in Sources */,
 				BD1070E91C046E0000CC1612 /* LineLayout.m in Sources */,
@@ -5546,6 +5590,16 @@
 			name = SSKeychain.strings;
 			sourceTree = "<group>";
 		};
+		BDC44F2B1C929C7900BCE92E /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BDC44F2A1C929C7900BCE92E /* Base */,
+				BDC44F2C1C929C8400BCE92E /* en */,
+				BDC44F2D1C929C8500BCE92E /* zh-Hans */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
 		BDFA0B741BC61743003BC5EA /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -5667,6 +5721,7 @@
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = PrefixHeader.pch;
+				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = TEST11/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -5676,7 +5731,9 @@
 					"$(PROJECT_DIR)/TEST11/LIbs/JPush",
 					"$(PROJECT_DIR)/TEST11/LIbs/WeixinActivity/WeChatSDK_1.5",
 				);
+				OTHER_CFLAGS = "";
 				OTHER_LDFLAGS = "-ObjC";
+				PODS_ROOT = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};
@@ -5701,6 +5758,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = PrefixHeader.pch;
 				GCC_PREPROCESSOR_DEFINITIONS = NS_BLOCK_ASSERTIONS;
+				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = TEST11/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -5710,7 +5768,9 @@
 					"$(PROJECT_DIR)/TEST11/LIbs/JPush",
 					"$(PROJECT_DIR)/TEST11/LIbs/WeixinActivity/WeChatSDK_1.5",
 				);
+				OTHER_CFLAGS = "";
 				OTHER_LDFLAGS = "-ObjC";
+				PODS_ROOT = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};
@@ -5904,6 +5964,7 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = PrefixHeader.pch;
+				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = TEST11/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -5913,7 +5974,9 @@
 					"$(PROJECT_DIR)/TEST11/LIbs/JPush",
 					"$(PROJECT_DIR)/TEST11/LIbs/WeixinActivity/WeChatSDK_1.5",
 				);
+				OTHER_CFLAGS = "";
 				OTHER_LDFLAGS = "-ObjC";
+				PODS_ROOT = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};

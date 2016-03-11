@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ButtonInstance">
@@ -11,6 +11,7 @@
                 <outlet property="button2" destination="7ya-5V-PEC" id="H7A-zf-0mf"/>
                 <outlet property="button3" destination="zpR-Ty-LbD" id="JFv-jH-Feq"/>
                 <outlet property="imgView" destination="bEQ-TP-QOi" id="5Di-lr-EQg"/>
+                <outlet property="imgView2" destination="EsG-eD-oTd" id="nUl-19-RRP"/>
                 <outlet property="lab" destination="ebf-Wz-m0K" id="CK0-fb-Aj4"/>
                 <outlet property="stretchButton" destination="tdJ-Fp-1gc" id="jRX-D1-mFC"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -69,16 +70,22 @@
                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="bEQ-TP-QOi">
-                    <rect key="frame" x="123" y="252" width="75" height="86"/>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="11.png" id="bEQ-TP-QOi">
+                    <rect key="frame" x="123" y="252" width="60" height="60"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 </imageView>
-                <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="3iq-v3-oOn">
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="12.png" id="EsG-eD-oTd">
+                    <rect key="frame" x="218" y="252" width="30" height="31"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </imageView>
+                <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translucent="NO" id="3iq-v3-oOn">
                     <rect key="frame" x="0.0" y="416" width="320" height="44"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                    <color key="backgroundColor" red="0.13725490200000001" green="0.37254901959999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="backgroundColor" red="0.75233467819628608" green="0.84313725490000002" blue="0.82487210013684797" alpha="1" colorSpace="calibratedRGB"/>
                     <items>
-                        <barButtonItem title="Item" id="ZP1-QJ-H9I"/>
+                        <barButtonItem title="Item" id="ZP1-QJ-H9I">
+                            <color key="tintColor" red="1" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        </barButtonItem>
                     </items>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="color" keyPath="layerBorderColor">
@@ -91,6 +98,10 @@
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <state key="normal" title="Button12"/>
                 </button>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="11.png" id="T08-FN-A5W">
+                    <rect key="frame" x="40" y="252" width="30" height="30"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </imageView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
@@ -98,4 +109,8 @@
             <point key="canvasLocation" x="362" y="256"/>
         </view>
     </objects>
+    <resources>
+        <image name="11.png" width="30" height="30"/>
+        <image name="12.png" width="30" height="30"/>
+    </resources>
 </document>
