@@ -1,0 +1,2 @@
+/Users/lichenze/Library/Developer/Xcode/DerivedData/TEST11-awzpnhycmgaihgdgiwdjssabamrt/Build/Products/Debug-iphoneos/TEST11.app
+iPhone Developer

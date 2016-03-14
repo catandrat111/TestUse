@@ -61,6 +61,15 @@
 
 -(IBAction)p1:(UIButton*)sender{
     [self.button1 endSubmitting];
+   
+}
+
+-(IBAction)p5:(id)sender {
+    self.lab.text = @"HELLO ";
+    self.view.backgroundColor = [UIColor redColor];
+    self.button5.backgroundColor = [UIColor yellowColor];
+    self.button5.layer.cornerRadius = 5.0f;
+    self.button5.frameHeight = 60;
 }
 
 -(IBAction)p2:(UIButton*)sender{
@@ -168,5 +177,10 @@
                                       resizableImageWithCapInsets:edgeInsets];
     [self.stretchButton setBackgroundImage:backgroundButtonImage
                                  forState:UIControlStateNormal];
+}
+
+- (void)injected
+{
+    NSLog(@"I've been injected: %@", self);
 }
 @end

@@ -8,6 +8,9 @@
 /**
  *  成员变量类型（属性类型）
  */
+
+#import <Foundation/Foundation.h>
+
 NSString *const MJTypeInt = @"i";
 NSString *const MJTypeFloat = @"f";
 NSString *const MJTypeDouble = @"d";

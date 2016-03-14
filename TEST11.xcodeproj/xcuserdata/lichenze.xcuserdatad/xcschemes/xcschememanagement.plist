@@ -12,7 +12,7 @@
 		<key>BlockTest.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>4</integer>
+			<integer>5</integer>
 		</dict>
 		<key>Ipad1.xcscheme</key>
 		<dict>
@@ -27,7 +27,17 @@
 		<key>SwiftTest.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
+			<integer>3</integer>
+		</dict>
+		<key>SwiftTestTests.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
 			<integer>2</integer>
+		</dict>
+		<key>SwiftTestUITests.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>4</integer>
 		</dict>
 		<key>TEST11-release.xcscheme</key>
 		<dict>
@@ -38,6 +48,11 @@
 		<dict>
 			<key>orderHint</key>
 			<integer>0</integer>
+		</dict>
+		<key>TEST11RELEASE.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>7</integer>
 		</dict>
 		<key>TEST11Tests.xcscheme</key>
 		<dict>

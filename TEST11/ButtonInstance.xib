@@ -10,6 +10,7 @@
                 <outlet property="button1" destination="dEU-6f-HcE" id="TOS-e4-94b"/>
                 <outlet property="button2" destination="7ya-5V-PEC" id="H7A-zf-0mf"/>
                 <outlet property="button3" destination="zpR-Ty-LbD" id="JFv-jH-Feq"/>
+                <outlet property="button5" destination="r8u-Yx-y7n" id="D9Z-TZ-WyS"/>
                 <outlet property="imgView" destination="bEQ-TP-QOi" id="5Di-lr-EQg"/>
                 <outlet property="imgView2" destination="EsG-eD-oTd" id="nUl-19-RRP"/>
                 <outlet property="lab" destination="ebf-Wz-m0K" id="CK0-fb-Aj4"/>
@@ -102,6 +103,16 @@
                     <rect key="frame" x="40" y="252" width="30" height="30"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="r8u-Yx-y7n">
+                    <rect key="frame" x="123" y="39" width="46" height="30"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <state key="normal" title="Button">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="p5:" destination="-1" eventType="touchUpInside" id="Mmp-AF-edX"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>

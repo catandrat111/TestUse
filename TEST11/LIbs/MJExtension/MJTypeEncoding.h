@@ -8,6 +8,8 @@
 /**
  *  类型（属性类型）
  */
+
+
 extern NSString *const MJTypeInt;
 extern NSString *const MJTypeFloat;
 extern NSString *const MJTypeDouble;

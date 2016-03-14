@@ -1866,7 +1866,7 @@
                   moduleName = "TEST11"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/lichenze/Documents/opensource/TestUse/TEST11/RunLoopInstance.m"
-                  timestampString = "479360022.023823"
+                  timestampString = "479642957.84568"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "215"
@@ -1881,7 +1881,7 @@
                   moduleName = "TEST11"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/lichenze/Documents/opensource/TestUse/TEST11/RunLoopInstance.m"
-                  timestampString = "479360022.023982"
+                  timestampString = "479642957.845864"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "0"
@@ -1896,7 +1896,7 @@
                   moduleName = "TEST11"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/lichenze/Documents/opensource/TestUse/TEST11/RunLoopInstance.m"
-                  timestampString = "479360022.024147"
+                  timestampString = "479642957.846043"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "0"
@@ -3246,6 +3246,20 @@
             endingLineNumber = "44"
             landmarkName = "-p2:"
             landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "PrefixHeader.pch"
+            timestampString = "479620362.427406"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "13"
+            endingLineNumber = "13">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

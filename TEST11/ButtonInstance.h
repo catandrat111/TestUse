@@ -13,6 +13,7 @@
 @property(weak,nonatomic) IBOutlet UIButton* button2;
 @property(weak,nonatomic) IBOutlet UIButton* button3;
 @property(weak,nonatomic) IBOutlet UIButton* button4;
+@property(weak,nonatomic) IBOutlet UIButton* button5;
 @property(weak,nonatomic) IBOutlet UIButton* stretchButton;
 @property(weak,nonatomic) IBOutlet UILabel* lab;
 @property(weak,nonatomic) IBOutlet UIImageView* imgView;
@@ -23,4 +24,6 @@
 -(IBAction)p2:(id)sender;
 -(IBAction)p3:(id)sender;
 -(IBAction)p4:(id)sender;
+
+-(IBAction)p5:(id)sender;
 @end
