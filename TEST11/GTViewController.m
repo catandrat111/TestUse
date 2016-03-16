@@ -8,7 +8,7 @@
 
 #import "GTViewController.h"
 
-#import <GTFramework/GTFramework.h>
+#import "GTFramework/GTFramework.h"
 #import "Helper.h"
 @implementation GTViewController
 

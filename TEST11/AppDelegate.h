@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #define BLog(formatString, ...) NSLog((@"%s " formatString), __PRETTY_FUNCTION__, ##__VA_ARGS__);
+@class HelloWorldViewController;
 @interface AppDelegate : UIResponder <UIApplicationDelegate,NSURLSessionDelegate>
 
 @property (strong, nonatomic) UIWindow *window;

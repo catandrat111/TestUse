@@ -52,8 +52,10 @@
 #import "MJExtension.h"
 #import "NSDictionary+Log.h"
 #import "Constant.h"
+#import "iConsole.h"
+
 //#import <PonyDebugger/PonyDebugger.h>
-@interface AppDelegate ()
+@interface AppDelegate ()<iConsoleDelegate>
 
 @end
 
@@ -89,7 +91,8 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    self.window  =[[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    self.window = [[iConsoleWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+   // self.window  =[[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     ViewController* main = [[ViewController alloc] init];
     EZNavigationController* navi = [[EZNavigationController alloc] initWithRootViewController:main];
     self.window.rootViewController = navi;
@@ -181,7 +184,8 @@
     
     //后台抓取
     [[UIApplication sharedApplication] setMinimumBackgroundFetchInterval:UIApplicationBackgroundFetchIntervalMinimum];
-
+    [self testConsole];
+    [self testLogger];
     return YES;
 }
 //http://blog.sina.com.cn/s/blog_4c925dca0102uzdi.html
@@ -190,6 +194,41 @@
     NSString* h3 = nil;
     NSAssert(h3 != nil, @"名字不能为空！");
 }
+
+
+- (void)testConsole {
+    [iConsole sharedConsole].delegate = self;
+    
+    NSUInteger touches = (TARGET_IPHONE_SIMULATOR ? [iConsole sharedConsole].simulatorTouchesToShow: [iConsole sharedConsole].deviceTouchesToShow);
+    if (touches > 0 && touches < 11)
+    {
+         }
+    else if (TARGET_IPHONE_SIMULATOR ? [iConsole sharedConsole].simulatorShakeToShow: [iConsole sharedConsole].deviceShakeToShow)
+    {
+       
+    }
+    
+    //关闭 iconsole
+   // [iConsole sharedConsole].enabled = NO;
+
+    
+}
+
+
+- (void)handleConsoleCommand:(NSString *)command
+{
+    if ([command isEqualToString:@"version"])
+    {
+        [iConsole info:@"%@ version %@",
+         [[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleName"],
+         [[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleVersion"]];
+    }
+    else
+    {
+        [iConsole error:@"unrecognised command:%@, try 'version' instead",command];
+    }
+}
+
 
 //- (void)testPony {
 //    PDDebugger *debugger = [PDDebugger defaultInstance];
@@ -210,7 +249,7 @@
 -(void)application:(UIApplication *)application performFetchWithCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler {
     
     //在这里展示获取到数据后更新界面
-    BLog();
+   
     
     /*
      At the end of the fetch, invoke the completion handler.
@@ -243,6 +282,26 @@
     // Start the task
     [task resume];
     
+}
+
+- (void)testLogger {
+    LoggerSetViewerHost(NULL, (CFStringRef)@"172.16.16.165", (UInt32)50000);
+    LoggerSetOptions(NULL,						// configure the default logger
+                     kLoggerOption_BufferLogsUntilConnection |
+                     kLoggerOption_UseSSL |
+                     ( kLoggerOption_BrowseBonjour) |
+                     ( kLoggerOption_BrowseOnlyLocalDomain));
+    //    LoggerSetOptions(NULL,						// configure the default logger
+    //                     kLoggerOption_BufferLogsUntilConnection |
+    //                     kLoggerOption_UseSSL |
+    //                     ( 0) |
+    //                     (0));
+    
+    NSString *cacheDirectory = [NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) objectAtIndex:0];
+    NSString *logPath = [cacheDirectory stringByAppendingPathComponent:@"log.rawnsloggerdata"];
+    
+    LoggerSetBufferFile(NULL, (__bridge CFStringRef)logPath);
+
 }
 
 - (NSURLSession *)backgroundURLSession

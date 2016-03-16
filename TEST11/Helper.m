@@ -8,7 +8,7 @@
 
 #import "Helper.h"
 #import "AppDelegate.h"
-#import <GTFramework/GTFramework.h>
+#import "GTFramework/GTFramework.h"
 @implementation Helper
 /**
  *  向custom服务器请求gt验证

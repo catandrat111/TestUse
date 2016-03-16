@@ -322,6 +322,9 @@
 		BD6E07871C22BD3700B94F38 /* iphonetype.png in Resources */ = {isa = PBXBuildFile; fileRef = BD6E07861C22BD3600B94F38 /* iphonetype.png */; };
 		BD70B1C21BFDC81800027F33 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BD70B1C11BFDC81800027F33 /* main.m */; };
 		BD7115AC1C321F16007841D0 /* TableGroupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD7115AB1C321F16007841D0 /* TableGroupViewController.m */; };
+		BD7385A41C97E61B00AAD42D /* LoggerClient.m in Sources */ = {isa = PBXBuildFile; fileRef = BD7385A31C97E61B00AAD42D /* LoggerClient.m */; };
+		BD7385A91C97EEEB00AAD42D /* GTMStackTrace.m in Sources */ = {isa = PBXBuildFile; fileRef = BD7385A81C97EEEB00AAD42D /* GTMStackTrace.m */; };
+		BD7385AD1C97EEF400AAD42D /* iConsole.m in Sources */ = {isa = PBXBuildFile; fileRef = BD7385AC1C97EEF400AAD42D /* iConsole.m */; };
 		BD754A781BA16CFD00BE410D /* 类型编码.png in Resources */ = {isa = PBXBuildFile; fileRef = BD754A771BA16CFD00BE410D /* 类型编码.png */; };
 		BD754A7B1BA17E7C00BE410D /* NSInvocation+Improved.m in Sources */ = {isa = PBXBuildFile; fileRef = BD754A7A1BA17E7B00BE410D /* NSInvocation+Improved.m */; };
 		BD7641301C0E7ABA00846EF0 /* ImageviewInstance.m in Sources */ = {isa = PBXBuildFile; fileRef = BD76412E1C0E7AB900846EF0 /* ImageviewInstance.m */; };
@@ -404,6 +407,7 @@
 		BD89E1DA1C313C03007C8D2A /* B82872BC-7286-429D-BD4E-35D2ADE7C325.png in Resources */ = {isa = PBXBuildFile; fileRef = BD89E1D41C313C03007C8D2A /* B82872BC-7286-429D-BD4E-35D2ADE7C325.png */; };
 		BD89E1DB1C313C03007C8D2A /* mask_3.png in Resources */ = {isa = PBXBuildFile; fileRef = BD89E1D51C313C03007C8D2A /* mask_3.png */; };
 		BD89E1DC1C313C03007C8D2A /* mask_4.png in Resources */ = {isa = PBXBuildFile; fileRef = BD89E1D61C313C03007C8D2A /* mask_4.png */; };
+		BD8B06921C97BCA100536A45 /* NSLogger.app in Resources */ = {isa = PBXBuildFile; fileRef = BD8B06911C97BCA100536A45 /* NSLogger.app */; };
 		BD8B1F421C17D999004F9D60 /* ZHTelephonyVoiceVerificationCodeView.m in Sources */ = {isa = PBXBuildFile; fileRef = BD8B1F401C17D999004F9D60 /* ZHTelephonyVoiceVerificationCodeView.m */; };
 		BD8B1F431C17D999004F9D60 /* ZHTelephonyVoiceVerificationCodeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BD8B1F411C17D999004F9D60 /* ZHTelephonyVoiceVerificationCodeView.xib */; };
 		BD8B1F461C17D99F004F9D60 /* ZHBasicVerificationCodeView.m in Sources */ = {isa = PBXBuildFile; fileRef = BD8B1F451C17D99F004F9D60 /* ZHBasicVerificationCodeView.m */; };
@@ -1312,6 +1316,14 @@
 		BD70B1C11BFDC81800027F33 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		BD7115AA1C321F16007841D0 /* TableGroupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableGroupViewController.h; sourceTree = "<group>"; };
 		BD7115AB1C321F16007841D0 /* TableGroupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableGroupViewController.m; sourceTree = "<group>"; };
+		BD7385A01C97E61B00AAD42D /* LoggerClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoggerClient.h; sourceTree = "<group>"; };
+		BD7385A11C97E61B00AAD42D /* LoggerCommon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoggerCommon.h; sourceTree = "<group>"; };
+		BD7385A21C97E61B00AAD42D /* NSLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSLogger.h; sourceTree = "<group>"; };
+		BD7385A31C97E61B00AAD42D /* LoggerClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoggerClient.m; sourceTree = "<group>"; };
+		BD7385A71C97EEEB00AAD42D /* GTMStackTrace.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTMStackTrace.h; sourceTree = "<group>"; };
+		BD7385A81C97EEEB00AAD42D /* GTMStackTrace.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTMStackTrace.m; sourceTree = "<group>"; };
+		BD7385AB1C97EEF400AAD42D /* iConsole.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iConsole.h; sourceTree = "<group>"; };
+		BD7385AC1C97EEF400AAD42D /* iConsole.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iConsole.m; sourceTree = "<group>"; };
 		BD754A771BA16CFD00BE410D /* 类型编码.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "类型编码.png"; sourceTree = "<group>"; };
 		BD754A791BA17E7B00BE410D /* NSInvocation+Improved.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSInvocation+Improved.h"; sourceTree = "<group>"; };
 		BD754A7A1BA17E7B00BE410D /* NSInvocation+Improved.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSInvocation+Improved.m"; sourceTree = "<group>"; };
@@ -1443,6 +1455,7 @@
 		BD89E1D41C313C03007C8D2A /* B82872BC-7286-429D-BD4E-35D2ADE7C325.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "B82872BC-7286-429D-BD4E-35D2ADE7C325.png"; sourceTree = "<group>"; };
 		BD89E1D51C313C03007C8D2A /* mask_3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mask_3.png; sourceTree = "<group>"; };
 		BD89E1D61C313C03007C8D2A /* mask_4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mask_4.png; sourceTree = "<group>"; };
+		BD8B06911C97BCA100536A45 /* NSLogger.app */ = {isa = PBXFileReference; lastKnownFileType = wrapper.application; path = NSLogger.app; sourceTree = "<group>"; };
 		BD8B1F3F1C17D999004F9D60 /* ZHTelephonyVoiceVerificationCodeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZHTelephonyVoiceVerificationCodeView.h; sourceTree = "<group>"; };
 		BD8B1F401C17D999004F9D60 /* ZHTelephonyVoiceVerificationCodeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZHTelephonyVoiceVerificationCodeView.m; sourceTree = "<group>"; };
 		BD8B1F411C17D999004F9D60 /* ZHTelephonyVoiceVerificationCodeView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZHTelephonyVoiceVerificationCodeView.xib; sourceTree = "<group>"; };
@@ -1929,6 +1942,7 @@
 		BDFCFB2B1C2110220066BCFE /* CustomKVO1ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomKVO1ViewController.m; sourceTree = "<group>"; };
 		BDFEB8C41BDA18A50001FE1D /* GifViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GifViewController.h; sourceTree = "<group>"; };
 		BDFEB8C51BDA18A50001FE1D /* GifViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GifViewController.m; sourceTree = "<group>"; };
+		C2285397A98B32CEAF50CDD0 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -2013,6 +2027,7 @@
 				BDB3C2401C759ADD0039E146 /* AVFoundation.framework */,
 				BDB3C23E1C759AD20039E146 /* AudioToolbox.framework */,
 				BD8D3D3C1C083A7500B9B214 /* JavaScriptCore.framework */,
+				C2285397A98B32CEAF50CDD0 /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -2159,6 +2174,7 @@
 		5195B3ED1AB70284007CFA8B /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				BD8B06911C97BCA100536A45 /* NSLogger.app */,
 				BDAE10391B7C77AE001908A5 /* PrefixHeader.pch */,
 				BDB3C24A1C759BC60039E146 /* FeelinGood.mp3 */,
 				BDB3C24B1C759BC60039E146 /* IronBacon.mp3 */,
@@ -3502,6 +3518,44 @@
 			name = AlterviewGroup;
 			sourceTree = "<group>";
 		};
+		BD73859F1C97E60900AAD42D /* Logger */ = {
+			isa = PBXGroup;
+			children = (
+				BD7385A01C97E61B00AAD42D /* LoggerClient.h */,
+				BD7385A11C97E61B00AAD42D /* LoggerCommon.h */,
+				BD7385A21C97E61B00AAD42D /* NSLogger.h */,
+				BD7385A31C97E61B00AAD42D /* LoggerClient.m */,
+			);
+			name = Logger;
+			sourceTree = "<group>";
+		};
+		BD7385A51C97EEC700AAD42D /* ICONSLOLE */ = {
+			isa = PBXGroup;
+			children = (
+				BD7385AA1C97EEF400AAD42D /* iConsole */,
+				BD7385A61C97EEEB00AAD42D /* GTM */,
+			);
+			name = ICONSLOLE;
+			sourceTree = "<group>";
+		};
+		BD7385A61C97EEEB00AAD42D /* GTM */ = {
+			isa = PBXGroup;
+			children = (
+				BD7385A71C97EEEB00AAD42D /* GTMStackTrace.h */,
+				BD7385A81C97EEEB00AAD42D /* GTMStackTrace.m */,
+			);
+			path = GTM;
+			sourceTree = "<group>";
+		};
+		BD7385AA1C97EEF400AAD42D /* iConsole */ = {
+			isa = PBXGroup;
+			children = (
+				BD7385AB1C97EEF400AAD42D /* iConsole.h */,
+				BD7385AC1C97EEF400AAD42D /* iConsole.m */,
+			);
+			path = iConsole;
+			sourceTree = "<group>";
+		};
 		BD76412C1C0E7A7500846EF0 /* UIIMAGEVIEW */ = {
 			isa = PBXGroup;
 			children = (
@@ -3816,6 +3870,8 @@
 		BDAE12451B7C7FEC001908A5 /* LIbs */ = {
 			isa = PBXGroup;
 			children = (
+				BD7385A51C97EEC700AAD42D /* ICONSLOLE */,
+				BD73859F1C97E60900AAD42D /* Logger */,
 				BDA914ED1C1A808A00007CDC /* MKNetworkKit */,
 				BDE08D8A1C16D32100E47F61 /* EZNavigationController.h */,
 				BDE08D8B1C16D32100E47F61 /* EZNavigationController.m */,
@@ -4884,6 +4940,7 @@
 				BD8877AF1BF5AB9400F0EA08 /* MultiThreadViewInstance.xib in Resources */,
 				BDB3C23D1C7590770039E146 /* TBFifthViewController.xib in Resources */,
 				512CB77F1B5E841B0084E5AB /* Selected.png in Resources */,
+				BD8B06921C97BCA100536A45 /* NSLogger.app in Resources */,
 				BD754A781BA16CFD00BE410D /* 类型编码.png in Resources */,
 				BDB3C24E1C759BC60039E146 /* IronBacon.mp3 in Resources */,
 				BDB3C2391C7590770039E146 /* TBThirdViewController.xib in Resources */,
@@ -5090,6 +5147,7 @@
 				BDAE15611B7C7FED001908A5 /* UIScrollView+MJExtension.m in Sources */,
 				BDC766101B942A5D00EC31D7 /* UIAlertView+Blocks.m in Sources */,
 				51E10DFC1B481BD4009B162E /* MKMapView+BetterMaps.m in Sources */,
+				BD7385A41C97E61B00AAD42D /* LoggerClient.m in Sources */,
 				51E10E071B481BD4009B162E /* UIButton+Indicator.m in Sources */,
 				BDD31C581B9C121600E1A496 /* BasicUsageViewController.m in Sources */,
 				BD79F6A51BCBAE9000AE64FD /* DTTimePeriodChain.m in Sources */,
@@ -5233,6 +5291,7 @@
 				BDF49D491BB3E2CF00BEFE26 /* GCDApplyViewController.m in Sources */,
 				51E10E0E1B481BD4009B162E /* UIControl+ActionBlocks.m in Sources */,
 				BDFCFB271C210EFC0066BCFE /* Observer.m in Sources */,
+				BD7385A91C97EEEB00AAD42D /* GTMStackTrace.m in Sources */,
 				51E10DEE1B481BD4009B162E /* NSString+Emoji.m in Sources */,
 				BDAE154D1B7C7FED001908A5 /* MASViewConstraint.m in Sources */,
 				BD8CDF8C1BE33B460026D74E /* CYPortalTransitionAnimator.m in Sources */,
@@ -5391,6 +5450,7 @@
 				BDD31C4D1B9C0E9600E1A496 /* AnimationInstanceView.m in Sources */,
 				BD25F7801B8C081100C0BC8E /* HiTestDview.m in Sources */,
 				51E10DD01B481BD4009B162E /* NSDate+Formatter.m in Sources */,
+				BD7385AD1C97EEF400AAD42D /* iConsole.m in Sources */,
 				BDAE15D51B7C7FED001908A5 /* UIView+Position.m in Sources */,
 				BD5A39331C02F83D000E212F /* TWTExamplesListViewController.m in Sources */,
 				BD8CDF831BE33B460026D74E /* CoreLaunchCool.m in Sources */,
@@ -5709,8 +5769,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_ENTITLEMENTS = TEST11/TEST11.entitlements;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: yang cen (C5A2QJ6KBF)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: yang cen (C5A2QJ6KBF)";
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -5732,11 +5792,22 @@
 					"$(PROJECT_DIR)/TEST11/LIbs/JPush",
 					"$(PROJECT_DIR)/TEST11/LIbs/WeixinActivity/WeChatSDK_1.5",
 				);
-				OTHER_CFLAGS = "";
+				OTHER_CFLAGS = (
+					"$(inherited)",
+					"-isystem",
+					"\"${PODS_ROOT}/Headers/Public/NSLogger\"",
+					"-isystem",
+					"\"${PODS_ROOT}/Headers/Public\"",
+					"-isystem",
+					"\"${PODS_ROOT}/Headers/Public/PonyDebugger\"",
+					"-isystem",
+					"\"${PODS_ROOT}/Headers/Public/SocketRocket\"",
+				);
 				OTHER_LDFLAGS = "-ObjC";
-				PODS_ROOT = "";
+				PODS_ROOT = /Users/lichenze/Documents/opensource/TestUse/Pods;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				USER_HEADER_SEARCH_PATHS = "\"${PODS_ROOT}/Headers/Public/SocketRocket\" \"${PODS_ROOT}/Headers/Public/PonyDebugger\" \"${PODS_ROOT}/Headers/Public/NSLogger\" \"${PODS_ROOT}/Headers/Public\" $(inherited)";
 			};
 			name = Debug;
 		};
@@ -5746,8 +5817,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_ENTITLEMENTS = TEST11/TEST11.entitlements;
-				CODE_SIGN_IDENTITY = "iPhone Distribution";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -5770,11 +5841,22 @@
 					"$(PROJECT_DIR)/TEST11/LIbs/JPush",
 					"$(PROJECT_DIR)/TEST11/LIbs/WeixinActivity/WeChatSDK_1.5",
 				);
-				OTHER_CFLAGS = "";
+				OTHER_CFLAGS = (
+					"$(inherited)",
+					"-isystem",
+					"\"${PODS_ROOT}/Headers/Public/NSLogger\"",
+					"-isystem",
+					"\"${PODS_ROOT}/Headers/Public\"",
+					"-isystem",
+					"\"${PODS_ROOT}/Headers/Public/PonyDebugger\"",
+					"-isystem",
+					"\"${PODS_ROOT}/Headers/Public/SocketRocket\"",
+				);
 				OTHER_LDFLAGS = "-ObjC";
-				PODS_ROOT = "";
+				PODS_ROOT = /Users/lichenze/Documents/opensource/TestUse/Pods;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				USER_HEADER_SEARCH_PATHS = "\"${PODS_ROOT}/Headers/Public/SocketRocket\" \"${PODS_ROOT}/Headers/Public/PonyDebugger\" \"${PODS_ROOT}/Headers/Public/NSLogger\" \"${PODS_ROOT}/Headers/Public\" $(inherited)";
 			};
 			name = Release;
 		};
@@ -5977,11 +6059,22 @@
 					"$(PROJECT_DIR)/TEST11/LIbs/JPush",
 					"$(PROJECT_DIR)/TEST11/LIbs/WeixinActivity/WeChatSDK_1.5",
 				);
-				OTHER_CFLAGS = "";
+				OTHER_CFLAGS = (
+					"$(inherited)",
+					"-isystem",
+					"\"${PODS_ROOT}/Headers/Public/NSLogger\"",
+					"-isystem",
+					"\"${PODS_ROOT}/Headers/Public\"",
+					"-isystem",
+					"\"${PODS_ROOT}/Headers/Public/PonyDebugger\"",
+					"-isystem",
+					"\"${PODS_ROOT}/Headers/Public/SocketRocket\"",
+				);
 				OTHER_LDFLAGS = "-ObjC";
-				PODS_ROOT = "";
+				PODS_ROOT = /Users/lichenze/Documents/opensource/TestUse/Pods;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				USER_HEADER_SEARCH_PATHS = "\"${PODS_ROOT}/Headers/Public/SocketRocket\" \"${PODS_ROOT}/Headers/Public/PonyDebugger\" \"${PODS_ROOT}/Headers/Public/NSLogger\" \"${PODS_ROOT}/Headers/Public\" $(inherited)";
 			};
 			name = Beta;
 		};

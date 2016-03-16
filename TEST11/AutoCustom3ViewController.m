@@ -40,7 +40,7 @@
         NSArray *constrains = self.view.constraints;
         for (NSLayoutConstraint* constraint in constrains) {
             if (constraint.firstAttribute == NSLayoutAttributeLeading && constraint.firstItem == self.v2) {
-                constraint.constant = 100;
+                constraint.constant = 80;
             }
         }
         //更新约束  在某个时刻约束会被还原成frame使视图显示
@@ -62,7 +62,7 @@
         //子view的上边缘离父view的上边缘100个像素
         make.top.equalTo(weakSelf.view).with.offset(270);
         //子view的左边缘离父view的左边缘50个像素
-        make.left.equalTo(weakSelf.view).with.offset(30);
+        make.left.equalTo(weakSelf.view).with.offset(80);
         //子view的高度为1
         make.height.equalTo(@50);
         make.width.equalTo(@50);

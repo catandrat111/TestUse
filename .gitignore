@@ -4,7 +4,7 @@
 
 ## Build generated
 build/
-DerivedData
+DerivedData/
 
 ## Various settings
 *.pbxuser
@@ -15,13 +15,11 @@ DerivedData
 !default.mode2v3
 *.perspectivev3
 !default.perspectivev3
-xcuserdata
-*.xcuserstate
-## Other
-*.xccheckout
-*.moved-aside
+xcuserdata/
 
-*.xcscmblueprint
+## Other
+*.moved-aside
+*.xcuserstate
 
 ## Obj-C/Swift specific
 *.hmap
@@ -48,5 +46,6 @@ Carthage/Build
 # screenshots whenever they are needed.
 # For more information about the recommended setup visit:
 # https://github.com/fastlane/fastlane/blob/master/docs/Gitignore.md
+
 fastlane/report.xml
 fastlane/screenshots

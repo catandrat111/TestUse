@@ -69,13 +69,29 @@
     self.view.backgroundColor = [UIColor redColor];
     self.button5.backgroundColor = [UIColor yellowColor];
     self.button5.layer.cornerRadius = 5.0f;
-    self.button5.frameHeight = 60;
+    self.button5.frameHeight = 90;
+    
+    
+    UIImage *image = [UIImage imageNamed:@"11"];
+    LogImageData(@"image", 0, 320, 240, UIImagePNGRepresentation(image));
+    
+    LoggerApp(1, @"Hello world! Today is: %@", [NSDate date]);
+    
+    NSArray* arr = @[@"asd"];
+    // NSString *A = arr[0];
+    LoggerApp(1, @"arr[1] is: %@",arr[0] );
+    
+    NSLog(@"hello world");
+    
+    [iConsole info:@"Said '%@'", self.lab.text];
+    
+
 }
 
 -(IBAction)p2:(UIButton*)sender{
     [self.button1 hideIndicator];
     [self.button3 endSubmitting];
-    self.lab.frameHeight = 41.0f;
+    self.lab.frameHeight = 20.f;
      //NSString *message = [NSString stringWithFormat:@"\"%@\"，在去程飞机起飞日期时，年龄未超过12周岁，但在返程飞机起飞日期时，年龄已超过12周岁，因此无法以“儿童”身份购买往返儿童票。您可以重新预订两个单程订单，购买一张儿童票，一张成人票。",@"aa"];
 //    [UIAlertView showWithTitle:@"提示" message:message cancelButtonTitle:nil otherButtonTitles:@[@"确定",@"返回"] tapBlock:^(UIAlertView *alertView, NSInteger buttonIndex) {
 //        dispatch_async(dispatch_get_main_queue(), ^{//有cancle 为0 ，没有其他从0开始
