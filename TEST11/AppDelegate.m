@@ -54,6 +54,8 @@
 #import "Constant.h"
 #import "iConsole.h"
 
+#import <KSCrash/KSCrashInstallationStandard.h>
+
 //#import <PonyDebugger/PonyDebugger.h>
 @interface AppDelegate ()<iConsoleDelegate>
 
@@ -89,6 +91,14 @@
 //<string>mqq</string>
 //</array>
 
+//画一像素 http://www.cnblogs.com/smileEvday/p/iOS_PixelVsPoint.html
+
+#define SINGLE_LINE_WIDTH           (1 / [UIScreen mainScreen].scale)
+#define SINGLE_LINE_ADJUST_OFFSET   ((1 / [UIScreen mainScreen].scale) / 2)
+
+//CGFloat xPos = 5;
+//UIView *view = [[UIView alloc] initWithFrame:CGrect(x - SINGLE_LINE_ADJUST_OFFSET, 0, SINGLE_LINE_WIDTH, 100)];
+
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     self.window = [[iConsoleWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
@@ -97,8 +107,8 @@
     EZNavigationController* navi = [[EZNavigationController alloc] initWithRootViewController:main];
     self.window.rootViewController = navi;
     [self.window makeKeyAndVisible];
-    navi.navigationBar.translucent = NO;
-    
+    navi.navigationBar.translucent = YES;//决定视图是否从0开始
+    [[UINavigationBar appearance] setBarTintColor:UIColorFromRGB(0xd7000f)];
     //本地化
     NSString* h1 = NSLocalizedString(@"hello", @"comment");//
     NSLog(@"%@",h1);//你好
@@ -184,8 +194,9 @@
     
     //后台抓取
     [[UIApplication sharedApplication] setMinimumBackgroundFetchInterval:UIApplicationBackgroundFetchIntervalMinimum];
-    [self testConsole];
-    [self testLogger];
+   // [self testConsole];
+   // [self testLogger];
+    [self testFirim];
     return YES;
 }
 //http://blog.sina.com.cn/s/blog_4c925dca0102uzdi.html
@@ -195,6 +206,13 @@
     NSAssert(h3 != nil, @"名字不能为空！");
 }
 
+
+- (void)testFirim {
+    KSCrashInstallationStandard* installation = [KSCrashInstallationStandard sharedInstance];
+    installation.url = [NSURL URLWithString:@"https://collector.bughd.com/kscrash?key=83d8534d790f6b8f13143c6067d0ec3c"];
+    [installation install];
+    [installation sendAllReportsWithCompletion:nil];
+}
 
 - (void)testConsole {
     [iConsole sharedConsole].delegate = self;

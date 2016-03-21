@@ -407,7 +407,6 @@
 		BD89E1DA1C313C03007C8D2A /* B82872BC-7286-429D-BD4E-35D2ADE7C325.png in Resources */ = {isa = PBXBuildFile; fileRef = BD89E1D41C313C03007C8D2A /* B82872BC-7286-429D-BD4E-35D2ADE7C325.png */; };
 		BD89E1DB1C313C03007C8D2A /* mask_3.png in Resources */ = {isa = PBXBuildFile; fileRef = BD89E1D51C313C03007C8D2A /* mask_3.png */; };
 		BD89E1DC1C313C03007C8D2A /* mask_4.png in Resources */ = {isa = PBXBuildFile; fileRef = BD89E1D61C313C03007C8D2A /* mask_4.png */; };
-		BD8B06921C97BCA100536A45 /* NSLogger.app in Resources */ = {isa = PBXBuildFile; fileRef = BD8B06911C97BCA100536A45 /* NSLogger.app */; };
 		BD8B1F421C17D999004F9D60 /* ZHTelephonyVoiceVerificationCodeView.m in Sources */ = {isa = PBXBuildFile; fileRef = BD8B1F401C17D999004F9D60 /* ZHTelephonyVoiceVerificationCodeView.m */; };
 		BD8B1F431C17D999004F9D60 /* ZHTelephonyVoiceVerificationCodeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BD8B1F411C17D999004F9D60 /* ZHTelephonyVoiceVerificationCodeView.xib */; };
 		BD8B1F461C17D99F004F9D60 /* ZHBasicVerificationCodeView.m in Sources */ = {isa = PBXBuildFile; fileRef = BD8B1F451C17D99F004F9D60 /* ZHBasicVerificationCodeView.m */; };
@@ -612,6 +611,10 @@
 		BDC9C51A1C8FF5D8002A6EE1 /* ScrollViewInstance.m in Sources */ = {isa = PBXBuildFile; fileRef = BDC9C5191C8FF5D8002A6EE1 /* ScrollViewInstance.m */; };
 		BDCCA7AE1B8F04B8007ED1C9 /* RRPSectionFootView.m in Sources */ = {isa = PBXBuildFile; fileRef = BDCCA7AD1B8F04B8007ED1C9 /* RRPSectionFootView.m */; };
 		BDCCA7B11B8F0531007ED1C9 /* RRPSectionHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = BDCCA7B01B8F0531007ED1C9 /* RRPSectionHeaderView.m */; };
+		BDCEB7131C995472009A2865 /* KSCrash.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDCEB7121C995472009A2865 /* KSCrash.framework */; };
+		BDCEB7151C9954F1009A2865 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = BDCEB7141C9954F1009A2865 /* libc++.tbd */; };
+		BDCEB7171C9954F9009A2865 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = BDCEB7161C9954F9009A2865 /* libz.tbd */; };
+		BDCEB7191C995501009A2865 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDCEB7181C995501009A2865 /* SystemConfiguration.framework */; };
 		BDD1E1071B8FF29C0037A457 /* SearchBarInstanceView.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD1E1051B8FF29C0037A457 /* SearchBarInstanceView.m */; };
 		BDD1E1081B8FF29C0037A457 /* SearchBarInstanceView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BDD1E1061B8FF29C0037A457 /* SearchBarInstanceView.xib */; };
 		BDD1E10D1B9062F40037A457 /* SegmentControlInstanceView.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD1E10B1B9062F40037A457 /* SegmentControlInstanceView.m */; };
@@ -1455,7 +1458,6 @@
 		BD89E1D41C313C03007C8D2A /* B82872BC-7286-429D-BD4E-35D2ADE7C325.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "B82872BC-7286-429D-BD4E-35D2ADE7C325.png"; sourceTree = "<group>"; };
 		BD89E1D51C313C03007C8D2A /* mask_3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mask_3.png; sourceTree = "<group>"; };
 		BD89E1D61C313C03007C8D2A /* mask_4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mask_4.png; sourceTree = "<group>"; };
-		BD8B06911C97BCA100536A45 /* NSLogger.app */ = {isa = PBXFileReference; lastKnownFileType = wrapper.application; path = NSLogger.app; sourceTree = "<group>"; };
 		BD8B1F3F1C17D999004F9D60 /* ZHTelephonyVoiceVerificationCodeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZHTelephonyVoiceVerificationCodeView.h; sourceTree = "<group>"; };
 		BD8B1F401C17D999004F9D60 /* ZHTelephonyVoiceVerificationCodeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZHTelephonyVoiceVerificationCodeView.m; sourceTree = "<group>"; };
 		BD8B1F411C17D999004F9D60 /* ZHTelephonyVoiceVerificationCodeView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZHTelephonyVoiceVerificationCodeView.xib; sourceTree = "<group>"; };
@@ -1812,6 +1814,10 @@
 		BDCCA7AD1B8F04B8007ED1C9 /* RRPSectionFootView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RRPSectionFootView.m; sourceTree = "<group>"; };
 		BDCCA7AF1B8F0531007ED1C9 /* RRPSectionHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RRPSectionHeaderView.h; sourceTree = "<group>"; };
 		BDCCA7B01B8F0531007ED1C9 /* RRPSectionHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RRPSectionHeaderView.m; sourceTree = "<group>"; };
+		BDCEB7121C995472009A2865 /* KSCrash.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = KSCrash.framework; sourceTree = "<group>"; };
+		BDCEB7141C9954F1009A2865 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
+		BDCEB7161C9954F9009A2865 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		BDCEB7181C995501009A2865 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		BDD1E1041B8FF29C0037A457 /* SearchBarInstanceView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchBarInstanceView.h; sourceTree = "<group>"; };
 		BDD1E1051B8FF29C0037A457 /* SearchBarInstanceView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchBarInstanceView.m; sourceTree = "<group>"; };
 		BDD1E1061B8FF29C0037A457 /* SearchBarInstanceView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchBarInstanceView.xib; sourceTree = "<group>"; };
@@ -1950,12 +1956,16 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BDCEB7191C995501009A2865 /* SystemConfiguration.framework in Frameworks */,
+				BDCEB7171C9954F9009A2865 /* libz.tbd in Frameworks */,
+				BDCEB7151C9954F1009A2865 /* libc++.tbd in Frameworks */,
 				BD855DDB1C9269D400FD171A /* MobileCoreServices.framework in Frameworks */,
 				BD855DD91C9269BC00FD171A /* Security.framework in Frameworks */,
 				BDB3C2491C759B200039E146 /* NewsstandKit.framework in Frameworks */,
 				BDB3C2471C759AFB0039E146 /* MapKit.framework in Frameworks */,
 				BDB3C2451C759AF30039E146 /* CoreMedia.framework in Frameworks */,
 				BDB3C2431C759AE90039E146 /* CoreGraphics.framework in Frameworks */,
+				BDCEB7131C995472009A2865 /* KSCrash.framework in Frameworks */,
 				BDB3C2411C759ADD0039E146 /* AVFoundation.framework in Frameworks */,
 				BDB3C23F1C759AD20039E146 /* AudioToolbox.framework in Frameworks */,
 				BD8D3D3D1C083A7600B9B214 /* JavaScriptCore.framework in Frameworks */,
@@ -2018,6 +2028,9 @@
 		4B57CB8D439273592D6CB7DC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				BDCEB7181C995501009A2865 /* SystemConfiguration.framework */,
+				BDCEB7161C9954F9009A2865 /* libz.tbd */,
+				BDCEB7141C9954F1009A2865 /* libc++.tbd */,
 				BD855DDA1C9269D400FD171A /* MobileCoreServices.framework */,
 				BD855DD81C9269BC00FD171A /* Security.framework */,
 				BDB3C2481C759B200039E146 /* NewsstandKit.framework */,
@@ -2174,7 +2187,6 @@
 		5195B3ED1AB70284007CFA8B /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				BD8B06911C97BCA100536A45 /* NSLogger.app */,
 				BDAE10391B7C77AE001908A5 /* PrefixHeader.pch */,
 				BDB3C24A1C759BC60039E146 /* FeelinGood.mp3 */,
 				BDB3C24B1C759BC60039E146 /* IronBacon.mp3 */,
@@ -3620,6 +3632,7 @@
 		BD85848F1C2A841A001468F3 /* localize */ = {
 			isa = PBXGroup;
 			children = (
+				BDCEB7121C995472009A2865 /* KSCrash.framework */,
 				BD8584901C2A8525001468F3 /* localizable_3.png */,
 				BD8584911C2A8525001468F3 /* localizable_2.png */,
 				BD8584921C2A8525001468F3 /* localizable_1.png */,
@@ -4940,7 +4953,6 @@
 				BD8877AF1BF5AB9400F0EA08 /* MultiThreadViewInstance.xib in Resources */,
 				BDB3C23D1C7590770039E146 /* TBFifthViewController.xib in Resources */,
 				512CB77F1B5E841B0084E5AB /* Selected.png in Resources */,
-				BD8B06921C97BCA100536A45 /* NSLogger.app in Resources */,
 				BD754A781BA16CFD00BE410D /* 类型编码.png in Resources */,
 				BDB3C24E1C759BC60039E146 /* IronBacon.mp3 in Resources */,
 				BDB3C2391C7590770039E146 /* TBThirdViewController.xib in Resources */,
@@ -5808,6 +5820,10 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				USER_HEADER_SEARCH_PATHS = "\"${PODS_ROOT}/Headers/Public/SocketRocket\" \"${PODS_ROOT}/Headers/Public/PonyDebugger\" \"${PODS_ROOT}/Headers/Public/NSLogger\" \"${PODS_ROOT}/Headers/Public\" $(inherited)";
+				WARNING_CFLAGS = (
+					"-Wextra",
+					"-Wall",
+				);
 			};
 			name = Debug;
 		};
@@ -5857,6 +5873,10 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				USER_HEADER_SEARCH_PATHS = "\"${PODS_ROOT}/Headers/Public/SocketRocket\" \"${PODS_ROOT}/Headers/Public/PonyDebugger\" \"${PODS_ROOT}/Headers/Public/NSLogger\" \"${PODS_ROOT}/Headers/Public\" $(inherited)";
+				WARNING_CFLAGS = (
+					"-Wextra",
+					"-Wall",
+				);
 			};
 			name = Release;
 		};
@@ -6075,6 +6095,10 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				USER_HEADER_SEARCH_PATHS = "\"${PODS_ROOT}/Headers/Public/SocketRocket\" \"${PODS_ROOT}/Headers/Public/PonyDebugger\" \"${PODS_ROOT}/Headers/Public/NSLogger\" \"${PODS_ROOT}/Headers/Public\" $(inherited)";
+				WARNING_CFLAGS = (
+					"-Wextra",
+					"-Wall",
+				);
 			};
 			name = Beta;
 		};

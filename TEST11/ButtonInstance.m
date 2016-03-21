@@ -28,7 +28,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self.button1 setBackgroundColor:[UIColor redColor] forState:UIControlStateNormal];
-    self.edgesForExtendedLayout = UIRectEdgeNone;
+    //self.edgesForExtendedLayout = UIRectEdgeNone;
     [self.button1 showIndicator];
     
     //[self.button2 startTime:5 title:@"hello" waitTittle:@"world"];
@@ -52,6 +52,8 @@
     self.imgView.image = [UIImage imageNamed:@"Selected"];
     [self configureButton];
     
+
+    self.navigationController.navigationBar.translucent = YES;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -70,20 +72,24 @@
     self.button5.backgroundColor = [UIColor yellowColor];
     self.button5.layer.cornerRadius = 5.0f;
     self.button5.frameHeight = 90;
-    
-    
-    UIImage *image = [UIImage imageNamed:@"11"];
-    LogImageData(@"image", 0, 320, 240, UIImagePNGRepresentation(image));
-    
-    LoggerApp(1, @"Hello world! Today is: %@", [NSDate date]);
-    
     NSArray* arr = @[@"asd"];
-    // NSString *A = arr[0];
-    LoggerApp(1, @"arr[1] is: %@",arr[0] );
     
-    NSLog(@"hello world");
+    CGFloat alpha = self.navigationController.navigationBar.alpha;
+    self.navigationController.navigationBar.alpha = (alpha==1.f)?0:1;
+    NSString *A = arr[1];
     
-    [iConsole info:@"Said '%@'", self.lab.text];
+//    UIImage *image = [UIImage imageNamed:@"11"];
+//    LogImageData(@"image", 0, 320, 240, UIImagePNGRepresentation(image));
+//    
+//    LoggerApp(1, @"Hello world! Today is: %@", [NSDate date]);
+//    
+//    NSArray* arr = @[@"asd"];
+//     NSString *A = arr[1];
+//    LoggerApp(1, @"arr[1] is: %@",arr[0] );
+//    
+//    NSLog(@"hello world");
+//    
+//    [iConsole info:@"Said '%@'", self.lab.text];
     
 
 }
