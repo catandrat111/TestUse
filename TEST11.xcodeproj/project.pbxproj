@@ -251,6 +251,14 @@
 		BD1658431BA7CC1B00874780 /* TableViewLayoutCell1.xib in Resources */ = {isa = PBXBuildFile; fileRef = BD1658411BA7CC1B00874780 /* TableViewLayoutCell1.xib */; };
 		BD1658461BA7EEA600874780 /* RunLoopTestModel.m in Sources */ = {isa = PBXBuildFile; fileRef = BD1658451BA7EEA600874780 /* RunLoopTestModel.m */; };
 		BD1658491BA810D200874780 /* AntiAlias.m in Sources */ = {isa = PBXBuildFile; fileRef = BD1658481BA810D100874780 /* AntiAlias.m */; };
+		BD24F7B91D2B3704001F4AD6 /* RSAEncryptor.m in Sources */ = {isa = PBXBuildFile; fileRef = BD24F7B81D2B3704001F4AD6 /* RSAEncryptor.m */; };
+		BD24F7BC1D2B37BA001F4AD6 /* private_key.p12 in Resources */ = {isa = PBXBuildFile; fileRef = BD24F7BA1D2B37BA001F4AD6 /* private_key.p12 */; };
+		BD24F7BD1D2B37BA001F4AD6 /* public_key.der in Resources */ = {isa = PBXBuildFile; fileRef = BD24F7BB1D2B37BA001F4AD6 /* public_key.der */; };
+		BD24F7C51D2B3959001F4AD6 /* Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = BD24F7C21D2B3959001F4AD6 /* Base64.m */; };
+		BD24F7C61D2B3959001F4AD6 /* DES3Util.m in Sources */ = {isa = PBXBuildFile; fileRef = BD24F7C31D2B3959001F4AD6 /* DES3Util.m */; };
+		BD24F7C71D2B3959001F4AD6 /* ZSCHRSA.m in Sources */ = {isa = PBXBuildFile; fileRef = BD24F7C41D2B3959001F4AD6 /* ZSCHRSA.m */; };
+		BD24F7C91D2B421E001F4AD6 /* zsch_client_private_key.p12 in Resources */ = {isa = PBXBuildFile; fileRef = BD24F7C81D2B421E001F4AD6 /* zsch_client_private_key.p12 */; };
+		BD24F7CB1D2B4226001F4AD6 /* zsch_client_public_key.der in Resources */ = {isa = PBXBuildFile; fileRef = BD24F7CA1D2B4226001F4AD6 /* zsch_client_public_key.der */; };
 		BD25F7741B8C05DE00C0BC8E /* HitTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD25F7731B8C05DE00C0BC8E /* HitTestViewController.m */; };
 		BD25F7771B8C076E00C0BC8E /* HitTestAView.m in Sources */ = {isa = PBXBuildFile; fileRef = BD25F7761B8C076E00C0BC8E /* HitTestAView.m */; };
 		BD25F77A1B8C07B500C0BC8E /* HiTestBView.m in Sources */ = {isa = PBXBuildFile; fileRef = BD25F7791B8C07B500C0BC8E /* HiTestBView.m */; };
@@ -1187,6 +1195,18 @@
 		BD1658451BA7EEA600874780 /* RunLoopTestModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RunLoopTestModel.m; sourceTree = "<group>"; };
 		BD1658471BA810D100874780 /* AntiAlias.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AntiAlias.h; sourceTree = "<group>"; };
 		BD1658481BA810D100874780 /* AntiAlias.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AntiAlias.m; sourceTree = "<group>"; };
+		BD24F7B71D2B3704001F4AD6 /* RSAEncryptor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSAEncryptor.h; sourceTree = "<group>"; };
+		BD24F7B81D2B3704001F4AD6 /* RSAEncryptor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSAEncryptor.m; sourceTree = "<group>"; };
+		BD24F7BA1D2B37BA001F4AD6 /* private_key.p12 */ = {isa = PBXFileReference; lastKnownFileType = file; path = private_key.p12; sourceTree = "<group>"; };
+		BD24F7BB1D2B37BA001F4AD6 /* public_key.der */ = {isa = PBXFileReference; lastKnownFileType = file; path = public_key.der; sourceTree = "<group>"; };
+		BD24F7BE1D2B3959001F4AD6 /* Base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Base64.h; sourceTree = "<group>"; };
+		BD24F7BF1D2B3959001F4AD6 /* DES3Util.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DES3Util.h; sourceTree = "<group>"; };
+		BD24F7C01D2B3959001F4AD6 /* ZSCHRSA.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZSCHRSA.h; sourceTree = "<group>"; };
+		BD24F7C21D2B3959001F4AD6 /* Base64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Base64.m; sourceTree = "<group>"; };
+		BD24F7C31D2B3959001F4AD6 /* DES3Util.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DES3Util.m; sourceTree = "<group>"; };
+		BD24F7C41D2B3959001F4AD6 /* ZSCHRSA.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZSCHRSA.m; sourceTree = "<group>"; };
+		BD24F7C81D2B421E001F4AD6 /* zsch_client_private_key.p12 */ = {isa = PBXFileReference; lastKnownFileType = file; path = zsch_client_private_key.p12; sourceTree = "<group>"; };
+		BD24F7CA1D2B4226001F4AD6 /* zsch_client_public_key.der */ = {isa = PBXFileReference; lastKnownFileType = file; path = zsch_client_public_key.der; sourceTree = "<group>"; };
 		BD25F7721B8C05DE00C0BC8E /* HitTestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HitTestViewController.h; sourceTree = "<group>"; };
 		BD25F7731B8C05DE00C0BC8E /* HitTestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HitTestViewController.m; sourceTree = "<group>"; };
 		BD25F7751B8C076E00C0BC8E /* HitTestAView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HitTestAView.h; sourceTree = "<group>"; };
@@ -1956,11 +1976,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BD855DD91C9269BC00FD171A /* Security.framework in Frameworks */,
 				BDCEB7191C995501009A2865 /* SystemConfiguration.framework in Frameworks */,
 				BDCEB7171C9954F9009A2865 /* libz.tbd in Frameworks */,
 				BDCEB7151C9954F1009A2865 /* libc++.tbd in Frameworks */,
 				BD855DDB1C9269D400FD171A /* MobileCoreServices.framework in Frameworks */,
-				BD855DD91C9269BC00FD171A /* Security.framework in Frameworks */,
 				BDB3C2491C759B200039E146 /* NewsstandKit.framework in Frameworks */,
 				BDB3C2471C759AFB0039E146 /* MapKit.framework in Frameworks */,
 				BDB3C2451C759AF30039E146 /* CoreMedia.framework in Frameworks */,
@@ -2139,6 +2159,7 @@
 		5195B3EC1AB70284007CFA8B /* TEST11 */ = {
 			isa = PBXGroup;
 			children = (
+				BD24F7B61D2B36ED001F4AD6 /* RSA */,
 				BDC9C5171C8FF5A0002A6EE1 /* scrollview */,
 				BD9B2CE31C8D52AA004DAABC /* instrumenttest */,
 				BD6138C61C74493E00B0F4B7 /* nsurlconnection */,
@@ -3204,6 +3225,25 @@
 				BD1070E51C046DF300CC1612 /* CLLineViewController.m */,
 			);
 			name = Line;
+			sourceTree = "<group>";
+		};
+		BD24F7B61D2B36ED001F4AD6 /* RSA */ = {
+			isa = PBXGroup;
+			children = (
+				BD24F7CA1D2B4226001F4AD6 /* zsch_client_public_key.der */,
+				BD24F7C81D2B421E001F4AD6 /* zsch_client_private_key.p12 */,
+				BD24F7BE1D2B3959001F4AD6 /* Base64.h */,
+				BD24F7C21D2B3959001F4AD6 /* Base64.m */,
+				BD24F7BF1D2B3959001F4AD6 /* DES3Util.h */,
+				BD24F7C31D2B3959001F4AD6 /* DES3Util.m */,
+				BD24F7C01D2B3959001F4AD6 /* ZSCHRSA.h */,
+				BD24F7C41D2B3959001F4AD6 /* ZSCHRSA.m */,
+				BD24F7BA1D2B37BA001F4AD6 /* private_key.p12 */,
+				BD24F7BB1D2B37BA001F4AD6 /* public_key.der */,
+				BD24F7B71D2B3704001F4AD6 /* RSAEncryptor.h */,
+				BD24F7B81D2B3704001F4AD6 /* RSAEncryptor.m */,
+			);
+			name = RSA;
 			sourceTree = "<group>";
 		};
 		BD5A38FC1C02DE32000E212F /* Ipad1 */ = {
@@ -4857,6 +4897,7 @@
 				BDB3C24D1C759BC60039E146 /* FeelinGood.mp3 in Resources */,
 				BD80F1451BF46D8C0046FA80 /* stretch_vertically-1.png in Resources */,
 				5158D1941B7E242000ACF3AD /* DrawViewInstance.xib in Resources */,
+				BD24F7CB1D2B4226001F4AD6 /* zsch_client_public_key.der in Resources */,
 				BDAE15BE1B7C7FED001908A5 /* LICENSE.txt in Resources */,
 				BDD61C1A1BB3946800BC4264 /* forkingdog@2x.png in Resources */,
 				5158D19C1B7E253000ACF3AD /* CircleViewController.xib in Resources */,
@@ -4924,6 +4965,7 @@
 				BDF49D4A1BB3E2CF00BEFE26 /* GCDApplyViewController.xib in Resources */,
 				BD8877A11BF5826900F0EA08 /* photo1.png in Resources */,
 				BD80F1511BF475C50046FA80 /* HUDViewController.xib in Resources */,
+				BD24F7BD1D2B37BA001F4AD6 /* public_key.der in Resources */,
 				BDD1E10E1B9062F40037A457 /* SegmentControlInstanceView.xib in Resources */,
 				BD1070D21C045E2900CC1612 /* cl_3.png in Resources */,
 				BD8584931C2A8525001468F3 /* localizable_3.png in Resources */,
@@ -4950,6 +4992,7 @@
 				BD80F13C1BF46CB10046FA80 /* stretch_vertically-2.png in Resources */,
 				BDAE15C81B7C7FED001908A5 /* LICENSE in Resources */,
 				BD047E6C1BD8C5CB00D020E3 /* AutoCustom2ViewController.xib in Resources */,
+				BD24F7BC1D2B37BA001F4AD6 /* private_key.p12 in Resources */,
 				BD8877AF1BF5AB9400F0EA08 /* MultiThreadViewInstance.xib in Resources */,
 				BDB3C23D1C7590770039E146 /* TBFifthViewController.xib in Resources */,
 				512CB77F1B5E841B0084E5AB /* Selected.png in Resources */,
@@ -4963,6 +5006,7 @@
 				BD80F1631BF47E270046FA80 /* 37x-Checkmark.png in Resources */,
 				BDB3C2371C7590770039E146 /* TBSecondViewController.xib in Resources */,
 				BDB3C23B1C7590770039E146 /* TBFourthViewController.xib in Resources */,
+				BD24F7C91D2B421E001F4AD6 /* zsch_client_private_key.p12 in Resources */,
 				BD10709B1C04049200CC1612 /* thing01.jpg in Resources */,
 				BD80F13D1BF46CB10046FA80 /* stretch2.png in Resources */,
 				BD89E1D71C313C03007C8D2A /* mask_1.png in Resources */,
@@ -5165,6 +5209,7 @@
 				BD79F6A51BCBAE9000AE64FD /* DTTimePeriodChain.m in Sources */,
 				51E10DD11B481BD4009B162E /* NSDate+Reporting.m in Sources */,
 				BD8877B51BF5AF4600F0EA08 /* KCImageData.m in Sources */,
+				BD24F7C71D2B3959001F4AD6 /* ZSCHRSA.m in Sources */,
 				BD5A39311C02F83D000E212F /* TWTDismissAnimationController.m in Sources */,
 				BD1070E61C046DF300CC1612 /* CLLineViewController.m in Sources */,
 				51E10DE71B481BD4009B162E /* NSObject+MKBlockTimer.m in Sources */,
@@ -5294,6 +5339,7 @@
 				51E10C371B47A8EB009B162E /* TableInstanceView.m in Sources */,
 				BD1070E91C046E0000CC1612 /* LineLayout.m in Sources */,
 				BD8CDF841BE33B460026D74E /* CoreLaunchFlip.m in Sources */,
+				BD24F7C51D2B3959001F4AD6 /* Base64.m in Sources */,
 				BD5E8EB81BB51CC40088FE6D /* HCDCreateInvocationOperation.m in Sources */,
 				BD5E8EBB1BB51CE00088FE6D /* HCDConcurrentOperation.m in Sources */,
 				BDAE15BF1B7C7FED001908A5 /* README.md in Sources */,
@@ -5313,6 +5359,7 @@
 				BDAE15AC1B7C7FED001908A5 /* UIButton+WebCache.m in Sources */,
 				51E10DD61B481BD4009B162E /* NSDictionary+Block.m in Sources */,
 				BD79F6A81BCBAE9000AE64FD /* NSDate+DateTools.m in Sources */,
+				BD24F7C61D2B3959001F4AD6 /* DES3Util.m in Sources */,
 				BDADA2CA1BF9B46B0076BFDF /* KCAnimationStepViewController.m in Sources */,
 				BD1070DD1C0461DA00CC1612 /* CircleLayout.m in Sources */,
 				BDD7697E1BBA631C006A4CF4 /* ZOCNews.m in Sources */,
@@ -5359,6 +5406,7 @@
 				51E10DF71B481BD4009B162E /* NSString+UUID.m in Sources */,
 				BD8D3D381C0834FD00B9B214 /* WebView2ViewController.m in Sources */,
 				51E10DE11B481BD4009B162E /* NSObject+AddProperty.m in Sources */,
+				BD24F7B91D2B3704001F4AD6 /* RSAEncryptor.m in Sources */,
 				BDAE15B41B7C7FED001908A5 /* README.md in Sources */,
 				BDAE103D1B7C786F001908A5 /* AutoSizeViewInstance.m in Sources */,
 				BD8CDF891BE33B460026D74E /* CoreLaunchPlus.m in Sources */,

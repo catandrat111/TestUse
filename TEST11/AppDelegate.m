@@ -55,6 +55,8 @@
 #import "iConsole.h"
 
 #import <KSCrash/KSCrashInstallationStandard.h>
+#import "RSAEncryptor.h"
+#import "ZSCHRSA.h"
 
 //#import <PonyDebugger/PonyDebugger.h>
 @interface AppDelegate ()<iConsoleDelegate>
@@ -197,6 +199,22 @@
    // [self testConsole];
    // [self testLogger];
     [self testFirim];
+    
+    
+    RSAEncryptor* rsaEncryptor = [[RSAEncryptor alloc] init];
+    NSString* publicKeyPath = [[NSBundle mainBundle] pathForResource:@"public_key" ofType:@"der"];
+    NSString* privateKeyPath = [[NSBundle mainBundle] pathForResource:@"private_key" ofType:@"p12"];
+    [rsaEncryptor loadPublicKeyFromFile: publicKeyPath];
+    [rsaEncryptor loadPrivateKeyFromFile: privateKeyPath password:@"1234"];    // 这里，请换成你生成p12时的密码
+    
+    NSString* restrinBASE64STRING = [rsaEncryptor rsaEncryptString:@"hello"];
+    NSLog(@"Encrypted: %@", restrinBASE64STRING);       // 请把这段字符串Copy到JAVA这边main()里做测试
+    NSString* decryptString = [rsaEncryptor rsaDecryptString: restrinBASE64STRING];
+    NSLog(@"Decrypted: %@", decryptString);
+    
+    NSString* restrinBASE64STRING1 = [ZSCHRSA rsaEncryptString:@"hello"];
+    NSString* decryptString1 = [ZSCHRSA rsaDescryptString: restrinBASE64STRING1];
+    
     return YES;
 }
 //http://blog.sina.com.cn/s/blog_4c925dca0102uzdi.html
