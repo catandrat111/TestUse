@@ -57,6 +57,7 @@
 #import <KSCrash/KSCrashInstallationStandard.h>
 #import "RSAEncryptor.h"
 #import "ZSCHRSA.h"
+#import "User.h"
 
 //#import <PonyDebugger/PonyDebugger.h>
 @interface AppDelegate ()<iConsoleDelegate>
@@ -94,7 +95,7 @@
 //</array>
 
 //画一像素 http://www.cnblogs.com/smileEvday/p/iOS_PixelVsPoint.html
-
+typedef int (^frd)(NSString* st);
 #define SINGLE_LINE_WIDTH           (1 / [UIScreen mainScreen].scale)
 #define SINGLE_LINE_ADJUST_OFFSET   ((1 / [UIScreen mainScreen].scale) / 2)
 
@@ -198,9 +199,29 @@
     [[UIApplication sharedApplication] setMinimumBackgroundFetchInterval:UIApplicationBackgroundFetchIntervalMinimum];
    // [self testConsole];
    // [self testLogger];
-    [self testFirim];
+    //[self testFirim];
+
+    
+    [self testRsa];
+    
+    Son* son = [Son new];
     
     
+
+    return YES;
+}
+//http://blog.sina.com.cn/s/blog_4c925dca0102uzdi.html
+- (void)assetrtTest {
+    DLog(@"dlog test")
+    NSString* h3 = nil;
+    NSAssert(h3 != nil, @"名字不能为空！");
+    
+    
+}
+
+
+
+- (void)testRsa {
     RSAEncryptor* rsaEncryptor = [[RSAEncryptor alloc] init];
     NSString* publicKeyPath = [[NSBundle mainBundle] pathForResource:@"public_key" ofType:@"der"];
     NSString* privateKeyPath = [[NSBundle mainBundle] pathForResource:@"private_key" ofType:@"p12"];
@@ -212,18 +233,12 @@
     NSString* decryptString = [rsaEncryptor rsaDecryptString: restrinBASE64STRING];
     NSLog(@"Decrypted: %@", decryptString);
     
-    NSString* restrinBASE64STRING1 = [ZSCHRSA rsaEncryptString:@"hello"];
-    NSString* decryptString1 = [ZSCHRSA rsaDescryptString: restrinBASE64STRING1];
     
-    return YES;
-}
-//http://blog.sina.com.cn/s/blog_4c925dca0102uzdi.html
-- (void)assetrtTest {
-    DLog(@"dlog test")
-    NSString* h3 = nil;
-    NSAssert(h3 != nil, @"名字不能为空！");
-}
+    
+   // NSString* restrinBASE64STRING1 = [ZSCHRSA rsaEncryptString:@"hello"];//测试需要改key
+    //NSString* decryptString1 = [ZSCHRSA rsaDescryptString: restrinBASE64STRING1];
 
+}
 
 - (void)testFirim {
     KSCrashInstallationStandard* installation = [KSCrashInstallationStandard sharedInstance];

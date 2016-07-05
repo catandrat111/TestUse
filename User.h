@@ -35,3 +35,12 @@
 - (NSString *)appendMyString:(NSString *)string age:(NSInteger)age;
 - (NSString *)appendTestMyString:(NSString *)string;
 @end
+
+
+@interface Father : NSObject
+
+@end
+
+@interface Son : Father
+- (id)init;
+@end

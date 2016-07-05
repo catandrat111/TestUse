@@ -91,6 +91,8 @@ static int static_global_val = 2;
 //    [self methodTransmit2];
 //    [self methodTransmit3];
 //    [p1 blocktest];
+    
+    [self calentdarTest];
    
     
     
@@ -720,6 +722,78 @@ struct objc_class {
     
     BOOL b2 = [date1 isEqualToDateIgnoringTime:other];
     NSLog(@"b2:%@",@(b2));
+}
+
+
+- (void)calentdarTest {
+    //忽略小时分钟 计算相差天数
+     NSDateFormatter* formatter = [[NSDateFormatter alloc] init];
+    [formatter setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
+    NSCalendar* calendar = [NSCalendar currentCalendar];
+    NSDate* currdate = [NSDate date];
+    NSDate *fromDate;
+     NSDate *toDate;
+    [calendar rangeOfUnit:NSCalendarUnitDay startDate:&fromDate interval:nil forDate:currdate];
+    [calendar rangeOfUnit:NSDayCalendarUnit startDate:&toDate interval:NULL forDate:[formatter dateFromString:@"2016-07-06 12:02:03"]];
+    
+   NSDateComponents* comp = [calendar components:NSCalendarUnitDay fromDate:fromDate toDate:toDate options:0];
+    
+    
+    //拆分一个时间
+
+    NSDateComponents * components = [calendar components:NSCalendarUnitMinute | NSCalendarUnitMonth | NSCalendarUnitHour | NSCalendarUnitDay fromDate:currdate];
+    NSLog(@"%ld月%ld日%ld时%ld分" ,(long)components.month,(long)components.day,(long)components.hour,(long)components.minute);
+    
+    //相对序号
+    //例如，查看今天是在今年的第几周
+    NSInteger week = [calendar ordinalityOfUnit:NSCalendarUnitWeekday inUnit:NSCalendarUnitYear forDate:currdate];
+    NSLog(@"今天是今年的第%ld周",week);
+    
+    //根据拆分时间返回NSDate
+    components.year = 2015;
+    components.month = 7;
+    components.day = 11;
+    components.hour = 10;
+    components.minute = 30;
+    components.second = 20;
+
+    NSDate * date = [calendar dateFromComponents:components];
+    
+    formatter.dateFormat = @"yyyy年MM月dd日hh时mm分ss秒";
+    NSString * str = [formatter stringFromDate:date];
+    NSLog(@"%@",str);
+    
+    
+    //现在往后11天10小时
+    components.day = 11;
+    components.hour = 10;
+    NSDate * nextData = [calendar dateByAddingComponents:components toDate:currdate options:NSCalendarMatchStrictly];
+    
+    formatter.dateFormat = @"yyyy年MM月dd日hh时mm分ss秒";
+    NSString * str1 = [formatter stringFromDate:nextData];
+    NSLog(@"%@",str1);
+
+    //这个月有多少天
+    NSRange range = [calendar rangeOfUnit:NSCalendarUnitDay inUnit:NSCalendarUnitMonth forDate:currdate];
+    
+    // (NSUInteger)ordinalityOfUnit:(NSCalendarUnit)smaller inUnit:(NSCalendarUnit)larger forDate:(NSDate *)date
+//    返回某个特定时间(date)其对应的小的时间单元(smaller)在大的时间单元(larger)中的顺序，比如:
+//    . 要取得2008/11/12在当月的第几周则可以这样调用该方法:
+//    [calendar ordinalityOfUnit:NSWeekOrdinalCalendarUnit inUnit: NSWeekCalendarUnit forDate: someDate];
+//    注: someDate存放了2008/11/12
+//    . 要取得1:50分在一天中处于第几个小时，则可以这样调用该方法:
+//    [calendar ordinalityOfUnit:NSHourCalendarUnit inUnit: NSDayCalendarUnit forDate: someTime];
+//    注: someTime存放了1:50
+//    . 其它请参照firstWeekday和minimumDaysInFirstWeek中的说明
+//    
+//    - (NSRange)rangeOfUnit:(NSCalendarUnit)smaller inUnit:(NSCalendarUnit)larger forDate:(NSDate *)date
+//    返回某个特定时间(date)其对应的小的时间单元(smaller)在大的时间单元(larger)中的范围，比如:
+//    . 要取得2008/11/12在所在月份的日期范围则可以这样调用该方法:
+//    [calendar ordinalityOfUnit:NSDayCalendarUnit inUnit: NSMonthCalendarUnit forDate:fDate];
+//    则返回1-31。
+//    . 要取得2008/02/20在所在月份的日期范围则可以这样调用该方法:
+//    [calendar ordinalityOfUnit:NSDayCalendarUnit inUnit:NSMonthCalendarUnit forDate:fDate];
+//    则返回1-29。
 }
 
 - (void)vaFunc:(NSObject*)string,... {

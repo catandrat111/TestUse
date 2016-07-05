@@ -119,6 +119,28 @@ static int32_t const primes[] = {
 -(id)objectInArraTestAtIndex:(NSUInteger)index{
     return @"5";
 }
+
+
+@end
+
+@implementation Father
+
+
+
+@end
+
+@implementation Son
+
+- (id)init
+{
+    self = [super init];
+    if (self) {
+        NSLog(@"%@", NSStringFromClass([self class]));
+        NSLog(@"%@", NSStringFromClass([super class]));
+    }
+    return self;
+}
+
 @end
 
 

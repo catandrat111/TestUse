@@ -39,7 +39,7 @@
 -(void) loadPublicKeyFromFile: (NSString*) derFilePath
 {
     NSData *derData = [[NSData alloc] initWithContentsOfFile:derFilePath];
-    NSString* test = [derData base64EncodedString];
+    NSString* test = [derData base64EncodedString];//获得公钥
     [self loadPublicKeyFromData: derData];
 }
 -(void) loadPublicKeyFromData: (NSData*) derData
@@ -50,7 +50,7 @@
 -(void) loadPrivateKeyFromFile: (NSString*) p12FilePath password:(NSString*)p12Password
 {
     NSData *p12Data = [NSData dataWithContentsOfFile:p12FilePath];
-    NSString* test = [p12Data base64EncodedString];
+    NSString* test = [p12Data base64EncodedString];//获得私钥
     
     [self loadPrivateKeyFromData: p12Data password:p12Password];
 }
@@ -146,6 +146,7 @@
 
 
 
+
 #pragma mark - Decrypt
 
 -(NSString*) rsaDecryptString:(NSString*)string {
@@ -172,9 +173,6 @@
     
     return decryptedData;
 }
-
-
-
 
 
 
