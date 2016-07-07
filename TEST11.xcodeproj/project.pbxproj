@@ -266,6 +266,7 @@
 		BD25F77D1B8C07E600C0BC8E /* HitTestCView.m in Sources */ = {isa = PBXBuildFile; fileRef = BD25F77C1B8C07E600C0BC8E /* HitTestCView.m */; };
 		BD25F7801B8C081100C0BC8E /* HiTestDview.m in Sources */ = {isa = PBXBuildFile; fileRef = BD25F77F1B8C081100C0BC8E /* HiTestDview.m */; };
 		BD25F7821B8C151300C0BC8E /* hit-test-depth-first-traversal.png in Resources */ = {isa = PBXBuildFile; fileRef = BD25F7811B8C151300C0BC8E /* hit-test-depth-first-traversal.png */; };
+		BD2775911D2E5E6000C8F368 /* 1458633174180748.png in Resources */ = {isa = PBXBuildFile; fileRef = BD2775901D2E5E6000C8F368 /* 1458633174180748.png */; };
 		BD3570A71BB29EF900559A9A /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BD3570A61BB29EF900559A9A /* libsqlite3.dylib */; };
 		BD3570A91BB29F2A00559A9A /* libz.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BD3570A81BB29F2900559A9A /* libz.1.dylib */; };
 		BD54BCEB1BFB250B00FAEDAE /* RecordingCircleOverlayView.m in Sources */ = {isa = PBXBuildFile; fileRef = BD54BCEA1BFB250B00FAEDAE /* RecordingCircleOverlayView.m */; };
@@ -328,7 +329,6 @@
 		BD6E077E1C227F6D00B94F38 /* FDTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD6E077A1C227F6D00B94F38 /* FDTableViewController.m */; };
 		BD6E07811C227FEF00B94F38 /* HCDCreateBlockOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = BD6E07801C227FEF00B94F38 /* HCDCreateBlockOperation.m */; };
 		BD6E07831C22A0EC00B94F38 /* p.png in Resources */ = {isa = PBXBuildFile; fileRef = BD6E07821C22A0EC00B94F38 /* p.png */; };
-		BD6E07851C22A0F700B94F38 /* bf3d23c7jw1eygypvxaowj20vl2e9wqq.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BD6E07841C22A0F700B94F38 /* bf3d23c7jw1eygypvxaowj20vl2e9wqq.jpg */; };
 		BD6E07871C22BD3700B94F38 /* iphonetype.png in Resources */ = {isa = PBXBuildFile; fileRef = BD6E07861C22BD3600B94F38 /* iphonetype.png */; };
 		BD70B1C21BFDC81800027F33 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BD70B1C11BFDC81800027F33 /* main.m */; };
 		BD7115AC1C321F16007841D0 /* TableGroupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD7115AB1C321F16007841D0 /* TableGroupViewController.m */; };
@@ -1219,6 +1219,7 @@
 		BD25F77E1B8C081100C0BC8E /* HiTestDview.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HiTestDview.h; sourceTree = "<group>"; };
 		BD25F77F1B8C081100C0BC8E /* HiTestDview.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HiTestDview.m; sourceTree = "<group>"; };
 		BD25F7811B8C151300C0BC8E /* hit-test-depth-first-traversal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "hit-test-depth-first-traversal.png"; sourceTree = "<group>"; };
+		BD2775901D2E5E6000C8F368 /* 1458633174180748.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1458633174180748.png; sourceTree = "<group>"; };
 		BD3570A61BB29EF900559A9A /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = ../../../../../usr/lib/libsqlite3.dylib; sourceTree = "<group>"; };
 		BD3570A81BB29F2900559A9A /* libz.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.dylib; path = ../../../../../usr/lib/libz.1.dylib; sourceTree = "<group>"; };
 		BD54BCE91BFB250B00FAEDAE /* RecordingCircleOverlayView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecordingCircleOverlayView.h; sourceTree = "<group>"; };
@@ -1338,7 +1339,6 @@
 		BD6E077F1C227FEF00B94F38 /* HCDCreateBlockOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCDCreateBlockOperation.h; sourceTree = "<group>"; };
 		BD6E07801C227FEF00B94F38 /* HCDCreateBlockOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCDCreateBlockOperation.m; sourceTree = "<group>"; };
 		BD6E07821C22A0EC00B94F38 /* p.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = p.png; sourceTree = "<group>"; };
-		BD6E07841C22A0F700B94F38 /* bf3d23c7jw1eygypvxaowj20vl2e9wqq.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bf3d23c7jw1eygypvxaowj20vl2e9wqq.jpg; sourceTree = "<group>"; };
 		BD6E07861C22BD3600B94F38 /* iphonetype.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iphonetype.png; sourceTree = "<group>"; };
 		BD70B1BF1BFDC81800027F33 /* BlockTest */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = BlockTest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD70B1C11BFDC81800027F33 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -2208,12 +2208,12 @@
 		5195B3ED1AB70284007CFA8B /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				BD2775901D2E5E6000C8F368 /* 1458633174180748.png */,
 				BDAE10391B7C77AE001908A5 /* PrefixHeader.pch */,
 				BDB3C24A1C759BC60039E146 /* FeelinGood.mp3 */,
 				BDB3C24B1C759BC60039E146 /* IronBacon.mp3 */,
 				BDB3C24C1C759BC60039E146 /* WhatYouWant.mp3 */,
 				BD6E07861C22BD3600B94F38 /* iphonetype.png */,
-				BD6E07841C22A0F700B94F38 /* bf3d23c7jw1eygypvxaowj20vl2e9wqq.jpg */,
 				BD6E07821C22A0EC00B94F38 /* p.png */,
 				BDD740841C1EB421000B4CAC /* Test1.json */,
 				51B1C61D1B50E12200E68110 /* Image */,
@@ -4881,6 +4881,7 @@
 				BD8B1F431C17D999004F9D60 /* ZHTelephonyVoiceVerificationCodeView.xib in Resources */,
 				BD80F1331BF464B90046FA80 /* LaunchScreen.xib in Resources */,
 				BD24F7CD1D2B7FB1001F4AD6 /* private_key.pem in Resources */,
+				BD2775911D2E5E6000C8F368 /* 1458633174180748.png in Resources */,
 				BD80F15D1BF47E100046FA80 /* Icon.png in Resources */,
 				512933461B6FA6B4002634D5 /* TextFieldInstanceView.xib in Resources */,
 				BD80F1371BF466E20046FA80 /* purple_button@2x.png in Resources */,
@@ -4961,7 +4962,6 @@
 				BDE8983C1BB390FF00D7EB34 /* data.json in Resources */,
 				BDE08D891C16D03C00E47F61 /* Placeholder@2x.png in Resources */,
 				BD80F1641BF47E270046FA80 /* 37x-Checkmark@2x.png in Resources */,
-				BD6E07851C22A0F700B94F38 /* bf3d23c7jw1eygypvxaowj20vl2e9wqq.jpg in Resources */,
 				BD80F1441BF46D8C0046FA80 /* stretch_horizontal-1.png in Resources */,
 				BD8D3D301C082B2A00B9B214 /* html1.html in Resources */,
 				BDF49D4A1BB3E2CF00BEFE26 /* GCDApplyViewController.xib in Resources */,

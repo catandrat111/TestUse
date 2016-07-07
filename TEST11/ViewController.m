@@ -39,6 +39,11 @@
     dict = @{@"UITABLEVIEW":@"TableInstanceView",@"UILABEL":@"LabelInstance",@"UISLIDER":@"SliderInstance",@"UIBUTTON":@"ButtonInstance",@"UINAVIGATIONBAR":@"NavigationBarInstanceView",@"UITEXTFILED":@"TextFieldInstanceView",@"AUTOSIZE":@"AutoSizeViewInstance",@"Gesture":@"GestureViewController",@"UISEARCHBAR":@"SearchBarInstanceView",@"DrawView":@"DrawViewInstance",@"Algorithm":@"AlgorithmClass",@"RunLoop":@"RunLoopInstance",@"UISegmentControl":@"SegmentControlInstanceView",@"Animation":@"AnimationInstanceView",@"Usage":@"UsageViewController",@"AutoLayout":@"AutoLayoutViewInstance",@"GCD":@"GCDViewInstance",@"DESIGNATEINIT":@"ZOCKintsugiPhotoViewController_iPad",@"GIF":@"GifViewController",@"HUDView":@"HUDViewController",@"MultiThread":@"MultiThreadViewInstance",@"TransitionAnimation":@"TWTExamplesListViewController",@"CollectionView":@"CollectionViewInstance",@"WebView":@"WebViewInstanceView",@"Imageview":@"ImageviewInstance",@"alterview":@"AlterViewController",@"GTView":@"GTViewController",@"SystemSetting":@"SystemSettingInstance",@"kvo":@"KVOInstance",@"BackGround":@"BackgroundModeInstanceView",@"scrollview":@"ScrollViewInstance"};
 
     [self.view addSubview:tableView_];
+    
+    
+    UITapGestureRecognizer* tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tap:)];
+    tap.cancelsTouchesInView = NO;//1种解决方案 //默认yes不接受touch事件 只响应UITapGestureRecognizer事件 为no 则传递touch事件响应didselect
+    [self.view addGestureRecognizer:tap];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -46,7 +51,24 @@
     // Dispose of any resources that can be recreated.
 }
 
-
+//2种解决方案
+- (void)tap :(UITapGestureRecognizer*)gestureRecognizer{
+    UIEvent *event = [[UIEvent alloc] init];
+    CGPoint location = [gestureRecognizer locationInView:self.view];
+    
+    //check actually view you hit via hitTest
+    UIView *view = [self.view hitTest:location withEvent:event];
+    
+    if ([view.gestureRecognizers containsObject:gestureRecognizer]) {
+        //your UIView
+        //do something
+    }
+    else {
+        //your UITableView or some thing else...
+        //ignore
+        NSLog(@"TABLEVIEW EVENT");
+    }
+}
 #pragma mark uitabkeview datasource 
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
