@@ -477,7 +477,6 @@
 		BDADA2C41BF9B38D0076BFDF /* ball.png in Resources */ = {isa = PBXBuildFile; fileRef = BDADA2C31BF9B38D0076BFDF /* ball.png */; };
 		BDADA2C71BF9B3D10076BFDF /* KCAnimationSpringViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BDADA2C61BF9B3D10076BFDF /* KCAnimationSpringViewController.m */; };
 		BDADA2CA1BF9B46B0076BFDF /* KCAnimationStepViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BDADA2C91BF9B46B0076BFDF /* KCAnimationStepViewController.m */; };
-		BDADA2CC1BF9C28D0076BFDF /* Reveal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDADA2CB1BF9C28D0076BFDF /* Reveal.framework */; };
 		BDAE103D1B7C786F001908A5 /* AutoSizeViewInstance.m in Sources */ = {isa = PBXBuildFile; fileRef = BDAE103B1B7C786F001908A5 /* AutoSizeViewInstance.m */; };
 		BDAE103E1B7C786F001908A5 /* AutoSizeViewInstance.xib in Resources */ = {isa = PBXBuildFile; fileRef = BDAE103C1B7C786F001908A5 /* AutoSizeViewInstance.xib */; };
 		BDAE10401B7C7B31001908A5 /* autosize.png in Resources */ = {isa = PBXBuildFile; fileRef = BDAE103F1B7C7B31001908A5 /* autosize.png */; };
@@ -1991,7 +1990,6 @@
 				BDB3C2411C759ADD0039E146 /* AVFoundation.framework in Frameworks */,
 				BDB3C23F1C759AD20039E146 /* AudioToolbox.framework in Frameworks */,
 				BD8D3D3D1C083A7600B9B214 /* JavaScriptCore.framework in Frameworks */,
-				BDADA2CC1BF9C28D0076BFDF /* Reveal.framework in Frameworks */,
 				BD3570A91BB29F2A00559A9A /* libz.1.dylib in Frameworks */,
 				BD3570A71BB29EF900559A9A /* libsqlite3.dylib in Frameworks */,
 				51E10E551B482FE2009B162E /* CoreData.framework in Frameworks */,
@@ -2273,7 +2271,6 @@
 				BDD3ABFA1BA131CC002CF012 /* resizedRibbon.png */,
 				BDD3ABFF1BA134EE002CF012 /* AppIcon60x60@2x.png */,
 				BD0126321B9D58E900D22ACB /* bezier.png */,
-				BD25F7811B8C151300C0BC8E /* hit-test-depth-first-traversal.png */,
 				512CB77E1B5E841B0084E5AB /* Selected.png */,
 				51F410BC1B522638008DD35E /* slidermax.png */,
 				51B1C61E1B50E13B00E68110 /* Slice1.png */,
@@ -4319,6 +4316,7 @@
 		BDC5A9761B7DEFC500AC14C4 /* Gesture */ = {
 			isa = PBXGroup;
 			children = (
+				BD25F7811B8C151300C0BC8E /* hit-test-depth-first-traversal.png */,
 				5158D19D1B7E355000ACF3AD /* PanGestureInstance.h */,
 				5158D19E1B7E355000ACF3AD /* PanGestureInstance.m */,
 				5158D19F1B7E355000ACF3AD /* PanGestureInstance.xib */,

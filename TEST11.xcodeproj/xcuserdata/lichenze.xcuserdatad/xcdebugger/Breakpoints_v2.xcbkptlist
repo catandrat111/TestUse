@@ -157,6 +157,7 @@
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
+                  moduleName = "TEST11"
                   usesParentBreakpointCondition = "Yes"
                   offsetFromSymbolStart = "0">
                </Location>
@@ -1850,7 +1851,7 @@
                   moduleName = "TEST11"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/lichenze/Documents/opensource/TestUse/TEST11/RunLoopInstance.m"
-                  timestampString = "489396792.839342"
+                  timestampString = "489549473.812493"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "215"
@@ -1865,7 +1866,7 @@
                   moduleName = "TEST11"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/lichenze/Documents/opensource/TestUse/TEST11/RunLoopInstance.m"
-                  timestampString = "489396792.839757"
+                  timestampString = "489549473.812622"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "215"
@@ -1880,7 +1881,7 @@
                   moduleName = "TEST11"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/lichenze/Documents/opensource/TestUse/TEST11/RunLoopInstance.m"
-                  timestampString = "489396792.840212"
+                  timestampString = "489549473.812746"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "215"
@@ -2393,11 +2394,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TEST11/AppDelegate.m"
-            timestampString = "489395671.986548"
+            timestampString = "489547125.613047"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "387"
-            endingLineNumber = "387"
+            startingLineNumber = "393"
+            endingLineNumber = "393"
             landmarkName = "-application:didReceiveRemoteNotification:fetchCompletionHandler:"
             landmarkType = "5">
          </BreakpointContent>
@@ -2409,11 +2410,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TEST11/AppDelegate.m"
-            timestampString = "489395671.986548"
+            timestampString = "489547125.613047"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "406"
-            endingLineNumber = "406"
+            startingLineNumber = "412"
+            endingLineNumber = "412"
             landmarkName = "-testModel"
             landmarkType = "5">
          </BreakpointContent>
@@ -2425,11 +2426,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TEST11/AppDelegate.m"
-            timestampString = "489395671.986548"
+            timestampString = "489547125.613047"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "401"
-            endingLineNumber = "401"
+            startingLineNumber = "407"
+            endingLineNumber = "407"
             landmarkName = "-testModel"
             landmarkType = "5">
          </BreakpointContent>
@@ -2441,11 +2442,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TEST11/AppDelegate.m"
-            timestampString = "489395671.986548"
+            timestampString = "489547125.613047"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "388"
-            endingLineNumber = "388"
+            startingLineNumber = "394"
+            endingLineNumber = "394"
             landmarkName = "-application:didReceiveRemoteNotification:fetchCompletionHandler:"
             landmarkType = "5">
          </BreakpointContent>
@@ -2457,11 +2458,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TEST11/AppDelegate.m"
-            timestampString = "489395671.986548"
+            timestampString = "489547125.613047"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "392"
-            endingLineNumber = "392"
+            startingLineNumber = "398"
+            endingLineNumber = "398"
             landmarkName = "-testModel"
             landmarkType = "5">
          </BreakpointContent>
@@ -2919,11 +2920,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TEST11/AppDelegate.m"
-            timestampString = "489395671.986548"
+            timestampString = "489547125.613047"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "380"
-            endingLineNumber = "380"
+            startingLineNumber = "386"
+            endingLineNumber = "386"
             landmarkName = "-application:didReceiveRemoteNotification:fetchCompletionHandler:"
             landmarkType = "5">
          </BreakpointContent>
@@ -2935,11 +2936,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TEST11/AppDelegate.m"
-            timestampString = "489395671.986548"
+            timestampString = "489547125.613047"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "359"
-            endingLineNumber = "359"
+            startingLineNumber = "365"
+            endingLineNumber = "365"
             landmarkName = "-backgroundURLSession"
             landmarkType = "5">
          </BreakpointContent>
@@ -2951,11 +2952,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TEST11/AppDelegate.m"
-            timestampString = "489395671.986548"
+            timestampString = "489547125.613047"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "377"
-            endingLineNumber = "377"
+            startingLineNumber = "383"
+            endingLineNumber = "383"
             landmarkName = "-application:didReceiveRemoteNotification:fetchCompletionHandler:"
             landmarkType = "5">
          </BreakpointContent>
@@ -3111,11 +3112,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TEST11/AppDelegate.m"
-            timestampString = "489395671.986548"
+            timestampString = "489547125.613047"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "396"
-            endingLineNumber = "396"
+            startingLineNumber = "402"
+            endingLineNumber = "402"
             landmarkName = "-testModel"
             landmarkType = "5">
          </BreakpointContent>
@@ -3127,11 +3128,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TEST11/AppDelegate.m"
-            timestampString = "489395671.986548"
+            timestampString = "489547125.613047"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "494"
-            endingLineNumber = "494"
+            startingLineNumber = "500"
+            endingLineNumber = "500"
             landmarkName = "@implementation AppDelegate"
             landmarkType = "3">
          </BreakpointContent>
@@ -3239,11 +3240,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TEST11/ButtonInstance.m"
-            timestampString = "479879538.18045"
+            timestampString = "489549320.357406"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "107"
-            endingLineNumber = "107"
+            startingLineNumber = "123"
+            endingLineNumber = "123"
             landmarkName = "-p2:"
             landmarkType = "5">
          </BreakpointContent>
@@ -3309,6 +3310,22 @@
             startingLineNumber = "286"
             endingLineNumber = "286"
             landmarkName = "-connection:didReceiveData:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TEST11/AppDelegate.m"
+            timestampString = "489547125.613047"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "567"
+            endingLineNumber = "567"
+            landmarkName = "-applicationWillTerminate:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
