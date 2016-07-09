@@ -4,6 +4,21 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>BlockTest.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>2</integer>
+		</dict>
+		<key>Ipad1.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>3</integer>
+		</dict>
+		<key>SwiftTest.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
 		<key>TEST11.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -18,6 +33,36 @@
 			<true/>
 		</dict>
 		<key>5195B4021AB70285007CFA8B</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>BD097EDD1C2CD2EF00AF60B0</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>BD5A38FA1C02DE32000E212F</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>BD70B1BE1BFDC81800027F33</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>BDFA0B6D1BC61741003BC5EA</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>BDFA0B801BC61743003BC5EA</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>BDFA0B8B1BC61745003BC5EA</key>
 		<dict>
 			<key>primary</key>
 			<true/>
