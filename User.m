@@ -1,4 +1,4 @@
-//
+///
 //  User.m
 //  TEST11
 //
@@ -135,6 +135,8 @@ static int32_t const primes[] = {
 {
     self = [super init];
     if (self) {
+        Class a = [self class];
+        Class b = [super class];
         NSLog(@"%@", NSStringFromClass([self class]));
         NSLog(@"%@", NSStringFromClass([super class]));
     }

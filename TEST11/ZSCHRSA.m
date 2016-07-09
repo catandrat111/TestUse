@@ -22,7 +22,8 @@
     
     CFArrayRef items = CFArrayCreate(NULL, 0, 0, NULL);
     
-    OSStatus securityError = SecPKCS12Import((__bridge CFDataRef) pfxkeydata,
+    OSStatus securityError = SecPKCS12Import
+    ((__bridge CFDataRef) pfxkeydata,
                                              (__bridge CFDictionaryRef)options, &items);
     
     CFDictionaryRef identityDict = CFArrayGetValueAtIndex(items, 0);

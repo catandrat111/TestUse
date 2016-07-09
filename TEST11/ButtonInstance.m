@@ -53,6 +53,22 @@
     [self configureButton];
     
 
+    CABasicAnimation* animation = [CABasicAnimation animation];
+    animation.keyPath = @"transform.rotation.z";
+    animation.duration = 2;
+    animation.fromValue = @(0);
+    animation.toValue = @(2* M_PI);
+    animation.repeatCount = 10000;
+    [self.imgView2.layer addAnimation:animation forKey:nil];
+    
+    CAShapeLayer* shapeLayer = [CAShapeLayer layer];
+    UIBezierPath* path = [UIBezierPath bezierPathWithRoundedRect:CGRectMake(100, 100, 50, 80) byRoundingCorners:UIRectCornerTopLeft|UIRectCornerTopRight cornerRadii:CGSizeMake(10, 10)];
+    shapeLayer.path = path.CGPath;
+    shapeLayer.fillColor = UIColorFromRGB(0xff3476).CGColor;
+    shapeLayer.strokeColor = [UIColor greenColor].CGColor;
+    shapeLayer.lineWidth = 2.0f;
+    [self.view.layer addSublayer:shapeLayer];
+   
     self.navigationController.navigationBar.translucent = YES;
 }
 

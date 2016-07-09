@@ -86,4 +86,29 @@ hitTest的用法：将下面的函数添加到UIView的子类中，也就是屏�
 
 
 
+//事件传递原理
+//分两步
+//1 通过方法得到响应视图
+//2 如国视图无法响应事件 就把事件传给它的nextresponder
+// 添加手势改变了响应链的传递流程
+//http://stackoverflow.com/questions/4961386/event-handling-for-ios-how-hittestwithevent-and-pointinsidewithevent-are-r/4961484#4961484
+
+//- (UIView *)hitTest:(CGPoint)point withEvent:(UIEvent *)event {
+//    if (!self.isUserInteractionEnabled || self.isHidden || self.alpha <= 0.01) {
+//        return nil;
+//    }
+//    if ([self pointInside:point withEvent:event]) {
+//        for (UIView *subview in [self.subviews reverseObjectEnumerator]) {
+//            CGPoint convertedPoint = [subview convertPoint:point fromView:self];
+//            UIView *hitTestView = [subview hitTest:convertedPoint withEvent:event];
+//            if (hitTestView) {
+//                return hitTestView;
+//            }
+//        }
+//        return self;
+//    }
+//    return nil;
+//}
+
+
 @end

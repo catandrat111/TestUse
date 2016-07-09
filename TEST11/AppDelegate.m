@@ -204,10 +204,16 @@ typedef int (^frd)(NSString* st);
     
     [self testRsa];
     
-    Son* son = [Son new];
+    NSString* test111 = @"<fdg<fdg<GG";
+   NSString* sdd = [test111 stringByReplacingOccurrencesOfString:@"<" withString:@"1"];
+    NSLog(@"sdd:%@",sdd);
+    NSString* add = [test111 stringByReplacingCharactersInRange:NSMakeRange(0, 5) withString:@"11111"];
+    NSLog(@"add:%@",add);
     
     
-
+      
+    
+   
     return YES;
 }
 //http://blog.sina.com.cn/s/blog_4c925dca0102uzdi.html
@@ -560,6 +566,7 @@ typedef int (^frd)(NSString* st);
 
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+     DLog(@"强制退出");
 }
 
 - (void)application:(UIApplication *)application handleEventsForBackgroundURLSession:(NSString *)identifier
@@ -571,6 +578,8 @@ typedef int (^frd)(NSString* st);
      */
     self.backgroundSessionCompletionHandler = completionHandler;
 }
+
+
 
 
 
