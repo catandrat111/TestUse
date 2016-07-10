@@ -211,9 +211,32 @@ typedef int (^frd)(NSString* st);
     NSLog(@"add:%@",add);
     
     
-      
-    
+    NSMutableString* mustr = [[NSMutableString alloc] initWithString:@"f"];
    
+    CFDictionaryKeyCallBacks keyallbacks = {0,0,0,0,CFEqual,CFHash};
+    
+    CFDictionaryValueCallBacks valueallbacks = {0,0,0,0,CFEqual};
+    
+    CFMutableDictionaryRef acfdic =CFDictionaryCreateMutable(NULL,0, &keyallbacks, &valueallbacks);
+    
+    
+    NSMutableDictionary * adicc = (__bridge_transfer NSMutableDictionary * )acfdic;
+    [adicc setObject:@"g" forKey:mustr];
+    
+     NSString* aaa2 = adicc.allKeys[0];
+    
+    NSError * keyError = [NSError errorWithDomain:@"domian"code:123 userInfo:nil];
+    
+    NSError * numError = [NSError errorWithDomain:@"domian"code:456 userInfo:nil];
+    
+    
+    [adicc setObject:numError forKey:keyError];
+   // [adicc setObject:@"g" forKey:asd];
+    
+    
+    NSString* aaa1 = adicc.allKeys[0];
+    [aaa1 copy];
+    [self test1:mustr];
     return YES;
 }
 //http://blog.sina.com.cn/s/blog_4c925dca0102uzdi.html
@@ -225,6 +248,30 @@ typedef int (^frd)(NSString* st);
     
 }
 
+
+- (void)test1:(NSString* )ss
+{
+    NSLog(@"%@",ss);
+}
+//const void * retaincallbak(CFAllocatorRef allocator,const void * value) {
+//    
+//    return CFRetain(value);
+//    
+//}
+//
+//
+//void releasecallbak(CFAllocatorRef allocator,const void * value) {
+//    
+//    return CFRelease(value);
+//    
+//}
+//
+//CFStringRef copycallbak(const void * value) {
+//    
+//    return CFRetain(value);
+//    
+//}
+//
 
 
 - (void)testRsa {
