@@ -210,7 +210,6 @@ typedef int (^frd)(NSString* st);
     NSString* add = [test111 stringByReplacingCharactersInRange:NSMakeRange(0, 5) withString:@"11111"];
     NSLog(@"add:%@",add);
     
-    [self testStr];
       
     
    
