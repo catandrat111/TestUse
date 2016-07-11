@@ -664,6 +664,7 @@
 		BDE08D891C16D03C00E47F61 /* Placeholder@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BDE08D871C16D03C00E47F61 /* Placeholder@2x.png */; };
 		BDE08D8C1C16D32100E47F61 /* EZNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = BDE08D8B1C16D32100E47F61 /* EZNavigationController.m */; };
 		BDE20E7B1B9EA83F00C5F90E /* copy.png in Resources */ = {isa = PBXBuildFile; fileRef = BDE20E7A1B9EA83F00C5F90E /* copy.png */; };
+		BDE4135E1D334F0800DBA313 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BDE4135D1D334F0800DBA313 /* AppDelegate.m */; };
 		BDE557FA1B9FBD9B000B9231 /* metaClass.png in Resources */ = {isa = PBXBuildFile; fileRef = BDE557F91B9FBD9B000B9231 /* metaClass.png */; };
 		BDE557FC1B9FC849000B9231 /* 消息派发.png in Resources */ = {isa = PBXBuildFile; fileRef = BDE557FB1B9FC849000B9231 /* 消息派发.png */; };
 		BDE558021B9FD2E8000B9231 /* RNBlurModalView.m in Sources */ = {isa = PBXBuildFile; fileRef = BDE557FF1B9FD2E8000B9231 /* RNBlurModalView.m */; };
@@ -1909,6 +1910,7 @@
 		BDE08D8A1C16D32100E47F61 /* EZNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EZNavigationController.h; sourceTree = "<group>"; };
 		BDE08D8B1C16D32100E47F61 /* EZNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EZNavigationController.m; sourceTree = "<group>"; };
 		BDE20E7A1B9EA83F00C5F90E /* copy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = copy.png; sourceTree = "<group>"; };
+		BDE4135D1D334F0800DBA313 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		BDE557F91B9FBD9B000B9231 /* metaClass.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = metaClass.png; sourceTree = "<group>"; };
 		BDE557FB1B9FC849000B9231 /* 消息派发.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "消息派发.png"; sourceTree = "<group>"; };
 		BDE557FE1B9FD2E8000B9231 /* RNBlurModalView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RNBlurModalView.h; sourceTree = "<group>"; };
@@ -2206,6 +2208,7 @@
 				51F410C01B524B83008DD35E /* UiNavigationBar */,
 				51E10C621B481BD3009B162E /* Categories */,
 				5195B3F11AB70284007CFA8B /* AppDelegate.h */,
+				BDE4135D1D334F0800DBA313 /* AppDelegate.m */,
 				5195B3F41AB70284007CFA8B /* ViewController.h */,
 				5195B3F51AB70284007CFA8B /* ViewController.m */,
 				5195B3FA1AB70284007CFA8B /* Images.xcassets */,
@@ -5282,6 +5285,7 @@
 				BD8877E81BF5E09F00F0EA08 /* KCAnimationView1.m in Sources */,
 				BD8877E21BF5DD7500F0EA08 /* KCAnimationViewController6.m in Sources */,
 				BDD769741BBA622E006A4CF4 /* ZOCKintsugiPhotoViewController_iPad.m in Sources */,
+				BDE4135E1D334F0800DBA313 /* AppDelegate.m in Sources */,
 				BD8877A41BF58A4A00F0EA08 /* KCMainViewController.m in Sources */,
 				BDDA785E1D2F7DA300910BD7 /* NSObject+HYBUnicodeReadable.m in Sources */,
 				BDC5A9741B7DEF9100AC14C4 /* GestureViewController.m in Sources */,
