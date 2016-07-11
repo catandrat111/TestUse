@@ -653,6 +653,10 @@
 		BDD769771BBA6242006A4CF4 /* ZOCKintsugiPhotoViewController_iPhone.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD769761BBA6242006A4CF4 /* ZOCKintsugiPhotoViewController_iPhone.m */; };
 		BDD7697B1BBA62B7006A4CF4 /* ZOCNewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD7697A1BBA62B7006A4CF4 /* ZOCNewsViewController.m */; };
 		BDD7697E1BBA631C006A4CF4 /* ZOCNews.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD7697D1BBA631C006A4CF4 /* ZOCNews.m */; };
+		BDDA785C1D2F7DA300910BD7 /* NSArray+HYBUnicodeReadable.m in Sources */ = {isa = PBXBuildFile; fileRef = BDDA78551D2F7DA300910BD7 /* NSArray+HYBUnicodeReadable.m */; };
+		BDDA785D1D2F7DA300910BD7 /* NSDictionary+HYBUnicodeReadable.m in Sources */ = {isa = PBXBuildFile; fileRef = BDDA78571D2F7DA300910BD7 /* NSDictionary+HYBUnicodeReadable.m */; };
+		BDDA785E1D2F7DA300910BD7 /* NSObject+HYBUnicodeReadable.m in Sources */ = {isa = PBXBuildFile; fileRef = BDDA78591D2F7DA300910BD7 /* NSObject+HYBUnicodeReadable.m */; };
+		BDDA785F1D2F7DA300910BD7 /* NSSet+HYBUnicodeReadable.m in Sources */ = {isa = PBXBuildFile; fileRef = BDDA785B1D2F7DA300910BD7 /* NSSet+HYBUnicodeReadable.m */; };
 		BDE08D801C16C96000E47F61 /* AppRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = BDE08D7B1C16C96000E47F61 /* AppRecord.m */; };
 		BDE08D811C16C96000E47F61 /* ParseOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = BDE08D7D1C16C96000E47F61 /* ParseOperation.m */; };
 		BDE08D821C16C96000E47F61 /* IconDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = BDE08D7F1C16C96000E47F61 /* IconDownloader.m */; };
@@ -1886,6 +1890,14 @@
 		BDD7697A1BBA62B7006A4CF4 /* ZOCNewsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZOCNewsViewController.m; sourceTree = "<group>"; };
 		BDD7697C1BBA631C006A4CF4 /* ZOCNews.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZOCNews.h; sourceTree = "<group>"; };
 		BDD7697D1BBA631C006A4CF4 /* ZOCNews.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZOCNews.m; sourceTree = "<group>"; };
+		BDDA78541D2F7DA300910BD7 /* NSArray+HYBUnicodeReadable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+HYBUnicodeReadable.h"; sourceTree = "<group>"; };
+		BDDA78551D2F7DA300910BD7 /* NSArray+HYBUnicodeReadable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+HYBUnicodeReadable.m"; sourceTree = "<group>"; };
+		BDDA78561D2F7DA300910BD7 /* NSDictionary+HYBUnicodeReadable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+HYBUnicodeReadable.h"; sourceTree = "<group>"; };
+		BDDA78571D2F7DA300910BD7 /* NSDictionary+HYBUnicodeReadable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+HYBUnicodeReadable.m"; sourceTree = "<group>"; };
+		BDDA78581D2F7DA300910BD7 /* NSObject+HYBUnicodeReadable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+HYBUnicodeReadable.h"; sourceTree = "<group>"; };
+		BDDA78591D2F7DA300910BD7 /* NSObject+HYBUnicodeReadable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+HYBUnicodeReadable.m"; sourceTree = "<group>"; };
+		BDDA785A1D2F7DA300910BD7 /* NSSet+HYBUnicodeReadable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSSet+HYBUnicodeReadable.h"; sourceTree = "<group>"; };
+		BDDA785B1D2F7DA300910BD7 /* NSSet+HYBUnicodeReadable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSSet+HYBUnicodeReadable.m"; sourceTree = "<group>"; };
 		BDE08D7A1C16C96000E47F61 /* AppRecord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppRecord.h; sourceTree = "<group>"; };
 		BDE08D7B1C16C96000E47F61 /* AppRecord.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppRecord.m; sourceTree = "<group>"; };
 		BDE08D7C1C16C96000E47F61 /* ParseOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParseOperation.h; sourceTree = "<group>"; };
@@ -3923,6 +3935,7 @@
 		BDAE12451B7C7FEC001908A5 /* LIbs */ = {
 			isa = PBXGroup;
 			children = (
+				BDDA78531D2F7DA300910BD7 /* HYBUnicodeReadable */,
 				BD627E9E1D2B95980077E082 /* Logger */,
 				BD7385A51C97EEC700AAD42D /* ICONSLOLE */,
 				BDA914ED1C1A808A00007CDC /* MKNetworkKit */,
@@ -4492,6 +4505,21 @@
 				BDD7697D1BBA631C006A4CF4 /* ZOCNews.m */,
 			);
 			name = DesignatedInitializer;
+			sourceTree = "<group>";
+		};
+		BDDA78531D2F7DA300910BD7 /* HYBUnicodeReadable */ = {
+			isa = PBXGroup;
+			children = (
+				BDDA78541D2F7DA300910BD7 /* NSArray+HYBUnicodeReadable.h */,
+				BDDA78551D2F7DA300910BD7 /* NSArray+HYBUnicodeReadable.m */,
+				BDDA78561D2F7DA300910BD7 /* NSDictionary+HYBUnicodeReadable.h */,
+				BDDA78571D2F7DA300910BD7 /* NSDictionary+HYBUnicodeReadable.m */,
+				BDDA78581D2F7DA300910BD7 /* NSObject+HYBUnicodeReadable.h */,
+				BDDA78591D2F7DA300910BD7 /* NSObject+HYBUnicodeReadable.m */,
+				BDDA785A1D2F7DA300910BD7 /* NSSet+HYBUnicodeReadable.h */,
+				BDDA785B1D2F7DA300910BD7 /* NSSet+HYBUnicodeReadable.m */,
+			);
+			path = HYBUnicodeReadable;
 			sourceTree = "<group>";
 		};
 		BDE08D791C16C94100E47F61 /* LAZYTABLE */ = {
@@ -5136,6 +5164,7 @@
 				BDD61C201BB39DDD00BC4264 /* AutoLayoutCustomController.m in Sources */,
 				BDFCFB261C210EFC0066BCFE /* Foo.m in Sources */,
 				BD8CDF821BE33B460026D74E /* CALayer+Cool.m in Sources */,
+				BDDA785C1D2F7DA300910BD7 /* NSArray+HYBUnicodeReadable.m in Sources */,
 				BDAE154A1B7C7FED001908A5 /* MASConstraintMaker.m in Sources */,
 				51E10DC61B481BD4009B162E /* CLLocationManager+Blocks.m in Sources */,
 				BDE62A841BA6CC6500870499 /* LayoutModel.m in Sources */,
@@ -5258,6 +5287,7 @@
 				BD8877E21BF5DD7500F0EA08 /* KCAnimationViewController6.m in Sources */,
 				BDD769741BBA622E006A4CF4 /* ZOCKintsugiPhotoViewController_iPad.m in Sources */,
 				BD8877A41BF58A4A00F0EA08 /* KCMainViewController.m in Sources */,
+				BDDA785E1D2F7DA300910BD7 /* NSObject+HYBUnicodeReadable.m in Sources */,
 				BDC5A9741B7DEF9100AC14C4 /* GestureViewController.m in Sources */,
 				BD5A39421C02FA50000E212F /* TWTSimpleAnimationController.m in Sources */,
 				BD8CDF851BE33B460026D74E /* JDFlipImageView.m in Sources */,
@@ -5321,6 +5351,7 @@
 				BDE62A771BA6C9C000870499 /* UITableView+FDTemplateLayoutCell.m in Sources */,
 				51E10E061B481BD4009B162E /* UIButton+CountDown.m in Sources */,
 				51E10DE81B481BD4009B162E /* NSObject+Property.m in Sources */,
+				BDDA785D1D2F7DA300910BD7 /* NSDictionary+HYBUnicodeReadable.m in Sources */,
 				512933401B6FA65F002634D5 /* myUILabel.m in Sources */,
 				BD8CDF881BE33B460026D74E /* CoreLaunchLite.m in Sources */,
 				BDD7697B1BBA62B7006A4CF4 /* ZOCNewsViewController.m in Sources */,
@@ -5435,6 +5466,7 @@
 				BDAE15511B7C7FED001908A5 /* MJArgument.m in Sources */,
 				BDAE15C51B7C7FED001908A5 /* TPKeyboardAvoidingScrollView.m in Sources */,
 				BDAE14FF1B7C7FED001908A5 /* README.md in Sources */,
+				BDDA785F1D2F7DA300910BD7 /* NSSet+HYBUnicodeReadable.m in Sources */,
 				51E10E0B1B481BD4009B162E /* UIColor+Modify.m in Sources */,
 				51E10DFB1B481BD4009B162E /* NSUserDefaults+SafeAccess.m in Sources */,
 				BDAE15011B7C7FED001908A5 /* CustomIOS7AlertView.m in Sources */,

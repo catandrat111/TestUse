@@ -733,8 +733,9 @@ struct objc_class {
     NSDate* currdate = [NSDate date];
     NSDate *fromDate;
      NSDate *toDate;
-    [calendar rangeOfUnit:NSCalendarUnitDay startDate:&fromDate interval:nil forDate:currdate];
-    [calendar rangeOfUnit:NSDayCalendarUnit startDate:&toDate interval:NULL forDate:[formatter dateFromString:@"2016-07-06 12:02:03"]];
+    //2016-07-05 16:00:00 +0000 时间从2016-07-06 00:00：00算起
+    [calendar rangeOfUnit:NSCalendarUnitDay startDate:&fromDate interval:nil forDate:[formatter dateFromString:@"2016-07-06 23:02:03"]];
+    [calendar rangeOfUnit:NSDayCalendarUnit startDate:&toDate interval:NULL forDate:[formatter dateFromString:@"2016-07-07 05:02:03"]];
     
    NSDateComponents* comp = [calendar components:NSCalendarUnitDay fromDate:fromDate toDate:toDate options:0];
     
