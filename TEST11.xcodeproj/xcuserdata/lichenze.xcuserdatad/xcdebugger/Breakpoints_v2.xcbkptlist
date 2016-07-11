@@ -2381,9 +2381,7 @@
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "137"
-            endingLineNumber = "137"
-            landmarkName = "-application:didFinishLaunchingWithOptions:"
-            landmarkType = "5">
+            endingLineNumber = "137">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -2397,9 +2395,7 @@
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "415"
-            endingLineNumber = "415"
-            landmarkName = "-application:didReceiveRemoteNotification:fetchCompletionHandler:"
-            landmarkType = "5">
+            endingLineNumber = "415">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -2413,9 +2409,7 @@
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "434"
-            endingLineNumber = "434"
-            landmarkName = "-testModel"
-            landmarkType = "5">
+            endingLineNumber = "434">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -2429,9 +2423,7 @@
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "429"
-            endingLineNumber = "429"
-            landmarkName = "-testModel"
-            landmarkType = "5">
+            endingLineNumber = "429">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -2445,9 +2437,7 @@
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "416"
-            endingLineNumber = "416"
-            landmarkName = "-application:didReceiveRemoteNotification:fetchCompletionHandler:"
-            landmarkType = "5">
+            endingLineNumber = "416">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -2461,9 +2451,7 @@
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "420"
-            endingLineNumber = "420"
-            landmarkName = "-testModel"
-            landmarkType = "5">
+            endingLineNumber = "420">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -2923,9 +2911,7 @@
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "408"
-            endingLineNumber = "408"
-            landmarkName = "-application:didReceiveRemoteNotification:fetchCompletionHandler:"
-            landmarkType = "5">
+            endingLineNumber = "408">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -2939,9 +2925,7 @@
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "387"
-            endingLineNumber = "387"
-            landmarkName = "-backgroundURLSession"
-            landmarkType = "5">
+            endingLineNumber = "387">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -2955,9 +2939,7 @@
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "405"
-            endingLineNumber = "405"
-            landmarkName = "-application:didReceiveRemoteNotification:fetchCompletionHandler:"
-            landmarkType = "5">
+            endingLineNumber = "405">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -3115,9 +3097,7 @@
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "424"
-            endingLineNumber = "424"
-            landmarkName = "-testModel"
-            landmarkType = "5">
+            endingLineNumber = "424">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -3131,9 +3111,7 @@
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "522"
-            endingLineNumber = "522"
-            landmarkName = "@implementation AppDelegate"
-            landmarkType = "3">
+            endingLineNumber = "522">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -3195,9 +3173,7 @@
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "192"
-            endingLineNumber = "192"
-            landmarkName = "-application:didFinishLaunchingWithOptions:"
-            landmarkType = "5">
+            endingLineNumber = "192">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -3323,9 +3299,7 @@
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "589"
-            endingLineNumber = "589"
-            landmarkName = "-applicationWillTerminate:"
-            landmarkType = "5">
+            endingLineNumber = "589">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -3339,9 +3313,7 @@
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "248"
-            endingLineNumber = "248"
-            landmarkName = "-testStr"
-            landmarkType = "5">
+            endingLineNumber = "248">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -3371,9 +3343,7 @@
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "237"
-            endingLineNumber = "237"
-            landmarkName = "-testStr"
-            landmarkType = "5">
+            endingLineNumber = "237">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
