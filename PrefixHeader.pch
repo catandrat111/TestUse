@@ -17,8 +17,8 @@
 #import "Constant.h"
 #import "UIDevice+Info.h"
 
-#import "NSLogger.h"
-#import "iConsole.h"
+//#import "NSLogger.h"
+//#import "iConsole.h"
 #endif
 
 #endif

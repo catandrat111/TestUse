@@ -132,6 +132,8 @@ static int static_global_val = 2;
     
     [self testblock1];
     
+    [self bubbleSort:@[@(4),@(12),@(1),@(5),@(3),@(2),@(9)]];
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -831,5 +833,39 @@ struct objc_class {
 
 }
 
+//冒泡
+
+- (NSArray*)bubbleSort:(NSArray*)sortArray {
+    NSMutableArray* arr = [sortArray mutableCopy];
+    for (NSUInteger i = 0; i < arr.count;i++) {
+        for ( NSUInteger j = i + 1; j < arr.count; j++) {
+            NSNumber* num1 = arr[i];
+            NSNumber* num2 = arr[j];
+            if (num1.integerValue > num2.integerValue) {
+                NSNumber* temp = num1;
+                arr[i] = arr[j];
+                arr[j] = temp;
+            }
+            
+        }
+    }
+    return sortArray;
+}
+
+
+void SelectSort(int arr[], int n){
+    int i, j, minIndex;
+    for (i = 0; i < n; i++) {
+        minIndex = i;
+        for (j = i+1; j < n; j++) {
+            if (arr[minIndex] > arr[j]) {
+                minIndex = j;
+            }
+        }
+        if (minIndex != i) {
+            Swap(arr[i],arr[minIndex]);
+        }
+    }
+}
 
 @end

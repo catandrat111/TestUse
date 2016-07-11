@@ -50,17 +50,18 @@
 #import <objc/runtime.h>
 #import "Person.h"
 #import "MJExtension.h"
-#import "NSDictionary+Log.h"
+//import "NSDictionary+Log.h"
 #import "Constant.h"
-#import "iConsole.h"
+//#import "iConsole.h"
 
 #import <KSCrash/KSCrashInstallationStandard.h>
 #import "RSAEncryptor.h"
 #import "ZSCHRSA.h"
 #import "User.h"
-
+#import "NSDictionary+HYBUnicodeReadable.h"
 //#import <PonyDebugger/PonyDebugger.h>
-@interface AppDelegate ()<iConsoleDelegate>
+//@interface AppDelegate ()<iConsoleDelegate>
+@interface AppDelegate ()
 
 @end
 
@@ -104,8 +105,8 @@ typedef int (^frd)(NSString* st);
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    self.window = [[iConsoleWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-   // self.window  =[[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+   // self.window = [[iConsoleWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    self.window  =[[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     ViewController* main = [[ViewController alloc] init];
     EZNavigationController* navi = [[EZNavigationController alloc] initWithRootViewController:main];
     self.window.rootViewController = navi;
@@ -233,10 +234,30 @@ typedef int (^frd)(NSString* st);
     [adicc setObject:numError forKey:keyError];
    // [adicc setObject:@"g" forKey:asd];
     
-    
-    NSString* aaa1 = adicc.allKeys[0];
-    [aaa1 copy];
     [self test1:mustr];
+    
+    
+    NSString *str = @"我是转换成data格式的字符串";
+    NSData *dataString = [NSData dataWithBytes:str.UTF8String length:str.length];
+    NSDictionary *dataSet = @{@"key": @"字典转成data",
+                              @"key1": @"在set、数组、字典中嵌套"};
+    NSData *dataSetItem = [NSJSONSerialization dataWithJSONObject:dataSet options:NSJSONWritingPrettyPrinted error:nil];
+    
+    
+    NSDictionary *dict = @{@"name"  : @"标哥的技术博客",
+                           @"title" :dataSetItem,
+                          };
+//    NSMutableSet *set = [NSMutableSet setWithArray:@[@"可变集合", @"字典->不可变集合->可变集合", dataSetItem]];
+//    NSDictionary *dict = @{@"name"  : @"标哥的技术博客",
+//                           @"title" : @"http://www.henishuo.com",
+//                           @"count" : @(11),
+//                           @"dataString" : dataString,
+//                           @"results" : [NSSet setWithObjects:@"集合值1", @"集合值2", set , nil],
+//                           @"summaries" : @[@"sm1", @"sm2", @{@"keysm": @{@"stkey": @"字典->数组->字典->字典"}}, dataSetItem],
+//                           @"parameters" : @{@"key1" : @"value1", @"key2": @{@"key11" : @"value11", @"key12" : @[@"三层", @"字典->字典->数组"]}, @"key13": dataSetItem},
+//                           @"hasBug": @[@"YES",@"NO"],
+//                           @"contact" : @[@"关注博客地址：http://www.henishuo.com", @"QQ群: 324400294", @"关注微博：标哥Jacky", @"关注GITHUB：CoderJackyHuang"]};
+    NSLog(@"%@", dict);
     return YES;
 }
 //http://blog.sina.com.cn/s/blog_4c925dca0102uzdi.html
@@ -301,17 +322,17 @@ typedef int (^frd)(NSString* st);
 }
 
 - (void)testConsole {
-    [iConsole sharedConsole].delegate = self;
-    
-    NSUInteger touches = (TARGET_IPHONE_SIMULATOR ? [iConsole sharedConsole].simulatorTouchesToShow: [iConsole sharedConsole].deviceTouchesToShow);
-    if (touches > 0 && touches < 11)
-    {
-         }
-    else if (TARGET_IPHONE_SIMULATOR ? [iConsole sharedConsole].simulatorShakeToShow: [iConsole sharedConsole].deviceShakeToShow)
-    {
-       
-    }
-    
+//    [iConsole sharedConsole].delegate = self;
+//    
+//    NSUInteger touches = (TARGET_IPHONE_SIMULATOR ? [iConsole sharedConsole].simulatorTouchesToShow: [iConsole sharedConsole].deviceTouchesToShow);
+//    if (touches > 0 && touches < 11)
+//    {
+//         }
+//    else if (TARGET_IPHONE_SIMULATOR ? [iConsole sharedConsole].simulatorShakeToShow: [iConsole sharedConsole].deviceShakeToShow)
+//    {
+//       
+//    }
+//    
     //关闭 iconsole
    // [iConsole sharedConsole].enabled = NO;
 
@@ -321,16 +342,16 @@ typedef int (^frd)(NSString* st);
 
 - (void)handleConsoleCommand:(NSString *)command
 {
-    if ([command isEqualToString:@"version"])
-    {
-        [iConsole info:@"%@ version %@",
-         [[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleName"],
-         [[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleVersion"]];
-    }
-    else
-    {
-        [iConsole error:@"unrecognised command:%@, try 'version' instead",command];
-    }
+//    if ([command isEqualToString:@"version"])
+//    {
+//        [iConsole info:@"%@ version %@",
+//         [[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleName"],
+//         [[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleVersion"]];
+//    }
+//    else
+//    {
+//        [iConsole error:@"unrecognised command:%@, try 'version' instead",command];
+//    }
 }
 
 
@@ -389,22 +410,22 @@ typedef int (^frd)(NSString* st);
 }
 
 - (void)testLogger {
-    LoggerSetViewerHost(NULL, (CFStringRef)@"172.16.16.165", (UInt32)50000);
-    LoggerSetOptions(NULL,						// configure the default logger
-                     kLoggerOption_BufferLogsUntilConnection |
-                     kLoggerOption_UseSSL |
-                     ( kLoggerOption_BrowseBonjour) |
-                     ( kLoggerOption_BrowseOnlyLocalDomain));
-    //    LoggerSetOptions(NULL,						// configure the default logger
-    //                     kLoggerOption_BufferLogsUntilConnection |
-    //                     kLoggerOption_UseSSL |
-    //                     ( 0) |
-    //                     (0));
-    
-    NSString *cacheDirectory = [NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) objectAtIndex:0];
-    NSString *logPath = [cacheDirectory stringByAppendingPathComponent:@"log.rawnsloggerdata"];
-    
-    LoggerSetBufferFile(NULL, (__bridge CFStringRef)logPath);
+//    LoggerSetViewerHost(NULL, (CFStringRef)@"172.16.16.165", (UInt32)50000);
+//    LoggerSetOptions(NULL,						// configure the default logger
+//                     kLoggerOption_BufferLogsUntilConnection |
+//                     kLoggerOption_UseSSL |
+//                     ( kLoggerOption_BrowseBonjour) |
+//                     ( kLoggerOption_BrowseOnlyLocalDomain));
+//    //    LoggerSetOptions(NULL,						// configure the default logger
+//    //                     kLoggerOption_BufferLogsUntilConnection |
+//    //                     kLoggerOption_UseSSL |
+//    //                     ( 0) |
+//    //                     (0));
+//    
+//    NSString *cacheDirectory = [NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) objectAtIndex:0];
+//    NSString *logPath = [cacheDirectory stringByAppendingPathComponent:@"log.rawnsloggerdata"];
+//    
+//    LoggerSetBufferFile(NULL, (__bridge CFStringRef)logPath);
 
 }
 

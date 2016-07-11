@@ -43,7 +43,7 @@
     
     UITapGestureRecognizer* tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tap:)];
     tap.cancelsTouchesInView = NO;//1种解决方案 //默认yes不接受touch事件 只响应UITapGestureRecognizer事件 为no 则传递touch事件响应didselect
-    [self.view addGestureRecognizer:tap];
+    //[self.view addGestureRecognizer:tap];
 }
 
 - (void)didReceiveMemoryWarning {
