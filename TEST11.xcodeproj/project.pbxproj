@@ -23,7 +23,6 @@
 		515DFBD81B6CE3BA003C7B8E /* NavigationBarInstanceView.m in Sources */ = {isa = PBXBuildFile; fileRef = 515DFBD61B6CE3BA003C7B8E /* NavigationBarInstanceView.m */; };
 		515DFBD91B6CE3BA003C7B8E /* NavigationBarInstanceView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 515DFBD71B6CE3BA003C7B8E /* NavigationBarInstanceView.xib */; };
 		5195B3F01AB70284007CFA8B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5195B3EF1AB70284007CFA8B /* main.m */; };
-		5195B3F31AB70284007CFA8B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5195B3F21AB70284007CFA8B /* AppDelegate.m */; };
 		5195B3F61AB70284007CFA8B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5195B3F51AB70284007CFA8B /* ViewController.m */; };
 		5195B3FB1AB70284007CFA8B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5195B3FA1AB70284007CFA8B /* Images.xcassets */; };
 		5195B4181AB70332007CFA8B /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5195B4171AB70332007CFA8B /* CFNetwork.framework */; };
@@ -781,7 +780,6 @@
 		5195B3EE1AB70284007CFA8B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5195B3EF1AB70284007CFA8B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		5195B3F11AB70284007CFA8B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		5195B3F21AB70284007CFA8B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		5195B3F41AB70284007CFA8B /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		5195B3F51AB70284007CFA8B /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		5195B3FA1AB70284007CFA8B /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -2208,7 +2206,6 @@
 				51F410C01B524B83008DD35E /* UiNavigationBar */,
 				51E10C621B481BD3009B162E /* Categories */,
 				5195B3F11AB70284007CFA8B /* AppDelegate.h */,
-				5195B3F21AB70284007CFA8B /* AppDelegate.m */,
 				5195B3F41AB70284007CFA8B /* ViewController.h */,
 				5195B3F51AB70284007CFA8B /* ViewController.m */,
 				5195B3FA1AB70284007CFA8B /* Images.xcassets */,
@@ -5250,7 +5247,6 @@
 				51E10DEF1B481BD4009B162E /* NSString+Encrypt.m in Sources */,
 				BDAE14EE1B7C7FED001908A5 /* ALAssetsLibrary+CustomPhotoAlbum.m in Sources */,
 				51E10DEA1B481BD4009B162E /* NSSet+Block.m in Sources */,
-				5195B3F31AB70284007CFA8B /* AppDelegate.m in Sources */,
 				BD5E8EA51BB4E0860088FE6D /* YFAutoLayoutCell.m in Sources */,
 				512933451B6FA6B4002634D5 /* TextFieldInstanceView.m in Sources */,
 				BD8CDF8A1BE33B460026D74E /* CoreLaunchPro.m in Sources */,
