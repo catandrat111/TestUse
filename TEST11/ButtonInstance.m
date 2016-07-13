@@ -17,7 +17,8 @@
 #import "TextFieldInstanceView.h"
 #import "ZHAdvertisementView.h"
 #import "RNBlurModalView.h"
-
+#import "DQAlertView.h"
+#import "RMUniversalAlert.h"
 #define alterViewDisapperTime 0.5
 @interface ButtonInstance ()
 
@@ -83,16 +84,29 @@
 }
 
 -(IBAction)p5:(id)sender {
-    self.lab.text = @"HELLO ";
-    self.view.backgroundColor = [UIColor redColor];
-    self.button5.backgroundColor = [UIColor yellowColor];
-    self.button5.layer.cornerRadius = 5.0f;
-    self.button5.frameHeight = 90;
-    NSArray* arr = @[@"asd"];
+//    self.lab.text = @"HELLO ";
+//    self.view.backgroundColor = [UIColor redColor];
+//    self.button5.backgroundColor = [UIColor yellowColor];
+//    self.button5.layer.cornerRadius = 5.0f;
+//    self.button5.frameHeight = 90;
+//    NSArray* arr = @[@"asd"];
+//    
+//    CGFloat alpha = self.navigationController.navigationBar.alpha;
+//    self.navigationController.navigationBar.alpha = (alpha==1.f)?0:1;
+//    NSString *A = arr[1];
     
-    CGFloat alpha = self.navigationController.navigationBar.alpha;
-    self.navigationController.navigationBar.alpha = (alpha==1.f)?0:1;
-    NSString *A = arr[1];
+//  RMUniversalAlert* alert =  [RMUniversalAlert showAlertInViewController:self withTitle:@"title" message:@"message" cancelButtonTitle:@"cancel" destructiveButtonTitle:nil otherButtonTitles:@[@"confirm"] tapBlock:^(RMUniversalAlert *  alert, NSInteger buttonIndex) {
+//        
+//        if (buttonIndex == 0) {
+//            NSLog(@"0");
+//        }
+//        
+//        else if (buttonIndex == 1){
+//            NSLog(@"1");
+//        }
+//    }];
+//    
+//    [self performSelector:@selector(dis:) withObject:alert afterDelay:3];
     
 //    UIImage *image = [UIImage imageNamed:@"11"];
 //    LogImageData(@"image", 0, 320, 240, UIImagePNGRepresentation(image));
@@ -107,7 +121,14 @@
 //    
 //    [iConsole info:@"Said '%@'", self.lab.text];
     
+    DQAlertView* alterview = [[DQAlertView alloc] initWithTitle:@"tilte" message:@"message" cancelButtonTitle:nil otherButtonTitle:nil];
+    [alterview.cancelButton setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
+    [alterview show];
+}
 
+- (void)dis:(RMUniversalAlert *)alert {
+   // [alert dismiss];
+    
 }
 
 -(IBAction)p2:(UIButton*)sender{

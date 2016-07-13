@@ -292,6 +292,13 @@
 		BD5A39421C02FA50000E212F /* TWTSimpleAnimationController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD5A393F1C02FA50000E212F /* TWTSimpleAnimationController.m */; };
 		BD5A39461C031D4D000E212F /* TWTViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD5A39451C031D4D000E212F /* TWTViewController.m */; };
 		BD5A39491C031D5F000E212F /* TWTPopTransitionController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD5A39481C031D5F000E212F /* TWTPopTransitionController.m */; };
+		BD5DDE6A1D35F013003C5DAA /* DIOpenSDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = BD5DDE681D35F013003C5DAA /* DIOpenSDK.bundle */; };
+		BD5DDE6B1D35F013003C5DAA /* DIOpenSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD5DDE691D35F013003C5DAA /* DIOpenSDK.framework */; };
+		BD5DDE711D3617CF003C5DAA /* RMPopoverPresentationController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD5DDE6E1D3617CF003C5DAA /* RMPopoverPresentationController.m */; };
+		BD5DDE721D3617CF003C5DAA /* RMUniversalAlert.m in Sources */ = {isa = PBXBuildFile; fileRef = BD5DDE701D3617CF003C5DAA /* RMUniversalAlert.m */; };
+		BD5DDE791D361A18003C5DAA /* UIActionSheet+Blocks.m in Sources */ = {isa = PBXBuildFile; fileRef = BD5DDE741D361A17003C5DAA /* UIActionSheet+Blocks.m */; };
+		BD5DDE7A1D361A18003C5DAA /* UIAlertController+Blocks.m in Sources */ = {isa = PBXBuildFile; fileRef = BD5DDE761D361A18003C5DAA /* UIAlertController+Blocks.m */; };
+		BD5DDE7B1D361A18003C5DAA /* UIAlertView+Blocks.m in Sources */ = {isa = PBXBuildFile; fileRef = BD5DDE781D361A18003C5DAA /* UIAlertView+Blocks.m */; };
 		BD5E8EA51BB4E0860088FE6D /* YFAutoLayoutCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BD5E8EA01BB4E0860088FE6D /* YFAutoLayoutCell.m */; };
 		BD5E8EA61BB4E0860088FE6D /* YFAutoLayoutCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = BD5E8EA21BB4E0860088FE6D /* YFAutoLayoutCellModel.m */; };
 		BD5E8EA71BB4E0860088FE6D /* YFAutoLayoutCellViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD5E8EA41BB4E0860088FE6D /* YFAutoLayoutCellViewController.m */; };
@@ -1272,6 +1279,18 @@
 		BD5A39451C031D4D000E212F /* TWTViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWTViewController.m; sourceTree = "<group>"; };
 		BD5A39471C031D5F000E212F /* TWTPopTransitionController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWTPopTransitionController.h; sourceTree = "<group>"; };
 		BD5A39481C031D5F000E212F /* TWTPopTransitionController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWTPopTransitionController.m; sourceTree = "<group>"; };
+		BD5DDE681D35F013003C5DAA /* DIOpenSDK.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = DIOpenSDK.bundle; sourceTree = "<group>"; };
+		BD5DDE691D35F013003C5DAA /* DIOpenSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = DIOpenSDK.framework; sourceTree = "<group>"; };
+		BD5DDE6D1D3617CF003C5DAA /* RMPopoverPresentationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMPopoverPresentationController.h; sourceTree = "<group>"; };
+		BD5DDE6E1D3617CF003C5DAA /* RMPopoverPresentationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RMPopoverPresentationController.m; sourceTree = "<group>"; };
+		BD5DDE6F1D3617CF003C5DAA /* RMUniversalAlert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMUniversalAlert.h; sourceTree = "<group>"; };
+		BD5DDE701D3617CF003C5DAA /* RMUniversalAlert.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RMUniversalAlert.m; sourceTree = "<group>"; };
+		BD5DDE731D361A17003C5DAA /* UIActionSheet+Blocks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIActionSheet+Blocks.h"; sourceTree = "<group>"; };
+		BD5DDE741D361A17003C5DAA /* UIActionSheet+Blocks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIActionSheet+Blocks.m"; sourceTree = "<group>"; };
+		BD5DDE751D361A17003C5DAA /* UIAlertController+Blocks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAlertController+Blocks.h"; sourceTree = "<group>"; };
+		BD5DDE761D361A18003C5DAA /* UIAlertController+Blocks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertController+Blocks.m"; sourceTree = "<group>"; };
+		BD5DDE771D361A18003C5DAA /* UIAlertView+Blocks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAlertView+Blocks.h"; sourceTree = "<group>"; };
+		BD5DDE781D361A18003C5DAA /* UIAlertView+Blocks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertView+Blocks.m"; sourceTree = "<group>"; };
 		BD5E8E9F1BB4E0860088FE6D /* YFAutoLayoutCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YFAutoLayoutCell.h; sourceTree = "<group>"; };
 		BD5E8EA01BB4E0860088FE6D /* YFAutoLayoutCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YFAutoLayoutCell.m; sourceTree = "<group>"; };
 		BD5E8EA11BB4E0860088FE6D /* YFAutoLayoutCellModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YFAutoLayoutCellModel.h; sourceTree = "<group>"; };
@@ -1991,6 +2010,7 @@
 				BDCEB7171C9954F9009A2865 /* libz.tbd in Frameworks */,
 				BDCEB7151C9954F1009A2865 /* libc++.tbd in Frameworks */,
 				BD855DDB1C9269D400FD171A /* MobileCoreServices.framework in Frameworks */,
+				BD5DDE6B1D35F013003C5DAA /* DIOpenSDK.framework in Frameworks */,
 				BDB3C2491C759B200039E146 /* NewsstandKit.framework in Frameworks */,
 				BDB3C2471C759AFB0039E146 /* MapKit.framework in Frameworks */,
 				BDB3C2451C759AF30039E146 /* CoreMedia.framework in Frameworks */,
@@ -3367,6 +3387,32 @@
 			name = Interactive;
 			sourceTree = "<group>";
 		};
+		BD5DDE671D35F013003C5DAA /* DIOpenSDK_V1.1.0_0421 */ = {
+			isa = PBXGroup;
+			children = (
+				BD5DDE681D35F013003C5DAA /* DIOpenSDK.bundle */,
+				BD5DDE691D35F013003C5DAA /* DIOpenSDK.framework */,
+			);
+			path = DIOpenSDK_V1.1.0_0421;
+			sourceTree = "<group>";
+		};
+		BD5DDE6C1D3617CF003C5DAA /* RMUniversalAlert */ = {
+			isa = PBXGroup;
+			children = (
+				BD5DDE731D361A17003C5DAA /* UIActionSheet+Blocks.h */,
+				BD5DDE741D361A17003C5DAA /* UIActionSheet+Blocks.m */,
+				BD5DDE751D361A17003C5DAA /* UIAlertController+Blocks.h */,
+				BD5DDE761D361A18003C5DAA /* UIAlertController+Blocks.m */,
+				BD5DDE771D361A18003C5DAA /* UIAlertView+Blocks.h */,
+				BD5DDE781D361A18003C5DAA /* UIAlertView+Blocks.m */,
+				BD5DDE6D1D3617CF003C5DAA /* RMPopoverPresentationController.h */,
+				BD5DDE6E1D3617CF003C5DAA /* RMPopoverPresentationController.m */,
+				BD5DDE6F1D3617CF003C5DAA /* RMUniversalAlert.h */,
+				BD5DDE701D3617CF003C5DAA /* RMUniversalAlert.m */,
+			);
+			path = RMUniversalAlert;
+			sourceTree = "<group>";
+		};
 		BD5E8E9E1BB4E0860088FE6D /* autoLayoutCell */ = {
 			isa = PBXGroup;
 			children = (
@@ -3932,6 +3978,8 @@
 		BDAE12451B7C7FEC001908A5 /* LIbs */ = {
 			isa = PBXGroup;
 			children = (
+				BD5DDE6C1D3617CF003C5DAA /* RMUniversalAlert */,
+				BD5DDE671D35F013003C5DAA /* DIOpenSDK_V1.1.0_0421 */,
 				BDDA78531D2F7DA300910BD7 /* HYBUnicodeReadable */,
 				BD627E9E1D2B95980077E082 /* Logger */,
 				BD7385A51C97EEC700AAD42D /* ICONSLOLE */,
@@ -4916,6 +4964,7 @@
 				BDAE103E1B7C786F001908A5 /* AutoSizeViewInstance.xib in Resources */,
 				BDB3C2311C7590770039E146 /* first@2x.png in Resources */,
 				BDADA2BD1BF9A5830076BFDF /* 0.png in Resources */,
+				BD5DDE6A1D35F013003C5DAA /* DIOpenSDK.bundle in Resources */,
 				BDF49D451BB3DFB900BEFE26 /* GCDBasicViewController.xib in Resources */,
 				BDAE15B71B7C7FED001908A5 /* Info.plist in Resources */,
 				BD80F15B1BF47E100046FA80 /* Icon-Small.png in Resources */,
@@ -5227,6 +5276,7 @@
 				51E10E131B481BD4009B162E /* UIImage+Blur.m in Sources */,
 				BD1070B11C0404DD00CC1612 /* DSLTransitionFromFirstToSecond.m in Sources */,
 				BDAE15C31B7C7FED001908A5 /* README.md in Sources */,
+				BD5DDE7B1D361A18003C5DAA /* UIAlertView+Blocks.m in Sources */,
 				BDAE15611B7C7FED001908A5 /* UIScrollView+MJExtension.m in Sources */,
 				BDC766101B942A5D00EC31D7 /* UIAlertView+Blocks.m in Sources */,
 				51E10DFC1B481BD4009B162E /* MKMapView+BetterMaps.m in Sources */,
@@ -5396,6 +5446,7 @@
 				BDAE15601B7C7FED001908A5 /* MJRefreshHeaderView.m in Sources */,
 				BD6E077C1C227F6D00B94F38 /* FDTableViewCell.m in Sources */,
 				51B1C61B1B50D79300E68110 /* SliderInstance.m in Sources */,
+				BD5DDE711D3617CF003C5DAA /* RMPopoverPresentationController.m in Sources */,
 				BDAE15031B7C7FED001908A5 /* NSTimer+Addition.m in Sources */,
 				BD6B30061C0FE601008C83C5 /* AFHTTPRequestOperation.m in Sources */,
 				BD79F6A71BCBAE9000AE64FD /* DTTimePeriodGroup.m in Sources */,
@@ -5453,6 +5504,7 @@
 				BDAE15A91B7C7FED001908A5 /* SDWebImageDownloaderOperation.m in Sources */,
 				BD54BCEB1BFB250B00FAEDAE /* RecordingCircleOverlayView.m in Sources */,
 				51E10E431B481BD4009B162E /* UIView+Toast.m in Sources */,
+				BD5DDE791D361A18003C5DAA /* UIActionSheet+Blocks.m in Sources */,
 				51E10DD51B481BD4009B162E /* NSDateFormatter+Make.m in Sources */,
 				51E10DC91B481BD4009B162E /* NSBundle+AppIcon.m in Sources */,
 				BD25F77D1B8C07E600C0BC8E /* HitTestCView.m in Sources */,
@@ -5539,6 +5591,7 @@
 				BD25F7801B8C081100C0BC8E /* HiTestDview.m in Sources */,
 				51E10DD01B481BD4009B162E /* NSDate+Formatter.m in Sources */,
 				BD7385AD1C97EEF400AAD42D /* iConsole.m in Sources */,
+				BD5DDE7A1D361A18003C5DAA /* UIAlertController+Blocks.m in Sources */,
 				BDAE15D51B7C7FED001908A5 /* UIView+Position.m in Sources */,
 				BD5A39331C02F83D000E212F /* TWTExamplesListViewController.m in Sources */,
 				BD8CDF831BE33B460026D74E /* CoreLaunchCool.m in Sources */,
@@ -5607,6 +5660,7 @@
 				515DFBD81B6CE3BA003C7B8E /* NavigationBarInstanceView.m in Sources */,
 				51E10E291B481BD4009B162E /* UINavigationItem+Loading.m in Sources */,
 				BDAE15A31B7C7FED001908A5 /* MKAnnotationView+WebCache.m in Sources */,
+				BD5DDE721D3617CF003C5DAA /* RMUniversalAlert.m in Sources */,
 				BDFCFB171C20FEDE0066BCFE /* LXD_ObservedObject.m in Sources */,
 				BD9B2CEF1C8D8489004DAABC /* UIView+Corner.m in Sources */,
 				BD80F1551BF479050046FA80 /* MBProgressHUDController.m in Sources */,
@@ -5865,6 +5919,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 					"$(PROJECT_DIR)/TEST11/LIbs/alipay",
+					"$(PROJECT_DIR)/TEST11/LIbs/DIOpenSDK_V1.1.0_0421",
 				);
 				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -5917,6 +5972,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 					"$(PROJECT_DIR)/TEST11/LIbs/alipay",
+					"$(PROJECT_DIR)/TEST11/LIbs/DIOpenSDK_V1.1.0_0421",
 				);
 				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -6141,6 +6197,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 					"$(PROJECT_DIR)/TEST11/LIbs/alipay",
+					"$(PROJECT_DIR)/TEST11/LIbs/DIOpenSDK_V1.1.0_0421",
 				);
 				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;

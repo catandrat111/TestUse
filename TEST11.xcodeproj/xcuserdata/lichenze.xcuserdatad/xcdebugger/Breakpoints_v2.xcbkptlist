@@ -1851,7 +1851,7 @@
                   moduleName = "TEST11"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/lichenze/Documents/opensource/TestUse/TEST11/RunLoopInstance.m"
-                  timestampString = "489920613.826447"
+                  timestampString = "490088508.720508"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "215"
@@ -1866,7 +1866,7 @@
                   moduleName = "TEST11"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/lichenze/Documents/opensource/TestUse/TEST11/RunLoopInstance.m"
-                  timestampString = "489920613.826585"
+                  timestampString = "490088508.720646"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "215"
@@ -1881,7 +1881,7 @@
                   moduleName = "TEST11"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/lichenze/Documents/opensource/TestUse/TEST11/RunLoopInstance.m"
-                  timestampString = "489920613.826713"
+                  timestampString = "490088508.720777"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "215"
@@ -3224,11 +3224,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TEST11/ButtonInstance.m"
-            timestampString = "489549320.357406"
+            timestampString = "490088260.612495"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "123"
-            endingLineNumber = "123"
+            startingLineNumber = "144"
+            endingLineNumber = "144"
             landmarkName = "-p2:"
             landmarkType = "5">
          </BreakpointContent>
@@ -3416,22 +3416,6 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TEST11/UsageViewController.m"
-            timestampString = "489920490.158013"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "852"
-            endingLineNumber = "852"
-            landmarkName = "-bubbleSort:"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "TEST11/UsageViewController.m"
             timestampString = "489919359.60529"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
@@ -3470,22 +3454,6 @@
             startingLineNumber = "15"
             endingLineNumber = "15"
             landmarkName = "-description"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "TEST11/UsageViewController.m"
-            timestampString = "489920490.158013"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "840"
-            endingLineNumber = "840"
-            landmarkName = "-bubbleSort:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

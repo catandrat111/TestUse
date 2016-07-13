@@ -863,7 +863,7 @@ void SelectSort(int arr[], int n){
             }
         }
         if (minIndex != i) {
-            Swap(arr[i],arr[minIndex]);
+            //Swap(arr[i],arr[minIndex]);
         }
     }
 }
