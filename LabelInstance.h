@@ -18,5 +18,6 @@
 @property(weak,nonatomic) IBOutlet UILabel *lab3;
 @property(weak,nonatomic) IBOutlet UILabel *lab4;
 @property(weak,nonatomic) IBOutlet UILabel *lab5;
+@property(weak,nonatomic) IBOutlet UILabel *lab6;
 @property(weak,nonatomic) IBOutlet UIView *v1;
 @end

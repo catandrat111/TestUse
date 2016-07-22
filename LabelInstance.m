@@ -301,6 +301,16 @@ UIFont * GetVariationOfFontWithTrait(UIFont *baseFont,
 //    maskView.backgroundColor =[UIColor redColor];
 //     self.lab5.maskView = maskView;
 //    maskView.frameX+= 20;
+    
+    NSString* str = @"自中国始发 - charge cny 300 for noshow. 每航段改期费200 人民币. 每航段退票费300 人民币. 不能同舱位延期 unless upgrade the whole ticket to an appropriate fare level. fare difference should be paid.";
+  NSString* str2 =  [str stringByReplacingOccurrencesOfString:@" " withString:@"\r\n"];
+NSString* str3 = @"";
+    self.lab6.text = str2;
+    
+    NSRegularExpression * regex = [[NSRegularExpression alloc]initWithPattern:@"[a-z]" options:NSRegularExpressionCaseInsensitive error:nil];
+    [regex enumerateMatchesInString:@"124a" options:NSMatchingReportProgress range:NSMakeRange(0, 4) usingBlock:^(NSTextCheckingResult *result, NSMatchingFlags flags, BOOL *stop) {
+        NSLog(@"%@",result);
+    } ];
 }
 
 

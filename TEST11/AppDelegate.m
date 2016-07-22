@@ -59,8 +59,12 @@
 #import "ZSCHRSA.h"
 #import "User.h"
 #import "NSDictionary+HYBUnicodeReadable.h"
+#import "JPUSHService.h"
+
+#import <DIOpenSDK/DIOpenSDK.h>
 //#import <PonyDebugger/PonyDebugger.h>
 //@interface AppDelegate ()<iConsoleDelegate>
+
 @interface AppDelegate ()
 
 @end
@@ -109,6 +113,7 @@ typedef int (^frd)(NSString* st);
     self.window  =[[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     ViewController* main = [[ViewController alloc] init];
     EZNavigationController* navi = [[EZNavigationController alloc] initWithRootViewController:main];
+    navi.hidesBarsOnSwipe = YES;
     self.window.rootViewController = navi;
     [self.window makeKeyAndVisible];
     navi.navigationBar.translucent = YES;//决定视图是否从0开始
@@ -119,7 +124,7 @@ typedef int (^frd)(NSString* st);
     
     NSString* h2 = NSLocalizedStringFromTable(@"hello", @"Localizable1", nil);
     NSLog(@"%@",h2);//你好1
-    
+    [DIOpenSDK registerApp:@"didi646E47504F336C793047717354734344" secret:@"eb28cd9512f46460882947a33b6a186d"];
    
    // navi.navigationBar.barStyle = UIBarStyleBlackTranslucent;
     //更改STATUSBAR
@@ -193,6 +198,7 @@ typedef int (^frd)(NSString* st);
 //    
 //    　　总体就是“想隐居幕后可以，但得先交出权利”。
     [self testModel];
+    [self test];
     //[self assetrtTest];
     //[self testPony];
     
@@ -258,14 +264,90 @@ typedef int (^frd)(NSString* st);
 //                           @"hasBug": @[@"YES",@"NO"],
 //                           @"contact" : @[@"关注博客地址：http://www.henishuo.com", @"QQ群: 324400294", @"关注微博：标哥Jacky", @"关注GITHUB：CoderJackyHuang"]};
     NSLog(@"%@", dict);
+    
+//    if ([[UIDevice currentDevice].systemVersion floatValue] >= 8.0) {
+//        //可以添加自定义categories
+//        [JPUSHService registerForRemoteNotificationTypes:(UIUserNotificationTypeBadge |
+//                                                          UIUserNotificationTypeSound |
+//                                                          UIUserNotificationTypeAlert)
+//                                              categories:nil];
+//    } else {
+//        //categories 必须为nil
+//        [JPUSHService registerForRemoteNotificationTypes:(UIRemoteNotificationTypeBadge |
+//                                                          UIRemoteNotificationTypeSound |
+//                                                          UIRemoteNotificationTypeAlert)
+//                                              categories:nil];
+//    }
+//    
+//    //如不需要使用IDFA，advertisingIdentifier 可为nil
+//    [JPUSHService setupWithOption:launchOptions appKey:@"ff0f4de59f7adb84e5c34f76"
+//                          channel:@"public"
+//                 apsForProduction:FALSE
+//            advertisingIdentifier:nil];
+//    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(getRegisterID) name:kJPFNetworkDidRegisterNotification object:nil];
+//    
     return YES;
 }
+
+- (void)getRegisterID {
+     NSString* jid = [JPUSHService registrationID];
+}
+
+- (void)application:(UIApplication *)application
+didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
+    NSLog(@"%@", [NSString stringWithFormat:@"Device Token: %@", deviceToken]);
+    DLog(@"%@",[JPUSHService registrationID]);
+    [JPUSHService registerDeviceToken:deviceToken];
+}
+
+- (void)application:(UIApplication *)application
+didFailToRegisterForRemoteNotificationsWithError:(NSError *)error {
+    NSLog(@"did Fail To Register For Remote Notifications With Error: %@", error);
+}
+
+#if __IPHONE_OS_VERSION_MAX_ALLOWED > __IPHONE_7_1
+- (void)application:(UIApplication *)application
+didRegisterUserNotificationSettings:
+(UIUserNotificationSettings *)notificationSettings {
+}
+
+// Called when your app has been activated by the user selecting an action from
+// a local notification.
+// A nil action identifier indicates the default action.
+// You should call the completion handler as soon as you've finished handling
+// the action.
+- (void)application:(UIApplication *)application
+handleActionWithIdentifier:(NSString *)identifier
+forLocalNotification:(UILocalNotification *)notification
+  completionHandler:(void (^)())completionHandler {
+}
+
+// Called when your app has been activated by the user selecting an action from
+// a remote notification.
+// A nil action identifier indicates the default action.
+// You should call the completion handler as soon as you've finished handling
+// the action.
+- (void)application:(UIApplication *)application
+handleActionWithIdentifier:(NSString *)identifier
+forRemoteNotification:(NSDictionary *)userInfo
+  completionHandler:(void (^)())completionHandler {
+}
+#endif
+
+
+
+
+
+- (void)application:(UIApplication *)application
+didReceiveLocalNotification:(UILocalNotification *)notification {
+    [JPUSHService showLocalNotificationAtFront:notification identifierKey:nil];
+}
+
 //http://blog.sina.com.cn/s/blog_4c925dca0102uzdi.html
 - (void)assetrtTest {
     DLog(@"dlog test")
     NSString* h3 = nil;
     NSAssert(h3 != nil, @"名字不能为空！");
-    
     
 }
 
@@ -448,6 +530,10 @@ typedef int (^frd)(NSString* st);
   didReceiveRemoteNotification:(NSDictionary *)userInfo
         fetchCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler
 {
+    
+    
+    [JPUSHService handleRemoteNotification:userInfo];
+    
     NSLog(@"Received remote notification with userInfo %@", userInfo);
     
     NSNumber *contentID = userInfo[@"content-id"];
@@ -538,6 +624,16 @@ typedef int (^frd)(NSString* st);
     
     BOOL b = [[JSON valueForKeyPath:@"ss"] isEqualToString:@"aa"];
      NSLog(@"%@",@(b));
+    
+     NSString *jsonString1 = @"{\"name\":\"Aaa\\n gg \",\"test\":\"自中国始发 \\n free for noshow. 每航段改期费300 人民币. 每航段退票费300 人民币. 不能同舱位延期 unless the whole tichet to an appropriate fare level. fare difference should be paid.\"}";
+     NSData *jsonData1 = [jsonString1 dataUsingEncoding:NSUTF8StringEncoding];
+    NSDictionary *JSON1 = [NSJSONSerialization
+                          JSONObjectWithData: jsonData1
+                          options: NSJSONReadingMutableContainers
+                          error: &e1];
+    
+    Person* p1 = [Person objectWithKeyValues:JSON1];
+
 }
 
 //testddd://?action=my_action_1&sourceurl=http://weibo.com/1692391497/CkirQtS1I?from=page_1005051692391497_profile&wvr=6&mod=weibotime&type=comment#_rnd1433007524429

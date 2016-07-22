@@ -19,8 +19,9 @@
 #import "RNBlurModalView.h"
 #import "DQAlertView.h"
 #import "RMUniversalAlert.h"
+#import <DIOpenSDK/DIOpenSDK.h>
 #define alterViewDisapperTime 0.5
-@interface ButtonInstance ()
+@interface ButtonInstance ()<DIOpenSDKDelegate>
 
 @end
 
@@ -121,9 +122,31 @@
 //    
 //    [iConsole info:@"Said '%@'", self.lab.text];
     
-    DQAlertView* alterview = [[DQAlertView alloc] initWithTitle:@"tilte" message:@"message" cancelButtonTitle:nil otherButtonTitle:nil];
-    [alterview.cancelButton setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
-    [alterview show];
+//    DQAlertView* alterview = [[DQAlertView alloc] initWithTitle:@"tilte" message:@"message" cancelButtonTitle:@"cancel" otherButtonTitle:@"confirm"];
+//    [alterview.cancelButton setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
+//    [alterview show];
+//     __weak __typeof(DQAlertView*)weakSelf = alterview;
+//    [alterview actionWithBlocksCancelButtonHandler:^{
+//        
+//    } otherButtonHandler:^{
+//        [weakSelf dismiss];
+//    }];
+//
+    
+//    UIButton *nameField = [[UIButton alloc] initWithFrame:CGRectMake(0.0, 0, 50, 50.0)];
+//    UIView *v = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 250, 40)];
+//    [nameField setImage:[UIImage imageNamed:@"stretch2"] forState:UIControlStateNormal];
+//    
+//    UILabel* lab = [[UILabel alloc] initWithFrame:CGRectMake(60, 0, 190, 40)];
+//    lab.font = [UIFont systemFontOfSize:15];
+//    lab.text = @"我接受此免责申明所有内容";
+//    [v addSubview:lab];
+//    [v addSubview:nameField];
+//    UIAlertView *av = [[UIAlertView alloc] initWithTitle:@"TEST" message:@"subview" delegate:nil cancelButtonTitle:@"NO" otherButtonTitles:@"YES", nil];
+//    [av setValue:v  forKey:@"accessoryView"];
+//    [av show];
+    DIOpenSDKRegisterOptions* options = [[DIOpenSDKRegisterOptions alloc] init];
+    [DIOpenSDK showDDPage:self animated:YES params:nil delegate:self];
 }
 
 - (void)dis:(RMUniversalAlert *)alert {
