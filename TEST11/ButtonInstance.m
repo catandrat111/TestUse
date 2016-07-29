@@ -21,6 +21,7 @@
 #import "RMUniversalAlert.h"
 #import <DIOpenSDK/DIOpenSDK.h>
 #define alterViewDisapperTime 0.5
+#import <PassKit/PassKit.h>
 @interface ButtonInstance ()<DIOpenSDKDelegate>
 
 @end
@@ -145,8 +146,45 @@
 //    UIAlertView *av = [[UIAlertView alloc] initWithTitle:@"TEST" message:@"subview" delegate:nil cancelButtonTitle:@"NO" otherButtonTitles:@"YES", nil];
 //    [av setValue:v  forKey:@"accessoryView"];
 //    [av show];
-    DIOpenSDKRegisterOptions* options = [[DIOpenSDKRegisterOptions alloc] init];
-    [DIOpenSDK showDDPage:self animated:YES params:nil delegate:self];
+//    DIOpenSDKRegisterOptions* options = [[DIOpenSDKRegisterOptions alloc] init];
+//    [DIOpenSDK showDDPage:self animated:YES params:nil delegate:self];
+    
+    
+    NSString* passjson = [[[NSBundle mainBundle] resourcePath]
+                          stringByAppendingPathComponent: @"pass.json"];
+    NSData* jsonData = [NSData dataWithContentsOfFile:passjson];
+    NSError*errorJson;
+    NSDictionary *jsonDict = [NSJSONSerialization JSONObjectWithData:jsonData options:kNilOptions error:&errorJson];
+
+
+    
+    NSString* passFile = [[[NSBundle mainBundle] resourcePath]
+                          stringByAppendingPathComponent: @"freehugcoupon.pkpass"];
+    NSData* passData = [NSData dataWithContentsOfFile:passFile];
+    NSError* error = nil;
+    PKPass *newPass = [[PKPass alloc] initWithData:passData
+                                             error:&error];
+    //5
+    if (error!=nil) {
+        [[[UIAlertView alloc] initWithTitle:@"Passes error"
+                                    message:[error
+                                             localizedDescription]
+                                   delegate:nil
+                          cancelButtonTitle:@"Ooops"
+                          otherButtonTitles: nil] show];
+        return;
+    }
+    
+    
+    PKAddPassesViewController *addController =
+    [[PKAddPassesViewController alloc] initWithPass:newPass];
+    
+    addController.delegate = self;
+    [self presentViewController:addController
+                       animated:YES
+                     completion:nil];
+
+
 }
 
 - (void)dis:(RMUniversalAlert *)alert {
