@@ -16,7 +16,8 @@
 #import "UIView+position.h"
 #import "Constant.h"
 #import "UIDevice+Info.h"
-
+#import "JPEngine.h"
+#import <JavaScriptCore/JavaScriptCore.h>
 //#import "NSLogger.h"
 //#import "iConsole.h"
 #endif

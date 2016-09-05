@@ -326,6 +326,56 @@
 		BD65ADF11C0D417B00F3D855 /* runloop.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BD65ADF01C0D417B00F3D855 /* runloop.jpg */; };
 		BD66F0D21BB387B400C4D76A /* UIView+FDCollapsibleConstraints.m in Sources */ = {isa = PBXBuildFile; fileRef = BD66F0D11BB387B400C4D76A /* UIView+FDCollapsibleConstraints.m */; };
 		BD66F0D61BB389F300C4D76A /* AutoLayoutFDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD66F0D51BB389F300C4D76A /* AutoLayoutFDViewController.m */; };
+		BD6872CF1D7D42FA00E7C0FD /* JPEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = BD6872CD1D7D42FA00E7C0FD /* JPEngine.m */; };
+		BD6872D01D7D42FA00E7C0FD /* JSPatch.js in Resources */ = {isa = PBXBuildFile; fileRef = BD6872CE1D7D42FA00E7C0FD /* JSPatch.js */; };
+		BD6872D21D7D45B700E7C0FD /* sample.js in Resources */ = {isa = PBXBuildFile; fileRef = BD6872D11D7D45B700E7C0FD /* sample.js */; };
+		BD6873321D7D4E5100E7C0FD /* JPCFunction.m in Sources */ = {isa = PBXBuildFile; fileRef = BD6872D61D7D4E5100E7C0FD /* JPCFunction.m */; };
+		BD6873331D7D4E5100E7C0FD /* JPMemory.m in Sources */ = {isa = PBXBuildFile; fileRef = BD6872D81D7D4E5100E7C0FD /* JPMemory.m */; };
+		BD6873341D7D4E5100E7C0FD /* JPStructPointer.m in Sources */ = {isa = PBXBuildFile; fileRef = BD6872DA1D7D4E5100E7C0FD /* JPStructPointer.m */; };
+		BD6873351D7D4E5100E7C0FD /* ffi_arm64.c in Sources */ = {isa = PBXBuildFile; fileRef = BD6872EF1D7D4E5100E7C0FD /* ffi_arm64.c */; };
+		BD6873361D7D4E5100E7C0FD /* sysv_arm64.S in Sources */ = {isa = PBXBuildFile; fileRef = BD6872F01D7D4E5100E7C0FD /* sysv_arm64.S */; };
+		BD6873371D7D4E5100E7C0FD /* ffi_armv7.c in Sources */ = {isa = PBXBuildFile; fileRef = BD6872F21D7D4E5100E7C0FD /* ffi_armv7.c */; };
+		BD6873381D7D4E5100E7C0FD /* sysv_armv7.S in Sources */ = {isa = PBXBuildFile; fileRef = BD6872F31D7D4E5100E7C0FD /* sysv_armv7.S */; };
+		BD6873391D7D4E5100E7C0FD /* trampoline_armv7.S in Sources */ = {isa = PBXBuildFile; fileRef = BD6872F41D7D4E5100E7C0FD /* trampoline_armv7.S */; };
+		BD68733A1D7D4E5100E7C0FD /* prep_cif.c in Sources */ = {isa = PBXBuildFile; fileRef = BD6872F61D7D4E5100E7C0FD /* prep_cif.c */; };
+		BD68733B1D7D4E5100E7C0FD /* raw_api.c in Sources */ = {isa = PBXBuildFile; fileRef = BD6872F71D7D4E5100E7C0FD /* raw_api.c */; };
+		BD68733C1D7D4E5100E7C0FD /* types.c in Sources */ = {isa = PBXBuildFile; fileRef = BD6872F81D7D4E5100E7C0FD /* types.c */; };
+		BD68733D1D7D4E5100E7C0FD /* darwin64_x86_64.S in Sources */ = {isa = PBXBuildFile; fileRef = BD6872FA1D7D4E5100E7C0FD /* darwin64_x86_64.S */; };
+		BD68733E1D7D4E5100E7C0FD /* darwin_i386.S in Sources */ = {isa = PBXBuildFile; fileRef = BD6872FB1D7D4E5100E7C0FD /* darwin_i386.S */; };
+		BD68733F1D7D4E5100E7C0FD /* ffi64_x86_64.c in Sources */ = {isa = PBXBuildFile; fileRef = BD6872FC1D7D4E5100E7C0FD /* ffi64_x86_64.c */; };
+		BD6873401D7D4E5100E7C0FD /* ffi_i386.c in Sources */ = {isa = PBXBuildFile; fileRef = BD6872FD1D7D4E5100E7C0FD /* ffi_i386.c */; };
+		BD6873411D7D4E5100E7C0FD /* win32_i386.S in Sources */ = {isa = PBXBuildFile; fileRef = BD6872FE1D7D4E5100E7C0FD /* win32_i386.S */; };
+		BD6873421D7D4E5100E7C0FD /* JPCGBitmapContext.m in Sources */ = {isa = PBXBuildFile; fileRef = BD6873021D7D4E5100E7C0FD /* JPCGBitmapContext.m */; };
+		BD6873431D7D4E5100E7C0FD /* JPCGColor.m in Sources */ = {isa = PBXBuildFile; fileRef = BD6873041D7D4E5100E7C0FD /* JPCGColor.m */; };
+		BD6873441D7D4E5100E7C0FD /* JPCGContext.m in Sources */ = {isa = PBXBuildFile; fileRef = BD6873061D7D4E5100E7C0FD /* JPCGContext.m */; };
+		BD6873451D7D4E5100E7C0FD /* JPCGGeometry.m in Sources */ = {isa = PBXBuildFile; fileRef = BD6873081D7D4E5100E7C0FD /* JPCGGeometry.m */; };
+		BD6873461D7D4E5100E7C0FD /* JPCGImage.m in Sources */ = {isa = PBXBuildFile; fileRef = BD68730A1D7D4E5100E7C0FD /* JPCGImage.m */; };
+		BD6873471D7D4E5100E7C0FD /* JPCGPath.m in Sources */ = {isa = PBXBuildFile; fileRef = BD68730C1D7D4E5100E7C0FD /* JPCGPath.m */; };
+		BD6873481D7D4E5100E7C0FD /* JPCGTransform.m in Sources */ = {isa = PBXBuildFile; fileRef = BD68730E1D7D4E5100E7C0FD /* JPCGTransform.m */; };
+		BD6873491D7D4E5100E7C0FD /* JPCoreGraphics.m in Sources */ = {isa = PBXBuildFile; fileRef = BD6873101D7D4E5100E7C0FD /* JPCoreGraphics.m */; };
+		BD68734A1D7D4E5100E7C0FD /* JPUIGeometry.m in Sources */ = {isa = PBXBuildFile; fileRef = BD6873131D7D4E5100E7C0FD /* JPUIGeometry.m */; };
+		BD68734B1D7D4E5100E7C0FD /* JPUIGraphics.m in Sources */ = {isa = PBXBuildFile; fileRef = BD6873151D7D4E5100E7C0FD /* JPUIGraphics.m */; };
+		BD68734C1D7D4E5100E7C0FD /* JPUIImage.m in Sources */ = {isa = PBXBuildFile; fileRef = BD6873171D7D4E5100E7C0FD /* JPUIImage.m */; };
+		BD68734D1D7D4E5100E7C0FD /* JPUIKit.m in Sources */ = {isa = PBXBuildFile; fileRef = BD6873191D7D4E5100E7C0FD /* JPUIKit.m */; };
+		BD68734E1D7D4E5100E7C0FD /* JPCleaner.m in Sources */ = {isa = PBXBuildFile; fileRef = BD68731B1D7D4E5100E7C0FD /* JPCleaner.m */; };
+		BD68734F1D7D4E5100E7C0FD /* JPLocker.m in Sources */ = {isa = PBXBuildFile; fileRef = BD68731D1D7D4E5100E7C0FD /* JPLocker.m */; };
+		BD6873501D7D4E5100E7C0FD /* JPNumber.m in Sources */ = {isa = PBXBuildFile; fileRef = BD68731F1D7D4E5100E7C0FD /* JPNumber.m */; };
+		BD6873511D7D4E5100E7C0FD /* JPPlayground.m in Sources */ = {isa = PBXBuildFile; fileRef = BD6873221D7D4E5100E7C0FD /* JPPlayground.m */; };
+		BD6873521D7D4E5100E7C0FD /* JPKeyCommands.m in Sources */ = {isa = PBXBuildFile; fileRef = BD6873251D7D4E5100E7C0FD /* JPKeyCommands.m */; };
+		BD6873531D7D4E5100E7C0FD /* SGDirWatchdog.m in Sources */ = {isa = PBXBuildFile; fileRef = BD6873271D7D4E5100E7C0FD /* SGDirWatchdog.m */; };
+		BD6873541D7D4E5100E7C0FD /* JPDevErrorView.m in Sources */ = {isa = PBXBuildFile; fileRef = BD68732A1D7D4E5100E7C0FD /* JPDevErrorView.m */; };
+		BD6873551D7D4E5100E7C0FD /* JPDevMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = BD68732C1D7D4E5100E7C0FD /* JPDevMenu.m */; };
+		BD6873561D7D4E5100E7C0FD /* JPDevTipView.m in Sources */ = {isa = PBXBuildFile; fileRef = BD68732E1D7D4E5100E7C0FD /* JPDevTipView.m */; };
+		BD6873571D7D4E5100E7C0FD /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = BD68732F1D7D4E5100E7C0FD /* README.md */; };
+		BD6873581D7D4E5100E7C0FD /* JPSpecialInit.m in Sources */ = {isa = PBXBuildFile; fileRef = BD6873311D7D4E5100E7C0FD /* JPSpecialInit.m */; };
+		BD68736D1D7D4E5D00E7C0FD /* JPLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = BD68735B1D7D4E5D00E7C0FD /* JPLoader.m */; };
+		BD68736E1D7D4E5D00E7C0FD /* ioapi.c in Sources */ = {isa = PBXBuildFile; fileRef = BD68735F1D7D4E5D00E7C0FD /* ioapi.c */; };
+		BD68736F1D7D4E5D00E7C0FD /* mztools.c in Sources */ = {isa = PBXBuildFile; fileRef = BD6873611D7D4E5D00E7C0FD /* mztools.c */; };
+		BD6873701D7D4E5D00E7C0FD /* unzip.c in Sources */ = {isa = PBXBuildFile; fileRef = BD6873631D7D4E5D00E7C0FD /* unzip.c */; };
+		BD6873711D7D4E5D00E7C0FD /* zip.c in Sources */ = {isa = PBXBuildFile; fileRef = BD6873651D7D4E5D00E7C0FD /* zip.c */; };
+		BD6873721D7D4E5D00E7C0FD /* RSA.m in Sources */ = {isa = PBXBuildFile; fileRef = BD6873681D7D4E5D00E7C0FD /* RSA.m */; };
+		BD6873731D7D4E5D00E7C0FD /* ZipArchive.m in Sources */ = {isa = PBXBuildFile; fileRef = BD68736A1D7D4E5D00E7C0FD /* ZipArchive.m */; };
+		BD6873741D7D4E5D00E7C0FD /* packer.php in Resources */ = {isa = PBXBuildFile; fileRef = BD68736C1D7D4E5D00E7C0FD /* packer.php */; };
 		BD6B2FEC1C0FCCA6008C83C5 /* ImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = BD6B2FEB1C0FCCA6008C83C5 /* ImageView.m */; };
 		BD6B2FEE1C0FD230008C83C5 /* ImageView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BD6B2FED1C0FD230008C83C5 /* ImageView.xib */; };
 		BD6B2FF11C0FDB7D008C83C5 /* UIImage+Color1.m in Sources */ = {isa = PBXBuildFile; fileRef = BD6B2FF01C0FDB7D008C83C5 /* UIImage+Color1.m */; };
@@ -1349,6 +1399,106 @@
 		BD66F0D11BB387B400C4D76A /* UIView+FDCollapsibleConstraints.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+FDCollapsibleConstraints.m"; sourceTree = "<group>"; };
 		BD66F0D41BB389F300C4D76A /* AutoLayoutFDViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AutoLayoutFDViewController.h; sourceTree = "<group>"; };
 		BD66F0D51BB389F300C4D76A /* AutoLayoutFDViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AutoLayoutFDViewController.m; sourceTree = "<group>"; };
+		BD6872CC1D7D42FA00E7C0FD /* JPEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JPEngine.h; sourceTree = "<group>"; };
+		BD6872CD1D7D42FA00E7C0FD /* JPEngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JPEngine.m; sourceTree = "<group>"; };
+		BD6872CE1D7D42FA00E7C0FD /* JSPatch.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = JSPatch.js; sourceTree = "<group>"; };
+		BD6872D11D7D45B700E7C0FD /* sample.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = sample.js; sourceTree = "<group>"; };
+		BD6872D51D7D4E5100E7C0FD /* JPCFunction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JPCFunction.h; sourceTree = "<group>"; };
+		BD6872D61D7D4E5100E7C0FD /* JPCFunction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JPCFunction.m; sourceTree = "<group>"; };
+		BD6872D71D7D4E5100E7C0FD /* JPMemory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JPMemory.h; sourceTree = "<group>"; };
+		BD6872D81D7D4E5100E7C0FD /* JPMemory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JPMemory.m; sourceTree = "<group>"; };
+		BD6872D91D7D4E5100E7C0FD /* JPStructPointer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JPStructPointer.h; sourceTree = "<group>"; };
+		BD6872DA1D7D4E5100E7C0FD /* JPStructPointer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JPStructPointer.m; sourceTree = "<group>"; };
+		BD6872DD1D7D4E5100E7C0FD /* ffi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ffi.h; sourceTree = "<group>"; };
+		BD6872DE1D7D4E5100E7C0FD /* ffi_arm64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ffi_arm64.h; sourceTree = "<group>"; };
+		BD6872DF1D7D4E5100E7C0FD /* ffi_armv7.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ffi_armv7.h; sourceTree = "<group>"; };
+		BD6872E01D7D4E5100E7C0FD /* ffi_common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ffi_common.h; sourceTree = "<group>"; };
+		BD6872E11D7D4E5100E7C0FD /* ffi_i386.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ffi_i386.h; sourceTree = "<group>"; };
+		BD6872E21D7D4E5100E7C0FD /* ffi_x86_64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ffi_x86_64.h; sourceTree = "<group>"; };
+		BD6872E31D7D4E5100E7C0FD /* fficonfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = fficonfig.h; sourceTree = "<group>"; };
+		BD6872E41D7D4E5100E7C0FD /* fficonfig_arm64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = fficonfig_arm64.h; sourceTree = "<group>"; };
+		BD6872E51D7D4E5100E7C0FD /* fficonfig_armv7.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = fficonfig_armv7.h; sourceTree = "<group>"; };
+		BD6872E61D7D4E5100E7C0FD /* fficonfig_i386.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = fficonfig_i386.h; sourceTree = "<group>"; };
+		BD6872E71D7D4E5100E7C0FD /* fficonfig_x86_64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = fficonfig_x86_64.h; sourceTree = "<group>"; };
+		BD6872E81D7D4E5100E7C0FD /* ffitarget.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ffitarget.h; sourceTree = "<group>"; };
+		BD6872E91D7D4E5100E7C0FD /* ffitarget_arm64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ffitarget_arm64.h; sourceTree = "<group>"; };
+		BD6872EA1D7D4E5100E7C0FD /* ffitarget_armv7.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ffitarget_armv7.h; sourceTree = "<group>"; };
+		BD6872EB1D7D4E5100E7C0FD /* ffitarget_i386.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ffitarget_i386.h; sourceTree = "<group>"; };
+		BD6872EC1D7D4E5100E7C0FD /* ffitarget_x86_64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ffitarget_x86_64.h; sourceTree = "<group>"; };
+		BD6872EF1D7D4E5100E7C0FD /* ffi_arm64.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ffi_arm64.c; sourceTree = "<group>"; };
+		BD6872F01D7D4E5100E7C0FD /* sysv_arm64.S */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.asm; path = sysv_arm64.S; sourceTree = "<group>"; };
+		BD6872F21D7D4E5100E7C0FD /* ffi_armv7.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ffi_armv7.c; sourceTree = "<group>"; };
+		BD6872F31D7D4E5100E7C0FD /* sysv_armv7.S */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.asm; path = sysv_armv7.S; sourceTree = "<group>"; };
+		BD6872F41D7D4E5100E7C0FD /* trampoline_armv7.S */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.asm; path = trampoline_armv7.S; sourceTree = "<group>"; };
+		BD6872F61D7D4E5100E7C0FD /* prep_cif.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = prep_cif.c; sourceTree = "<group>"; };
+		BD6872F71D7D4E5100E7C0FD /* raw_api.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = raw_api.c; sourceTree = "<group>"; };
+		BD6872F81D7D4E5100E7C0FD /* types.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = types.c; sourceTree = "<group>"; };
+		BD6872FA1D7D4E5100E7C0FD /* darwin64_x86_64.S */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.asm; path = darwin64_x86_64.S; sourceTree = "<group>"; };
+		BD6872FB1D7D4E5100E7C0FD /* darwin_i386.S */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.asm; path = darwin_i386.S; sourceTree = "<group>"; };
+		BD6872FC1D7D4E5100E7C0FD /* ffi64_x86_64.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ffi64_x86_64.c; sourceTree = "<group>"; };
+		BD6872FD1D7D4E5100E7C0FD /* ffi_i386.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ffi_i386.c; sourceTree = "<group>"; };
+		BD6872FE1D7D4E5100E7C0FD /* win32_i386.S */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.asm; path = win32_i386.S; sourceTree = "<group>"; };
+		BD6873011D7D4E5100E7C0FD /* JPCGBitmapContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JPCGBitmapContext.h; sourceTree = "<group>"; };
+		BD6873021D7D4E5100E7C0FD /* JPCGBitmapContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JPCGBitmapContext.m; sourceTree = "<group>"; };
+		BD6873031D7D4E5100E7C0FD /* JPCGColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JPCGColor.h; sourceTree = "<group>"; };
+		BD6873041D7D4E5100E7C0FD /* JPCGColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JPCGColor.m; sourceTree = "<group>"; };
+		BD6873051D7D4E5100E7C0FD /* JPCGContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JPCGContext.h; sourceTree = "<group>"; };
+		BD6873061D7D4E5100E7C0FD /* JPCGContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JPCGContext.m; sourceTree = "<group>"; };
+		BD6873071D7D4E5100E7C0FD /* JPCGGeometry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JPCGGeometry.h; sourceTree = "<group>"; };
+		BD6873081D7D4E5100E7C0FD /* JPCGGeometry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JPCGGeometry.m; sourceTree = "<group>"; };
+		BD6873091D7D4E5100E7C0FD /* JPCGImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JPCGImage.h; sourceTree = "<group>"; };
+		BD68730A1D7D4E5100E7C0FD /* JPCGImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JPCGImage.m; sourceTree = "<group>"; };
+		BD68730B1D7D4E5100E7C0FD /* JPCGPath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JPCGPath.h; sourceTree = "<group>"; };
+		BD68730C1D7D4E5100E7C0FD /* JPCGPath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JPCGPath.m; sourceTree = "<group>"; };
+		BD68730D1D7D4E5100E7C0FD /* JPCGTransform.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JPCGTransform.h; sourceTree = "<group>"; };
+		BD68730E1D7D4E5100E7C0FD /* JPCGTransform.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JPCGTransform.m; sourceTree = "<group>"; };
+		BD68730F1D7D4E5100E7C0FD /* JPCoreGraphics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JPCoreGraphics.h; sourceTree = "<group>"; };
+		BD6873101D7D4E5100E7C0FD /* JPCoreGraphics.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JPCoreGraphics.m; sourceTree = "<group>"; };
+		BD6873121D7D4E5100E7C0FD /* JPUIGeometry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JPUIGeometry.h; sourceTree = "<group>"; };
+		BD6873131D7D4E5100E7C0FD /* JPUIGeometry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JPUIGeometry.m; sourceTree = "<group>"; };
+		BD6873141D7D4E5100E7C0FD /* JPUIGraphics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JPUIGraphics.h; sourceTree = "<group>"; };
+		BD6873151D7D4E5100E7C0FD /* JPUIGraphics.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JPUIGraphics.m; sourceTree = "<group>"; };
+		BD6873161D7D4E5100E7C0FD /* JPUIImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JPUIImage.h; sourceTree = "<group>"; };
+		BD6873171D7D4E5100E7C0FD /* JPUIImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JPUIImage.m; sourceTree = "<group>"; };
+		BD6873181D7D4E5100E7C0FD /* JPUIKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JPUIKit.h; sourceTree = "<group>"; };
+		BD6873191D7D4E5100E7C0FD /* JPUIKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JPUIKit.m; sourceTree = "<group>"; };
+		BD68731A1D7D4E5100E7C0FD /* JPCleaner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JPCleaner.h; sourceTree = "<group>"; };
+		BD68731B1D7D4E5100E7C0FD /* JPCleaner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JPCleaner.m; sourceTree = "<group>"; };
+		BD68731C1D7D4E5100E7C0FD /* JPLocker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JPLocker.h; sourceTree = "<group>"; };
+		BD68731D1D7D4E5100E7C0FD /* JPLocker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JPLocker.m; sourceTree = "<group>"; };
+		BD68731E1D7D4E5100E7C0FD /* JPNumber.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JPNumber.h; sourceTree = "<group>"; };
+		BD68731F1D7D4E5100E7C0FD /* JPNumber.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JPNumber.m; sourceTree = "<group>"; };
+		BD6873211D7D4E5100E7C0FD /* JPPlayground.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JPPlayground.h; sourceTree = "<group>"; };
+		BD6873221D7D4E5100E7C0FD /* JPPlayground.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JPPlayground.m; sourceTree = "<group>"; };
+		BD6873241D7D4E5100E7C0FD /* JPKeyCommands.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JPKeyCommands.h; sourceTree = "<group>"; };
+		BD6873251D7D4E5100E7C0FD /* JPKeyCommands.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JPKeyCommands.m; sourceTree = "<group>"; };
+		BD6873261D7D4E5100E7C0FD /* SGDirWatchdog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGDirWatchdog.h; sourceTree = "<group>"; };
+		BD6873271D7D4E5100E7C0FD /* SGDirWatchdog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGDirWatchdog.m; sourceTree = "<group>"; };
+		BD6873291D7D4E5100E7C0FD /* JPDevErrorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JPDevErrorView.h; sourceTree = "<group>"; };
+		BD68732A1D7D4E5100E7C0FD /* JPDevErrorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JPDevErrorView.m; sourceTree = "<group>"; };
+		BD68732B1D7D4E5100E7C0FD /* JPDevMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JPDevMenu.h; sourceTree = "<group>"; };
+		BD68732C1D7D4E5100E7C0FD /* JPDevMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JPDevMenu.m; sourceTree = "<group>"; };
+		BD68732D1D7D4E5100E7C0FD /* JPDevTipView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JPDevTipView.h; sourceTree = "<group>"; };
+		BD68732E1D7D4E5100E7C0FD /* JPDevTipView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JPDevTipView.m; sourceTree = "<group>"; };
+		BD68732F1D7D4E5100E7C0FD /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		BD6873301D7D4E5100E7C0FD /* JPSpecialInit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JPSpecialInit.h; sourceTree = "<group>"; };
+		BD6873311D7D4E5100E7C0FD /* JPSpecialInit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JPSpecialInit.m; sourceTree = "<group>"; };
+		BD68735A1D7D4E5D00E7C0FD /* JPLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JPLoader.h; sourceTree = "<group>"; };
+		BD68735B1D7D4E5D00E7C0FD /* JPLoader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JPLoader.m; sourceTree = "<group>"; };
+		BD68735E1D7D4E5D00E7C0FD /* crypt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = crypt.h; sourceTree = "<group>"; };
+		BD68735F1D7D4E5D00E7C0FD /* ioapi.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ioapi.c; sourceTree = "<group>"; };
+		BD6873601D7D4E5D00E7C0FD /* ioapi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ioapi.h; sourceTree = "<group>"; };
+		BD6873611D7D4E5D00E7C0FD /* mztools.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = mztools.c; sourceTree = "<group>"; };
+		BD6873621D7D4E5D00E7C0FD /* mztools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mztools.h; sourceTree = "<group>"; };
+		BD6873631D7D4E5D00E7C0FD /* unzip.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = unzip.c; sourceTree = "<group>"; };
+		BD6873641D7D4E5D00E7C0FD /* unzip.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = unzip.h; sourceTree = "<group>"; };
+		BD6873651D7D4E5D00E7C0FD /* zip.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = zip.c; sourceTree = "<group>"; };
+		BD6873661D7D4E5D00E7C0FD /* zip.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = zip.h; sourceTree = "<group>"; };
+		BD6873671D7D4E5D00E7C0FD /* RSA.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSA.h; sourceTree = "<group>"; };
+		BD6873681D7D4E5D00E7C0FD /* RSA.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSA.m; sourceTree = "<group>"; };
+		BD6873691D7D4E5D00E7C0FD /* ZipArchive.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZipArchive.h; sourceTree = "<group>"; };
+		BD68736A1D7D4E5D00E7C0FD /* ZipArchive.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZipArchive.m; sourceTree = "<group>"; };
+		BD68736C1D7D4E5D00E7C0FD /* packer.php */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.php; path = packer.php; sourceTree = "<group>"; };
 		BD6B2FEA1C0FCCA6008C83C5 /* ImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageView.h; sourceTree = "<group>"; };
 		BD6B2FEB1C0FCCA6008C83C5 /* ImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageView.m; sourceTree = "<group>"; };
 		BD6B2FED1C0FD230008C83C5 /* ImageView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ImageView.xib; sourceTree = "<group>"; };
@@ -2037,6 +2187,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BD8D3D3D1C083A7600B9B214 /* JavaScriptCore.framework in Frameworks */,
 				BD1799F41D4B663900045C5B /* GTFramework.framework in Frameworks */,
 				BD855DD91C9269BC00FD171A /* Security.framework in Frameworks */,
 				BD17ACA21D49A3770097CA11 /* PassKit.framework in Frameworks */,
@@ -2054,7 +2205,6 @@
 				BDCEB7131C995472009A2865 /* KSCrash.framework in Frameworks */,
 				BDB3C2411C759ADD0039E146 /* AVFoundation.framework in Frameworks */,
 				BDB3C23F1C759AD20039E146 /* AudioToolbox.framework in Frameworks */,
-				BD8D3D3D1C083A7600B9B214 /* JavaScriptCore.framework in Frameworks */,
 				BD3570A91BB29F2A00559A9A /* libz.1.dylib in Frameworks */,
 				BD3570A71BB29EF900559A9A /* libsqlite3.dylib in Frameworks */,
 				51E10E551B482FE2009B162E /* CoreData.framework in Frameworks */,
@@ -2188,6 +2338,7 @@
 		5195B3E11AB70283007CFA8B = {
 			isa = PBXGroup;
 			children = (
+				BD6872D11D7D45B700E7C0FD /* sample.js */,
 				BD85848F1C2A841A001468F3 /* localize */,
 				BDA914E41C1A7CCA00007CDC /* GTFramework.framework */,
 				BDADA2CB1BF9C28D0076BFDF /* Reveal.framework */,
@@ -3629,6 +3780,272 @@
 			name = AutoLayout;
 			sourceTree = "<group>";
 		};
+		BD6872CB1D7D42FA00E7C0FD /* JSPatch */ = {
+			isa = PBXGroup;
+			children = (
+				BD6872CC1D7D42FA00E7C0FD /* JPEngine.h */,
+				BD6872CD1D7D42FA00E7C0FD /* JPEngine.m */,
+				BD6872CE1D7D42FA00E7C0FD /* JSPatch.js */,
+			);
+			path = JSPatch;
+			sourceTree = "<group>";
+		};
+		BD6872D31D7D4E5100E7C0FD /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				BD6872D41D7D4E5100E7C0FD /* JPCFunction */,
+				BD6872FF1D7D4E5100E7C0FD /* JPCFunctionBinder */,
+				BD68731A1D7D4E5100E7C0FD /* JPCleaner.h */,
+				BD68731B1D7D4E5100E7C0FD /* JPCleaner.m */,
+				BD68731C1D7D4E5100E7C0FD /* JPLocker.h */,
+				BD68731D1D7D4E5100E7C0FD /* JPLocker.m */,
+				BD68731E1D7D4E5100E7C0FD /* JPNumber.h */,
+				BD68731F1D7D4E5100E7C0FD /* JPNumber.m */,
+				BD6873201D7D4E5100E7C0FD /* JPPlaygroundTool */,
+				BD6873301D7D4E5100E7C0FD /* JPSpecialInit.h */,
+				BD6873311D7D4E5100E7C0FD /* JPSpecialInit.m */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		BD6872D41D7D4E5100E7C0FD /* JPCFunction */ = {
+			isa = PBXGroup;
+			children = (
+				BD6872D51D7D4E5100E7C0FD /* JPCFunction.h */,
+				BD6872D61D7D4E5100E7C0FD /* JPCFunction.m */,
+				BD6872D71D7D4E5100E7C0FD /* JPMemory.h */,
+				BD6872D81D7D4E5100E7C0FD /* JPMemory.m */,
+				BD6872D91D7D4E5100E7C0FD /* JPStructPointer.h */,
+				BD6872DA1D7D4E5100E7C0FD /* JPStructPointer.m */,
+				BD6872DB1D7D4E5100E7C0FD /* libffi */,
+			);
+			path = JPCFunction;
+			sourceTree = "<group>";
+		};
+		BD6872DB1D7D4E5100E7C0FD /* libffi */ = {
+			isa = PBXGroup;
+			children = (
+				BD6872DC1D7D4E5100E7C0FD /* headers */,
+				BD6872ED1D7D4E5100E7C0FD /* src */,
+			);
+			path = libffi;
+			sourceTree = "<group>";
+		};
+		BD6872DC1D7D4E5100E7C0FD /* headers */ = {
+			isa = PBXGroup;
+			children = (
+				BD6872DD1D7D4E5100E7C0FD /* ffi.h */,
+				BD6872DE1D7D4E5100E7C0FD /* ffi_arm64.h */,
+				BD6872DF1D7D4E5100E7C0FD /* ffi_armv7.h */,
+				BD6872E01D7D4E5100E7C0FD /* ffi_common.h */,
+				BD6872E11D7D4E5100E7C0FD /* ffi_i386.h */,
+				BD6872E21D7D4E5100E7C0FD /* ffi_x86_64.h */,
+				BD6872E31D7D4E5100E7C0FD /* fficonfig.h */,
+				BD6872E41D7D4E5100E7C0FD /* fficonfig_arm64.h */,
+				BD6872E51D7D4E5100E7C0FD /* fficonfig_armv7.h */,
+				BD6872E61D7D4E5100E7C0FD /* fficonfig_i386.h */,
+				BD6872E71D7D4E5100E7C0FD /* fficonfig_x86_64.h */,
+				BD6872E81D7D4E5100E7C0FD /* ffitarget.h */,
+				BD6872E91D7D4E5100E7C0FD /* ffitarget_arm64.h */,
+				BD6872EA1D7D4E5100E7C0FD /* ffitarget_armv7.h */,
+				BD6872EB1D7D4E5100E7C0FD /* ffitarget_i386.h */,
+				BD6872EC1D7D4E5100E7C0FD /* ffitarget_x86_64.h */,
+			);
+			path = headers;
+			sourceTree = "<group>";
+		};
+		BD6872ED1D7D4E5100E7C0FD /* src */ = {
+			isa = PBXGroup;
+			children = (
+				BD6872EE1D7D4E5100E7C0FD /* aarch64 */,
+				BD6872F11D7D4E5100E7C0FD /* arm */,
+				BD6872F51D7D4E5100E7C0FD /* common */,
+				BD6872F91D7D4E5100E7C0FD /* x86 */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+		BD6872EE1D7D4E5100E7C0FD /* aarch64 */ = {
+			isa = PBXGroup;
+			children = (
+				BD6872EF1D7D4E5100E7C0FD /* ffi_arm64.c */,
+				BD6872F01D7D4E5100E7C0FD /* sysv_arm64.S */,
+			);
+			path = aarch64;
+			sourceTree = "<group>";
+		};
+		BD6872F11D7D4E5100E7C0FD /* arm */ = {
+			isa = PBXGroup;
+			children = (
+				BD6872F21D7D4E5100E7C0FD /* ffi_armv7.c */,
+				BD6872F31D7D4E5100E7C0FD /* sysv_armv7.S */,
+				BD6872F41D7D4E5100E7C0FD /* trampoline_armv7.S */,
+			);
+			path = arm;
+			sourceTree = "<group>";
+		};
+		BD6872F51D7D4E5100E7C0FD /* common */ = {
+			isa = PBXGroup;
+			children = (
+				BD6872F61D7D4E5100E7C0FD /* prep_cif.c */,
+				BD6872F71D7D4E5100E7C0FD /* raw_api.c */,
+				BD6872F81D7D4E5100E7C0FD /* types.c */,
+			);
+			path = common;
+			sourceTree = "<group>";
+		};
+		BD6872F91D7D4E5100E7C0FD /* x86 */ = {
+			isa = PBXGroup;
+			children = (
+				BD6872FA1D7D4E5100E7C0FD /* darwin64_x86_64.S */,
+				BD6872FB1D7D4E5100E7C0FD /* darwin_i386.S */,
+				BD6872FC1D7D4E5100E7C0FD /* ffi64_x86_64.c */,
+				BD6872FD1D7D4E5100E7C0FD /* ffi_i386.c */,
+				BD6872FE1D7D4E5100E7C0FD /* win32_i386.S */,
+			);
+			path = x86;
+			sourceTree = "<group>";
+		};
+		BD6872FF1D7D4E5100E7C0FD /* JPCFunctionBinder */ = {
+			isa = PBXGroup;
+			children = (
+				BD6873001D7D4E5100E7C0FD /* CoreGraphics */,
+				BD6873111D7D4E5100E7C0FD /* UIKit */,
+			);
+			path = JPCFunctionBinder;
+			sourceTree = "<group>";
+		};
+		BD6873001D7D4E5100E7C0FD /* CoreGraphics */ = {
+			isa = PBXGroup;
+			children = (
+				BD6873011D7D4E5100E7C0FD /* JPCGBitmapContext.h */,
+				BD6873021D7D4E5100E7C0FD /* JPCGBitmapContext.m */,
+				BD6873031D7D4E5100E7C0FD /* JPCGColor.h */,
+				BD6873041D7D4E5100E7C0FD /* JPCGColor.m */,
+				BD6873051D7D4E5100E7C0FD /* JPCGContext.h */,
+				BD6873061D7D4E5100E7C0FD /* JPCGContext.m */,
+				BD6873071D7D4E5100E7C0FD /* JPCGGeometry.h */,
+				BD6873081D7D4E5100E7C0FD /* JPCGGeometry.m */,
+				BD6873091D7D4E5100E7C0FD /* JPCGImage.h */,
+				BD68730A1D7D4E5100E7C0FD /* JPCGImage.m */,
+				BD68730B1D7D4E5100E7C0FD /* JPCGPath.h */,
+				BD68730C1D7D4E5100E7C0FD /* JPCGPath.m */,
+				BD68730D1D7D4E5100E7C0FD /* JPCGTransform.h */,
+				BD68730E1D7D4E5100E7C0FD /* JPCGTransform.m */,
+				BD68730F1D7D4E5100E7C0FD /* JPCoreGraphics.h */,
+				BD6873101D7D4E5100E7C0FD /* JPCoreGraphics.m */,
+			);
+			path = CoreGraphics;
+			sourceTree = "<group>";
+		};
+		BD6873111D7D4E5100E7C0FD /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				BD6873121D7D4E5100E7C0FD /* JPUIGeometry.h */,
+				BD6873131D7D4E5100E7C0FD /* JPUIGeometry.m */,
+				BD6873141D7D4E5100E7C0FD /* JPUIGraphics.h */,
+				BD6873151D7D4E5100E7C0FD /* JPUIGraphics.m */,
+				BD6873161D7D4E5100E7C0FD /* JPUIImage.h */,
+				BD6873171D7D4E5100E7C0FD /* JPUIImage.m */,
+				BD6873181D7D4E5100E7C0FD /* JPUIKit.h */,
+				BD6873191D7D4E5100E7C0FD /* JPUIKit.m */,
+			);
+			path = UIKit;
+			sourceTree = "<group>";
+		};
+		BD6873201D7D4E5100E7C0FD /* JPPlaygroundTool */ = {
+			isa = PBXGroup;
+			children = (
+				BD6873211D7D4E5100E7C0FD /* JPPlayground.h */,
+				BD6873221D7D4E5100E7C0FD /* JPPlayground.m */,
+				BD6873231D7D4E5100E7C0FD /* JPPlaygroundModule */,
+				BD6873281D7D4E5100E7C0FD /* JPPlaygroundView */,
+				BD68732F1D7D4E5100E7C0FD /* README.md */,
+			);
+			path = JPPlaygroundTool;
+			sourceTree = "<group>";
+		};
+		BD6873231D7D4E5100E7C0FD /* JPPlaygroundModule */ = {
+			isa = PBXGroup;
+			children = (
+				BD6873241D7D4E5100E7C0FD /* JPKeyCommands.h */,
+				BD6873251D7D4E5100E7C0FD /* JPKeyCommands.m */,
+				BD6873261D7D4E5100E7C0FD /* SGDirWatchdog.h */,
+				BD6873271D7D4E5100E7C0FD /* SGDirWatchdog.m */,
+			);
+			path = JPPlaygroundModule;
+			sourceTree = "<group>";
+		};
+		BD6873281D7D4E5100E7C0FD /* JPPlaygroundView */ = {
+			isa = PBXGroup;
+			children = (
+				BD6873291D7D4E5100E7C0FD /* JPDevErrorView.h */,
+				BD68732A1D7D4E5100E7C0FD /* JPDevErrorView.m */,
+				BD68732B1D7D4E5100E7C0FD /* JPDevMenu.h */,
+				BD68732C1D7D4E5100E7C0FD /* JPDevMenu.m */,
+				BD68732D1D7D4E5100E7C0FD /* JPDevTipView.h */,
+				BD68732E1D7D4E5100E7C0FD /* JPDevTipView.m */,
+			);
+			path = JPPlaygroundView;
+			sourceTree = "<group>";
+		};
+		BD6873591D7D4E5D00E7C0FD /* Loader */ = {
+			isa = PBXGroup;
+			children = (
+				BD68735A1D7D4E5D00E7C0FD /* JPLoader.h */,
+				BD68735B1D7D4E5D00E7C0FD /* JPLoader.m */,
+				BD68735C1D7D4E5D00E7C0FD /* libs */,
+				BD68736B1D7D4E5D00E7C0FD /* tools */,
+			);
+			path = Loader;
+			sourceTree = "<group>";
+		};
+		BD68735C1D7D4E5D00E7C0FD /* libs */ = {
+			isa = PBXGroup;
+			children = (
+				BD68735D1D7D4E5D00E7C0FD /* minizip */,
+				BD6873671D7D4E5D00E7C0FD /* RSA.h */,
+				BD6873681D7D4E5D00E7C0FD /* RSA.m */,
+				BD6873691D7D4E5D00E7C0FD /* ZipArchive.h */,
+				BD68736A1D7D4E5D00E7C0FD /* ZipArchive.m */,
+			);
+			path = libs;
+			sourceTree = "<group>";
+		};
+		BD68735D1D7D4E5D00E7C0FD /* minizip */ = {
+			isa = PBXGroup;
+			children = (
+				BD68735E1D7D4E5D00E7C0FD /* crypt.h */,
+				BD68735F1D7D4E5D00E7C0FD /* ioapi.c */,
+				BD6873601D7D4E5D00E7C0FD /* ioapi.h */,
+				BD6873611D7D4E5D00E7C0FD /* mztools.c */,
+				BD6873621D7D4E5D00E7C0FD /* mztools.h */,
+				BD6873631D7D4E5D00E7C0FD /* unzip.c */,
+				BD6873641D7D4E5D00E7C0FD /* unzip.h */,
+				BD6873651D7D4E5D00E7C0FD /* zip.c */,
+				BD6873661D7D4E5D00E7C0FD /* zip.h */,
+			);
+			path = minizip;
+			sourceTree = "<group>";
+		};
+		BD68736B1D7D4E5D00E7C0FD /* tools */ = {
+			isa = PBXGroup;
+			children = (
+				BD68736C1D7D4E5D00E7C0FD /* packer.php */,
+			);
+			path = tools;
+			sourceTree = "<group>";
+		};
+		BD6873751D7D4E6000E7C0FD /* JSPatch */ = {
+			isa = PBXGroup;
+			children = (
+				BD6873591D7D4E5D00E7C0FD /* Loader */,
+				BD6872D31D7D4E5100E7C0FD /* Extensions */,
+				BD6872CB1D7D42FA00E7C0FD /* JSPatch */,
+			);
+			name = JSPatch;
+			sourceTree = "<group>";
+		};
 		BD6B2FF21C0FE601008C83C5 /* AFNetworking */ = {
 			isa = PBXGroup;
 			children = (
@@ -4042,6 +4459,7 @@
 		BDAE12451B7C7FEC001908A5 /* LIbs */ = {
 			isa = PBXGroup;
 			children = (
+				BD6873751D7D4E6000E7C0FD /* JSPatch */,
 				BDCAC8D21D3E28EB006A8D44 /* JPUSH */,
 				BD5DDE6C1D3617CF003C5DAA /* RMUniversalAlert */,
 				BD5DDE671D35F013003C5DAA /* DIOpenSDK_V1.1.0_0421 */,
@@ -5010,6 +5428,7 @@
 				BD80F13E1BF46CB10046FA80 /* stretch13.png in Resources */,
 				BDAE15BC1B7C7FED001908A5 /* SVProgressHUD.bundle in Resources */,
 				BDF987C21B8DB7040039838B /* RunLoopInstance.xib in Resources */,
+				BD6872D21D7D45B700E7C0FD /* sample.js in Resources */,
 				BDAE15BA1B7C7FED001908A5 /* LICENSE.txt in Resources */,
 				BD8584951C2A8525001468F3 /* localizable_1.png in Resources */,
 				BDADA2C41BF9B38D0076BFDF /* ball.png in Resources */,
@@ -5073,6 +5492,7 @@
 				BD89E1DB1C313C03007C8D2A /* mask_3.png in Resources */,
 				BDAE15CB1B7C7FED001908A5 /* LICENSE in Resources */,
 				BD17ACA91D49DB880097CA11 /* icon.png in Resources */,
+				BD6872D01D7D42FA00E7C0FD /* JSPatch.js in Resources */,
 				51E10DD41B481BD4009B162E /* NSDateTimeAgo.bundle in Resources */,
 				BDD31C591B9C121600E1A496 /* BasicUsageViewController.xib in Resources */,
 				BD1070B81C040BCC00CC1612 /* DSLSecondViewController.xib in Resources */,
@@ -5155,6 +5575,7 @@
 				BD17ACAD1D49DB880097CA11 /* pass.json in Resources */,
 				BD24F7BC1D2B37BA001F4AD6 /* private_key.p12 in Resources */,
 				BD8877AF1BF5AB9400F0EA08 /* MultiThreadViewInstance.xib in Resources */,
+				BD6873741D7D4E5D00E7C0FD /* packer.php in Resources */,
 				BDB3C23D1C7590770039E146 /* TBFifthViewController.xib in Resources */,
 				512CB77F1B5E841B0084E5AB /* Selected.png in Resources */,
 				BD754A781BA16CFD00BE410D /* 类型编码.png in Resources */,
@@ -5282,6 +5703,7 @@
 				BDAE15481B7C7FED001908A5 /* MASCompositeConstraint.m in Sources */,
 				BD1070C71C04481F00CC1612 /* CollectionViewBacicHeaderView.m in Sources */,
 				51E10DFF1B481BD4009B162E /* UIApplication+KeyboardFrame.m in Sources */,
+				BD6873421D7D4E5100E7C0FD /* JPCGBitmapContext.m in Sources */,
 				51E10E491B481BD4009B162E /* UIViewController+Visible.m in Sources */,
 				51E10E361B481BD4009B162E /* UITextField+Select.m in Sources */,
 				BDAE15AE1B7C7FED001908A5 /* UIImage+MultiFormat.m in Sources */,
@@ -5298,6 +5720,7 @@
 				BD8CDF821BE33B460026D74E /* CALayer+Cool.m in Sources */,
 				BDDA785C1D2F7DA300910BD7 /* NSArray+HYBUnicodeReadable.m in Sources */,
 				BDAE154A1B7C7FED001908A5 /* MASConstraintMaker.m in Sources */,
+				BD6872CF1D7D42FA00E7C0FD /* JPEngine.m in Sources */,
 				51E10DC61B481BD4009B162E /* CLLocationManager+Blocks.m in Sources */,
 				BDE62A841BA6CC6500870499 /* LayoutModel.m in Sources */,
 				BDAE15A71B7C7FED001908A5 /* SDWebImageDecoder.m in Sources */,
@@ -5326,14 +5749,18 @@
 				BD8877D31BF5DAD700F0EA08 /* KCAnimationViewController1.m in Sources */,
 				51E10E351B481BD4009B162E /* UITextField+Blocks.m in Sources */,
 				51E10E011B481BD4009B162E /* UIBezierPath+BasicShapes.m in Sources */,
+				BD6873471D7D4E5100E7C0FD /* JPCGPath.m in Sources */,
 				51E10DEC1B481BD4009B162E /* NSString+Contains.m in Sources */,
 				BD627EA31D2B95BE0077E082 /* LoggerClient.m in Sources */,
 				51E10E081B481BD4009B162E /* UIButton+Submitting.m in Sources */,
+				BD68733E1D7D4E5100E7C0FD /* darwin_i386.S in Sources */,
 				BDADA2B01BF983D80076BFDF /* KCAnimationBacicAnimationViewController13.m in Sources */,
 				BDC299541C8FFE5500C43370 /* ScrollViewScrollViewController.m in Sources */,
 				BD7641301C0E7ABA00846EF0 /* ImageviewInstance.m in Sources */,
+				BD6873361D7D4E5100E7C0FD /* sysv_arm64.S in Sources */,
 				BD5A39351C02F83D000E212F /* TWTOverlayExampleViewController.m in Sources */,
 				BD6B300C1C0FE601008C83C5 /* AFURLRequestSerialization.m in Sources */,
+				BD6873541D7D4E5100E7C0FD /* JPDevErrorView.m in Sources */,
 				51E10E121B481BD4009B162E /* UIImage+animatedGIF.m in Sources */,
 				BDAE15BB1B7C7FED001908A5 /* README.md in Sources */,
 				BD8CDF8B1BE33B460026D74E /* CYNavigationControllerDelegate.m in Sources */,
@@ -5371,18 +5798,25 @@
 				51E10E071B481BD4009B162E /* UIButton+Indicator.m in Sources */,
 				BDD31C581B9C121600E1A496 /* BasicUsageViewController.m in Sources */,
 				BD79F6A51BCBAE9000AE64FD /* DTTimePeriodChain.m in Sources */,
+				BD68734D1D7D4E5100E7C0FD /* JPUIKit.m in Sources */,
 				51E10DD11B481BD4009B162E /* NSDate+Reporting.m in Sources */,
+				BD6873551D7D4E5100E7C0FD /* JPDevMenu.m in Sources */,
 				BD8877B51BF5AF4600F0EA08 /* KCImageData.m in Sources */,
 				BD24F7C71D2B3959001F4AD6 /* ZSCHRSA.m in Sources */,
 				BD5A39311C02F83D000E212F /* TWTDismissAnimationController.m in Sources */,
+				BD6873571D7D4E5100E7C0FD /* README.md in Sources */,
 				BD1070E61C046DF300CC1612 /* CLLineViewController.m in Sources */,
 				51E10DE71B481BD4009B162E /* NSObject+MKBlockTimer.m in Sources */,
 				BDAE15621B7C7FED001908A5 /* UIScrollView+MJRefresh.m in Sources */,
 				51E10E2D1B481BD4009B162E /* UIScreen+Frame.m in Sources */,
 				BD8877C41BF5BE6000F0EA08 /* GCD_AsyncViewController.m in Sources */,
+				BD6873501D7D4E5100E7C0FD /* JPNumber.m in Sources */,
 				51E10DEF1B481BD4009B162E /* NSString+Encrypt.m in Sources */,
 				BDAE14EE1B7C7FED001908A5 /* ALAssetsLibrary+CustomPhotoAlbum.m in Sources */,
 				51E10DEA1B481BD4009B162E /* NSSet+Block.m in Sources */,
+				BD6873561D7D4E5100E7C0FD /* JPDevTipView.m in Sources */,
+				BD6873431D7D4E5100E7C0FD /* JPCGColor.m in Sources */,
+				BD6873341D7D4E5100E7C0FD /* JPStructPointer.m in Sources */,
 				BD5E8EA51BB4E0860088FE6D /* YFAutoLayoutCell.m in Sources */,
 				512933451B6FA6B4002634D5 /* TextFieldInstanceView.m in Sources */,
 				BD8CDF8A1BE33B460026D74E /* CoreLaunchPro.m in Sources */,
@@ -5393,6 +5827,7 @@
 				BD6B300D1C0FE601008C83C5 /* AFURLResponseSerialization.m in Sources */,
 				51E10E4E1B481BD4009B162E /* UIWebView+Load.m in Sources */,
 				51E10E1A1B481BD4009B162E /* UIImage+Orientation.m in Sources */,
+				BD6873531D7D4E5100E7C0FD /* SGDirWatchdog.m in Sources */,
 				BDD31C541B9C10E000E1A496 /* DRInspectionLayer.m in Sources */,
 				BDE08D8C1C16D32100E47F61 /* EZNavigationController.m in Sources */,
 				BD5E8EBE1BB51CF30088FE6D /* HCDNonConcurrentOperation.m in Sources */,
@@ -5400,6 +5835,7 @@
 				BD6138C91C744A5C00B0F4B7 /* APLViewController.m in Sources */,
 				51E10DF41B481BD4009B162E /* NSString+Trims.m in Sources */,
 				BD79F6A61BCBAE9000AE64FD /* DTTimePeriodCollection.m in Sources */,
+				BD6873331D7D4E5100E7C0FD /* JPMemory.m in Sources */,
 				51E10E041B481BD4009B162E /* UIButton+BackgroundColor.m in Sources */,
 				51E10E1B1B481BD4009B162E /* UIImage+PDF.m in Sources */,
 				51E10E181B481BD4009B162E /* UIImage+GIF.m in Sources */,
@@ -5411,12 +5847,14 @@
 				51E10E2E1B481BD4009B162E /* UIScrollView+Addition.m in Sources */,
 				51E10E271B481BD4009B162E /* UINavigationController+KeyboardFix.m in Sources */,
 				BDAE15B51B7C7FED001908A5 /* SevenSwitch.m in Sources */,
+				BD6873521D7D4E5100E7C0FD /* JPKeyCommands.m in Sources */,
 				BDAE122A1B7C7E17001908A5 /* UIButton+Parameter.m in Sources */,
 				BD6B2FEC1C0FCCA6008C83C5 /* ImageView.m in Sources */,
 				BD8877BE1BF5BBFB00F0EA08 /* BlockOperationViewController.m in Sources */,
 				BDC5A9701B7DEF5800AC14C4 /* HSCButton.m in Sources */,
 				BD8877E81BF5E09F00F0EA08 /* KCAnimationView1.m in Sources */,
 				BD8877E21BF5DD7500F0EA08 /* KCAnimationViewController6.m in Sources */,
+				BD6873731D7D4E5D00E7C0FD /* ZipArchive.m in Sources */,
 				BDD769741BBA622E006A4CF4 /* ZOCKintsugiPhotoViewController_iPad.m in Sources */,
 				BDE4135E1D334F0800DBA313 /* AppDelegate.m in Sources */,
 				BD8877A41BF58A4A00F0EA08 /* KCMainViewController.m in Sources */,
@@ -5432,6 +5870,7 @@
 				BD8877CA1BF5C9A300F0EA08 /* ConditionViewController.m in Sources */,
 				51E10E501B481BD4009B162E /* WebView+Debug.m in Sources */,
 				BDAE15AB1B7C7FED001908A5 /* SDWebImagePrefetcher.m in Sources */,
+				BD6873721D7D4E5D00E7C0FD /* RSA.m in Sources */,
 				51E10DC51B481BD4009B162E /* CLLocation+CH1903.m in Sources */,
 				51E10E3E1B481BD4009B162E /* UIView+Frame.m in Sources */,
 				BDE62A7B1BA6CAD200870499 /* TableViewLayout.m in Sources */,
@@ -5444,6 +5883,7 @@
 				BD6B300B1C0FE601008C83C5 /* AFURLConnectionOperation.m in Sources */,
 				BDFEB8C61BDA18A50001FE1D /* GifViewController.m in Sources */,
 				BDB3C23A1C7590770039E146 /* TBFourthViewController.m in Sources */,
+				BD68733D1D7D4E5100E7C0FD /* darwin64_x86_64.S in Sources */,
 				BDE62A801BA6CB7200870499 /* TableViewLayoutCell.m in Sources */,
 				51E10DD21B481BD4009B162E /* NSDate+TimeAgo.m in Sources */,
 				BD89E1D01C31258C007C8D2A /* KCAnimationViewController8.m in Sources */,
@@ -5481,6 +5921,7 @@
 				BD6E07811C227FEF00B94F38 /* HCDCreateBlockOperation.m in Sources */,
 				BD8877DC1BF5DD5C00F0EA08 /* KCAnimationViewController4.m in Sources */,
 				BDE62A771BA6C9C000870499 /* UITableView+FDTemplateLayoutCell.m in Sources */,
+				BD6873351D7D4E5100E7C0FD /* ffi_arm64.c in Sources */,
 				51E10E061B481BD4009B162E /* UIButton+CountDown.m in Sources */,
 				51E10DE81B481BD4009B162E /* NSObject+Property.m in Sources */,
 				BDDA785D1D2F7DA300910BD7 /* NSDictionary+HYBUnicodeReadable.m in Sources */,
@@ -5490,9 +5931,11 @@
 				51E10E111B481BD4009B162E /* UIImage+Alpha.m in Sources */,
 				BDAE122B1B7C7E17001908A5 /* UIDevice+Info.m in Sources */,
 				BD8877C71BF5C3BC00F0EA08 /* LockViewController.m in Sources */,
+				BD68733B1D7D4E5100E7C0FD /* raw_api.c in Sources */,
 				BD1070E11C04629500CC1612 /* CLCircleViewController.m in Sources */,
 				BDAE15B11B7C7FED001908A5 /* UIImageView+WebCache.m in Sources */,
 				BD9B2CEC1C8D7FBC004DAABC /* UIImage+ImageRoundedCorner.m in Sources */,
+				BD68736E1D7D4E5D00E7C0FD /* ioapi.c in Sources */,
 				51E10E4C1B481BD4009B162E /* UIWebView+Canvas.m in Sources */,
 				BD047E6B1BD8C5CB00D020E3 /* AutoCustom2ViewController.m in Sources */,
 				BDA915061C1A808A00007CDC /* NSString+MKNetworkKitAdditions.m in Sources */,
@@ -5504,11 +5947,13 @@
 				51E10C371B47A8EB009B162E /* TableInstanceView.m in Sources */,
 				BD1070E91C046E0000CC1612 /* LineLayout.m in Sources */,
 				BD8CDF841BE33B460026D74E /* CoreLaunchFlip.m in Sources */,
+				BD68734A1D7D4E5100E7C0FD /* JPUIGeometry.m in Sources */,
 				BD24F7C51D2B3959001F4AD6 /* Base64.m in Sources */,
 				BD5E8EB81BB51CC40088FE6D /* HCDCreateInvocationOperation.m in Sources */,
 				BD5E8EBB1BB51CE00088FE6D /* HCDConcurrentOperation.m in Sources */,
 				BDAE15BF1B7C7FED001908A5 /* README.md in Sources */,
 				BDAE15C91B7C7FED001908A5 /* README.md in Sources */,
+				BD6873581D7D4E5100E7C0FD /* JPSpecialInit.m in Sources */,
 				51E10DF81B481BD4009B162E /* NSTimer+Addition.m in Sources */,
 				51E10DCD1B481BD4009B162E /* NSData+Hash.m in Sources */,
 				BDF49D491BB3E2CF00BEFE26 /* GCDApplyViewController.m in Sources */,
@@ -5527,6 +5972,7 @@
 				BD24F7C61D2B3959001F4AD6 /* DES3Util.m in Sources */,
 				BDADA2CA1BF9B46B0076BFDF /* KCAnimationStepViewController.m in Sources */,
 				BD1070DD1C0461DA00CC1612 /* CircleLayout.m in Sources */,
+				BD6873381D7D4E5100E7C0FD /* sysv_armv7.S in Sources */,
 				BDD7697E1BBA631C006A4CF4 /* ZOCNews.m in Sources */,
 				BDF49D441BB3DFB900BEFE26 /* GCDBasicViewController.m in Sources */,
 				BD8D3D3B1C08351A00B9B214 /* MyWebView.m in Sources */,
@@ -5534,6 +5980,7 @@
 				BDAE15601B7C7FED001908A5 /* MJRefreshHeaderView.m in Sources */,
 				BD6E077C1C227F6D00B94F38 /* FDTableViewCell.m in Sources */,
 				51B1C61B1B50D79300E68110 /* SliderInstance.m in Sources */,
+				BD68733F1D7D4E5100E7C0FD /* ffi64_x86_64.c in Sources */,
 				BD5DDE711D3617CF003C5DAA /* RMPopoverPresentationController.m in Sources */,
 				BDAE15031B7C7FED001908A5 /* NSTimer+Addition.m in Sources */,
 				BD6B30061C0FE601008C83C5 /* AFHTTPRequestOperation.m in Sources */,
@@ -5565,14 +6012,18 @@
 				BDD31C5F1B9C2F1F00E1A496 /* DRSavedPopAnimationState.m in Sources */,
 				51E10DE31B481BD4009B162E /* NSObject+AutoCoding.m in Sources */,
 				51E10E2C1B481BD4009B162E /* UIResponder+UIAdapt.m in Sources */,
+				BD6873511D7D4E5100E7C0FD /* JPPlayground.m in Sources */,
 				51E10E0A1B481BD4009B162E /* UIColor+HEX.m in Sources */,
 				51E10DE51B481BD4009B162E /* NSObject+GCD.m in Sources */,
+				BD68734C1D7D4E5100E7C0FD /* JPUIImage.m in Sources */,
+				BD68736D1D7D4E5D00E7C0FD /* JPLoader.m in Sources */,
 				51E10E051B481BD4009B162E /* UIButton+Block.m in Sources */,
 				BDFCFB2C1C2110220066BCFE /* CustomKVO1ViewController.m in Sources */,
 				51E10DF71B481BD4009B162E /* NSString+UUID.m in Sources */,
 				BD8D3D381C0834FD00B9B214 /* WebView2ViewController.m in Sources */,
 				51E10DE11B481BD4009B162E /* NSObject+AddProperty.m in Sources */,
 				BD24F7B91D2B3704001F4AD6 /* RSAEncryptor.m in Sources */,
+				BD6873491D7D4E5100E7C0FD /* JPCoreGraphics.m in Sources */,
 				BDAE15B41B7C7FED001908A5 /* README.md in Sources */,
 				BDAE103D1B7C786F001908A5 /* AutoSizeViewInstance.m in Sources */,
 				BD8CDF891BE33B460026D74E /* CoreLaunchPlus.m in Sources */,
@@ -5591,6 +6042,7 @@
 				51E10DCC1B481BD4009B162E /* NSData+Gzip.m in Sources */,
 				BDAE15A91B7C7FED001908A5 /* SDWebImageDownloaderOperation.m in Sources */,
 				BD54BCEB1BFB250B00FAEDAE /* RecordingCircleOverlayView.m in Sources */,
+				BD6873371D7D4E5100E7C0FD /* ffi_armv7.c in Sources */,
 				51E10E431B481BD4009B162E /* UIView+Toast.m in Sources */,
 				BD5DDE791D361A18003C5DAA /* UIActionSheet+Blocks.m in Sources */,
 				51E10DD51B481BD4009B162E /* NSDateFormatter+Make.m in Sources */,
@@ -5622,6 +6074,7 @@
 				BDAE15541B7C7FED001908A5 /* MJIvar.m in Sources */,
 				51E10E1E1B481BD4009B162E /* UIImage+RoundedCorner.m in Sources */,
 				5158D1A01B7E355000ACF3AD /* PanGestureInstance.m in Sources */,
+				BD6873401D7D4E5100E7C0FD /* ffi_i386.c in Sources */,
 				BDAE155A1B7C7FED001908A5 /* NSObject+MJKeyValue.m in Sources */,
 				BDADA2C71BF9B3D10076BFDF /* KCAnimationSpringViewController.m in Sources */,
 				BD8877C11BF5BE4300F0EA08 /* GCD_SyncViewController.m in Sources */,
@@ -5630,20 +6083,24 @@
 				51E10DCF1B481BD4009B162E /* NSDate+Extension.m in Sources */,
 				BDB3C23C1C7590770039E146 /* TBFifthViewController.m in Sources */,
 				51E10DDA1B481BD4009B162E /* NSException+Trace.m in Sources */,
+				BD6873411D7D4E5100E7C0FD /* win32_i386.S in Sources */,
 				BDADA2A51BF976770076BFDF /* KCAnimationBacicAnimationViewController1.m in Sources */,
 				51E10E3B1B481BD4009B162E /* UIView+Constraints.m in Sources */,
 				51E10DF11B481BD4009B162E /* NSString+MIME.m in Sources */,
 				51E10DDE1B481BD4009B162E /* NSDecimalNumber+Extensions.m in Sources */,
 				51E10E0C1B481BD4009B162E /* UIColor+Random.m in Sources */,
 				BDB3C21B1C7558880039E146 /* BackgroundModeViewController.m in Sources */,
+				BD6873461D7D4E5100E7C0FD /* JPCGImage.m in Sources */,
 				51E10E1D1B481BD4009B162E /* UIImage+Resize.m in Sources */,
 				BD8CDF911BE33B460026D74E /* ProVC.m in Sources */,
 				BDADA2C01BF9A60D0076BFDF /* KCAnimationSwitchViewController.m in Sources */,
 				BD754A7B1BA17E7C00BE410D /* NSInvocation+Improved.m in Sources */,
 				BD1658491BA810D200874780 /* AntiAlias.m in Sources */,
+				BD6873481D7D4E5100E7C0FD /* JPCGTransform.m in Sources */,
 				51E10DCB1B481BD4009B162E /* NSData+Encrypt.m in Sources */,
 				BD1070EC1C046E1200CC1612 /* CLineCell.m in Sources */,
 				51E10DC01B481BD4009B162E /* NSManagedObject+Extensions.m in Sources */,
+				BD6873441D7D4E5100E7C0FD /* JPCGContext.m in Sources */,
 				BD8877B21BF5AEC900F0EA08 /* Thread_MultiViewController.m in Sources */,
 				BD047E631BD8780000D020E3 /* AutoCustom1ViewController.m in Sources */,
 				51E10DDF1B481BD4009B162E /* NSNumber+Round.m in Sources */,
@@ -5656,9 +6113,13 @@
 				51E10E141B481BD4009B162E /* UIImage+Capture.m in Sources */,
 				BDADA2A81BF978DF0076BFDF /* KCAnimationBacicAnimationViewController11.m in Sources */,
 				BD6B300E1C0FE601008C83C5 /* AFURLSessionManager.m in Sources */,
+				BD6873701D7D4E5D00E7C0FD /* unzip.c in Sources */,
+				BD6873451D7D4E5100E7C0FD /* JPCGGeometry.m in Sources */,
+				BD68734E1D7D4E5100E7C0FD /* JPCleaner.m in Sources */,
 				BD25F7771B8C076E00C0BC8E /* HitTestAView.m in Sources */,
 				BDAE15C41B7C7FED001908A5 /* TPKeyboardAvoidingCollectionView.m in Sources */,
 				BD1070BB1C04409000CC1612 /* CollectionViewInstance.m in Sources */,
+				BD6873391D7D4E5100E7C0FD /* trampoline_armv7.S in Sources */,
 				51E10E151B481BD4009B162E /* UIImage+Color.m in Sources */,
 				BD1070B21C0404DD00CC1612 /* DSLTransitionFromSecondToFirst.m in Sources */,
 				BD5A39371C02F83D000E212F /* TWTPushExampleViewController.m in Sources */,
@@ -5673,6 +6134,7 @@
 				BDAE15D01B7C7FED001908A5 /* UIImageView+AnimationCompletion.m in Sources */,
 				BD5C96561D75330B004021F2 /* SearchControllerInstanceView.m in Sources */,
 				51E10E411B481BD4009B162E /* UIView+Screenshot.m in Sources */,
+				BD68733A1D7D4E5100E7C0FD /* prep_cif.c in Sources */,
 				51FA7A231B70FB2A0002990E /* UsageViewController.m in Sources */,
 				BDBBDBCB1BF2EAF50016768B /* FBKVOController.m in Sources */,
 				BDA915071C1A808A00007CDC /* UIAlertView+MKNetworkKitAdditions.m in Sources */,
@@ -5693,9 +6155,12 @@
 				51E10E4A1B481BD4009B162E /* UIWebView+Alert.m in Sources */,
 				BDAE15491B7C7FED001908A5 /* MASConstraint.m in Sources */,
 				BD6E077E1C227F6D00B94F38 /* FDTableViewController.m in Sources */,
+				BD68733C1D7D4E5100E7C0FD /* types.c in Sources */,
 				BDBD75381BA01B2200168A8B /* NSNull+XY_InternalNullExtention.m in Sources */,
 				BDAE15391B7C7FED001908A5 /* GZIP.m in Sources */,
+				BD6873711D7D4E5D00E7C0FD /* zip.c in Sources */,
 				BD1070AD1C0404DD00CC1612 /* DSLFirstViewController.m in Sources */,
+				BD68734B1D7D4E5100E7C0FD /* JPUIGraphics.m in Sources */,
 				BDA915031C1A808A00007CDC /* NSData+MKBase64.m in Sources */,
 				BDA9150A1C1A808A00007CDC /* MKNetworkOperation.m in Sources */,
 				BD5E8EAA1BB4E3B90088FE6D /* ViewController+MASAdditions.m in Sources */,
@@ -5710,6 +6175,7 @@
 				51E10E421B481BD4009B162E /* UIView+Shake.m in Sources */,
 				51FA7A2B1B7105180002990E /* Person+GHAssociatedObject.m in Sources */,
 				BD6B2FF11C0FDB7D008C83C5 /* UIImage+Color1.m in Sources */,
+				BD68736F1D7D4E5D00E7C0FD /* mztools.c in Sources */,
 				BDCCA7AE1B8F04B8007ED1C9 /* RRPSectionFootView.m in Sources */,
 				51E10DFE1B481BD4009B162E /* UIAlertView+Block.m in Sources */,
 				BD8877D91BF5DD4F00F0EA08 /* KCAnimationViewController3.m in Sources */,
@@ -5723,6 +6189,7 @@
 				51E10DC31B481BD4009B162E /* NSManagedObjectContext+FetchRequestsConstructors.m in Sources */,
 				BDAE15D31B7C7FED001908A5 /* UIViewController+Swizzle.m in Sources */,
 				51E10E261B481BD4009B162E /* UINavigationController+FDFullscreenPopGesture.m in Sources */,
+				BD68734F1D7D4E5100E7C0FD /* JPLocker.m in Sources */,
 				51E10E101B481BD4009B162E /* UIDevice+Hardware.m in Sources */,
 				BDADA2B31BF98A7A0076BFDF /* KCAnimationKeyPathAnimationViewController11.m in Sources */,
 				51E10E4F1B481BD4009B162E /* UIWebView+Style.m in Sources */,
@@ -5736,6 +6203,7 @@
 				BDAE12091B7C7E17001908A5 /* NSDate-Utilities.m in Sources */,
 				51E10E401B481BD4009B162E /* UIView+RecursiveDescription.m in Sources */,
 				BD65ADEF1C0D3D6D00F3D855 /* MyWorkerClass.m in Sources */,
+				BD6873321D7D4E5100E7C0FD /* JPCFunction.m in Sources */,
 				BDB3C2341C7590770039E146 /* TBFirstViewController.m in Sources */,
 				BD5A39491C031D5F000E212F /* TWTPopTransitionController.m in Sources */,
 				BD79F6A21BCBAE9000AE64FD /* DTConstants.m in Sources */,

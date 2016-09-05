@@ -136,7 +136,7 @@ typedef int (^frd)(NSString* st);
     NSString* h2 = NSLocalizedStringFromTable(@"hello", @"Localizable1", nil);
     NSLog(@"%@",h2);//你好1
     [DIOpenSDK registerApp:@"didi646E47504F336C793047717354734344" secret:@"eb28cd9512f46460882947a33b6a186d"];
-   
+    [JPEngine startEngine];
    // navi.navigationBar.barStyle = UIBarStyleBlackTranslucent;
     //更改STATUSBAR
     //[[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
@@ -296,8 +296,16 @@ typedef int (^frd)(NSString* st);
 //                 apsForProduction:FALSE
 //            advertisingIdentifier:nil];
 //    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(getRegisterID) name:kJPFNetworkDidRegisterNotification object:nil];
-//    
+//
+    [self testJSPatch];
     return YES;
+}
+
+
+-(void)testJSPatch {
+    NSString *sourcePath = [[NSBundle mainBundle] pathForResource:@"sample" ofType:@"js"];
+    NSString *script = [NSString stringWithContentsOfFile:sourcePath encoding:NSUTF8StringEncoding error:nil];
+    [JPEngine evaluateScript:script];
 }
 
 - (void)getRegisterID {
