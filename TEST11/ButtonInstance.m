@@ -150,40 +150,62 @@
 //    [DIOpenSDK showDDPage:self animated:YES params:nil delegate:self];
     
     
-    NSString* passjson = [[[NSBundle mainBundle] resourcePath]
-                          stringByAppendingPathComponent: @"pass.json"];
-    NSData* jsonData = [NSData dataWithContentsOfFile:passjson];
-    NSError*errorJson;
-    NSDictionary *jsonDict = [NSJSONSerialization JSONObjectWithData:jsonData options:kNilOptions error:&errorJson];
+//    NSString* passjson = [[[NSBundle mainBundle] resourcePath]
+//                          stringByAppendingPathComponent: @"pass.json"];
+//    NSData* jsonData = [NSData dataWithContentsOfFile:passjson];
+//    NSError*errorJson;
+//    NSDictionary *jsonDict = [NSJSONSerialization JSONObjectWithData:jsonData options:kNilOptions error:&errorJson];
+//
+//
+//    
+//    NSString* passFile = [[[NSBundle mainBundle] resourcePath]
+//                          stringByAppendingPathComponent: @"freehugcoupon.pkpass"];
+//    NSData* passData = [NSData dataWithContentsOfFile:passFile];
+//    NSError* error = nil;
+//    PKPass *newPass = [[PKPass alloc] initWithData:passData
+//                                             error:&error];
+//    //5
+//    if (error!=nil) {
+//        [[[UIAlertView alloc] initWithTitle:@"Passes error"
+//                                    message:[error
+//                                             localizedDescription]
+//                                   delegate:nil
+//                          cancelButtonTitle:@"Ooops"
+//                          otherButtonTitles: nil] show];
+//        return;
+//    }
+//    
+//    
+//    PKAddPassesViewController *addController =
+//    [[PKAddPassesViewController alloc] initWithPass:newPass];
+//    
+//    addController.delegate = self;
+//    [self presentViewController:addController
+//                       animated:YES
+//                     completion:nil];
+    
+//    DQAlertView* alertView = [[DQAlertView alloc] initWithTitle:nil message:@"根据民航总局指示，凡购买到达或者途径中转西藏拉萨、林芝的旅客，非中国公民身份证持有者需持《进藏批准函》进藏，如因旅客违反此规定造成无法进藏等损失，将由旅客自行承担。感谢您的配合！" cancelButtonTitle:@"否" otherButtonTitle:@"是"];
+//    __weak __typeof(DQAlertView*)weakSelf = alertView;
+//    alertView.messageLabel.font = [UIFont systemFontOfSize:16.0];
+//    [alertView show];
+//    
+//    [alertView actionWithBlocksCancelButtonHandler:^{
+//        
+//    } otherButtonHandler:^{
+//        [weakSelf dismiss];
+//        NSLog(@"test");
+//    }];
+    
+//    [UIAlertView showWithTitle:@"提示" message:@"取消座位成功" cancelButtonTitle:@"返回" otherButtonTitles:nil tapBlock:^(UIAlertView *alertView, NSInteger buttonIndex) {
+//        dispatch_async(dispatch_get_main_queue(), ^{
+//            
+//            NSLog(@"test");
+//            
+//        });
+//    }];
 
 
-    
-    NSString* passFile = [[[NSBundle mainBundle] resourcePath]
-                          stringByAppendingPathComponent: @"freehugcoupon.pkpass"];
-    NSData* passData = [NSData dataWithContentsOfFile:passFile];
-    NSError* error = nil;
-    PKPass *newPass = [[PKPass alloc] initWithData:passData
-                                             error:&error];
-    //5
-    if (error!=nil) {
-        [[[UIAlertView alloc] initWithTitle:@"Passes error"
-                                    message:[error
-                                             localizedDescription]
-                                   delegate:nil
-                          cancelButtonTitle:@"Ooops"
-                          otherButtonTitles: nil] show];
-        return;
-    }
-    
-    
-    PKAddPassesViewController *addController =
-    [[PKAddPassesViewController alloc] initWithPass:newPass];
-    
-    addController.delegate = self;
-    [self presentViewController:addController
-                       animated:YES
-                     completion:nil];
-
+    self.button5.center = self.view.center;
 
 }
 
@@ -303,4 +325,6 @@
 {
     NSLog(@"I've been injected: %@", self);
 }
+
+
 @end

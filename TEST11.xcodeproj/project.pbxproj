@@ -251,7 +251,6 @@
 		BD1658461BA7EEA600874780 /* RunLoopTestModel.m in Sources */ = {isa = PBXBuildFile; fileRef = BD1658451BA7EEA600874780 /* RunLoopTestModel.m */; };
 		BD1658491BA810D200874780 /* AntiAlias.m in Sources */ = {isa = PBXBuildFile; fileRef = BD1658481BA810D100874780 /* AntiAlias.m */; };
 		BD1799CA1D4B062800045C5B /* url.png in Resources */ = {isa = PBXBuildFile; fileRef = BD1799C91D4B062800045C5B /* url.png */; };
-		BD1799F31D4B58B000045C5B /* TestFrameWork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD1799F21D4B588B00045C5B /* TestFrameWork.framework */; };
 		BD1799F41D4B663900045C5B /* GTFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDA914E41C1A7CCA00007CDC /* GTFramework.framework */; };
 		BD17ACA01D49A3400097CA11 /* freehugcoupon.pkpass in Resources */ = {isa = PBXBuildFile; fileRef = BD17AC9F1D49A3400097CA11 /* freehugcoupon.pkpass */; };
 		BD17ACA21D49A3770097CA11 /* PassKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD17ACA11D49A3770097CA11 /* PassKit.framework */; };
@@ -302,6 +301,8 @@
 		BD5A39421C02FA50000E212F /* TWTSimpleAnimationController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD5A393F1C02FA50000E212F /* TWTSimpleAnimationController.m */; };
 		BD5A39461C031D4D000E212F /* TWTViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD5A39451C031D4D000E212F /* TWTViewController.m */; };
 		BD5A39491C031D5F000E212F /* TWTPopTransitionController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD5A39481C031D5F000E212F /* TWTPopTransitionController.m */; };
+		BD5C96561D75330B004021F2 /* SearchControllerInstanceView.m in Sources */ = {isa = PBXBuildFile; fileRef = BD5C96551D75330B004021F2 /* SearchControllerInstanceView.m */; };
+		BD5C96581D75331C004021F2 /* SearchControllerInstanceView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BD5C96571D75331C004021F2 /* SearchControllerInstanceView.xib */; };
 		BD5DDE6A1D35F013003C5DAA /* DIOpenSDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = BD5DDE681D35F013003C5DAA /* DIOpenSDK.bundle */; };
 		BD5DDE6B1D35F013003C5DAA /* DIOpenSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD5DDE691D35F013003C5DAA /* DIOpenSDK.framework */; };
 		BD5DDE711D3617CF003C5DAA /* RMPopoverPresentationController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD5DDE6E1D3617CF003C5DAA /* RMPopoverPresentationController.m */; };
@@ -734,13 +735,6 @@
 			proxyType = 1;
 			remoteGlobalIDString = 5195B3E91AB70284007CFA8B;
 			remoteInfo = TEST11;
-		};
-		BD1799F11D4B588B00045C5B /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BD1799ED1D4B588A00045C5B /* TestFrameWork.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = BD1799D51D4B540200045C5B;
-			remoteInfo = TestFrameWork;
 		};
 		BDFA0B821BC61744003BC5EA /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -1226,7 +1220,6 @@
 		BD1658471BA810D100874780 /* AntiAlias.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AntiAlias.h; sourceTree = "<group>"; };
 		BD1658481BA810D100874780 /* AntiAlias.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AntiAlias.m; sourceTree = "<group>"; };
 		BD1799C91D4B062800045C5B /* url.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = url.png; path = Coupon2/url.png; sourceTree = "<group>"; };
-		BD1799ED1D4B588A00045C5B /* TestFrameWork.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = TestFrameWork.xcodeproj; sourceTree = "<group>"; };
 		BD17AC9F1D49A3400097CA11 /* freehugcoupon.pkpass */ = {isa = PBXFileReference; lastKnownFileType = file; path = freehugcoupon.pkpass; sourceTree = "<group>"; };
 		BD17ACA11D49A3770097CA11 /* PassKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PassKit.framework; path = System/Library/Frameworks/PassKit.framework; sourceTree = SDKROOT; };
 		BD17ACA41D49DB880097CA11 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
@@ -1309,6 +1302,9 @@
 		BD5A39451C031D4D000E212F /* TWTViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWTViewController.m; sourceTree = "<group>"; };
 		BD5A39471C031D5F000E212F /* TWTPopTransitionController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWTPopTransitionController.h; sourceTree = "<group>"; };
 		BD5A39481C031D5F000E212F /* TWTPopTransitionController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWTPopTransitionController.m; sourceTree = "<group>"; };
+		BD5C96541D75330B004021F2 /* SearchControllerInstanceView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchControllerInstanceView.h; sourceTree = "<group>"; };
+		BD5C96551D75330B004021F2 /* SearchControllerInstanceView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchControllerInstanceView.m; sourceTree = "<group>"; };
+		BD5C96571D75331C004021F2 /* SearchControllerInstanceView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchControllerInstanceView.xib; sourceTree = "<group>"; };
 		BD5DDE681D35F013003C5DAA /* DIOpenSDK.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = DIOpenSDK.bundle; sourceTree = "<group>"; };
 		BD5DDE691D35F013003C5DAA /* DIOpenSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = DIOpenSDK.framework; sourceTree = "<group>"; };
 		BD5DDE6D1D3617CF003C5DAA /* RMPopoverPresentationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMPopoverPresentationController.h; sourceTree = "<group>"; };
@@ -2041,7 +2037,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BD1799F31D4B58B000045C5B /* TestFrameWork.framework in Frameworks */,
 				BD1799F41D4B663900045C5B /* GTFramework.framework in Frameworks */,
 				BD855DD91C9269BC00FD171A /* Security.framework in Frameworks */,
 				BD17ACA21D49A3770097CA11 /* PassKit.framework in Frameworks */,
@@ -2193,7 +2188,6 @@
 		5195B3E11AB70283007CFA8B = {
 			isa = PBXGroup;
 			children = (
-				BD1799ED1D4B588A00045C5B /* TestFrameWork.xcodeproj */,
 				BD85848F1C2A841A001468F3 /* localize */,
 				BDA914E41C1A7CCA00007CDC /* GTFramework.framework */,
 				BDADA2CB1BF9C28D0076BFDF /* Reveal.framework */,
@@ -2233,6 +2227,7 @@
 		5195B3EC1AB70284007CFA8B /* TEST11 */ = {
 			isa = PBXGroup;
 			children = (
+				BD5FB4291D5C090B002C2EBA /* TEST */,
 				BD17AC9F1D49A3400097CA11 /* freehugcoupon.pkpass */,
 				BDF8F02E1B7C97D9007DAC63 /* TEST11.entitlements */,
 				BD24F7B61D2B36ED001F4AD6 /* RSA */,
@@ -3305,14 +3300,6 @@
 			name = Line;
 			sourceTree = "<group>";
 		};
-		BD1799EE1D4B588A00045C5B /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				BD1799F21D4B588B00045C5B /* TestFrameWork.framework */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 		BD17ACA31D49DB880097CA11 /* Coupon2 */ = {
 			isa = PBXGroup;
 			children = (
@@ -3539,6 +3526,13 @@
 				BD5E8EB71BB51CC40088FE6D /* HCDCreateInvocationOperation.m */,
 			);
 			name = InvocationOperation;
+			sourceTree = "<group>";
+		};
+		BD5FB4291D5C090B002C2EBA /* TEST */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = TEST;
 			sourceTree = "<group>";
 		};
 		BD6138C61C74493E00B0F4B7 /* nsurlconnection */ = {
@@ -4509,6 +4503,9 @@
 				BDD1E1041B8FF29C0037A457 /* SearchBarInstanceView.h */,
 				BDD1E1051B8FF29C0037A457 /* SearchBarInstanceView.m */,
 				BDD1E1061B8FF29C0037A457 /* SearchBarInstanceView.xib */,
+				BD5C96541D75330B004021F2 /* SearchControllerInstanceView.h */,
+				BD5C96551D75330B004021F2 /* SearchControllerInstanceView.m */,
+				BD5C96571D75331C004021F2 /* SearchControllerInstanceView.xib */,
 			);
 			name = UISearchBar;
 			sourceTree = "<group>";
@@ -4984,12 +4981,6 @@
 			mainGroup = 5195B3E11AB70283007CFA8B;
 			productRefGroup = 5195B3EB1AB70284007CFA8B /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = BD1799EE1D4B588A00045C5B /* Products */;
-					ProjectRef = BD1799ED1D4B588A00045C5B /* TestFrameWork.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
 				5195B3E91AB70284007CFA8B /* TEST11 */,
@@ -5002,16 +4993,6 @@
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXReferenceProxy section */
-		BD1799F21D4B588B00045C5B /* TestFrameWork.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = TestFrameWork.framework;
-			remoteRef = BD1799F11D4B588B00045C5B /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		5195B3E81AB70284007CFA8B /* Resources */ = {
@@ -5136,6 +5117,7 @@
 				51E10C5E1B48113E009B162E /* TableInstanceInitCellXib.xib in Resources */,
 				BDE8983C1BB390FF00D7EB34 /* data.json in Resources */,
 				BDE08D891C16D03C00E47F61 /* Placeholder@2x.png in Resources */,
+				BD5C96581D75331C004021F2 /* SearchControllerInstanceView.xib in Resources */,
 				BD80F1641BF47E270046FA80 /* 37x-Checkmark@2x.png in Resources */,
 				BD80F1441BF46D8C0046FA80 /* stretch_horizontal-1.png in Resources */,
 				BD8D3D301C082B2A00B9B214 /* html1.html in Resources */,
@@ -5689,6 +5671,7 @@
 				BD5A39341C02F83D000E212F /* TWTExampleViewController.m in Sources */,
 				BD5A39301C02F83D000E212F /* TWTChangingTabsExampleViewController.m in Sources */,
 				BDAE15D01B7C7FED001908A5 /* UIImageView+AnimationCompletion.m in Sources */,
+				BD5C96561D75330B004021F2 /* SearchControllerInstanceView.m in Sources */,
 				51E10E411B481BD4009B162E /* UIView+Screenshot.m in Sources */,
 				51FA7A231B70FB2A0002990E /* UsageViewController.m in Sources */,
 				BDBBDBCB1BF2EAF50016768B /* FBKVOController.m in Sources */,

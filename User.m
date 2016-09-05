@@ -125,7 +125,12 @@ static int32_t const primes[] = {
 
 @implementation Father
 
-
+- (id)copyWithZone:(NSZone *)zone
+{
+    Father *father = [[[self class] allocWithZone:zone] init];
+    father.name = self.name;
+    return father;
+}
 
 @end
 
@@ -142,6 +147,14 @@ static int32_t const primes[] = {
     }
     return self;
 }
+
+- (id)copyWithZone:(NSZone *)zone
+{
+    Son *son = [super copyWithZone:zone];
+    son.sex = self.sex;
+    return son;
+}
+
 
 @end
 

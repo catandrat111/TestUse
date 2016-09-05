@@ -366,7 +366,25 @@ didReceiveLocalNotification:(UILocalNotification *)notification {
 - (void)test1:(NSString* )ss
 {
     NSLog(@"%@",ss);
+    
+    Son* son = [Son new];
+    son.name = @"ddd";
+    son.sex = @"ff";
+    NSString* str =  son.user.name;
+    Son* s1 = [son copy];
+    
+    NSString* testStr = @"hello o\n12334a\n";
+    //NSStringEnumerationByWords 单词之间有空格
+    //NSStringEnumerationByComposedCharacterSequences 单个字符也包括空格
+    [testStr enumerateLinesUsingBlock:^(NSString * _Nonnull line, BOOL * _Nonnull stop) {
+        NSLog(@"%@",line);
+        [line enumerateSubstringsInRange:NSMakeRange(0, line.length) options:NSStringEnumerationByComposedCharacterSequences usingBlock:^(NSString * _Nullable substring, NSRange substringRange, NSRange enclosingRange, BOOL * _Nonnull stop) {
+            NSLog(@"%@",substring);
+        }];
+    }];
 }
+
+
 //const void * retaincallbak(CFAllocatorRef allocator,const void * value) {
 //    
 //    return CFRetain(value);
@@ -644,6 +662,16 @@ didReceiveLocalNotification:(UILocalNotification *)notification {
                           error: &e1];
     
     Person* p1 = [Person objectWithKeyValues:JSON1];
+    Personsubmodel* p2 = [Personsubmodel  objectWithKeyValues:JSON1];
+    NSData *archiveAddressData = [NSKeyedArchiver archivedDataWithRootObject:p1];
+    [[NSUserDefaults standardUserDefaults] setObject:archiveAddressData forKey:@"p1"];
+    
+    
+    NSData *p1data1 = [[NSUserDefaults standardUserDefaults] objectForKey:@"p1"];
+    
+   Person* p11  = [NSKeyedUnarchiver unarchiveObjectWithData:p1data1];
+
+    
 
 }
 

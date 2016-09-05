@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+//#import "AutoCoding.h"
 //判断相等
 @interface Person : NSObject
 @property (nonatomic, strong) NSString *name;
@@ -30,5 +31,9 @@
 //@property (nonatomic,strong) NSString* flightNo;
 //@property (nonatomic,strong) NSString* cabinNo;
 @property (nonatomic,strong) NSString* flightDate;
+
+@end
+
+@interface Personsubmodel : Person
 
 @end

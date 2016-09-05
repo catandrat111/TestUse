@@ -37,10 +37,12 @@
 @end
 
 
-@interface Father : NSObject
-
+@interface Father : NSObject<NSCopying>
+@property (nonatomic, strong) NSString *name;
 @end
 
-@interface Son : Father
+@interface Son : Father<NSCopying>
+@property (nonatomic, strong) NSString *sex;
+@property (nonatomic,strong) User* user;
 - (id)init;
 @end
