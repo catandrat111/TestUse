@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "DQAlertView.h"
 @interface ButtonInstance : UIViewController
 @property(weak,nonatomic) IBOutlet UIButton* button1;
 @property(weak,nonatomic) IBOutlet UIButton* button2;

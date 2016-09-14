@@ -22,6 +22,8 @@
 #import <DIOpenSDK/DIOpenSDK.h>
 #define alterViewDisapperTime 0.5
 #import <PassKit/PassKit.h>
+#import "AFNetworking.h"
+#import "UIButton+AFNetworking.h"
 @interface ButtonInstance ()<DIOpenSDKDelegate>
 
 @end
@@ -205,8 +207,27 @@
 //    }];
 
 
-    self.button5.center = self.view.center;
-
+    //self.button5.center = self.view.center;
+    
+    AFHTTPSessionManager* manager = [AFHTTPSessionManager manager];
+    manager.requestSerializer.HTTPShouldHandleCookies = YES;
+   // 申明返回的结果是json类型
+    manager.responseSerializer = [AFJSONResponseSerializer serializer];
+    //申明请求的数据是json类型
+    manager.requestSerializer=[AFJSONRequestSerializer serializer];
+    NSString* url = @"http://www.nghttp2.org/httpbin/image/png";
+    url = @"http://7xt5rm.com2.z0.glb.clouddn.com/picjumbo.com_download.jpg";
+    [manager GET:url parameters:nil  success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+    
+        UIImage* img = [[UIImage alloc] initWithData:responseObject];
+        NSLog(@"%@",img);
+        
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+       
+    }];
+    
+   
+    
 }
 
 - (void)dis:(RMUniversalAlert *)alert {

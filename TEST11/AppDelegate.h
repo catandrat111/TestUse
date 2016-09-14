@@ -14,5 +14,8 @@
 @property (strong, nonatomic) UIWindow *window;
 @property (assign, nonatomic) UIBackgroundTaskIdentifier  backgroundUpdateTask;
 @property (copy) void (^backgroundSessionCompletionHandler)();
+- (NSDate*)replaceMethodWithJSPatch;
+- (void)testJS;
 @end
+
 

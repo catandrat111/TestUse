@@ -47,6 +47,9 @@
 
 
 //uitableview 优化 ：1 来自苹果官方例子 lazytable,针对图片异步加载，拖动或滑动结束时，得到当前可视cell,让每个cell下载图片，有个下载类（包含CELL所需的model数据，也包括图片数据）专门下载图片，有个全局字典存放每个cell的下载类，首先检查cell中有没有他对应的下载类，没有建立实力对象加入字典，执行下载， 下载完封装进相应的Model，并从字典中删除相应的下载类  2 http://blog.sunnyxx.com/2015/05/17/cell-height-calculation/  注册观察者 ，当runloop即将休眠时，查找缓存中是否有cell的高度（一个数组用来存贮高度，一个用来存所用的indexpath）,将休眠时取出一个indexpoath，查看缓存中是否有。
+
+#define TICK   NSDate *startTime = [NSDate date]
+#define TOCK   NSLog(@"Time: %f", -[startTime timeIntervalSinceNow])
 #import "AppDelegate.h"
 
 
@@ -120,6 +123,8 @@ typedef int (^frd)(NSString* st);
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    
+    
    // self.window = [[iConsoleWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     self.window  =[[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     ViewController* main = [[ViewController alloc] init];
@@ -298,6 +303,12 @@ typedef int (^frd)(NSString* st);
 //    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(getRegisterID) name:kJPFNetworkDidRegisterNotification object:nil];
 //
     [self testJSPatch];
+    NSDate* testDate = [self replaceMethodWithJSPatch];
+    TICK;
+    [self testJS];
+    TOCK;
+    NSLog(@"%@",testDate);
+    
     return YES;
 }
 
@@ -308,8 +319,27 @@ typedef int (^frd)(NSString* st);
     [JPEngine evaluateScript:script];
 }
 
+- (void)testJS {
+    NSLog(@"helllo");
+    for (int i = 0; i < 1000; i++) {
+        
+    }
+}
+
+- (NSDate*)replaceMethodWithJSPatch {
+    NSString* yearString = @"1986-05-04 00:59:01";
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc]init];
+    [dateFormatter setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
+    // [dateFormatter setTimeZone:[NSTimeZone timeZoneWithAbbreviation:@"UTC"]];;
+    NSDate *userDate = [dateFormatter dateFromString:yearString];
+    return userDate;
+}
+
 - (void)getRegisterID {
      NSString* jid = [JPUSHService registrationID];
+    if ([jid isKindOfClass:[NSString class]]) {
+        NSLog(@"%@",jid);
+    }
 }
 
 - (void)application:(UIApplication *)application
