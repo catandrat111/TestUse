@@ -213,8 +213,8 @@ typedef int (^frd)(NSString* st);
 //    　　3、ActionSheet的window在隐藏掉
 //    
 //    　　总体就是“想隐居幕后可以，但得先交出权利”。
-    [self testModel];
-    [self test];
+    //[self testModel];
+   // [self test];
     //[self assetrtTest];
     //[self testPony];
     
@@ -309,6 +309,7 @@ typedef int (^frd)(NSString* st);
     TOCK;
     NSLog(@"%@",testDate);
     
+    [self testPrintCNText];
     return YES;
 }
 
@@ -317,6 +318,26 @@ typedef int (^frd)(NSString* st);
     NSString *sourcePath = [[NSBundle mainBundle] pathForResource:@"sample" ofType:@"js"];
     NSString *script = [NSString stringWithContentsOfFile:sourcePath encoding:NSUTF8StringEncoding error:nil];
     [JPEngine evaluateScript:script];
+}
+
+- (void)testPrintCNText {
+    NSString *str = @"我是转换成data格式的字符串";
+    NSData *dataString = [NSData dataWithBytes:str.UTF8String length:str.length];
+    NSDictionary *dataSet = @{@"key": @"字典转成data",
+                              @"key1": @"在set、数组、字典中嵌套"};
+    NSData *dataSetItem = [NSJSONSerialization dataWithJSONObject:dataSet options:NSJSONWritingPrettyPrinted error:nil];
+    
+    NSMutableSet *set = [NSMutableSet setWithArray:@[@"可变集合", @"字典->不可变集合->可变集合", dataSetItem]];
+    NSDictionary *dict = @{@"name"  : @"标哥的技术博客",
+                           @"title" : @"http://www.huangyibiao.com",
+                           @"count" : @(11),
+                           @"dataString" : dataString,
+                           @"results" : [NSSet setWithObjects:@"集合值1", @"集合值2", set , nil],
+                           @"summaries" : @[@"sm1", @"sm2", @{@"keysm": @{@"stkey": @"字典->数组->字典->字典"}}, dataSetItem],
+                           @"parameters" : @{@"key1" : @"value1", @"key2": @{@"key11" : @"value11", @"key12" : @[@"三层", @"字典->字典->数组"]}, @"key13": dataSetItem},
+                           @"hasBug": @[@"YES",@"NO"],
+                           @"contact" : @[@"关注博客地址：http://www.huangyibiao.com", @"QQ群: 324400294", @"关注微博：标哥Jacky", @"关注GITHUB：CoderJackyHuang"]};
+    NSLog(@"%@", dict);
 }
 
 - (void)testJS {

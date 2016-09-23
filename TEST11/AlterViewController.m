@@ -68,18 +68,18 @@
     
     
     ZHTelephonyVoiceVerificationCodeView* contentView = [ZHTelephonyVoiceVerificationCodeView new];
-    self.alertView = [[DQAlertView alloc] initWithTitle:@"alterviewalterview" message:nil cancelButtonTitle:@"取消" otherButtonTitle:nil];
-    self.alertView.contentView = contentView;
-    
-    [self.alertView show];
-     //__weak __typeof(alertView)weakSelf = alertView;
-   
-    self.alertView.otherButtonAction = ^{
-        DLog(@"OK Cicked");
-        
-       // [weakSelf dismiss];
-        
-    };
+//    self.alertView = [[DQAlertView alloc] initWithTitle:@"alterviewalterview" message:nil cancelButtonTitle:@"取消" otherButtonTitle:nil];
+//    self.alertView.contentView = contentView;
+//    
+//    [self.alertView show];
+//     //__weak __typeof(alertView)weakSelf = alertView;
+//   
+//    self.alertView.otherButtonAction = ^{
+//        DLog(@"OK Cicked");
+//        
+//       // [weakSelf dismiss];
+//        
+//    };
   //    self.name = @"bbb";
 //    FBKVOController *KVOController = [FBKVOController controllerWithObserver:self];
 //    self.KVOController = KVOController;

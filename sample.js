@@ -1,8 +1,9 @@
 
 include('tool.js')
+require('JPEngine').addExtensions(['JPMemory'])
 defineClass('ButtonInstance', {
             p5: function(sender) {
-            
+            require('UIView, DQAlertView,UIColor,UITapGestureRecognizer,UIApplication')
             var arr = require('NSMutableArray').alloc().init()
             arr.addObject("JS")
             jsArr = arr.toJS()
@@ -23,12 +24,19 @@ defineClass('ButtonInstance', {
 //            alertView.setTitle('Alert');
 //            alertView.setMessage('AlertView from js');
 //            alertView.addButtonWithTitle('OK');
+//            
+//            alertView.show();
             
-           // alertView.show();
-            
-            var alterview = require('DQAlertView').alloc().initWithTitle_message_cancelButtonTitle_otherButtonTitle("title","message","other","ok");
-            alertView.show();
+            var person = require('Person').alloc().init();
+             person.name = "ff";
+            person.test = "gg";
+            person.age = 30;
+//            var alterview1 = DQAlertView.alloc().initWithTitle_message_cancelButtonTitle_otherButtonTitle("title","message","other","ok");
+//            
+//            alertView1.show();
+         //   require('SVProgressHUD').show()
 
+//
             }
             })
 
@@ -37,7 +45,7 @@ defineClass('AppDelegate', {
             
            var yearString = "1986-05-04 00:59:01";
             var dateFormatter = require('NSDateFormatter').dateFormatterWithFormat_timeZone('yyyy-MM-dd HH:mm:ss', require('NSTimeZone').timeZoneWithAbbreviation('UTC'));
-            
+                       
             //dateFormatter.setDateFormat('yyyy-MM-dd HH:mm:ss');
            // var timeZone = require('NSTimeZone').timeZoneWithAbbreviation('UTC');
             var userDate = dateFormatter.dateFromString(yearString);

@@ -552,6 +552,8 @@
 		BDADA2C41BF9B38D0076BFDF /* ball.png in Resources */ = {isa = PBXBuildFile; fileRef = BDADA2C31BF9B38D0076BFDF /* ball.png */; };
 		BDADA2C71BF9B3D10076BFDF /* KCAnimationSpringViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BDADA2C61BF9B3D10076BFDF /* KCAnimationSpringViewController.m */; };
 		BDADA2CA1BF9B46B0076BFDF /* KCAnimationStepViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BDADA2C91BF9B46B0076BFDF /* KCAnimationStepViewController.m */; };
+		BDADD3EF1D8F91210072492B /* JRSwizzle.m in Sources */ = {isa = PBXBuildFile; fileRef = BDADD3EE1D8F91210072492B /* JRSwizzle.m */; };
+		BDADD4021D8FB38A0072492B /* NSDictionary+Unicode.m in Sources */ = {isa = PBXBuildFile; fileRef = BDADD4011D8FB38A0072492B /* NSDictionary+Unicode.m */; };
 		BDAE103D1B7C786F001908A5 /* AutoSizeViewInstance.m in Sources */ = {isa = PBXBuildFile; fileRef = BDAE103B1B7C786F001908A5 /* AutoSizeViewInstance.m */; };
 		BDAE103E1B7C786F001908A5 /* AutoSizeViewInstance.xib in Resources */ = {isa = PBXBuildFile; fileRef = BDAE103C1B7C786F001908A5 /* AutoSizeViewInstance.xib */; };
 		BDAE10401B7C7B31001908A5 /* autosize.png in Resources */ = {isa = PBXBuildFile; fileRef = BDAE103F1B7C7B31001908A5 /* autosize.png */; };
@@ -1809,6 +1811,10 @@
 		BDADA2C81BF9B46B0076BFDF /* KCAnimationStepViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KCAnimationStepViewController.h; sourceTree = "<group>"; };
 		BDADA2C91BF9B46B0076BFDF /* KCAnimationStepViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KCAnimationStepViewController.m; sourceTree = "<group>"; };
 		BDADA2CB1BF9C28D0076BFDF /* Reveal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Reveal.framework; sourceTree = "<group>"; };
+		BDADD3ED1D8F91210072492B /* JRSwizzle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JRSwizzle.h; sourceTree = "<group>"; };
+		BDADD3EE1D8F91210072492B /* JRSwizzle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JRSwizzle.m; sourceTree = "<group>"; };
+		BDADD4001D8FB38A0072492B /* NSDictionary+Unicode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+Unicode.h"; sourceTree = "<group>"; };
+		BDADD4011D8FB38A0072492B /* NSDictionary+Unicode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+Unicode.m"; sourceTree = "<group>"; };
 		BDAE10391B7C77AE001908A5 /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PrefixHeader.pch; path = ../PrefixHeader.pch; sourceTree = "<group>"; };
 		BDAE103A1B7C786F001908A5 /* AutoSizeViewInstance.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AutoSizeViewInstance.h; sourceTree = "<group>"; };
 		BDAE103B1B7C786F001908A5 /* AutoSizeViewInstance.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AutoSizeViewInstance.m; sourceTree = "<group>"; };
@@ -2582,6 +2588,8 @@
 		51E10C621B481BD3009B162E /* Categories */ = {
 			isa = PBXGroup;
 			children = (
+				BDADD4001D8FB38A0072492B /* NSDictionary+Unicode.h */,
+				BDADD4011D8FB38A0072492B /* NSDictionary+Unicode.m */,
 				BD9B2CE91C8D7FA5004DAABC /* Corner */,
 				BDE557FD1B9FD2E8000B9231 /* PopView */,
 				BDC766091B942A5D00EC31D7 /* UIAlertView+Blocks */,
@@ -4486,6 +4494,15 @@
 			path = Reachability;
 			sourceTree = "<group>";
 		};
+		BDADD3EC1D8F91210072492B /* JRSwizzle */ = {
+			isa = PBXGroup;
+			children = (
+				BDADD3ED1D8F91210072492B /* JRSwizzle.h */,
+				BDADD3EE1D8F91210072492B /* JRSwizzle.m */,
+			);
+			path = JRSwizzle;
+			sourceTree = "<group>";
+		};
 		BDAE10471B7C7DA9001908A5 /* Custom */ = {
 			isa = PBXGroup;
 			children = (
@@ -4512,6 +4529,7 @@
 		BDAE12451B7C7FEC001908A5 /* LIbs */ = {
 			isa = PBXGroup;
 			children = (
+				BDADD3EC1D8F91210072492B /* JRSwizzle */,
 				BD5AEA801D879010009D8F1F /* AFNetworking */,
 				BD6873751D7D4E6000E7C0FD /* JSPatch */,
 				BDCAC8D21D3E28EB006A8D44 /* JPUSH */,
@@ -5874,6 +5892,7 @@
 				51E10DEF1B481BD4009B162E /* NSString+Encrypt.m in Sources */,
 				BDAE14EE1B7C7FED001908A5 /* ALAssetsLibrary+CustomPhotoAlbum.m in Sources */,
 				51E10DEA1B481BD4009B162E /* NSSet+Block.m in Sources */,
+				BDADD4021D8FB38A0072492B /* NSDictionary+Unicode.m in Sources */,
 				BD6873561D7D4E5100E7C0FD /* JPDevTipView.m in Sources */,
 				BD6873431D7D4E5100E7C0FD /* JPCGColor.m in Sources */,
 				BD6873341D7D4E5100E7C0FD /* JPStructPointer.m in Sources */,
@@ -5939,6 +5958,7 @@
 				BD8877E51BF5DD8400F0EA08 /* KCAnimationViewController7.m in Sources */,
 				51E10DD71B481BD4009B162E /* NSDictionary+JSONString.m in Sources */,
 				BDD373F11B86BBB20047313A /* AlgorithmClass.m in Sources */,
+				BDADD3EF1D8F91210072492B /* JRSwizzle.m in Sources */,
 				51E10E3D1B481BD4009B162E /* UIView+Find.m in Sources */,
 				BDFEB8C61BDA18A50001FE1D /* GifViewController.m in Sources */,
 				BDB3C23A1C7590770039E146 /* TBFourthViewController.m in Sources */,
