@@ -17,6 +17,8 @@
         UIMenuController *menu =[UIMenuController sharedMenuController];
         [menu setMenuItems:[NSArray arrayWithObjects:flag, nil]];
         
+        
+            
     }
     return self;
 }

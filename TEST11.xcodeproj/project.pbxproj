@@ -484,6 +484,8 @@
 		BD8877E81BF5E09F00F0EA08 /* KCAnimationView1.m in Sources */ = {isa = PBXBuildFile; fileRef = BD8877E71BF5E09F00F0EA08 /* KCAnimationView1.m */; };
 		BD8877EB1BF5E0E600F0EA08 /* KCAnimationLayer1.m in Sources */ = {isa = PBXBuildFile; fileRef = BD8877EA1BF5E0E600F0EA08 /* KCAnimationLayer1.m */; };
 		BD8877ED1BF5E25D00F0EA08 /* photo.png in Resources */ = {isa = PBXBuildFile; fileRef = BD8877EC1BF5E25D00F0EA08 /* photo.png */; };
+		BD89106D1D9CB5780059B94F /* WebView3ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD89106C1D9CB5780059B94F /* WebView3ViewController.m */; };
+		BD8910701D9CB8830059B94F /* WebView4ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD89106F1D9CB8830059B94F /* WebView4ViewController.m */; };
 		BD89E1CD1C3124F0007C8D2A /* FadeString.m in Sources */ = {isa = PBXBuildFile; fileRef = BD89E1CC1C3124F0007C8D2A /* FadeString.m */; };
 		BD89E1D01C31258C007C8D2A /* KCAnimationViewController8.m in Sources */ = {isa = PBXBuildFile; fileRef = BD89E1CF1C31258C007C8D2A /* KCAnimationViewController8.m */; };
 		BD89E1D71C313C03007C8D2A /* mask_1.png in Resources */ = {isa = PBXBuildFile; fileRef = BD89E1D11C313C03007C8D2A /* mask_1.png */; };
@@ -1692,6 +1694,10 @@
 		BD8877E91BF5E0E600F0EA08 /* KCAnimationLayer1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KCAnimationLayer1.h; sourceTree = "<group>"; };
 		BD8877EA1BF5E0E600F0EA08 /* KCAnimationLayer1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KCAnimationLayer1.m; sourceTree = "<group>"; };
 		BD8877EC1BF5E25D00F0EA08 /* photo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = photo.png; sourceTree = "<group>"; };
+		BD89106B1D9CB5780059B94F /* WebView3ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebView3ViewController.h; sourceTree = "<group>"; };
+		BD89106C1D9CB5780059B94F /* WebView3ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebView3ViewController.m; sourceTree = "<group>"; };
+		BD89106E1D9CB8830059B94F /* WebView4ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebView4ViewController.h; sourceTree = "<group>"; };
+		BD89106F1D9CB8830059B94F /* WebView4ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebView4ViewController.m; sourceTree = "<group>"; };
 		BD89E1CB1C3124F0007C8D2A /* FadeString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FadeString.h; sourceTree = "<group>"; };
 		BD89E1CC1C3124F0007C8D2A /* FadeString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FadeString.m; sourceTree = "<group>"; };
 		BD89E1CE1C31258C007C8D2A /* KCAnimationViewController8.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KCAnimationViewController8.h; sourceTree = "<group>"; };
@@ -4419,6 +4425,10 @@
 				BD8D3D371C0834FD00B9B214 /* WebView2ViewController.m */,
 				BD8D3D391C08351A00B9B214 /* MyWebView.h */,
 				BD8D3D3A1C08351A00B9B214 /* MyWebView.m */,
+				BD89106B1D9CB5780059B94F /* WebView3ViewController.h */,
+				BD89106C1D9CB5780059B94F /* WebView3ViewController.m */,
+				BD89106E1D9CB8830059B94F /* WebView4ViewController.h */,
+				BD89106F1D9CB8830059B94F /* WebView4ViewController.m */,
 			);
 			name = UIWEBVIEW;
 			sourceTree = "<group>";
@@ -5872,6 +5882,7 @@
 				BD5AEABE1D879010009D8F1F /* UIButton+AFNetworking.m in Sources */,
 				BDC766101B942A5D00EC31D7 /* UIAlertView+Blocks.m in Sources */,
 				51E10DFC1B481BD4009B162E /* MKMapView+BetterMaps.m in Sources */,
+				BD8910701D9CB8830059B94F /* WebView4ViewController.m in Sources */,
 				51E10E071B481BD4009B162E /* UIButton+Indicator.m in Sources */,
 				BDD31C581B9C121600E1A496 /* BasicUsageViewController.m in Sources */,
 				BD79F6A51BCBAE9000AE64FD /* DTTimePeriodChain.m in Sources */,
@@ -6133,6 +6144,7 @@
 				BDAE15511B7C7FED001908A5 /* MJArgument.m in Sources */,
 				BDAE15C51B7C7FED001908A5 /* TPKeyboardAvoidingScrollView.m in Sources */,
 				BDAE14FF1B7C7FED001908A5 /* README.md in Sources */,
+				BD89106D1D9CB5780059B94F /* WebView3ViewController.m in Sources */,
 				BDDA785F1D2F7DA300910BD7 /* NSSet+HYBUnicodeReadable.m in Sources */,
 				51E10E0B1B481BD4009B162E /* UIColor+Modify.m in Sources */,
 				51E10DFB1B481BD4009B162E /* NSUserDefaults+SafeAccess.m in Sources */,
