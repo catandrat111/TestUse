@@ -18,7 +18,7 @@ defineClass('ButtonInstance', {
             mycars[1]="Volvo"
             mycars[2]="BMW"
             mycars.join(".")
-             console.log(mycars)
+            console.log(mycars)
             
 //            var alertView = require('UIAlertView').alloc().init();
 //            alertView.setTitle('Alert');
@@ -31,6 +31,10 @@ defineClass('ButtonInstance', {
              person.name = "ff";
             person.test = "gg";
             person.age = 30;
+            
+            require('JPObject').request(block("NSString *, BOOL", function(ctn, succ) {
+                                              if (succ) log(ctn)  //output: I'm content
+                                              }));
 //            var alterview1 = DQAlertView.alloc().initWithTitle_message_cancelButtonTitle_otherButtonTitle("title","message","other","ok");
 //            
 //            alertView1.show();

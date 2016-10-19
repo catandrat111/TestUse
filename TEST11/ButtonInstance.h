@@ -26,4 +26,6 @@
 -(IBAction)p4:(id)sender;
 
 -(IBAction)p5:(id)sender;
+
+-(IBAction)p12:(id)sender;
 @end

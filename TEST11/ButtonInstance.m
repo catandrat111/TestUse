@@ -24,6 +24,8 @@
 #import <PassKit/PassKit.h>
 #import "AFNetworking.h"
 #import "UIButton+AFNetworking.h"
+#import "PHPhotoLibrary+ZHCustomPhotoAlbum.h"
+#import "SVProgressHUD.h"
 @interface ButtonInstance ()<DIOpenSDKDelegate>
 
 @end
@@ -87,7 +89,28 @@
    
 }
 
+
+-(IBAction)p12:(id)sender {
+      [SVProgressHUD showErrorWithStatus:@"系统原因，无法访问相册"];
+     return;
+}
+
 -(IBAction)p5:(id)sender {
+  //  [SVProgressHUD showErrorWithStatus:@"保存成功"];
+   // return;
+    [PHPhotoLibrary saveImage:[UIImage imageNamed:@"stretch2.png"] toAlbum:@"hello" withCompletionBlock:^(NSError *error) {
+        if (error) {
+            dispatch_async(dispa, <#^(void)block#>);
+            [SVProgressHUD showErrorWithStatus:@"保存失败"];
+        }
+        else {
+            [SVProgressHUD showErrorWithStatus:@"保存成功"];
+            
+        }
+    }];
+
+    return;
+    
 //    self.lab.text = @"HELLO ";
 //    self.view.backgroundColor = [UIColor redColor];
 //    self.button5.backgroundColor = [UIColor yellowColor];

@@ -68,7 +68,7 @@
 #import "Constant.h"
 //#import "iConsole.h"
 
-#import <KSCrash/KSCrashInstallationStandard.h>
+//#import <KSCrash/KSCrashInstallationStandard.h>
 #import "RSAEncryptor.h"
 #import "ZSCHRSA.h"
 #import "User.h"
@@ -76,6 +76,11 @@
 #import "JPUSHService.h"
 
 #import <DIOpenSDK/DIOpenSDK.h>
+#import <Photos/Photos.h>
+#import "SVProgressHUD.h"
+#import <AssetsLibrary/AssetsLibrary.h>
+#import "ALAssetsLibrary+CustomPhotoAlbum.h"
+#import "PHPhotoLibrary+ZHCustomPhotoAlbum.h"
 //#import <PonyDebugger/PonyDebugger.h>
 //@interface AppDelegate ()<iConsoleDelegate>
 
@@ -124,6 +129,7 @@ typedef int (^frd)(NSString* st);
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
+   //[self save];
     
    // self.window = [[iConsoleWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     self.window  =[[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
@@ -294,7 +300,7 @@ typedef int (^frd)(NSString* st);
 //                                                          UIRemoteNotificationTypeAlert)
 //                                              categories:nil];
 //    }
-//    
+//
 //    //如不需要使用IDFA，advertisingIdentifier 可为nil
 //    [JPUSHService setupWithOption:launchOptions appKey:@"ff0f4de59f7adb84e5c34f76"
 //                          channel:@"public"
@@ -302,15 +308,121 @@ typedef int (^frd)(NSString* st);
 //            advertisingIdentifier:nil];
 //    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(getRegisterID) name:kJPFNetworkDidRegisterNotification object:nil];
 //
-    [self testJSPatch];
+   // [self testJSPatch];
     NSDate* testDate = [self replaceMethodWithJSPatch];
     TICK;
-    [self testJS];
+    //[self testJS];
     TOCK;
     NSLog(@"%@",testDate);
     
     [self testPrintCNText];
     return YES;
+}
+
+/**
+ *  返回相册
+ */
+- (PHAssetCollection *)collection{
+    // 先获得之前创建过的相册
+    PHFetchResult<PHAssetCollection *> *collectionResult = [PHAssetCollection fetchAssetCollectionsWithType:PHAssetCollectionTypeAlbum subtype:PHAssetCollectionSubtypeAlbumRegular options:nil];
+    for (PHAssetCollection *collection in collectionResult) {
+        if ([collection.localizedTitle isEqualToString:@"川航登机牌"]) {
+            return collection;
+        }
+    }
+    
+    // 如果相册不存在,就创建新的相册(文件夹)
+    __block NSString *collectionId = nil; // __block修改block外部的变量的值
+    // 这个方法会在相册创建完毕后才会返回
+    [[PHPhotoLibrary sharedPhotoLibrary] performChangesAndWait:^{
+        // 新建一个PHAssertCollectionChangeRequest对象, 用来创建一个新的相册
+        collectionId = [PHAssetCollectionChangeRequest creationRequestForAssetCollectionWithTitle:@"川航登机牌"].placeholderForCreatedAssetCollection.localIdentifier;
+    } error:nil];
+    
+    return [PHAssetCollection fetchAssetCollectionsWithLocalIdentifiers:@[collectionId] options:nil].firstObject;
+}
+
+- (void)save {
+    
+    [PHPhotoLibrary saveImage:[UIImage imageNamed:@"stretch2.png"] toAlbum:@"hello" withCompletionBlock:^(NSError *error) {
+        if (error) {
+            [SVProgressHUD showErrorWithStatus:@"保存失败"];
+        }
+        else {
+            [SVProgressHUD showErrorWithStatus:@"保存成功"];
+
+        }
+    }];
+    // 0.判断状态
+//    PHAuthorizationStatus status = [PHPhotoLibrary authorizationStatus];
+//    if (status == PHAuthorizationStatusDenied) {
+//        DLog(@"用户拒绝当前应用访问相册,我们需要提醒用户打开访问开关");
+//    }else if (status == PHAuthorizationStatusRestricted){
+//        DLog(@"家长控制,不允许访问");
+//    }else if (status == PHAuthorizationStatusNotDetermined){
+//        DLog(@"用户还没有做出选择");
+//        [self saveImage];
+//    }else if (status == PHAuthorizationStatusAuthorized){
+//        DLog(@"用户允许当前应用访问相册");
+//        [self saveImage];
+//    }
+}
+
+/**
+ *  返回相册,避免重复创建相册引起不必要的错误
+ */
+- (void)saveImage{
+    
+//    ALAssetsLibrary* lib = [[ALAssetsLibrary alloc] init];
+//    [lib saveImage:[UIImage imageNamed:@"stretch2.png"] toAlbum:@"test" withCompletionBlock:^(NSError *error) {
+//        NSLog(@"test");
+//    }];
+//    return;
+    
+    UIImage* img = [UIImage imageNamed:@"stretch2.png"];
+    /*
+     PHAsset : 一个PHAsset对象就代表一个资源文件,比如一张图片
+     PHAssetCollection : 一个PHAssetCollection对象就代表一个相册
+     */
+    
+    __block NSString *assetId = nil;
+    // 1. 存储图片到"相机胶卷"
+    [[PHPhotoLibrary sharedPhotoLibrary] performChanges:^{ // 这个block里保存一些"修改"性质的代码
+        // 新建一个PHAssetCreationRequest对象, 保存图片到"相机胶卷"
+        // 返回PHAsset(图片)的字符串标识
+        id ff=   [PHAssetCreationRequest creationRequestForAssetFromImage:img];
+        assetId = [PHAssetCreationRequest creationRequestForAssetFromImage:img].placeholderForCreatedAsset.localIdentifier;
+    } completionHandler:^(BOOL success, NSError * _Nullable error) {
+        if (error) {
+            DLog(@"保存图片到相机胶卷中失败");
+            return;
+        }
+        
+        DLog(@"成功保存图片到相机胶卷中");
+        
+        // 2. 获得相册对象
+        PHAssetCollection *collection = [self collection];
+        
+        // 3. 将“相机胶卷”中的图片添加到新的相册
+        [[PHPhotoLibrary sharedPhotoLibrary] performChanges:^{
+            PHAssetCollectionChangeRequest *request = [PHAssetCollectionChangeRequest changeRequestForAssetCollection:collection];
+            
+            // 根据唯一标示获得相片对象
+            PHAsset *asset = [PHAsset fetchAssetsWithLocalIdentifiers:@[assetId] options:nil].firstObject;
+            // 添加图片到相册中
+            [request addAssets:@[asset]];
+        } completionHandler:^(BOOL success, NSError * _Nullable error) {
+            if (error) {
+                DLog(@"添加图片到相册中失败");
+                return;
+            }
+            
+            DLog(@"成功添加图片到相册中");
+            [[NSOperationQueue mainQueue] addOperationWithBlock:^{
+                [SVProgressHUD showSuccessWithStatus:@"保存成功"];
+            }];
+        }];
+    }];
 }
 
 
@@ -390,6 +502,7 @@ didRegisterUserNotificationSettings:
 handleActionWithIdentifier:(NSString *)identifier
 forLocalNotification:(UILocalNotification *)notification
   completionHandler:(void (^)())completionHandler {
+    NSLog(@"gg");
 }
 
 // Called when your app has been activated by the user selecting an action from
@@ -485,10 +598,10 @@ didReceiveLocalNotification:(UILocalNotification *)notification {
 }
 
 - (void)testFirim {
-    KSCrashInstallationStandard* installation = [KSCrashInstallationStandard sharedInstance];
-    installation.url = [NSURL URLWithString:@"https://collector.bughd.com/kscrash?key=83d8534d790f6b8f13143c6067d0ec3c"];
-    [installation install];
-    [installation sendAllReportsWithCompletion:nil];
+//    KSCrashInstallationStandard* installation = [KSCrashInstallationStandard sharedInstance];
+//    installation.url = [NSURL URLWithString:@"https://collector.bughd.com/kscrash?key=83d8534d790f6b8f13143c6067d0ec3c"];
+//    [installation install];
+//    [installation sendAllReportsWithCompletion:nil];
 }
 
 - (void)testConsole {
