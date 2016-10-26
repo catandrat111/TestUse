@@ -26,6 +26,7 @@
 #import "UIButton+AFNetworking.h"
 #import "PHPhotoLibrary+ZHCustomPhotoAlbum.h"
 #import "SVProgressHUD.h"
+#import "WXApi.h"
 @interface ButtonInstance ()<DIOpenSDKDelegate>
 
 @end
@@ -98,13 +99,32 @@
 -(IBAction)p5:(id)sender {
   //  [SVProgressHUD showErrorWithStatus:@"保存成功"];
    // return;
+       
+    [WXApi registerApp:@"wxeb8210e6bb741258"];
+    PayReq* req =[[PayReq alloc] init];
+    req.partnerId = @"1298908101";
+    req.prepayId = @"wx201610251336580a2765a3150671000179";
+    req.nonceStr = @"P4FDX2Z9J46057R7Y5I53620R2IF54RX";
+    
+    req.timeStamp = 1477373554;
+    req.package = @"Sign=WXPay";
+    req.sign = @"DB683F25806102A75AD02DA444FB4CDC";
+   // DLog(@"appid=%@\npartid=%@\nprepayid=%@\nnoncestr=%@\ntimestamp=%ld\npackage=%@\nsign=%@",[dict objectForKey:@"appid"],req.partnerId,req.prepayId,req.nonceStr,(long)req.timeStamp,req.package,req.sign );
+    [WXApi sendReq:req];
+    return;
+    
     [PHPhotoLibrary saveImage:[UIImage imageNamed:@"stretch2.png"] toAlbum:@"hello" withCompletionBlock:^(NSError *error) {
         if (error) {
-            dispatch_async(dispa, <#^(void)block#>);
-            [SVProgressHUD showErrorWithStatus:@"保存失败"];
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [SVProgressHUD showErrorWithStatus:@"保存失败"];
+            });
+           
         }
         else {
-            [SVProgressHUD showErrorWithStatus:@"保存成功"];
+            dispatch_async(dispatch_get_main_queue(), ^{
+                 [SVProgressHUD showErrorWithStatus:@"保存成功"];
+            });
+          
             
         }
     }];

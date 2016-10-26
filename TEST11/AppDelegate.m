@@ -81,10 +81,11 @@
 #import <AssetsLibrary/AssetsLibrary.h>
 #import "ALAssetsLibrary+CustomPhotoAlbum.h"
 #import "PHPhotoLibrary+ZHCustomPhotoAlbum.h"
+#import "WXApi.h"
 //#import <PonyDebugger/PonyDebugger.h>
 //@interface AppDelegate ()<iConsoleDelegate>
 
-@interface AppDelegate ()
+@interface AppDelegate ()<WXApiDelegate>
 
 @end
 
@@ -318,6 +319,27 @@ typedef int (^frd)(NSString* st);
     [self testPrintCNText];
     return YES;
 }
+
+- (void)onResp:(BaseResp *)resp {
+    if(!resp.errCode){
+        if([resp isKindOfClass:[SendAuthResp class]]){
+            //            SendAuthResp* sendResq = (SendAuthResp*)resp;
+            //            self.wxCode = sendResq.code;
+            //            [self getAccess_token];
+        }
+        if ([resp isKindOfClass:[SendMessageToWXResp class]]) {
+            if (resp.errCode == 0) {
+                
+            }
+        }
+        //发送成功
+        if([resp isKindOfClass:[PayResp class]]){
+            
+        }
+    }
+    
+}
+
 
 /**
  *  返回相册
@@ -889,14 +911,16 @@ didReceiveLocalNotification:(UILocalNotification *)notification {
 }
 
 //testd:// 浏览器输入
-- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {
-    if ([[url scheme] isEqualToString:@"testddd"]) {
-       
-        return YES;
-    }
-    return NO;
-}
-
+//- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {
+//    if ([[url scheme] isEqualToString:@"testddd"]) {
+//       
+//        return YES;
+//    }
+//    
+//    
+//    return NO;
+//}
+//
 
 
 - (void)applicationWillResignActive:(UIApplication *)application {
@@ -952,6 +976,28 @@ didReceiveLocalNotification:(UILocalNotification *)notification {
      Store the completion handler. The completion handler is invoked by the view controller's checkForAllDownloadsHavingCompleted method (if all the download tasks have been completed).
      */
     self.backgroundSessionCompletionHandler = completionHandler;
+}
+
+- (BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url
+{
+    //    [self parse:url application:application];
+    
+    return [WXApi handleOpenURL:url delegate:self];
+}
+
+- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation
+{
+    
+    
+    
+    if ([sourceApplication isEqualToString:@"com.tencent.xin"]) {
+        BOOL b = [WXApi handleOpenURL:url delegate:self];
+        return b;
+    }
+else{
+        return YES;
+    }
+    
 }
 
 

@@ -157,7 +157,6 @@
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  moduleName = "TEST11"
                   usesParentBreakpointCondition = "Yes"
                   offsetFromSymbolStart = "0">
                </Location>
@@ -1851,7 +1850,7 @@
                   moduleName = "TEST11"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/lichenze/Documents/opensource/TestUse/TEST11/RunLoopInstance.m"
-                  timestampString = "498561948.807622"
+                  timestampString = "499072836.702619"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "215"
@@ -1866,7 +1865,7 @@
                   moduleName = "TEST11"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/lichenze/Documents/opensource/TestUse/TEST11/RunLoopInstance.m"
-                  timestampString = "498561948.810574"
+                  timestampString = "499072836.706042"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "215"
@@ -1881,7 +1880,7 @@
                   moduleName = "TEST11"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/lichenze/Documents/opensource/TestUse/TEST11/RunLoopInstance.m"
-                  timestampString = "498561948.813788"
+                  timestampString = "499072836.70959"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "215"
@@ -2378,11 +2377,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TEST11/AppDelegate.m"
-            timestampString = "497959016.373895"
+            timestampString = "499064887.92507"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "159"
-            endingLineNumber = "159"
+            startingLineNumber = "160"
+            endingLineNumber = "160"
             landmarkName = "-application:didFinishLaunchingWithOptions:"
             landmarkType = "7">
          </BreakpointContent>
@@ -2394,11 +2393,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TEST11/AppDelegate.m"
-            timestampString = "497959016.373895"
+            timestampString = "499064887.92507"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "702"
-            endingLineNumber = "702"
+            startingLineNumber = "724"
+            endingLineNumber = "724"
             landmarkName = "-testLogger"
             landmarkType = "7">
          </BreakpointContent>
@@ -2410,43 +2409,43 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TEST11/AppDelegate.m"
-            timestampString = "497959016.373895"
+            timestampString = "499064887.92507"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "747"
+            endingLineNumber = "747"
+            landmarkName = "-backgroundURLSession"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TEST11/AppDelegate.m"
+            timestampString = "499064887.92507"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "739"
+            endingLineNumber = "739"
+            landmarkName = "-backgroundURLSession"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TEST11/AppDelegate.m"
+            timestampString = "499064887.92507"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "725"
             endingLineNumber = "725"
-            landmarkName = "-backgroundURLSession"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "TEST11/AppDelegate.m"
-            timestampString = "497959016.373895"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "717"
-            endingLineNumber = "717"
-            landmarkName = "-backgroundURLSession"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "TEST11/AppDelegate.m"
-            timestampString = "497959016.373895"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "703"
-            endingLineNumber = "703"
             landmarkName = "-testLogger"
             landmarkType = "7">
          </BreakpointContent>
@@ -2458,11 +2457,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TEST11/AppDelegate.m"
-            timestampString = "497959016.373895"
+            timestampString = "499064887.92507"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "707"
-            endingLineNumber = "707"
+            startingLineNumber = "729"
+            endingLineNumber = "729"
             landmarkName = "-testLogger"
             landmarkType = "7">
          </BreakpointContent>
@@ -2920,11 +2919,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TEST11/AppDelegate.m"
-            timestampString = "497959016.373895"
+            timestampString = "499064887.92507"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "695"
-            endingLineNumber = "695"
+            startingLineNumber = "717"
+            endingLineNumber = "717"
             landmarkName = "-testLogger"
             landmarkType = "7">
          </BreakpointContent>
@@ -2936,11 +2935,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TEST11/AppDelegate.m"
-            timestampString = "497959016.373895"
+            timestampString = "499064887.92507"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "674"
-            endingLineNumber = "674"
+            startingLineNumber = "696"
+            endingLineNumber = "696"
             landmarkName = "-application:performFetchWithCompletionHandler:"
             landmarkType = "7">
          </BreakpointContent>
@@ -3096,11 +3095,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TEST11/AppDelegate.m"
-            timestampString = "497959016.373895"
+            timestampString = "499064887.92507"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "711"
-            endingLineNumber = "711"
+            startingLineNumber = "733"
+            endingLineNumber = "733"
             landmarkName = "-testLogger"
             landmarkType = "7">
          </BreakpointContent>
@@ -3112,11 +3111,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TEST11/AppDelegate.m"
-            timestampString = "497959016.373895"
+            timestampString = "499064887.92507"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "823"
-            endingLineNumber = "823"
+            startingLineNumber = "845"
+            endingLineNumber = "845"
             landmarkName = "-test"
             landmarkType = "7">
          </BreakpointContent>
@@ -3176,11 +3175,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TEST11/AppDelegate.m"
-            timestampString = "497959016.373895"
+            timestampString = "499064887.92507"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "214"
-            endingLineNumber = "214"
+            startingLineNumber = "215"
+            endingLineNumber = "215"
             landmarkName = "-application:didFinishLaunchingWithOptions:"
             landmarkType = "7">
          </BreakpointContent>
@@ -3224,11 +3223,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TEST11/ButtonInstance.m"
-            timestampString = "498549307.963041"
+            timestampString = "499072406.160053"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "270"
-            endingLineNumber = "270"
+            startingLineNumber = "289"
+            endingLineNumber = "289"
             landmarkName = "-p2:"
             landmarkType = "7">
          </BreakpointContent>
@@ -3414,11 +3413,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TEST11/AppDelegate.m"
-            timestampString = "497959016.373895"
+            timestampString = "499064887.92507"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "514"
-            endingLineNumber = "514"
+            startingLineNumber = "536"
+            endingLineNumber = "536"
             landmarkName = "-application:handleActionWithIdentifier:forRemoteNotification:completionHandler:"
             landmarkType = "7">
          </BreakpointContent>
@@ -3462,11 +3461,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TEST11/AppDelegate.m"
-            timestampString = "497959016.373895"
+            timestampString = "499064887.92507"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "547"
-            endingLineNumber = "547"
+            startingLineNumber = "569"
+            endingLineNumber = "569"
             landmarkName = "-test1:"
             landmarkType = "7">
             <Locations>
@@ -3652,11 +3651,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TEST11/AppDelegate.m"
-            timestampString = "497959016.373895"
+            timestampString = "499064887.92507"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "472"
-            endingLineNumber = "472"
+            startingLineNumber = "494"
+            endingLineNumber = "494"
             landmarkName = "-getRegisterID"
             landmarkType = "7">
          </BreakpointContent>
@@ -3668,11 +3667,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TEST11/AppDelegate.m"
-            timestampString = "497959016.373895"
+            timestampString = "499064887.92507"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "377"
-            endingLineNumber = "377"
+            startingLineNumber = "399"
+            endingLineNumber = "399"
             landmarkName = "-saveImage"
             landmarkType = "7">
             <Locations>
@@ -3716,11 +3715,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TEST11/AppDelegate.m"
-            timestampString = "497959016.373895"
+            timestampString = "499064887.92507"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "393"
-            endingLineNumber = "393"
+            startingLineNumber = "415"
+            endingLineNumber = "415"
             landmarkName = "-saveImage"
             landmarkType = "7">
          </BreakpointContent>
@@ -3732,11 +3731,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TEST11/AppDelegate.m"
-            timestampString = "497959016.373895"
+            timestampString = "499064887.92507"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "388"
-            endingLineNumber = "388"
+            startingLineNumber = "410"
+            endingLineNumber = "410"
             landmarkName = "-saveImage"
             landmarkType = "7">
          </BreakpointContent>
@@ -3796,11 +3795,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TEST11/ButtonInstance.m"
-            timestampString = "498549307.963041"
+            timestampString = "499062031.26034"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "99"
-            endingLineNumber = "99"
+            startingLineNumber = "100"
+            endingLineNumber = "100"
             landmarkName = "-p5:"
             landmarkType = "7">
             <Locations>
@@ -3844,11 +3843,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TEST11/AppDelegate.m"
-            timestampString = "497961291.182548"
+            timestampString = "499064887.92507"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "349"
-            endingLineNumber = "349"
+            startingLineNumber = "371"
+            endingLineNumber = "371"
             landmarkName = "-save"
             landmarkType = "7">
          </BreakpointContent>
@@ -3860,11 +3859,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TEST11/AppDelegate.m"
-            timestampString = "497961292.638992"
+            timestampString = "499064887.92507"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "352"
-            endingLineNumber = "352"
+            startingLineNumber = "374"
+            endingLineNumber = "374"
             landmarkName = "-save"
             landmarkType = "7">
          </BreakpointContent>
@@ -3908,7 +3907,7 @@
                   moduleName = "TEST11"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/lichenze/Documents/opensource/TestUse/TEST11/ALAssetsLibrary_CustomPhotoAlbum/PHPhotoLibrary+ZHCustomPhotoAlbum.m"
-                  timestampString = "498561949.073939"
+                  timestampString = "499072836.949283"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "59"
@@ -3923,7 +3922,7 @@
                   moduleName = "TEST11"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/lichenze/Documents/opensource/TestUse/TEST11/ALAssetsLibrary_CustomPhotoAlbum/PHPhotoLibrary+ZHCustomPhotoAlbum.m"
-                  timestampString = "498561949.077311"
+                  timestampString = "499072836.952787"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "60"
@@ -3931,22 +3930,6 @@
                   offsetFromSymbolStart = "27">
                </Location>
             </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "TEST11/ButtonInstance.m"
-            timestampString = "498549555.726545"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "94"
-            endingLineNumber = "94"
-            landmarkName = "-p12:"
-            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -3972,7 +3955,7 @@
                   moduleName = "TEST11"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/lichenze/Documents/opensource/TestUse/TEST11/ALAssetsLibrary_CustomPhotoAlbum/PHPhotoLibrary+ZHCustomPhotoAlbum.m"
-                  timestampString = "498561965.540254"
+                  timestampString = "499072836.960299"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "78"
@@ -3987,7 +3970,7 @@
                   moduleName = "TEST11"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/lichenze/Documents/opensource/TestUse/TEST11/ALAssetsLibrary_CustomPhotoAlbum/PHPhotoLibrary+ZHCustomPhotoAlbum.m"
-                  timestampString = "498561965.542347"
+                  timestampString = "499072836.963811"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "78"
@@ -4026,6 +4009,86 @@
             startingLineNumber = "115"
             endingLineNumber = "115"
             landmarkName = "+saveImage:albumName:withCompletionBlock:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TEST11/AppDelegate.m"
+            timestampString = "499064862.32082"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "324"
+            endingLineNumber = "324"
+            landmarkName = "-onResp:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TEST11/AppDelegate.m"
+            timestampString = "499065516.375638"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "988"
+            endingLineNumber = "988"
+            landmarkName = "-application:openURL:sourceApplication:annotation:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TEST11/AppDelegate.m"
+            timestampString = "499065497.54618"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "981"
+            endingLineNumber = "981"
+            landmarkName = "-application:handleOpenURL:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TEST11/AppDelegate.m"
+            timestampString = "499066242.850124"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "993"
+            endingLineNumber = "993"
+            landmarkName = "-application:openURL:sourceApplication:annotation:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TEST11/ButtonInstance.m"
+            timestampString = "499072720.423849"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "102"
+            endingLineNumber = "102"
+            landmarkName = "-p5:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
