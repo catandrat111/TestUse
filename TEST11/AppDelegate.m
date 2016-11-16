@@ -82,8 +82,16 @@
 #import "ALAssetsLibrary+CustomPhotoAlbum.h"
 #import "PHPhotoLibrary+ZHCustomPhotoAlbum.h"
 #import "WXApi.h"
+#import "CocoaLumberjack.h"
+#import "DDLegacyMacros.h"
 //#import <PonyDebugger/PonyDebugger.h>
 //@interface AppDelegate ()<iConsoleDelegate>
+#import "CocoaLumberjack.h"
+#import "MyCustomFormatter.h"
+#import "MyExceptionHandler.h"
+#import "MyFileLogger.h"
+//static const int ddLogLevel = DDLogLevelVerbose;//定义日志级别
+
 
 @interface AppDelegate ()<WXApiDelegate>
 
@@ -316,9 +324,44 @@ typedef int (^frd)(NSString* st);
     TOCK;
     NSLog(@"%@",testDate);
     
-    [self testPrintCNText];
+   // [self testPrintCNText];
+    [self stringWithHourAndMinute:@"03:02"];
+    NSObject* bn = [NSObject new];
+    NSObject * bn2 = [NSObject new];
+    BOOL b3 = [self isZHKindOfClass:[bn class] otherClass:[bn2 class]];
+    
+
+   
+    [self testLumberjack];
     return YES;
 }
+
+- (BOOL) isZHKindOfClass :(Class)suBclass otherClass:(Class)otherClass {
+    Class subclass1 = suBclass;
+    BOOL b = NO;
+    while (subclass1) {
+        if ([NSStringFromClass(subclass1) isEqualToString:NSStringFromClass(otherClass)]) {
+            b = YES;
+            break;
+        }
+        subclass1 = [subclass1 superclass];
+        
+    }
+    return b;
+    
+}
+
+- (NSString*)stringWithHourAndMinute:(NSString*)timeStr {
+    NSString* result = @"";
+    NSArray* arr = [timeStr componentsSeparatedByString:@":"];
+    NSInteger d = [arr[0] integerValue];
+    NSInteger d1 = [arr[1] integerValue];
+    if (arr.count > 0) {
+        result = [NSString stringWithFormat:@"停留%@小时%@分",@(d),@(d1)];
+    }
+    return result;
+}
+
 
 - (void)onResp:(BaseResp *)resp {
     if(!resp.errCode){
@@ -340,6 +383,36 @@ typedef int (^frd)(NSString* st);
     
 }
 
+
+- (void)testLumberjack {
+   // setenv("XcodeColors", "YES", 0);
+    [DDLog addLogger:[DDASLLogger sharedInstance]];//mac控制台
+    [DDLog addLogger:[DDTTYLogger sharedInstance]];
+     [[DDTTYLogger sharedInstance] setColorsEnabled:YES];// 启用颜色区分
+   // [DDTTYLogger sharedInstance].logFormatter = [MyCustomFormatter sharedInstance];
+    [[DDTTYLogger sharedInstance] setForegroundColor:[UIColor grayColor] backgroundColor:nil forFlag:DDLogFlagVerbose];
+    [[DDTTYLogger sharedInstance] setForegroundColor:[UIColor greenColor] backgroundColor:nil forFlag:DDLogFlagDebug];
+   
+    DDLogVerbose(@"Verbose");
+    DDLogInfo(@"Info");
+    DDLogWarn(@"Warn");
+    DDLogError(@"Error");
+    
+    DDLog *aDDLogInstance = [DDLog new];
+    [aDDLogInstance addLogger:[DDTTYLogger sharedInstance]];
+   
+    DDLogVerboseToDDLog(aDDLogInstance, @"Verbose from aDDLogInstance");
+    DDLogInfoToDDLog(aDDLogInstance, @"Info from aDDLogInstance");
+    DDLogWarnToDDLog(aDDLogInstance, @"Warn from aDDLogInstance");
+    DDLogErrorToDDLog(aDDLogInstance, @"Error from aDDLogInstance");
+    
+    [MyExceptionHandler setDefaultHandler];
+    self.logger=[[MyFileLogger alloc]init];
+    
+    NSString *path = NSHomeDirectory();//主目录
+    DDLogInfo(@"当前项目的路径:%@",path);
+        
+}
 
 /**
  *  返回相册

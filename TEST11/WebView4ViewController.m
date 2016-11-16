@@ -43,7 +43,7 @@
     // 某个页面 https://test.hd.paipian.leying.com:445/
     
     self.urlStr = @"https://mapi.alipay.com/gateway.do?sign=7abb084d4493890e144fdb3ac90a1285&body=%E5%9B%9B%E5%B7%9D%E8%88%AA%E7%A9%BA%E5%A4%A7%E5%AE%A2%E6%88%B7%E4%B8%93%E5%8C%BA%E6%9C%BA%E7%A5%A8&_input_charset=UTF-8&exter_invoke_ip=172.16.5.109&it_b_pay=30m&subject=%E5%9B%9B%E5%B7%9D%E8%88%AA%E7%A9%BA%E5%A4%A7%E5%AE%A2%E6%88%B7%E4%B8%93%E5%8C%BA%E6%9C%BA%E7%A5%A8&total_fee=0.01&sign_type=MD5&service=create_direct_pay_by_user&notify_url=http%3A%2F%2F114.242.187.254%3A4135%2Fpay-center%2Fnotify%2FALPC%2F2&qr_pay_mode=2&partner=2088101054133484&seller_id=2088101054133484&out_trade_no=JSWFALPC201609271802389NR1&payment_type=1&return_url=http%3A%2F%2Fm.scal.com.cn%2Fheavybuyer_port_service%2FpaySuccessForIOS.jsp";
-    
+    self.urlStr = @"https://101.231.204.80:5000/gateway/api/frontTransReq.do";
     NSURL *url = [[NSURL alloc] initWithString:self.urlStr];
     _request = [NSURLRequest requestWithURL:url];
  
@@ -90,13 +90,13 @@
         
         
         _urlConnection = [[NSURLConnection alloc] initWithRequest:_request delegate:self];
-        [_urlConnection start];
+       // [_urlConnection start];
         
         
-//        NSURLSessionConfiguration * config = [NSURLSessionConfiguration defaultSessionConfiguration];
-//        _session = [NSURLSession sessionWithConfiguration:config delegate:self delegateQueue:[[NSOperationQueue alloc]init]];
-//        NSURLSessionTask *task =  [_session dataTaskWithRequest:_request];
-//        [task resume];
+        NSURLSessionConfiguration * config = [NSURLSessionConfiguration defaultSessionConfiguration];
+        _session = [NSURLSession sessionWithConfiguration:config delegate:self delegateQueue:[[NSOperationQueue alloc]init]];
+        NSURLSessionTask *task =  [_session dataTaskWithRequest:_request];
+        [task resume];
         
         return NO;
     }

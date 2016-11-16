@@ -57,7 +57,7 @@
    CGSize size =  [self.lab sizeThatFits:CGSizeMake(self.lab.frameWidth, 0)];
     self.lab.frameHeight = size.height;
     
-    self.imgView.image = [UIImage imageNamed:@"Selected"];
+  //  self.imgView.image = [UIImage imageNamed:@"Selected"];
     [self configureButton];
     
 
@@ -78,6 +78,7 @@
     [self.view.layer addSublayer:shapeLayer];
    
     self.navigationController.navigationBar.translucent = YES;
+   
 }
 
 - (void)didReceiveMemoryWarning {
@@ -87,7 +88,7 @@
 
 -(IBAction)p1:(UIButton*)sender{
     [self.button1 endSubmitting];
-   
+    
 }
 
 
@@ -99,6 +100,10 @@
 -(IBAction)p5:(id)sender {
   //  [SVProgressHUD showErrorWithStatus:@"保存成功"];
    // return;
+    
+    NSArray *test=@[@"123",@"444"];
+    id testID=test[5];
+    return;
        
     [WXApi registerApp:@"wxeb8210e6bb741258"];
     PayReq* req =[[PayReq alloc] init];

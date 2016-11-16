@@ -11,6 +11,11 @@
 #import "UITableView+iOS7Style.h"
 #import "GifViewController.h"
 
+#if DEBUG
+// FLEX should only be compiled and used in debug builds.
+#import "FLEX.h"
+#endif
+
 
 @interface ViewController ()<UITableViewDelegate,UITableViewDataSource>
 {
@@ -29,7 +34,9 @@
     self.view.backgroundColor = [UIColor colorWithRed:242 green:242 blue:242 alpha:1.0];
 
    
-    
+#if DEBUG
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"FLEX" style:UIBarButtonItemStylePlain target:self action:@selector(flexButtonTapped:)];
+#endif
 
     tableView_ = [[UITableView alloc] initWithFrame:CGRectMake(10, 10, self.view.frameWidth - 20, self.view.frameHeight - 74)];
     [tableView_ setSeparatorStyle:UITableViewCellSeparatorStyleNone];
@@ -38,8 +45,8 @@
     tableView_.delegate = self;
     tableView_.dataSource = self;
     tableView_.backgroundColor = [UIColor clearColor];
-    dataSource = @[@"GTView",@"UILABEL",@"UIBUTTON",@"UITABLEVIEW",@"UISTATUSBAR",@"UINAVIGATIONBAR",@"UISLIDER",@"UITEXTFILED",@"AUTOSIZE",@"Gesture",@"UISEARCHBAR",@"Algorithm",@"RunLoop",@"UISegmentControl",@"Animation",@"Usage",@"AutoLayout",@"GCD",@"DESIGNATEINIT",@"GIF",@"HUDView",@"DrawView",@"MultiThread",@"TransitionAnimation",@"CollectionView",@"WebView",@"Imageview",@"alterview",@"SystemSetting",@"kvo",@"BackGround",@"scrollview",@"TestFrameWork",@"dispatchprotocol"];
-    dict = @{@"UITABLEVIEW":@"TableInstanceView",@"UILABEL":@"LabelInstance",@"UISLIDER":@"SliderInstance",@"UIBUTTON":@"ButtonInstance",@"UINAVIGATIONBAR":@"NavigationBarInstanceView",@"UITEXTFILED":@"TextFieldInstanceView",@"AUTOSIZE":@"AutoSizeViewInstance",@"Gesture":@"GestureViewController",@"UISEARCHBAR":@"SearchControllerInstanceView",@"DrawView":@"DrawViewInstance",@"Algorithm":@"AlgorithmClass",@"RunLoop":@"RunLoopInstance",@"UISegmentControl":@"SegmentControlInstanceView",@"Animation":@"AnimationInstanceView",@"Usage":@"UsageViewController",@"AutoLayout":@"AutoLayoutViewInstance",@"GCD":@"GCDViewInstance",@"DESIGNATEINIT":@"ZOCKintsugiPhotoViewController_iPad",@"GIF":@"GifViewController",@"HUDView":@"HUDViewController",@"MultiThread":@"MultiThreadViewInstance",@"TransitionAnimation":@"TWTExamplesListViewController",@"CollectionView":@"CollectionViewInstance",@"WebView":@"WebViewInstanceView",@"Imageview":@"ImageviewInstance",@"alterview":@"AlterViewController",@"GTView":@"GTViewController",@"SystemSetting":@"SystemSettingInstance",@"kvo":@"KVOInstance",@"BackGround":@"BackgroundModeInstanceView",@"scrollview":@"ScrollViewInstance",@"TestFrameWork":@"TestFrameWorkViewController",@"dispatchprotocol":@"DIspatchProtocolViewController"};
+    dataSource = @[@"GTView",@"UILABEL",@"UIBUTTON",@"UITABLEVIEW",@"UISTATUSBAR",@"UINAVIGATIONBAR",@"UISLIDER",@"UITEXTFILED",@"AUTOSIZE",@"Gesture",@"UISEARCHBAR",@"Algorithm",@"RunLoop",@"UISegmentControl",@"Animation",@"Usage",@"AutoLayout",@"GCD",@"DESIGNATEINIT",@"GIF",@"HUDView",@"DrawView",@"MultiThread",@"TransitionAnimation",@"CollectionView",@"WebView",@"Imageview",@"alterview",@"SystemSetting",@"kvo",@"BackGround",@"scrollview",@"TestFrameWork",@"dispatchprotocol",@"APPGROUP",@"ddlogexception"];
+    dict = @{@"UITABLEVIEW":@"TableInstanceView",@"UILABEL":@"LabelInstance",@"UISLIDER":@"SliderInstance",@"UIBUTTON":@"ButtonInstance",@"UINAVIGATIONBAR":@"NavigationBarInstanceView",@"UITEXTFILED":@"TextFieldInstanceView",@"AUTOSIZE":@"AutoSizeViewInstance",@"Gesture":@"GestureViewController",@"UISEARCHBAR":@"SearchControllerInstanceView",@"DrawView":@"DrawViewInstance",@"Algorithm":@"AlgorithmClass",@"RunLoop":@"RunLoopInstance",@"UISegmentControl":@"SegmentControlInstanceView",@"Animation":@"AnimationInstanceView",@"Usage":@"UsageViewController",@"AutoLayout":@"AutoLayoutViewInstance",@"GCD":@"GCDViewInstance",@"DESIGNATEINIT":@"ZOCKintsugiPhotoViewController_iPad",@"GIF":@"GifViewController",@"HUDView":@"HUDViewController",@"MultiThread":@"MultiThreadViewInstance",@"TransitionAnimation":@"TWTExamplesListViewController",@"CollectionView":@"CollectionViewInstance",@"WebView":@"WebViewInstanceView",@"Imageview":@"ImageviewInstance",@"alterview":@"AlterViewController",@"GTView":@"GTViewController",@"SystemSetting":@"SystemSettingInstance",@"kvo":@"KVOInstance",@"BackGround":@"BackgroundModeInstanceView",@"scrollview":@"ScrollViewInstance",@"TestFrameWork":@"TestFrameWorkViewController",@"dispatchprotocol":@"DIspatchProtocolViewController",@"APPGROUP":@"AppExtensionViewController",@"ddlogexception":@"loggerTableViewController"};
 
     [self.view addSubview:tableView_];
     
@@ -52,6 +59,13 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)flexButtonTapped:(id)sender
+{
+#if DEBUG
+    [[FLEXManager sharedManager] showExplorer];
+#endif
 }
 
 //2种解决方案

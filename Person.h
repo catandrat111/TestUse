@@ -8,8 +8,13 @@
 
 #import <Foundation/Foundation.h>
 //#import "AutoCoding.h"
+@protocol PersonDelegate <NSObject>
+
+- (NSString*)getUserName;
+
+@end
 //判断相等
-@interface Person : NSObject
+@interface Person : NSObject <PersonDelegate>
 @property (nonatomic, strong) NSString *name;
 @property (nonatomic, strong) NSNumber *age;
 

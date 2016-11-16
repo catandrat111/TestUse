@@ -59,6 +59,11 @@
 			<key>orderHint</key>
 			<integer>1</integer>
 		</dict>
+		<key>ToDoListTodayExtension.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>2</integer>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
@@ -78,6 +83,16 @@
 			<true/>
 		</dict>
 		<key>BD097EDD1C2CD2EF00AF60B0</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>BD55CE661DC994C0006C291B</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>BD55CE7E1DC9984C006C291B</key>
 		<dict>
 			<key>primary</key>
 			<true/>
