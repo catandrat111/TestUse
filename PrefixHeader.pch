@@ -20,8 +20,9 @@
 #import <JavaScriptCore/JavaScriptCore.h>
 //#import "NSLogger.h"
 //#import "iConsole.h"
+#import "DDLog.h"
 #import "CocoaLumberjack.h"
-static const int ddLogLevel = DDLogLevelOff;//定义日志级别
+static const int ddLogLevel = DDLogLevelVerbose;//定义日志级别
 #endif
 
 #endif

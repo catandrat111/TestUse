@@ -39,6 +39,7 @@
 
 @interface Father : NSObject<NSCopying>
 @property (nonatomic, strong) NSString *name;
+@property (nonatomic, strong) NSNumber *age1;
 @end
 
 @interface Son : Father<NSCopying>
