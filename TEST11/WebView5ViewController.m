@@ -8,9 +8,14 @@
 
 #import "WebView5ViewController.h"
 #import <libkern/OSAtomic.h>
+#import "UIWebView+AFNetworking.h"
+#import "AFNetworking.h"
+#import "NSString+Util.h"
+#import <pthread.h>
+static pthread_mutex_t pLock;
+
 
 @interface WebView5ViewController () <UIWebViewDelegate,NSURLSessionDelegate>{
-    BOOL _authenticated;
     NSURLSession* _session;
 
 }
@@ -30,7 +35,7 @@
 
 @property OSSpinLock lock;
 
-
+@property(nonatomic,strong)NSString *userAgent;
 @end
 
 @implementation WebView5ViewController
@@ -40,7 +45,7 @@
         _whiteList = [[NSMutableSet alloc] initWithCapacity:0];
         
         _data = [[NSMutableData alloc] init];
-
+        pthread_mutex_init(&pLock, NULL);
     }
     return self;
 }
@@ -54,6 +59,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+   
     // Do any additional setup after loading the view.
     self.navigationItem.title = @"支付";
     self.webView = [[UIWebView alloc] initWithFrame:CGRectZero];
@@ -65,29 +71,85 @@
     
     NSString *path = [[NSBundle mainBundle] pathForResource:@"test" ofType:@"html"];
     NSURLRequest *request1 = [NSURLRequest requestWithURL:[NSURL fileURLWithPath:path]];
+    // request1 = [NSURLRequest requestWithURL:[NSURL URLWithString:@"http://172.16.10.237:8989/gateway/openPrize?businessType=0&memberid=959255754&foid=131025198911302418&foidType=0&name=qwr&mobile=18310325118"]];
+     //request1 = [NSURLRequest requestWithURL:[NSURL URLWithString:@"http://www.baidu.com"]];
     
     [self.webView loadRequest:request1];
+    
+    //AFSecurityPolicy * securityPolicy = [AFSecurityPolicy policyWithPinningMode:AFSSLPinningModeCertificate];
+    //allowInvalidCertificates 是否允许无效证书（也就是自建的证书），默认为NO
+    //如果是需要验证自建证书，需要设置为YES
+    //securityPolicy.allowInvalidCertificates = YES;
+    //validatesDomainName 是否需要验证域名，默认为YES；
+    //假如证书的域名与你请求的域名不一致，需把该项设置为NO
+    //主要用于这种情况：客户端请求的是子域名，而证书上的是另外一个域名。因为SSL证书上的域名是独立的，假如证书上注册的域名是www.google.com，那么mail.google.com是无法验证通过的；当然，有钱可以注册通配符的域名*.google.com，但这个还是比较贵的。
+   // securityPolicy.validatesDomainName = NO;
+    //validatesCertificateChain 是否验证整个证书链，默认为YES
+    //设置为YES，会将服务器返回的Trust Object上的证书链与本地导入的证书进行对比，这就意味着，假如你的证书链是这样的：
+    //GeoTrust Global CA
+    //    Google Internet Authority G2
+    //        *.google.com
+    //那么，除了导入*.google.com之外，还需要导入证书链上所有的CA证书（GeoTrust Global CA, Google Internet Authority G2）；
+    //如是自建证书的时候，可以设置为YES，增强安全性；假如是信任的CA所签发的证书，则建议关闭该验证；
+    
+   // self.webView.sessionManager.securityPolicy = securityPolicy;
+    
+    
+    //[self createHttpRequest];
 
 }
 - (void)webViewDidStartLoad:(UIWebView *)webView {
     
 }
 
+- (void)webViewDidFinishLoad:(UIWebView *)webView {
+}
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+//有些https请求需要带参数user-agent的参数，则可以通过一下方法获取
+- (void)createHttpRequest {
+    
+//    _web = [[UIWebView alloc] init];
+//    
+//    _web.delegate = self;
+//    
+//    [_web loadRequest:[NSURLRequest requestWithURL:
+//                       
+//                       [NSURL URLWithString:@"http://www.eoe.cn"]]];
+    
+    NSLog(@"%@", [self userAgentString]);
+    
+}
 
+-(NSString *)userAgentString
 
+{
+    
+    while (self.userAgent == nil)
+        
+    {
+        
+        NSLog(@"%@", @"in while");
+        
+        [[NSRunLoop currentRunLoop] runMode:NSDefaultRunLoopMode beforeDate:[NSDate distantFuture]];
+        
+    }
+    
+    return self.userAgent;
+    
+}
 
+#pragma URLSession Delegate
 - (void)URLSession:(NSURLSession *)session task:(NSURLSessionTask *)task
 willPerformHTTPRedirection:(NSHTTPURLResponse *)response
         newRequest:(NSURLRequest *)request
  completionHandler:(void (^)(NSURLRequest * _Nullable))completionHandler {
     
-    NSLog(@"willPerformHTTPRedirection");
+    NSLog(@"willPerformHTTPRedirection:%@",request);
     completionHandler(request);
 }
 
@@ -124,14 +186,12 @@ didReceiveResponse:(NSURLResponse *)response
  completionHandler:(void (^)(NSURLSessionResponseDisposition disposition))completionHandler {
     completionHandler(NSURLSessionResponseAllow);
     
-    
-    //_authenticated = YES;
-   // [self.webView loadRequest:_request];
-    [self _lock];
-    
+   // [self _lock];
+    pthread_mutex_lock(&pLock);
     [_whiteList addObject:[_FailedRequest URL]];
     
-    [self _unlock];
+    //[self _unlock];
+    pthread_mutex_unlock(&pLock);
     
     _FailedRequest = nil;
     
@@ -140,6 +200,19 @@ didReceiveResponse:(NSURLResponse *)response
     
     
 }
+
+- (void)URLSession:(NSURLSession *)session task:(NSURLSessionTask *)task
+didCompleteWithError:(nullable NSError *)error {
+    NSString *str = [[NSString alloc] initWithData:_data encoding:NSUTF8StringEncoding];
+    
+    [_webView loadHTMLString:str baseURL:[_response URL]];
+    
+    [_data setLength:0];
+    
+    _response = nil;
+
+}
+
 
 - (id)initWithCoder:(NSCoder *)aDecoder {
     
@@ -157,6 +230,7 @@ didReceiveResponse:(NSURLResponse *)response
 - (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType
 
 {
+    _userAgent = [request valueForHTTPHeaderField:@"User-Agent"];
     
     NSURL *requestURL =[request URL];
     
@@ -181,24 +255,30 @@ didReceiveResponse:(NSURLResponse *)response
         
         //如果是https:的话，那么就用NSURLConnection来重发请求。从而在请求的过程当中吧要请求的URL做信任处理。
         
-        [self _lock];
-        
+       // [self _lock];
+         pthread_mutex_lock(&pLock);
         BOOL result = [_whiteList containsObject:[request URL]];
-        
-        [self _unlock];
+        pthread_mutex_unlock(&pLock);
+       // [self _unlock];
         
         if (!result) {
             
             _FailedRequest = request;
             
-            _connection = [[NSURLConnection alloc] initWithRequest:request delegate:self];
+           // _connection = [[NSURLConnection alloc] initWithRequest:request delegate:self];
+            
+            NSURLSessionConfiguration * config = [NSURLSessionConfiguration defaultSessionConfiguration];
+            _session = [NSURLSession sessionWithConfiguration:config delegate:self delegateQueue:[[NSOperationQueue alloc]init]];
+            NSURLSessionTask *task =  [_session dataTaskWithRequest:request];
+            [task resume];
+
             
             [_webView stopLoading];
             
         }
         
         return result;
-        
+         
     }
     
     return YES;
@@ -223,11 +303,12 @@ didReceiveResponse:(NSURLResponse *)response
 
 {
     
-    [self _lock];
-    
+   // [self _lock];
+    pthread_mutex_lock(&pLock);
     [_whiteList addObject:[_FailedRequest URL]];
     
-    [self _unlock];
+    //[self _unlock];
+    pthread_mutex_unlock(&pLock);
     
     _FailedRequest = nil;
     

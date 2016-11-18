@@ -19,8 +19,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.dataSource = @[@"Thread_Single",@"Thread_Multi",@"Thread_Multi_1",@"InvocationOperation",@"BlockOperation",@"GCD_Sync",@"GCD_Async",@"LockView",@"ConditionView"];
-    self.dataSourceDict = @{@"Thread_Single" :@"Thread_SingleViewController",@"Thread_Multi":@"Thread_MultiViewController",@"Thread_Multi_1":@"Thread_Multi_1ViewController",@"InvocationOperation":@"InvocationOperationViewController",@"BlockOperation":@"BlockOperationViewController",@"GCD_Sync":@"GCD_SyncViewController",@"GCD_Async":@"GCD_AsyncViewController",@"LockView":@"LockViewController",@"ConditionView":@"ConditionViewController"};
+    self.dataSource = @[@"Thread_Single",@"Thread_Multi",@"Thread_Multi_1",@"InvocationOperation",@"BlockOperation",@"GCD_Sync",@"GCD_Async",@"LockView",@"ConditionView",@"otherlock"];
+    self.dataSourceDict = @{@"Thread_Single" :@"Thread_SingleViewController",@"Thread_Multi":@"Thread_MultiViewController",@"Thread_Multi_1":@"Thread_Multi_1ViewController",@"InvocationOperation":@"InvocationOperationViewController",@"BlockOperation":@"BlockOperationViewController",@"GCD_Sync":@"GCD_SyncViewController",@"GCD_Async":@"GCD_AsyncViewController",@"LockView":@"LockViewController",@"ConditionView":@"ConditionViewController",@"otherlock":@"OtherLockViewController"};
     
 }
 
