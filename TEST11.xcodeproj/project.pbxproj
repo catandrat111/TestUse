@@ -250,6 +250,10 @@
 		BD1090AE1D9D052D001ABC55 /* AlipaySDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = BD1090AC1D9D052D001ABC55 /* AlipaySDK.bundle */; };
 		BD1090AF1D9D052D001ABC55 /* AlipaySDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD1090AD1D9D052D001ABC55 /* AlipaySDK.framework */; };
 		BD1090B21D9D1DCA001ABC55 /* JPObject.m in Sources */ = {isa = PBXBuildFile; fileRef = BD1090B11D9D1DCA001ABC55 /* JPObject.m */; };
+		BD12D0361DE3D39100186173 /* wkWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD12D0351DE3D39100186173 /* wkWebViewController.m */; };
+		BD12D0381DE3D3F200186173 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD12D0371DE3D3F200186173 /* WebKit.framework */; };
+		BD12D0471DE411C000186173 /* wkWebViewController1.m in Sources */ = {isa = PBXBuildFile; fileRef = BD12D0461DE411C000186173 /* wkWebViewController1.m */; };
+		BD12D0491DE4123A00186173 /* test3.html in Resources */ = {isa = PBXBuildFile; fileRef = BD12D0481DE4123A00186173 /* test3.html */; };
 		BD143D4E1DDBEAF30057CA88 /* WebView5ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD143D4D1DDBEAF30057CA88 /* WebView5ViewController.m */; };
 		BD143D5A1DDC2C0E0057CA88 /* test.html in Resources */ = {isa = PBXBuildFile; fileRef = BD143D591DDC2C0D0057CA88 /* test.html */; };
 		BD16583E1BA7B9F600874780 /* TableViewLayoutCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BD16583D1BA7B9F600874780 /* TableViewLayoutCell.xib */; };
@@ -266,6 +270,7 @@
 		BD17ACAB1D49DB880097CA11 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = BD17ACA61D49DB880097CA11 /* logo.png */; };
 		BD17ACAC1D49DB880097CA11 /* logo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BD17ACA71D49DB880097CA11 /* logo@2x.png */; };
 		BD17ACAD1D49DB880097CA11 /* pass.json in Resources */ = {isa = PBXBuildFile; fileRef = BD17ACA81D49DB880097CA11 /* pass.json */; };
+		BD18E6B31DED713C00954539 /* test4.html in Resources */ = {isa = PBXBuildFile; fileRef = BD18E6B21DED713C00954539 /* test4.html */; };
 		BD24F7B91D2B3704001F4AD6 /* RSAEncryptor.m in Sources */ = {isa = PBXBuildFile; fileRef = BD24F7B81D2B3704001F4AD6 /* RSAEncryptor.m */; };
 		BD24F7BC1D2B37BA001F4AD6 /* private_key.p12 in Resources */ = {isa = PBXBuildFile; fileRef = BD24F7BA1D2B37BA001F4AD6 /* private_key.p12 */; };
 		BD24F7BD1D2B37BA001F4AD6 /* public_key.der in Resources */ = {isa = PBXBuildFile; fileRef = BD24F7BB1D2B37BA001F4AD6 /* public_key.der */; };
@@ -554,6 +559,8 @@
 		BD8D3D381C0834FD00B9B214 /* WebView2ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD8D3D371C0834FD00B9B214 /* WebView2ViewController.m */; };
 		BD8D3D3B1C08351A00B9B214 /* MyWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = BD8D3D3A1C08351A00B9B214 /* MyWebView.m */; };
 		BD8D3D3D1C083A7600B9B214 /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD8D3D3C1C083A7500B9B214 /* JavaScriptCore.framework */; };
+		BD933E381DE29D1200BF1AB2 /* ShakeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD933E371DE29D1200BF1AB2 /* ShakeViewController.m */; };
+		BD933E3B1DE303E000BF1AB2 /* test2.html in Resources */ = {isa = PBXBuildFile; fileRef = BD933E3A1DE303E000BF1AB2 /* test2.html */; };
 		BD9B2CE71C8D72F2004DAABC /* TestCornerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD9B2CE51C8D72F2004DAABC /* TestCornerViewController.m */; };
 		BD9B2CE81C8D72F2004DAABC /* TestCornerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BD9B2CE61C8D72F2004DAABC /* TestCornerViewController.xib */; };
 		BD9B2CEC1C8D7FBC004DAABC /* UIImage+ImageRoundedCorner.m in Sources */ = {isa = PBXBuildFile; fileRef = BD9B2CEB1C8D7FBC004DAABC /* UIImage+ImageRoundedCorner.m */; };
@@ -1448,6 +1455,12 @@
 		BD1090AD1D9D052D001ABC55 /* AlipaySDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AlipaySDK.framework; sourceTree = "<group>"; };
 		BD1090B01D9D1DCA001ABC55 /* JPObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JPObject.h; sourceTree = "<group>"; };
 		BD1090B11D9D1DCA001ABC55 /* JPObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JPObject.m; sourceTree = "<group>"; };
+		BD12D0341DE3D39100186173 /* wkWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = wkWebViewController.h; sourceTree = "<group>"; };
+		BD12D0351DE3D39100186173 /* wkWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = wkWebViewController.m; sourceTree = "<group>"; };
+		BD12D0371DE3D3F200186173 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		BD12D0451DE411C000186173 /* wkWebViewController1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = wkWebViewController1.h; sourceTree = "<group>"; };
+		BD12D0461DE411C000186173 /* wkWebViewController1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = wkWebViewController1.m; sourceTree = "<group>"; };
+		BD12D0481DE4123A00186173 /* test3.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = test3.html; sourceTree = "<group>"; };
 		BD143D4C1DDBEAF30057CA88 /* WebView5ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebView5ViewController.h; sourceTree = "<group>"; };
 		BD143D4D1DDBEAF30057CA88 /* WebView5ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebView5ViewController.m; sourceTree = "<group>"; };
 		BD143D591DDC2C0D0057CA88 /* test.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = test.html; sourceTree = "<group>"; };
@@ -1467,6 +1480,7 @@
 		BD17ACA61D49DB880097CA11 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
 		BD17ACA71D49DB880097CA11 /* logo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logo@2x.png"; sourceTree = "<group>"; };
 		BD17ACA81D49DB880097CA11 /* pass.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = pass.json; sourceTree = "<group>"; };
+		BD18E6B21DED713C00954539 /* test4.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = test4.html; sourceTree = "<group>"; };
 		BD24F7B71D2B3704001F4AD6 /* RSAEncryptor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSAEncryptor.h; sourceTree = "<group>"; };
 		BD24F7B81D2B3704001F4AD6 /* RSAEncryptor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSAEncryptor.m; sourceTree = "<group>"; };
 		BD24F7BA1D2B37BA001F4AD6 /* private_key.p12 */ = {isa = PBXFileReference; lastKnownFileType = file; path = private_key.p12; sourceTree = "<group>"; };
@@ -1986,6 +2000,9 @@
 		BD8D3D391C08351A00B9B214 /* MyWebView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyWebView.h; sourceTree = "<group>"; };
 		BD8D3D3A1C08351A00B9B214 /* MyWebView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyWebView.m; sourceTree = "<group>"; };
 		BD8D3D3C1C083A7500B9B214 /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
+		BD933E361DE29D1200BF1AB2 /* ShakeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShakeViewController.h; sourceTree = "<group>"; };
+		BD933E371DE29D1200BF1AB2 /* ShakeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShakeViewController.m; sourceTree = "<group>"; };
+		BD933E3A1DE303E000BF1AB2 /* test2.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = test2.html; sourceTree = "<group>"; };
 		BD9B2CE41C8D72F2004DAABC /* TestCornerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestCornerViewController.h; sourceTree = "<group>"; };
 		BD9B2CE51C8D72F2004DAABC /* TestCornerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestCornerViewController.m; sourceTree = "<group>"; };
 		BD9B2CE61C8D72F2004DAABC /* TestCornerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TestCornerViewController.xib; sourceTree = "<group>"; };
@@ -2684,6 +2701,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BD12D0381DE3D3F200186173 /* WebKit.framework in Frameworks */,
+				BDB3C23F1C759AD20039E146 /* AudioToolbox.framework in Frameworks */,
 				BDCA97361DAE24C80012862F /* AssetsLibrary.framework in Frameworks */,
 				BD392A471DAE0F33009AC236 /* Photos.framework in Frameworks */,
 				BD1090361D9CF40E001ABC55 /* CoreMotion.framework in Frameworks */,
@@ -2706,7 +2725,6 @@
 				BDB3C2471C759AFB0039E146 /* MapKit.framework in Frameworks */,
 				BDB3C2451C759AF30039E146 /* CoreMedia.framework in Frameworks */,
 				BDB3C2411C759ADD0039E146 /* AVFoundation.framework in Frameworks */,
-				BDB3C23F1C759AD20039E146 /* AudioToolbox.framework in Frameworks */,
 				BD1090AF1D9D052D001ABC55 /* AlipaySDK.framework in Frameworks */,
 				BD3570A91BB29F2A00559A9A /* libz.1.dylib in Frameworks */,
 				BD3570A71BB29EF900559A9A /* libsqlite3.dylib in Frameworks */,
@@ -2773,6 +2791,7 @@
 		4B57CB8D439273592D6CB7DC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				BD12D0371DE3D3F200186173 /* WebKit.framework */,
 				BDCA97351DAE24C80012862F /* AssetsLibrary.framework */,
 				BD392A461DAE0F33009AC236 /* Photos.framework */,
 				BD1090351D9CF40E001ABC55 /* CoreMotion.framework */,
@@ -2897,6 +2916,7 @@
 		5195B3EC1AB70284007CFA8B /* TEST11 */ = {
 			isa = PBXGroup;
 			children = (
+				BD933E351DE29CF900BF1AB2 /* shake */,
 				BDC5015C1DDECEDD003F04C1 /* HTTPStubsViewController */,
 				BD889B3F1DD1776F00EBAACE /* DDLOG */,
 				BD55CE5F1DC98D01006C291B /* app group */,
@@ -5012,6 +5032,9 @@
 		BD8D3D291C08281C00B9B214 /* UIWEBVIEW */ = {
 			isa = PBXGroup;
 			children = (
+				BD18E6B21DED713C00954539 /* test4.html */,
+				BD12D0481DE4123A00186173 /* test3.html */,
+				BD933E3A1DE303E000BF1AB2 /* test2.html */,
 				BD143D591DDC2C0D0057CA88 /* test.html */,
 				BD8D3D2F1C082B2A00B9B214 /* html1.html */,
 				BD8D3D2A1C08286900B9B214 /* WebViewInstanceView.h */,
@@ -5030,8 +5053,21 @@
 				BD89106F1D9CB8830059B94F /* WebView4ViewController.m */,
 				BD143D4C1DDBEAF30057CA88 /* WebView5ViewController.h */,
 				BD143D4D1DDBEAF30057CA88 /* WebView5ViewController.m */,
+				BD12D0341DE3D39100186173 /* wkWebViewController.h */,
+				BD12D0351DE3D39100186173 /* wkWebViewController.m */,
+				BD12D0451DE411C000186173 /* wkWebViewController1.h */,
+				BD12D0461DE411C000186173 /* wkWebViewController1.m */,
 			);
 			name = UIWEBVIEW;
+			sourceTree = "<group>";
+		};
+		BD933E351DE29CF900BF1AB2 /* shake */ = {
+			isa = PBXGroup;
+			children = (
+				BD933E361DE29D1200BF1AB2 /* ShakeViewController.h */,
+				BD933E371DE29D1200BF1AB2 /* ShakeViewController.m */,
+			);
+			name = shake;
 			sourceTree = "<group>";
 		};
 		BD9B2CE31C8D52AA004DAABC /* instrumenttest */ = {
@@ -6563,7 +6599,7 @@
 								enabled = 1;
 							};
 							com.apple.Push = {
-								enabled = 0;
+								enabled = 1;
 							};
 						};
 					};
@@ -6643,6 +6679,7 @@
 				BDAE15BC1B7C7FED001908A5 /* SVProgressHUD.bundle in Resources */,
 				BDF987C21B8DB7040039838B /* RunLoopInstance.xib in Resources */,
 				BD6872D21D7D45B700E7C0FD /* sample.js in Resources */,
+				BD933E3B1DE303E000BF1AB2 /* test2.html in Resources */,
 				BDAE15BA1B7C7FED001908A5 /* LICENSE.txt in Resources */,
 				BD8584951C2A8525001468F3 /* localizable_1.png in Resources */,
 				BDADA2C41BF9B38D0076BFDF /* ball.png in Resources */,
@@ -6688,6 +6725,7 @@
 				BDD18B241DD415FA00896807 /* LICENSE in Resources */,
 				BDB3C24D1C759BC60039E146 /* FeelinGood.mp3 in Resources */,
 				BD80F1451BF46D8C0046FA80 /* stretch_vertically-1.png in Resources */,
+				BD18E6B31DED713C00954539 /* test4.html in Resources */,
 				5158D1941B7E242000ACF3AD /* DrawViewInstance.xib in Resources */,
 				BD24F7CB1D2B4226001F4AD6 /* zsch_client_public_key.der in Resources */,
 				BDAE15BE1B7C7FED001908A5 /* LICENSE.txt in Resources */,
@@ -6772,6 +6810,7 @@
 				BDD1E10E1B9062F40037A457 /* SegmentControlInstanceView.xib in Resources */,
 				BD1070D21C045E2900CC1612 /* cl_3.png in Resources */,
 				BD70F6EC1D40A7CE00C8E5BC /* 1351727154_1887.jpg in Resources */,
+				BD12D0491DE4123A00186173 /* test3.html in Resources */,
 				BD8584931C2A8525001468F3 /* localizable_3.png in Resources */,
 				BD79F6A11BCBAE9000AE64FD /* DateTools.bundle in Resources */,
 				51F410C51B525041008DD35E /* TableInstanceStyle.xib in Resources */,
@@ -7166,6 +7205,7 @@
 				BDD373F11B86BBB20047313A /* AlgorithmClass.m in Sources */,
 				BDADD3EF1D8F91210072492B /* JRSwizzle.m in Sources */,
 				BD6657861DD05A7A00E2F6FA /* Aspects.m in Sources */,
+				BD12D0361DE3D39100186173 /* wkWebViewController.m in Sources */,
 				51E10E3D1B481BD4009B162E /* UIView+Find.m in Sources */,
 				BDFEB8C61BDA18A50001FE1D /* GifViewController.m in Sources */,
 				BDB3C23A1C7590770039E146 /* TBFourthViewController.m in Sources */,
@@ -7442,6 +7482,7 @@
 				BD754A7B1BA17E7C00BE410D /* NSInvocation+Improved.m in Sources */,
 				BD1658491BA810D200874780 /* AntiAlias.m in Sources */,
 				BD6873481D7D4E5100E7C0FD /* JPCGTransform.m in Sources */,
+				BD12D0471DE411C000186173 /* wkWebViewController1.m in Sources */,
 				51E10DCB1B481BD4009B162E /* NSData+Encrypt.m in Sources */,
 				BD1070EC1C046E1200CC1612 /* CLineCell.m in Sources */,
 				51E10DC01B481BD4009B162E /* NSManagedObject+Extensions.m in Sources */,
@@ -7583,6 +7624,7 @@
 				BD1658461BA7EEA600874780 /* RunLoopTestModel.m in Sources */,
 				BDAE15A81B7C7FED001908A5 /* SDWebImageDownloader.m in Sources */,
 				BDD18B1B1DD415FA00896807 /* FLEXManager.m in Sources */,
+				BD933E381DE29D1200BF1AB2 /* ShakeViewController.m in Sources */,
 				BDFCFB281C210EFC0066BCFE /* Target.m in Sources */,
 				BD47FB571DD0816800F2E2D6 /* DDMultiFormatter.m in Sources */,
 				51E10E221B481BD4009B162E /* UILabel+ESAdjustableLabel.m in Sources */,

@@ -10,13 +10,13 @@
 #import "ZOCKintsugiPhotoViewController_iPad.h"
 #import "UITableView+iOS7Style.h"
 #import "GifViewController.h"
-
+#import "Masonry.h"
 #if DEBUG
 // FLEX should only be compiled and used in debug builds.
 #import "FLEX.h"
 #endif
 
-
+static NSUInteger CalendarViewInterReturnCount = 0;
 @interface ViewController ()<UITableViewDelegate,UITableViewDataSource>
 {
     UITableView* tableView_;
@@ -29,10 +29,14 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    CalendarViewInterReturnCount =  CalendarViewInterReturnCount +1;
+    NSLog(@"%@",@(CalendarViewInterReturnCount));
     self.title = @"主页";
     self.view.backgroundColor = [UIColor redColor];
     self.view.backgroundColor = [UIColor colorWithRed:242 green:242 blue:242 alpha:1.0];
-
+    
+    DDLogInfo(@"topLayoutGuide-%@ bottomLayoutGuide-%@",self.topLayoutGuide,self.bottomLayoutGuide);
    
 #if DEBUG
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"FLEX" style:UIBarButtonItemStylePlain target:self action:@selector(flexButtonTapped:)];
@@ -45,8 +49,8 @@
     tableView_.delegate = self;
     tableView_.dataSource = self;
     tableView_.backgroundColor = [UIColor clearColor];
-    dataSource = @[@"GTView",@"UILABEL",@"UIBUTTON",@"UITABLEVIEW",@"UISTATUSBAR",@"UINAVIGATIONBAR",@"UISLIDER",@"UITEXTFILED",@"AUTOSIZE",@"Gesture",@"UISEARCHBAR",@"Algorithm",@"RunLoop",@"UISegmentControl",@"Animation",@"Usage",@"AutoLayout",@"GCD",@"DESIGNATEINIT",@"GIF",@"HUDView",@"DrawView",@"MultiThread",@"TransitionAnimation",@"CollectionView",@"WebView",@"Imageview",@"alterview",@"SystemSetting",@"kvo",@"BackGround",@"scrollview",@"TestFrameWork",@"dispatchprotocol",@"APPGROUP",@"ddlogexception",@"HTTPStubs"];
-    dict = @{@"UITABLEVIEW":@"TableInstanceView",@"UILABEL":@"LabelInstance",@"UISLIDER":@"SliderInstance",@"UIBUTTON":@"ButtonInstance",@"UINAVIGATIONBAR":@"NavigationBarInstanceView",@"UITEXTFILED":@"TextFieldInstanceView",@"AUTOSIZE":@"AutoSizeViewInstance",@"Gesture":@"GestureViewController",@"UISEARCHBAR":@"SearchControllerInstanceView",@"DrawView":@"DrawViewInstance",@"Algorithm":@"AlgorithmClass",@"RunLoop":@"RunLoopInstance",@"UISegmentControl":@"SegmentControlInstanceView",@"Animation":@"AnimationInstanceView",@"Usage":@"UsageViewController",@"AutoLayout":@"AutoLayoutViewInstance",@"GCD":@"GCDViewInstance",@"DESIGNATEINIT":@"ZOCKintsugiPhotoViewController_iPad",@"GIF":@"GifViewController",@"HUDView":@"HUDViewController",@"MultiThread":@"MultiThreadViewInstance",@"TransitionAnimation":@"TWTExamplesListViewController",@"CollectionView":@"CollectionViewInstance",@"WebView":@"WebViewInstanceView",@"Imageview":@"ImageviewInstance",@"alterview":@"AlterViewController",@"GTView":@"GTViewController",@"SystemSetting":@"SystemSettingInstance",@"kvo":@"KVOInstance",@"BackGround":@"BackgroundModeInstanceView",@"scrollview":@"ScrollViewInstance",@"TestFrameWork":@"TestFrameWorkViewController",@"dispatchprotocol":@"DIspatchProtocolViewController",@"APPGROUP":@"AppExtensionViewController",@"ddlogexception":@"loggerTableViewController",@"HTTPStubs":@"HTTPStubsViewController"};
+    dataSource = @[@"GTView",@"UILABEL",@"UIBUTTON",@"UITABLEVIEW",@"UISTATUSBAR",@"UINAVIGATIONBAR",@"UISLIDER",@"UITEXTFILED",@"AUTOSIZE",@"Gesture",@"UISEARCHBAR",@"Algorithm",@"RunLoop",@"UISegmentControl",@"Animation",@"Usage",@"AutoLayout",@"GCD",@"DESIGNATEINIT",@"GIF",@"HUDView",@"DrawView",@"MultiThread",@"TransitionAnimation",@"CollectionView",@"WebView",@"Imageview",@"alterview",@"SystemSetting",@"kvo",@"BackGround",@"scrollview",@"TestFrameWork",@"dispatchprotocol",@"APPGROUP",@"ddlogexception",@"HTTPStubs",@"shake"];
+    dict = @{@"UITABLEVIEW":@"TableInstanceView",@"UILABEL":@"LabelInstance",@"UISLIDER":@"SliderInstance",@"UIBUTTON":@"ButtonInstance",@"UINAVIGATIONBAR":@"NavigationBarInstanceView",@"UITEXTFILED":@"TextFieldInstanceView",@"AUTOSIZE":@"AutoSizeViewInstance",@"Gesture":@"GestureViewController",@"UISEARCHBAR":@"SearchControllerInstanceView",@"DrawView":@"DrawViewInstance",@"Algorithm":@"AlgorithmClass",@"RunLoop":@"RunLoopInstance",@"UISegmentControl":@"SegmentControlInstanceView",@"Animation":@"AnimationInstanceView",@"Usage":@"UsageViewController",@"AutoLayout":@"AutoLayoutViewInstance",@"GCD":@"GCDViewInstance",@"DESIGNATEINIT":@"ZOCKintsugiPhotoViewController_iPad",@"GIF":@"GifViewController",@"HUDView":@"HUDViewController",@"MultiThread":@"MultiThreadViewInstance",@"TransitionAnimation":@"TWTExamplesListViewController",@"CollectionView":@"CollectionViewInstance",@"WebView":@"WebViewInstanceView",@"Imageview":@"ImageviewInstance",@"alterview":@"AlterViewController",@"GTView":@"GTViewController",@"SystemSetting":@"SystemSettingInstance",@"kvo":@"KVOInstance",@"BackGround":@"BackgroundModeInstanceView",@"scrollview":@"ScrollViewInstance",@"TestFrameWork":@"TestFrameWorkViewController",@"dispatchprotocol":@"DIspatchProtocolViewController",@"APPGROUP":@"AppExtensionViewController",@"ddlogexception":@"loggerTableViewController",@"HTTPStubs":@"HTTPStubsViewController",@"shake":@"ShakeViewController"};
 
     [self.view addSubview:tableView_];
     

@@ -62,7 +62,9 @@
 		</dict>
 	</array>
 	<key>CFBundleVersion</key>
-	<string>1531</string>
+	<string>1625</string>
+	<key>LSApplicationCategoryType</key>
+	<string></string>
 	<key>LSApplicationQueriesSchemes</key>
 	<array>
 		<string>weixin</string>
