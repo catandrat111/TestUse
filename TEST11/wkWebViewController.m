@@ -65,13 +65,17 @@
     self.wkWebView.navigationDelegate = self;
     [self.view addSubview:self.wkWebView];
     // [self loadData];
+    NSStringEncoding enc = CFStringConvertEncodingToNSStringEncoding(kCFStringEncodingGB_18030_2000);
     
-    
-    NSString *path = [[NSBundle mainBundle] pathForResource:@"test4" ofType:@"html"];
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"test2" ofType:@"html"];//银联
+    path = [[NSBundle mainBundle] pathForResource:@"testhuifu" ofType:@"html"];//huipu 新webview在ios不行
     NSURLRequest *request1 = [NSURLRequest requestWithURL:[NSURL fileURLWithPath:path]];
-   // request1 = [NSURLRequest requestWithURL:[NSURL URLWithString:@"http://172.16.10.237:8989/gateway/openPrize?businessType=0&memberid=959255754&foid=131025198911302418&foidType=0&name=qwr&mobile=18310325118"]];
-   // request1 = [NSURLRequest requestWithURL:[NSURL URLWithString:@"http://m.sichuanair.com/gateway/openpay?businessType=2&memberid=959300705&foid=430524199404263237&foidType=0&name=qw&mobile=15810509173"]];
-   
+  //  request1 = [NSURLRequest requestWithURL:[NSURL URLWithString:@"http://172.16.10.237:8989/gateway/openPrize?businessType=0&memberid=959255754&foid=131025198911302418&foidType=0&name=qwr&mobile=18310325118"]];
+    //request1 = [NSURLRequest requestWithURL:[NSURL URLWithString:@"http://m.sichuanair.com/gateway/openpay?businessType=2&memberid=959300705&foid=430524199404263237&foidType=0&name=qw&mobile=15810509173"]];
+    
+   // request1 = [NSURLRequest requestWithURL:[NSURL URLWithString:@"http://m.sichuanair.com/gateway/openPrize?encParams=51+7c8tNcs3oNwcYaSt3KMvTIfw770igEqhuu7XzSPXAR6h8mAlEEPWf/+iLXbgm8GypynJCUFY600GvgZaXTZhIA//187fskc3ExasTIoo3RNhg4qQ7K0QlMV9munc2"]];//网上兑奖
+   // request1 = [NSURLRequest requestWithURL:[NSURL URLWithString:@"http://m.sichuanair.com/gateway/openpay?encParams=51+7c8tNcs0NSPbIjzonnA80AUQVSqckiomCKVzdvWwHwqb3TpzWqoXu+/Ls9Qhw3xs4cWublwzlTAGg4u8kHHt/0PRg+gQ3xx+1NjPfXl8b4FvQjAWiGi0l73gAGR3N"]];//"添加银行卡"
+  //request1 = [NSURLRequest requestWithURL:[NSURL URLWithString:@"http://m.sichuanair.com/gateway/cardAdd?encParams=QMyEHJ+EXwl2Bn4tqmSY0x/ayFgZj+OlHwVbDchftWjGOzDi7dVj5U6zWEHklCWBU58X7EgWAXpUtdnck7PLLkwQeHJys3wCr2nOUpRRosmCyYkGPU0ryZd6o2agZpsMHvf/coLAfpN1Sn00alr7NJH8MyGvhpef7VrukjLlLt97IfVxWgNI3c4Ec1PiPJ5d657QqKpC6LYzvqk8UbQPAkde/KZy0DyC9Q4+odb3gGQ=&orderid=DZHA161130005643&price=1"]];//
     [self.wkWebView loadRequest:request1];
     
 
@@ -179,7 +183,7 @@ didCompleteWithError:(nullable NSError *)error {
     urlString = [urlString stringByRemovingPercentEncoding];
     
     
-    
+    NSLog(@"this is web url : %@",[navigationAction.request URL]);
     NSString* scheme = [[navigationAction.request URL] scheme];
     
     if ([scheme isEqualToString:@"https"]) {

@@ -291,6 +291,7 @@
 		BD3570A71BB29EF900559A9A /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BD3570A61BB29EF900559A9A /* libsqlite3.dylib */; };
 		BD3570A91BB29F2A00559A9A /* libz.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BD3570A81BB29F2900559A9A /* libz.1.dylib */; };
 		BD392A471DAE0F33009AC236 /* Photos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD392A461DAE0F33009AC236 /* Photos.framework */; };
+		BD4223081DEFC8FC007D51F1 /* testhuifu.html in Resources */ = {isa = PBXBuildFile; fileRef = BD4223071DEFC8FC007D51F1 /* testhuifu.html */; };
 		BD42BE1B1DD2FE7100C10AF1 /* CocoaLumberjackClassDiagram.png in Resources */ = {isa = PBXBuildFile; fileRef = BD42BE1A1DD2FE7100C10AF1 /* CocoaLumberjackClassDiagram.png */; };
 		BD47FB4D1DD0816700F2E2D6 /* CLIColor.m in Sources */ = {isa = PBXBuildFile; fileRef = BD47FB331DD0816700F2E2D6 /* CLIColor.m */; };
 		BD47FB4F1DD0816800F2E2D6 /* DDAbstractDatabaseLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = BD47FB371DD0816700F2E2D6 /* DDAbstractDatabaseLogger.m */; };
@@ -1511,6 +1512,7 @@
 		BD3570A61BB29EF900559A9A /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = ../../../../../usr/lib/libsqlite3.dylib; sourceTree = "<group>"; };
 		BD3570A81BB29F2900559A9A /* libz.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.dylib; path = ../../../../../usr/lib/libz.1.dylib; sourceTree = "<group>"; };
 		BD392A461DAE0F33009AC236 /* Photos.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Photos.framework; path = System/Library/Frameworks/Photos.framework; sourceTree = SDKROOT; };
+		BD4223071DEFC8FC007D51F1 /* testhuifu.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = testhuifu.html; sourceTree = "<group>"; };
 		BD42BE1A1DD2FE7100C10AF1 /* CocoaLumberjackClassDiagram.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CocoaLumberjackClassDiagram.png; sourceTree = "<group>"; };
 		BD47FB321DD0816700F2E2D6 /* CLIColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLIColor.h; sourceTree = "<group>"; };
 		BD47FB331DD0816700F2E2D6 /* CLIColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLIColor.m; sourceTree = "<group>"; };
@@ -5032,9 +5034,8 @@
 		BD8D3D291C08281C00B9B214 /* UIWEBVIEW */ = {
 			isa = PBXGroup;
 			children = (
+				BD4223071DEFC8FC007D51F1 /* testhuifu.html */,
 				BD18E6B21DED713C00954539 /* test4.html */,
-				BD12D0481DE4123A00186173 /* test3.html */,
-				BD933E3A1DE303E000BF1AB2 /* test2.html */,
 				BD143D591DDC2C0D0057CA88 /* test.html */,
 				BD8D3D2F1C082B2A00B9B214 /* html1.html */,
 				BD8D3D2A1C08286900B9B214 /* WebViewInstanceView.h */,
@@ -5055,6 +5056,8 @@
 				BD143D4D1DDBEAF30057CA88 /* WebView5ViewController.m */,
 				BD12D0341DE3D39100186173 /* wkWebViewController.h */,
 				BD12D0351DE3D39100186173 /* wkWebViewController.m */,
+				BD12D0481DE4123A00186173 /* test3.html */,
+				BD933E3A1DE303E000BF1AB2 /* test2.html */,
 				BD12D0451DE411C000186173 /* wkWebViewController1.h */,
 				BD12D0461DE411C000186173 /* wkWebViewController1.m */,
 			);
@@ -6733,6 +6736,7 @@
 				5158D19C1B7E253000ACF3AD /* CircleViewController.xib in Resources */,
 				BDAE15B31B7C7FED001908A5 /* LICENSE in Resources */,
 				BD1070C41C04438F00CC1612 /* CLCollectionViewCell.xib in Resources */,
+				BD4223081DEFC8FC007D51F1 /* testhuifu.html in Resources */,
 				BD6B30131C1034E8008C83C5 /* AutoCustom3ViewController.xib in Resources */,
 				BD6B2FEE1C0FD230008C83C5 /* ImageView.xib in Resources */,
 				BDE62A7C1BA6CAD200870499 /* TableViewLayout.xib in Resources */,

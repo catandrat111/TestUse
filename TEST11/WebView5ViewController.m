@@ -69,11 +69,13 @@ static pthread_mutex_t pLock;
    // [self loadData];
     
     
-    NSString *path = [[NSBundle mainBundle] pathForResource:@"test" ofType:@"html"];
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"test4" ofType:@"html"];
     NSURLRequest *request1 = [NSURLRequest requestWithURL:[NSURL fileURLWithPath:path]];
-     request1 = [NSURLRequest requestWithURL:[NSURL URLWithString:@"http://172.16.10.237:8989/gateway/openPrize?businessType=0&memberid=959255754&foid=131025198911302418&foidType=0&name=qwr&mobile=18310325118"]];
-     request1 = [NSURLRequest requestWithURL:[NSURL URLWithString:@"http://m.sichuanair.com/gateway/openpay?businessType=2&memberid=959300705&foid=430524199404263237&foidType=0&name=??&mobile=15810509173"]];
+    // request1 = [NSURLRequest requestWithURL:[NSURL URLWithString:@"http://172.16.10.237:8989/gateway/openPrize?businessType=0&memberid=959255754&foid=131025198911302418&foidType=0&name=qwr&mobile=18310325118"]];
+   //  request1 = [NSURLRequest requestWithURL:[NSURL URLWithString:@"http://m.sichuanair.com/gateway/openpay?businessType=2&memberid=959300705&foid=430524199404263237&foidType=0&name=??&mobile=15810509173"]];
+   // request1 = [NSURLRequest requestWithURL:[NSURL URLWithString:@"http://www.cocoachina.com"]];
     
+ request1 = [NSURLRequest requestWithURL:[NSURL URLWithString:@"http://m.sichuanair.com/gateway/openPrizehtml?encParams=51+7c8tNcs2SvlO6RDnKPQFenoKNpdgfLR2IBJdkUounQkW7c6Wc2zjdSm3HCC4/yXKAP0yeTaOvIhOHFxdUMYKQTeNQL/qGgCV7zqKSP8B6GXMUUshgkr4Pnd2kvTx44VNO+dC+DuA="]];//http://m.sichuanair.com/gateway/openPrize?encParams=51+7c8tNcs3oNwcYaSt3KMvTIfw770igwxGIyOa/Dij6apRSCQlapTMKakM6spmMndv2IU0aIHg29NW6RJaylV9CHMp0YqhjKrVijOJZNTfCex51H4spsw2QWcALQhl4
     [self.webView loadRequest:request1];
     
     //AFSecurityPolicy * securityPolicy = [AFSecurityPolicy policyWithPinningMode:AFSSLPinningModeCertificate];
@@ -260,6 +262,8 @@ didCompleteWithError:(nullable NSError *)error {
             
         }
         
+        
+        
     }
     
     NSString* scheme = [[request URL] scheme];
@@ -280,9 +284,9 @@ didCompleteWithError:(nullable NSError *)error {
             
                        
             
-            //_connection = [[NSURLConnection alloc] initWithRequest:request delegate:self];
+            _connection = [[NSURLConnection alloc] initWithRequest:request delegate:self];
             
-            
+            /*
             NSURLSessionConfiguration * config = [NSURLSessionConfiguration defaultSessionConfiguration];
            
             _session = [NSURLSession sessionWithConfiguration:config delegate:self delegateQueue:[[NSOperationQueue alloc]init]];
@@ -291,6 +295,7 @@ didCompleteWithError:(nullable NSError *)error {
             
             
             [_webView stopLoading];
+             */
             
         }
         
@@ -343,7 +348,9 @@ didCompleteWithError:(nullable NSError *)error {
     
     NSString *str = [[NSString alloc] initWithData:_data encoding:NSUTF8StringEncoding];
     
-    [_webView loadHTMLString:str baseURL:[_response URL]];
+   // [_webView loadHTMLString:str baseURL:[_response URL]];
+    NSMutableData* mdata = [_data mutableCopy];
+    [_webView loadData:mdata MIMEType:_response.MIMEType textEncodingName:_response.textEncodingName baseURL:[_response URL]];
 
     
     [_data setLength:0];
@@ -368,6 +375,10 @@ didCompleteWithError:(nullable NSError *)error {
     
     [challenge.sender continueWithoutCredentialForAuthenticationChallenge:challenge];
     
+}
+
+- (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error {
+    NSLog(@"%@",error);
 }
 
 - (void)_lock {
