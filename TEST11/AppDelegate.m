@@ -91,6 +91,7 @@
 #import "MyExceptionHandler.h"
 #import "MyFileLogger.h"
 #import "NSDate+DateTools.h"
+#import "LocationHelper.h"
 //static const int ddLogLevel = DDLogLevelVerbose;//定义日志级别
 
 
@@ -335,6 +336,7 @@ typedef int (^frd)(NSString* st);
    
     [self testLumberjack];
     [self setupLocalNotification];
+    [self openGps];
     return YES;
 }
 
@@ -1151,6 +1153,85 @@ didReceiveLocalNotification:(UILocalNotification *)notification {
 else{
         return YES;
     }
+    
+}
+
+
+-(void)openGps{
+    //郑州 113.663221 34.7568711 //经纬度
+    //新疆维吾尔自治区喀什地区莎车县 77.02 38.54
+    
+    CLLocation *myLocation = [[CLLocation alloc] initWithLatitude:1.352083 longitude:103.819836 ];
+    
+   
+    [self reverseGeocodeLocation:myLocation address:^(id response) {
+        
+    }];
+    
+}
+//http://jingweidu.51240.com 查询经纬度 国际返回错误
+//因为苹果在国内用的是高德地图，高德只提供国内位置信息，可以通过ＶＰＮ连到目标地址国家的ip来上网，就可以获得当地的位置信息了
+-(void)reverseGeocodeLocation :(CLLocation*)location address:(ResponseBlock)responseBlock{
+    CLGeocoder *geocoder = [[CLGeocoder alloc] init];
+    [geocoder reverseGeocodeLocation:location completionHandler:^(NSArray* placemarks,NSError *error)
+     {
+         if (placemarks.count >0 )
+         {
+             CLPlacemark * plmark = [placemarks objectAtIndex:0];
+             
+             NSDictionary* dic = plmark.addressDictionary;
+             NSString * country = dic[@"Country"];//中国
+             NSString * city = dic[@"State"];//北京市
+             if(city == nil){
+                 city = @"";
+             }
+             NSString * locality = dic[@"City"];//北京市
+             if(locality == nil){
+                 locality = @"";
+             }
+             NSString * subLocality = dic[@"SubLocality"];//海淀区
+             if(subLocality == nil){
+                 subLocality = nil;
+             }
+             NSString * street = dic[@"Street"];//首都体育馆南路22号
+             if(street == nil){
+                 street = @"";
+             }
+             //NSString * name = dic[@"Name"];//国兴大厦
+             NSString* address =  [NSString stringWithFormat: @"%@%@%@%@",city,locality, subLocality,street];
+             DLog(@"%@",address);
+             NSString *tempcity = plmark.locality;
+             
+             NSString  *  beijin=@"北京市";
+             NSString  *  shanghai=@"上海市";
+             NSString  *  tianjin=@"天津市";
+             NSString  *  chongqin=@"重庆市";
+             if ([plmark.administrativeArea rangeOfString:beijin].location != NSNotFound  ||
+                 [plmark.administrativeArea rangeOfString:shanghai].location != NSNotFound ||
+                 [plmark.administrativeArea rangeOfString:tianjin].location  != NSNotFound ||
+                 [plmark.administrativeArea rangeOfString:chongqin].location != NSNotFound
+                 )
+             {
+                 tempcity= plmark.administrativeArea;
+                 address =  [NSString stringWithFormat: @"%@%@%@",tempcity,subLocality,street];
+             }
+             
+             
+             //             if (!tempcity) {
+             //                 //四大直辖市的城市信息无法通过locality获得，只能通过获取省份的方法来获得（如果city为空，则可知为直辖市）
+             //                 tempcity = plmark.administrativeArea;
+             //             }
+             NSDictionary* tempDic = [NSDictionary dictionaryWithObjectsAndKeys:tempcity,@"city",address,@"address",country,@"country",nil];
+             responseBlock(tempDic);
+             DLog(@"%@",location);
+             DLog(@"%@",[plmark description]);
+         }
+         else {
+             NSLog(@"%@",error);
+             responseBlock(nil);
+         }
+         
+     }];
     
 }
 

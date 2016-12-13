@@ -44,6 +44,8 @@ static int static_global_val = 2;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    UIImage* img111 = [UIImage imageNamed:@"submitorder"];
+    
     char* aaa = @encode(Class);
     NSLog(@"%@",[NSString stringWithUTF8String:aaa]);
     self.array = [NSMutableArray new];
@@ -741,6 +743,14 @@ struct objc_class {
     
    NSDateComponents* comp = [calendar components:NSCalendarUnitDay fromDate:fromDate toDate:toDate options:0];
     
+    //字符串对应0时区
+    NSDateFormatter* formatter1 = [[NSDateFormatter alloc] init];
+    [formatter1 setDateFormat:@"yyyy-MM-dd"];
+    [formatter1 setTimeZone:[NSTimeZone timeZoneWithName:@"UTC"]];
+    NSDate* DATE2 = [formatter1 dateFromString:@"2016-07-06"];
+    NSDate* DATE3 = [formatter1 dateFromString:@"2016-07-07"];
+    NSDate* DATE4 = [formatter1 dateFromString:@"2016-07-06 05:02:03"];
+   NSDateComponents* comp1 = [calendar components:NSCalendarUnitDay fromDate:DATE2 toDate:DATE3 options:0];
     
     //拆分一个时间
 
