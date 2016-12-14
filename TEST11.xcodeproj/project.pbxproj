@@ -866,6 +866,7 @@
 		BDD3ABFD1BA131CC002CF012 /* resizedBetaRibbon.png in Resources */ = {isa = PBXBuildFile; fileRef = BDD3ABF91BA131CC002CF012 /* resizedBetaRibbon.png */; };
 		BDD3ABFE1BA131CC002CF012 /* resizedRibbon.png in Resources */ = {isa = PBXBuildFile; fileRef = BDD3ABFA1BA131CC002CF012 /* resizedRibbon.png */; };
 		BDD3AC001BA134EE002CF012 /* AppIcon60x60@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BDD3ABFF1BA134EE002CF012 /* AppIcon60x60@2x.png */; };
+		BDD4AD4B1E0127C80087A450 /* 12306.cer in Resources */ = {isa = PBXBuildFile; fileRef = BDD4AD4A1E0127C80087A450 /* 12306.cer */; };
 		BDD51D2D1BFC210A00D27C22 /* ProgressGradientView.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD51D2C1BFC210900D27C22 /* ProgressGradientView.m */; };
 		BDD51D301BFC790400D27C22 /* BlockModel.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD51D2F1BFC790400D27C22 /* BlockModel.m */; };
 		BDD61C181BB3924600BC4264 /* AutoLayoutFDViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BDD61C171BB3924600BC4264 /* AutoLayoutFDViewController.xib */; };
@@ -2558,6 +2559,7 @@
 		BDD3ABF91BA131CC002CF012 /* resizedBetaRibbon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = resizedBetaRibbon.png; path = ../resizedBetaRibbon.png; sourceTree = "<group>"; };
 		BDD3ABFA1BA131CC002CF012 /* resizedRibbon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = resizedRibbon.png; path = ../resizedRibbon.png; sourceTree = "<group>"; };
 		BDD3ABFF1BA134EE002CF012 /* AppIcon60x60@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AppIcon60x60@2x.png"; sourceTree = "<group>"; };
+		BDD4AD4A1E0127C80087A450 /* 12306.cer */ = {isa = PBXFileReference; lastKnownFileType = file; path = 12306.cer; sourceTree = "<group>"; };
 		BDD51D2B1BFC210900D27C22 /* ProgressGradientView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProgressGradientView.h; sourceTree = "<group>"; };
 		BDD51D2C1BFC210900D27C22 /* ProgressGradientView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProgressGradientView.m; sourceTree = "<group>"; };
 		BDD51D2E1BFC790400D27C22 /* BlockModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlockModel.h; sourceTree = "<group>"; };
@@ -2890,6 +2892,7 @@
 		5195B3E11AB70283007CFA8B = {
 			isa = PBXGroup;
 			children = (
+				BDD4AD4A1E0127C80087A450 /* 12306.cer */,
 				BD55CE911DC9B22A006C291B /* Dylib.framework */,
 				BD6872D11D7D45B700E7C0FD /* sample.js */,
 				BD52E73A1D893CFD0086A9E8 /* tool.js */,
@@ -6788,6 +6791,7 @@
 				BD80F1471BF46E7B0046FA80 /* stretch_full.png in Resources */,
 				BD17ACA01D49A3400097CA11 /* freehugcoupon.pkpass in Resources */,
 				BD047E641BD8780000D020E3 /* AutoCustom1ViewController.xib in Resources */,
+				BDD4AD4B1E0127C80087A450 /* 12306.cer in Resources */,
 				51FA7A241B70FB2A0002990E /* UsageViewController.xib in Resources */,
 				BD17ACAA1D49DB880097CA11 /* icon@2x.png in Resources */,
 				BD6138CB1C744AE900B0F4B7 /* APLViewController.xib in Resources */,

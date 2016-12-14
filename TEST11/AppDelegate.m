@@ -93,10 +93,13 @@
 #import "NSDate+DateTools.h"
 #import "LocationHelper.h"
 //static const int ddLogLevel = DDLogLevelVerbose;//定义日志级别
+#import "MKNetworkKit.h"
+#import "AFHTTPSessionManager.h"
 
-
-@interface AppDelegate ()<WXApiDelegate>
-
+@interface AppDelegate ()<WXApiDelegate> {
+  
+}
+@property(nonatomic,strong) AFHTTPSessionManager* manager;
 @end
 
 @implementation AppDelegate
@@ -337,6 +340,8 @@ typedef int (^frd)(NSString* st);
     [self testLumberjack];
     [self setupLocalNotification];
     [self openGps];
+    [self TestMkNet];
+    [self testUrlsession];
     return YES;
 }
 
@@ -1236,7 +1241,186 @@ else{
 }
 
 
+- (void)TestMkNet {
+    NSString *custom_server_validate_url = @"https://www.baifubao.com/callback";
+    NSDictionary *headerFields = @{@"Content-Type":@"application/x-www-form-urlencoded;charset=UTF-8"};
+    MKNetworkEngine *engine = [[MKNetworkEngine alloc] initWithHostName:nil customHeaderFields:headerFields];
+    NSDictionary *dict = @{@"cmd":@(1059),
+                           @"callback":@"phone",
+                           @"phone":@(15810194905)
+                           };
+    MKNetworkOperation *operation = [engine operationWithURLString:custom_server_validate_url
+                                                            params:nil
+                                                        httpMethod:@"GET"];
+    
+    [operation addCompletionHandler:^(MKNetworkOperation *completedOperation) {
+        
+        if (completedOperation.HTTPStatusCode == 200) {
+            //TODO 二次验证成功后执行的方法(after finish Secondery-Validate, to do something)
+            NSLog(@"client captcha response:%@",completedOperation.responseString);
+            
+            //[self showSuccessView:YES];
+          
+        } else {
+            NSLog(@"client captcha response:%@",completedOperation.responseString);
+            
+            //[self showSuccessView:NO];
+           
+        }
+        
+    } errorHandler:^(MKNetworkOperation *completedOperation, NSError *error) {
+        NSLog(@"client captcha response error:%@",error.localizedDescription);
+    }];
+    
+    [engine enqueueOperation:operation];
+}
 
 
+- (void)testUrlsession {
+    NSString *urlString = @"https://kyfw.12306.cn/otn";
+    /*
+    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
+    AFSecurityPolicy *securityPolicy = [AFSecurityPolicy policyWithPinningMode:AFSSLPinningModePublicKey];
+    [securityPolicy setAllowInvalidCertificates:YES];
+    [securityPolicy setValidatesDomainName:YES];
+    manager.securityPolicy = securityPolicy;
+    
+    //用于指定文件
+    
+    NSData *certData = [NSData dataWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"12306" ofType:@"cer"]];
+    NSSet *cerSet  = [NSSet setWithObject:certData];
+    if(certData){
+        [securityPolicy setPinnedCertificates:cerSet];
+    }
+    
+    
+    manager.responseSerializer = [AFHTTPResponseSerializer serializer];
+    [manager GET:urlString
+      parameters:nil
+        progress:nil
+         success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+             NSDictionary * array = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingMutableLeaves error:nil];
+             NSLog(@"OK === %@",array);
+             NSString *htmlString = [[NSString alloc]initWithData:responseObject encoding:NSUTF8StringEncoding];
+             NSLog(@"%@",htmlString);
+         } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+             NSLog(@"error ==%@",error.description);
+         }];
+     */
+    
+    NSString *certFilePath = [[NSBundle mainBundle] pathForResource:@"12306" ofType:@"cer"];
+    NSData *certData = [NSData dataWithContentsOfFile:certFilePath];
+    NSSet *certSet = [NSSet setWithObject:certData];
+    AFSecurityPolicy *policy = [AFSecurityPolicy policyWithPinningMode: AFSSLPinningModePublicKey withPinnedCertificates:certSet];
+    policy.allowInvalidCertificates = YES;
+    policy.validatesDomainName = YES;
+    
+    _manager = [AFHTTPSessionManager manager];
+    _manager.securityPolicy = policy;
+    _manager.requestSerializer = [AFHTTPRequestSerializer serializer];
+    _manager.responseSerializer = [AFHTTPResponseSerializer serializer];
+   // _manager.responseSerializer.acceptableContentTypes =  [NSSet setWithObjects:@"application/json", @"text/json", @"text/javascript",@"text/plain", nil];
+    //关闭缓存避免干扰测试r
+    _manager.requestSerializer.cachePolicy = NSURLRequestReloadIgnoringLocalCacheData;
+    [_manager setSessionDidBecomeInvalidBlock:^(NSURLSession * _Nonnull session, NSError * _Nonnull error) {
+        NSLog(@"setSessionDidBecomeInvalidBlock");
+    }];
+    //客户端请求验证 重写 setSessionDidReceiveAuthenticationChallengeBlock 方法
+    __weak typeof(self)weakSelf = self;
+    [_manager setSessionDidReceiveAuthenticationChallengeBlock:^NSURLSessionAuthChallengeDisposition(NSURLSession*session, NSURLAuthenticationChallenge *challenge, NSURLCredential *__autoreleasing*_credential) {
+        NSURLSessionAuthChallengeDisposition disposition = NSURLSessionAuthChallengePerformDefaultHandling;
+        __autoreleasing NSURLCredential *credential =nil;
+        if([challenge.protectionSpace.authenticationMethod isEqualToString:NSURLAuthenticationMethodServerTrust]) {
+            if([weakSelf.manager.securityPolicy evaluateServerTrust:challenge.protectionSpace.serverTrust forDomain:challenge.protectionSpace.host]) {
+                credential = [NSURLCredential credentialForTrust:challenge.protectionSpace.serverTrust];
+                if(credential) {
+                    disposition =NSURLSessionAuthChallengeUseCredential;
+                } else {
+                    disposition =NSURLSessionAuthChallengePerformDefaultHandling;
+                }
+            } else {
+                disposition = NSURLSessionAuthChallengeCancelAuthenticationChallenge;
+            }
+        } else {
+            // client authentication
+            SecIdentityRef identity = NULL;
+            SecTrustRef trust = NULL;
+            NSString *p12 = [[NSBundle mainBundle] pathForResource:@"client"ofType:@"p12"];
+            NSFileManager *fileManager =[NSFileManager defaultManager];
+            
+            if(![fileManager fileExistsAtPath:p12])
+            {
+                NSLog(@"client.p12:not exist");
+            }
+            else
+            {
+                NSData *PKCS12Data = [NSData dataWithContentsOfFile:p12];
+                
+                if ([[weakSelf class] extractIdentity:&identity andTrust:&trust fromPKCS12Data:PKCS12Data])
+                {
+                    SecCertificateRef certificate = NULL;
+                    SecIdentityCopyCertificate(identity, &certificate);
+                    const void*certs[] = {certificate};
+                    CFArrayRef certArray =CFArrayCreate(kCFAllocatorDefault, certs,1,NULL);
+                    credential =[NSURLCredential credentialWithIdentity:identity certificates:(__bridge  NSArray*)certArray persistence:NSURLCredentialPersistencePermanent];
+                    disposition =NSURLSessionAuthChallengeUseCredential;
+                }
+            }
+        }
+        *_credential = credential;
+        return disposition;
+    }];
+    
+    [_manager GET:urlString parameters:nil progress:^(NSProgress * _Nonnull downloadProgress) {
+        
+    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingMutableContainers error:nil];
+        NSLog(@"JSON: %@", dic);
+        NSString *htmlString = [[NSString alloc]initWithData:responseObject encoding:NSUTF8StringEncoding];
+        NSLog(@"12306:%@",htmlString);
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        NSLog(@"Error: %@", error);
+        
+        NSData *data = [error.userInfo objectForKey:@"com.alamofire.serialization.response.error.data"];
+        NSString *str = [[NSString alloc]initWithData:data encoding:NSUTF8StringEncoding];
+        NSLog(@"%@",str);
+    }];
+}
 
++(BOOL)extractIdentity:(SecIdentityRef*)outIdentity andTrust:(SecTrustRef *)outTrust fromPKCS12Data:(NSData *)inPKCS12Data {
+    OSStatus securityError = errSecSuccess;
+    //client certificate password
+    NSDictionary*optionsDictionary = [NSDictionary dictionaryWithObject:@"证书密码"
+                                                                 forKey:(__bridge id)kSecImportExportPassphrase];
+    
+    CFArrayRef items = CFArrayCreate(NULL, 0, 0, NULL);
+    securityError = SecPKCS12Import((__bridge CFDataRef)inPKCS12Data,(__bridge CFDictionaryRef)optionsDictionary,&items);
+    
+    if(securityError == 0) {
+        CFDictionaryRef myIdentityAndTrust =CFArrayGetValueAtIndex(items,0);
+        const void*tempIdentity =NULL;
+        tempIdentity= CFDictionaryGetValue (myIdentityAndTrust,kSecImportItemIdentity);
+        *outIdentity = (SecIdentityRef)tempIdentity;
+        const void*tempTrust =NULL;
+        tempTrust = CFDictionaryGetValue(myIdentityAndTrust,kSecImportItemTrust);
+        *outTrust = (SecTrustRef)tempTrust;
+    } else {
+        NSLog(@"Failedwith error code %d",(int)securityError);
+        return NO;
+    }
+    return YES;
+}
+
+
+/**** SSL Pinning ****/
+- (AFSecurityPolicy*)customSecurityPolicy {
+    NSString *cerPath = [[NSBundle mainBundle] pathForResource:@"12306" ofType:@"cer"];
+    NSData *certData = [NSData dataWithContentsOfFile:cerPath];
+    AFSecurityPolicy *securityPolicy = [AFSecurityPolicy policyWithPinningMode:AFSSLPinningModeCertificate];
+    [securityPolicy setAllowInvalidCertificates:YES];
+    NSSet *set = [NSSet setWithObjects:certData, nil];
+    [securityPolicy setPinnedCertificates:@[certData]];
+    /**** SSL Pinning ****/
+    return securityPolicy;
+}
 @end
