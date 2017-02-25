@@ -27,17 +27,20 @@
 #import "PHPhotoLibrary+ZHCustomPhotoAlbum.h"
 #import "SVProgressHUD.h"
 #import "WXApi.h"
+#import "ZHGTHelper.h"
+#include <CoreFoundation/CFRunLoop.h>
+#import "ReactiveCocoa.h"
 @interface ButtonInstance ()<DIOpenSDKDelegate>
-
+@property(nonatomic,strong) ZHGTHelper* helper;
 @end
 
 @implementation ButtonInstance
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self.button1 setBackgroundColor:[UIColor redColor] forState:UIControlStateNormal];
+//[self.button1 setBackgroundColor:[UIColor redColor] forState:UIControlStateNormal];
     //self.edgesForExtendedLayout = UIRectEdgeNone;
-    [self.button1 showIndicator];
+   // [self.button1 showIndicator];
     
     //[self.button2 startTime:5 title:@"hello" waitTittle:@"world"];
     
@@ -78,7 +81,11 @@
     [self.view.layer addSublayer:shapeLayer];
    
     self.navigationController.navigationBar.translucent = YES;
-   
+    @weakify(self);
+    
+    [RACObserve(self, testStr) subscribeNext:^(NSString *newName) {
+        NSLog(@"%@", newName);
+    }];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -86,20 +93,62 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    NSLog(@"Button appear");
+}
+
 -(IBAction)p1:(UIButton*)sender{
-    [self.button1 endSubmitting];
+    //[self.button1 endSubmitting];
+    NSLog(@"hello");
+     self.testStr = @"aaa";
+//    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+//        [NSRunLoop currentRunLoop];
+//        CFRunLoopRun();
+//       // CFRunLoopRunResult  result1 = CFRunLoopRunInMode( kCFRunLoopDefaultMode, 1.0e10, NO);
+//        NSLog(@"End RunLoop");
+//    
+//    });
+    
+//    while (!self.isFinish) {
+//        NSLog(@"Begin RunLoop");
+//       // [[NSRunLoop currentRunLoop] runMode:NSDefaultRunLoopMode beforeDate:[NSDate distantFuture]];
+//      CFRunLoopRunResult  result = CFRunLoopRunInMode( kCFRunLoopDefaultMode, 1.0e10, NO);
+//        NSLog(@"End RunLoop");
+//    }
     
 }
 
+- (void)useSafe {
+    NSArray* arr = @[@"df"];
+    NSString* a =  [arr objectAtIndex:1];
+}
 
 -(IBAction)p12:(id)sender {
       [SVProgressHUD showErrorWithStatus:@"系统原因，无法访问相册"];
      return;
 }
 
+- (void)p55 {
+//    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+//        //[SVProgressHUD dismiss];
+//    });
+
+}
+
 -(IBAction)p5:(id)sender {
-  //  [SVProgressHUD showErrorWithStatus:@"保存成功"];
-   // return;
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        [SVProgressHUD showWithStatus:@"请稍候" maskType:SVProgressHUDMaskTypeGradient];
+       
+    });
+    
+    [self performSelector:@selector(p55) withObject:nil afterDelay:5];
+  //[SVProgressHUD showWithStatus:@"请稍候" maskType:SVProgressHUDMaskTypeGradient];
+    
+
+    
+    //  [SVProgressHUD showErrorWithStatus:@"保存成功"];
+    return;
     
     NSArray *test=@[@"123",@"444"];
     id testID=test[5];
@@ -329,7 +378,7 @@
 }
 
 -(IBAction)p3:(UIButton*)sender{
-    
+    [self showGTView];
 }
 
 -(IBAction)p4:(id)sender {
@@ -393,6 +442,19 @@
 - (void)injected
 {
     NSLog(@"I've been injected: %@", self);
+}
+
+
+- (void)showGTView {
+    self.helper = [[ZHGTHelper alloc] init];
+    [self.helper requestGTest];
+    __weak __typeof(self)weakSelf = self;
+    self.helper.GTResultBlock = ^(BOOL result) {
+        if (result) {
+           
+           
+        }
+    };
 }
 
 

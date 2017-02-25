@@ -72,6 +72,12 @@ static NSUInteger CalendarViewInterReturnCount = 0;
 #endif
 }
 
+- (void)viewDidDisappear:(BOOL)animated {
+    [super viewDidDisappear:animated];
+    NSLog(@"view disappear");
+}
+
+
 //2种解决方案
 - (void)tap :(UITapGestureRecognizer*)gestureRecognizer{
     UIEvent *event = [[UIEvent alloc] init];
@@ -125,17 +131,17 @@ static NSUInteger CalendarViewInterReturnCount = 0;
 #pragma mark ---- uitableviewdelegate
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     //更改返回按钮图片 同是设置
-    self.navigationController.navigationBar.backIndicatorImage = [UIImage imageNamed:@"Selected"];
-    self.navigationController.navigationBar.backIndicatorTransitionMaskImage = [UIImage imageNamed:@"Selected"];
+   // self.navigationController.navigationBar.backIndicatorImage = [UIImage imageNamed:@"Selected"];
+   // self.navigationController.navigationBar.backIndicatorTransitionMaskImage = [UIImage imageNamed:@"Selected"];
     //
-    
+   // return;
     NSString* classKey = dataSource[indexPath.row];
     NSString* className = dict[classKey];
-    if ([className isEqualToString:@"ZOCKintsugiPhotoViewController_iPad"]) {
-        ZOCKintsugiPhotoViewController_iPad * ipad = [[ZOCKintsugiPhotoViewController_iPad alloc] initWithPhotos:nil];
-        [self.navigationController pushViewController:ipad animated:YES];
-        return;
-    }
+//    if ([className isEqualToString:@"ZOCKintsugiPhotoViewController_iPad"]) {
+//        ZOCKintsugiPhotoViewController_iPad * ipad = [[ZOCKintsugiPhotoViewController_iPad alloc] initWithPhotos:nil];
+//        [self.navigationController pushViewController:ipad animated:YES];
+//        return;
+//    }
     Class contrllerClass = NSClassFromString(className);
     UIViewController* controller = [[contrllerClass alloc] init];
     [self.navigationController pushViewController:controller animated:YES];

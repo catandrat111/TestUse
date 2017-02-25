@@ -22,6 +22,11 @@
 
 @property (nonatomic, strong) NSNumber *sex;
 
+@property (nonatomic, assign)int age1;
+
+@property (nonatomic, assign)long  age2;
+
+
 
 - (void)blocktest;
 //解释NSInvocation

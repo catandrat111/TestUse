@@ -7,6 +7,7 @@
 //
 
 #import "User.h"
+//#import "MJExtension.h"
 static int32_t const primes[] = {
     2, 101, 233, 383, 3, 103, 239, 389, 5, 107, 241, 397, 7, 109,
     251, 401, 11, 113, 257, 409, 13, 127, 263, 419, 17, 131, 269,
@@ -124,14 +125,26 @@ static int32_t const primes[] = {
 @end
 
 @implementation Father
-
+//MJCodingImplementation
 - (id)copyWithZone:(NSZone *)zone
 {
     Father *father = [[[self class] allocWithZone:zone] init];
     father.name = self.name;
     return father;
 }
+//http://blog.csdn.net/gang544043963/article/details/51800472
+//如果子类没实现 在父类会代为执行一次
+//+(void)initialize {
+//    NSLog(@"%@",[self class]);
+//    NSLog(@"father  initialize");
+//}
+//
+//如果子类没实现 父类也会掉用  类优先类别
 
+//+(void)load {
+//    NSLog(@"father load");
+//    
+//}
 @end
 
 @implementation Son
@@ -155,7 +168,14 @@ static int32_t const primes[] = {
     return son;
 }
 
++(void)initialize {;
+    NSLog(@"son initialize");
+}
 
++(void)load {
+    NSLog(@"son load");
+
+}
 @end
 
 

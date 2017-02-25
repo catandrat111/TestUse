@@ -13,10 +13,12 @@
 @implementation GTViewController
 
 - (void)viewDidLoad {
-    UIButton* button = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 100, 30)];
+    UIButton* button = [[UIButton alloc] initWithFrame:CGRectMake(0, 60, 100, 30)];
     [button setTitle:@"test" forState:UIControlStateNormal];
     [button setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
+    [self.view addSubview:button];
     [button addTarget:self action:@selector(testAction:) forControlEvents:UIControlEventTouchUpInside];
+    self.view.backgroundColor = [UIColor whiteColor];
     [self.view addSubview:button];
 }
 

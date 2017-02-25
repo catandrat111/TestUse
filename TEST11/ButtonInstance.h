@@ -19,6 +19,8 @@
 @property(weak,nonatomic) IBOutlet UIImageView* imgView;
 @property(weak,nonatomic) IBOutlet UIImageView* imgView2;
 @property(strong,nonatomic) NSURL* sourceURL; //@s///
+@property(strong,nonatomic) NSString* testStr;
+@property(nonatomic) BOOL isFinish; //@s///
 
 -(IBAction)p1:(id)sender;
 -(IBAction)p2:(id)sender;

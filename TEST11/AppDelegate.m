@@ -95,6 +95,10 @@
 //static const int ddLogLevel = DDLogLevelVerbose;//定义日志级别
 #import "MKNetworkKit.h"
 #import "AFHTTPSessionManager.h"
+#import "ZHGTHelper.h"
+#import <AVFoundation/AVAudioSession.h>
+#import "TempObject.h"
+#import "NSArray+Safe1.h"
 
 @interface AppDelegate ()<WXApiDelegate> {
   
@@ -131,7 +135,7 @@
 //<string>mqzone</string>
 //<string>mqq</string>
 //</array>
-
+#define REPLACE_NIL_STRING(object) [NSString stringWithFormat:@"%@",(object.length > 0) ? object : @""]
 //画一像素 http://www.cnblogs.com/smileEvday/p/iOS_PixelVsPoint.html
 typedef int (^frd)(NSString* st);
 #define SINGLE_LINE_WIDTH           (1 / [UIScreen mainScreen].scale)
@@ -142,9 +146,9 @@ typedef int (^frd)(NSString* st);
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    
+
    //[self save];
-    
+   
    // self.window = [[iConsoleWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     self.window  =[[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     ViewController* main = [[ViewController alloc] init];
@@ -161,7 +165,8 @@ typedef int (^frd)(NSString* st);
     NSString* h2 = NSLocalizedStringFromTable(@"hello", @"Localizable1", nil);
     NSLog(@"%@",h2);//你好1
     [DIOpenSDK registerApp:@"didi646E47504F336C793047717354734344" secret:@"eb28cd9512f46460882947a33b6a186d"];
-    [JPEngine startEngine];
+    [self archiveFather];
+    //[JPEngine startEngine];
    // navi.navigationBar.barStyle = UIBarStyleBlackTranslucent;
     //更改STATUSBAR
     //[[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
@@ -233,7 +238,7 @@ typedef int (^frd)(NSString* st);
 //    　　3、ActionSheet的window在隐藏掉
 //    
 //    　　总体就是“想隐居幕后可以，但得先交出权利”。
-    //[self testModel];
+    [self testModel];
    // [self test];
     //[self assetrtTest];
     //[self testPony];
@@ -246,6 +251,8 @@ typedef int (^frd)(NSString* st);
 
     
     [self testRsa];
+    NSString*aaasdf = dateStringDisplayWithFormat(@"MM-dd", nil);
+   
     
     NSString* test111 = @"<fdg<fdg<GG";
    NSString* sdd = [test111 stringByReplacingOccurrencesOfString:@"<" withString:@"1"];
@@ -331,9 +338,7 @@ typedef int (^frd)(NSString* st);
     
    // [self testPrintCNText];
     [self stringWithHourAndMinute:@"03:02"];
-    NSObject* bn = [NSObject new];
-    NSObject * bn2 = [NSObject new];
-    BOOL b3 = [self isZHKindOfClass:[bn class] otherClass:[bn2 class]];
+
     
 
    
@@ -342,6 +347,49 @@ typedef int (^frd)(NSString* st);
     [self openGps];
     [self TestMkNet];
     [self testUrlsession];
+    
+    NSString* datestr = dateStringDisplayWithFormat(@"yyyy-MM-dd", [NSDate date]);
+    NSDateFormatter *dateformatter = [[NSDateFormatter alloc] init];
+    [dateformatter setTimeZone:[NSTimeZone timeZoneWithName:@"UTC"]];
+    [dateformatter setDateFormat:@"yyyy-MM-dd"];
+   
+
+    NSDate *flightDateDate2 = [dateformatter dateFromString:@"2014-01-05"] ;
+    
+    NSDate *flightDateDate3 = dateDisplayWithDateString(@"2016-01-05 01:00:00");
+    
+    NSDate *flightDateDate = dateDisplayWithDateString(@"2014-01-01 15:00:00");
+    
+    
+    NSDateComponents* ageComponents = [[NSCalendar currentCalendar]
+                                      components:NSYearCalendarUnit
+                                      fromDate:flightDateDate2
+                                      toDate:flightDateDate3
+                                      options:0];
+    NSInteger age3 = [ageComponents year];
+    
+    
+    NSDate *flightDateDate1 = dateDisplayWithDateString(@"2016-01-01 23:00:00");
+    NSCalendar *gregorian = [NSCalendar currentCalendar];
+    NSDate *fromDate;
+    NSDate *toDate;
+    // 适用于 身份证 字符串转date 有夏令时 可能有些无法转化   2014-01-05 00:00:00 +0000 转化为第八时区 2014-01-05 08:00:00 去掉小时2014-01-05 00:00:00 在转化为utc
+    [gregorian rangeOfUnit:NSDayCalendarUnit startDate:&fromDate interval:NULL forDate:flightDateDate2];
+    [gregorian rangeOfUnit:NSDayCalendarUnit startDate:&toDate interval:NULL forDate:flightDateDate3];
+    
+     [gregorian rangeOfUnit:NSDayCalendarUnit startDate:&fromDate interval:NULL forDate:[NSDate date]];
+    [gregorian rangeOfUnit:NSDayCalendarUnit startDate:&fromDate interval:NULL forDate:flightDateDate];
+    [gregorian rangeOfUnit:NSDayCalendarUnit startDate:&toDate interval:NULL forDate:flightDateDate1];
+
+    NSDateComponents* ageComponents1 = [[NSCalendar currentCalendar]
+                                       components:NSYearCalendarUnit
+                                       fromDate:fromDate
+                                       toDate:toDate
+                                       options:0];
+    NSInteger age = [ageComponents1 year];
+
+    
+    [[AVAudioSession sharedInstance] setCategory: AVAudioSessionCategoryPlayback error: nil];
     return YES;
 }
 
@@ -359,6 +407,8 @@ typedef int (^frd)(NSString* st);
     return b;
     
 }
+
+
 
 - (NSString*)stringWithHourAndMinute:(NSString*)timeStr {
     NSString* result = @"";
@@ -561,6 +611,26 @@ typedef int (^frd)(NSString* st);
     for (int i = 0; i < 1000; i++) {
         
     }
+}
+
+
+- (void)archiveFather {
+    TempObject * f1 = [[TempObject alloc] init];
+    f1.name = @"vv";
+    f1.age1 = [NSNumber numberWithInt:10];
+    f1.height = @(25);
+    f1.age = 12;
+   //NSData* data1 = [NSKeyedArchiver archivedDataWithRootObject:f1];
+    NSString *documents = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject];
+    NSString *path = [documents stringByAppendingPathComponent:@"person.archiver"];//拓展名可以自己随便取
+    
+    [NSKeyedArchiver archiveRootObject:f1 toFile:path];
+    
+    //读取
+    TempObject *person1 = [NSKeyedUnarchiver unarchiveObjectWithFile:path];
+    
+    
+    
 }
 
 - (NSDate*)replaceMethodWithJSPatch {
@@ -929,15 +999,25 @@ didReceiveLocalNotification:(UILocalNotification *)notification {
     [[UIApplication sharedApplication] registerUserNotificationSettings:userSettings];
     
     [[UIApplication sharedApplication] registerForRemoteNotifications];
-        
-   
     
 }
 
 - (void)testModel {
     
+    NSDictionary* dict1 = @{
+                            @"name":@"hello"
+                            };
+    Person* p1 = [Person objectWithKeyValues:dict1];
+    Person* p2;
+  NSString* ar =  REPLACE_NIL_STRING(p2.name);
     
     PersonModel* model = [[PersonModel alloc] init];
+    
+    NSDictionary* dict12 = @{@"age2":@(p1.age2)};
+    
+    NSString* str111 = [NSString stringWithFormat:@"%d",p1.age1];
+     NSString* str1112 = [NSString stringWithFormat:@"%@",p1.age];
+     NSString* str1113 = [NSString stringWithFormat:@"%@",@(p1.age2)];
     //model.cabinNo = @"F";
     model.flightDate = @"2014-01-02";
 //    model.flightNo = @"3U8549";
