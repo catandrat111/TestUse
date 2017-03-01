@@ -14,3 +14,16 @@
 @property (nonatomic, strong) NSNumber *height;
 @property (nonatomic, assign) NSUInteger age;
 @end
+
+typedef NS_ENUM(NSUInteger, UserSex) {
+    UserSex_Unknown = 0,
+    UserSex_Man,
+    UserSex_Woman,
+};
+
+@interface UserModel : NSObject<NSCopying>
+
+@property (nonatomic,copy,readonly) NSString *name;
+@property (nonatomic,assign,readonly) NSUInteger age;
+@property (nonatomic,assign,readonly) UserSex sex;
+@end

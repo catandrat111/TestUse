@@ -17,12 +17,13 @@
 #endif
 
 static NSUInteger CalendarViewInterReturnCount = 0;
-@interface ViewController ()<UITableViewDelegate,UITableViewDataSource>
+@interface ViewController ()<UITableViewDelegate,UITableViewDataSource,UIScrollViewDelegate>
 {
     UITableView* tableView_;
     NSArray* dataSource;
     NSDictionary* dict;
 }
+@property(nonatomic,strong) UIView* headerView;
 @end
 
 @implementation ViewController
@@ -58,6 +59,22 @@ static NSUInteger CalendarViewInterReturnCount = 0;
     UITapGestureRecognizer* tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tap:)];
     tap.cancelsTouchesInView = NO;//1种解决方案 //默认yes不接受touch事件 只响应UITapGestureRecognizer事件 为no 则传递touch事件响应didselect
     //[self.view addGestureRecognizer:tap];
+    
+    UIView *header = [[UIView alloc] init];
+    header.backgroundColor = [UIColor yellowColor];
+    header.height = 80;
+    header.frameWidth = tableView_.frameWidth;
+    header.frameY = - header.height;
+    [tableView_ addSubview:header];
+    self.headerView = header;
+    
+    UILabel *headerLabel = [[UILabel alloc] init];
+    headerLabel.text = @"下拉可以刷新";
+    headerLabel.frameWidth = tableView_.frameWidth;
+    headerLabel.frameHeight = header.frameHeight;
+    headerLabel.textAlignment = NSTextAlignmentCenter;
+    [_headerView addSubview:headerLabel];
+
 }
 
 - (void)didReceiveMemoryWarning {
@@ -150,5 +167,28 @@ static NSUInteger CalendarViewInterReturnCount = 0;
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     return 80.0f;
+}
+
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView
+{
+    // 处理下拉刷新
+    NSLog(@"%@",scrollView);
+}
+
+
+/**
+ * 当用户手松开(停止拖拽),就会调用这个代理方法
+ */
+- (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate
+{
+    
+    
+    // 增加顶部的内边距
+    [UIView animateWithDuration:0.25 animations:^{
+        UIEdgeInsets inset = tableView_.contentInset;
+        inset.top += self.headerView.height;
+        tableView_.contentInset = inset;
+    }];
+    
 }
 @end

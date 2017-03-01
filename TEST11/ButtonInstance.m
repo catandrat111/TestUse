@@ -101,7 +101,7 @@
 -(IBAction)p1:(UIButton*)sender{
     //[self.button1 endSubmitting];
     NSLog(@"hello");
-     self.testStr = @"aaa";
+    // self.testStr = @"aaa";
 //    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
 //        [NSRunLoop currentRunLoop];
 //        CFRunLoopRun();
@@ -116,11 +116,11 @@
 //      CFRunLoopRunResult  result = CFRunLoopRunInMode( kCFRunLoopDefaultMode, 1.0e10, NO);
 //        NSLog(@"End RunLoop");
 //    }
-    
+    [self useSafe];
 }
 
 - (void)useSafe {
-    NSArray* arr = @[@"df"];
+    NSArray* arr = @[@"df",nil];
     NSString* a =  [arr objectAtIndex:1];
 }
 

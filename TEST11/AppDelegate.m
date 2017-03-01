@@ -98,7 +98,7 @@
 #import "ZHGTHelper.h"
 #import <AVFoundation/AVAudioSession.h>
 #import "TempObject.h"
-#import "NSArray+Safe1.h"
+
 
 @interface AppDelegate ()<WXApiDelegate> {
   
