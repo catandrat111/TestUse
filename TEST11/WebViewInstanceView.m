@@ -21,8 +21,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    dataSource = @[@"webview1",@"webview2",@"webview3",@"webview4",@"webview5",@"wkWebView"];
-    dict = @{@"webview1":@"WebView1ViewController",@"webview2":@"WebView2ViewController",@"webview3":@"WebView3ViewController",@"webview4":@"WebView4ViewController",@"webview5":@"WebView5ViewController",@"wkWebView":@"wkWebViewController"};
+    dataSource = @[@"webview1",@"webview2",@"webview3",@"webview4",@"webview5",@"wkWebView",@"wkWebView1"];
+    dict = @{@"webview1":@"WebView1ViewController",@"webview2":@"WebView2ViewController",@"webview3":@"WebView3ViewController",@"webview4":@"WebView4ViewController",@"webview5":@"WebView5ViewController",@"wkWebView":@"wkWebViewController",@"wkWebView1":@"wkWebViewController1"};
 
 }
 

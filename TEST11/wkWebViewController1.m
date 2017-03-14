@@ -46,7 +46,7 @@
     
     self.webView = [[WKWebView alloc] initWithFrame:self.view.bounds
                                       configuration:config];
-    NSURL *path = [[NSBundle mainBundle] URLForResource:@"test4ß" withExtension:@"html"];
+    NSURL *path = [[NSBundle mainBundle] URLForResource:@"test3" withExtension:@"html"];
     [self.webView loadRequest:[NSURLRequest requestWithURL:path]];
     [self.view addSubview:self.webView];
     
