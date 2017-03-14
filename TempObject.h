@@ -26,4 +26,6 @@ typedef NS_ENUM(NSUInteger, UserSex) {
 @property (nonatomic,copy,readonly) NSString *name;
 @property (nonatomic,assign,readonly) NSUInteger age;
 @property (nonatomic,assign,readonly) UserSex sex;
+
+- (int (^)(int)) add;
 @end

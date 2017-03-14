@@ -39,4 +39,8 @@ MJCodingImplementation
                         initWithUserName:_name age:_age sex:_sex];
     return model;
 }
+
+- (int (^)(int)) add {
+    return nil;
+}
 @end

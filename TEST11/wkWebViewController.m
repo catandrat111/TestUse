@@ -70,7 +70,7 @@
     NSString *path = [[NSBundle mainBundle] pathForResource:@"test2" ofType:@"html"];//银联
     path = [[NSBundle mainBundle] pathForResource:@"testhuifu" ofType:@"html"];//huipu 新webview在ios不行
     NSURLRequest *request1 = [NSURLRequest requestWithURL:[NSURL fileURLWithPath:path]];
-  //  request1 = [NSURLRequest requestWithURL:[NSURL URLWithString:@"http://172.16.10.237:8989/gateway/openPrize?businessType=0&memberid=959255754&foid=131025198911302418&foidType=0&name=qwr&mobile=18310325118"]];
+    request1 = [NSURLRequest requestWithURL:[NSURL URLWithString:@"http://ffp.sichuanair.com/html5appweb"]];
     //request1 = [NSURLRequest requestWithURL:[NSURL URLWithString:@"http://m.sichuanair.com/gateway/openpay?businessType=2&memberid=959300705&foid=430524199404263237&foidType=0&name=qw&mobile=15810509173"]];
     
    // request1 = [NSURLRequest requestWithURL:[NSURL URLWithString:@"http://m.sichuanair.com/gateway/openPrize?encParams=51+7c8tNcs3oNwcYaSt3KMvTIfw770igEqhuu7XzSPXAR6h8mAlEEPWf/+iLXbgm8GypynJCUFY600GvgZaXTZhIA//187fskc3ExasTIoo3RNhg4qQ7K0QlMV9munc2"]];//网上兑奖

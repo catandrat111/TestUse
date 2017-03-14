@@ -120,8 +120,11 @@
 }
 
 - (void)useSafe {
-    NSArray* arr = @[@"df",nil];
+    NSString* str1 = nil;
+    NSArray* arr = @[@"df",[NSNull null]];
     NSString* a =  [arr objectAtIndex:1];
+    a = [NSNull null];
+    [a length];
 }
 
 -(IBAction)p12:(id)sender {

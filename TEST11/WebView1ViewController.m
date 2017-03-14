@@ -16,9 +16,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    NSString *path = [[NSBundle mainBundle] pathForResource:@"html1" ofType:@"html"];
-    NSURLRequest *request1 = [NSURLRequest requestWithURL:[NSURL fileURLWithPath:path]];
-     NSURLRequest *request2 = [NSURLRequest requestWithURL:[NSURL URLWithString:@"http://auto.163.com/photoview/5BD20008/180692.html#p=B96T07GT5BD20008"]];
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"TEST1111" ofType:@"html"];
+   // NSURLRequest *request1 = [NSURLRequest requestWithURL:[NSURL fileURLWithPath:path]];
+     NSURLRequest *request2 = [NSURLRequest requestWithURL:[NSURL URLWithString:@"http://ffp.sichuanair.com/html5appweb"]];
     self.webview.scalesPageToFit = YES;//自动对页面进行缩放以适应屏幕
     self.webview.dataDetectorTypes = UIDataDetectorTypePhoneNumber;//自动检测网页上的电话号码，单击可以拨打
 
@@ -40,6 +40,8 @@
 
 - (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType
 {
+    NSString *requestString = [[request URL] absoluteString];
+    NSLog(@"%@",[request URL]);
     if([request.mainDocumentURL.relativePath isEqualToString:@"/getInfo/name"])
     {
         NSString *info = [[UIDevice currentDevice] name];
@@ -68,9 +70,9 @@
    
     
     //首先创建JSContext 对象（此处通过当前webView的键获取到jscontext）
-    JSContext *context=[webView valueForKeyPath:@"documentView.webView.mainFrame.javaScriptContext"];
-    NSString *alertJS=@"alert('test js OC')"; //准备执行的js代码
-    [context evaluateScript:alertJS];//通过oc方法调用js的alert
+   // JSContext *context=[webView valueForKeyPath:@"documentView.webView.mainFrame.javaScriptContext"];
+   // NSString *alertJS=@"alert('test js OC')"; //准备执行的js代码
+   // [context evaluateScript:alertJS];//通过oc方法调用js的alert
 
 }
 
